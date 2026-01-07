@@ -1,0 +1,211 @@
+[
+  {
+    "idEcole": 1,
+    "nom": "École Nationale d'Informatique",
+    "ville": "Rabat",
+    "type": "Université Publique",
+    "description": "École d'excellence en informatique et nouvelles technologies",
+    "specialites": ["Informatique", "IA", "Cybersécurité"],
+    "cout": "15000 MAD/an",
+    "note": 4.5,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 3,
+    "nom": "École Mohammadia d'Ingénieurs",
+    "ville": "Rabat",
+    "type": "École Publique d'Ingénieurs",
+    "description": "Prestigieuse école d'ingénieurs marocaine",
+    "specialites": ["Génie Civil", "Génie Mécanique", "Génie Électrique", "Génie Industriel"],
+    "cout": "12000 MAD/an",
+    "note": 4.7,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 4,
+    "nom": "Université Mohammed V de Rabat - Faculté des Sciences",
+    "ville": "Rabat",
+    "type": "Université Publique",
+    "description": "Formation scientifique fondamentale et appliquée",
+    "specialites": ["Mathématiques", "Physique", "Chimie", "Biologie"],
+    "cout": "8000 MAD/an",
+    "note": 4.0,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 5,
+    "nom": "Institut National des Postes et Télécommunications",
+    "ville": "Rabat",
+    "type": "Établissement Public",
+    "description": "Spécialisé dans les technologies de l'information et de la communication",
+    "specialites": ["Réseaux et Télécoms", "Informatique", "Digital Marketing"],
+    "cout": "14000 MAD/an",
+    "note": 4.3,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 6,
+    "nom": "École Nationale Supérieure d'Arts et Métiers",
+    "ville": "Meknès",
+    "type": "École Publique d'Ingénieurs",
+    "description": "Formation d'ingénieurs en génie mécanique et industriel",
+    "specialites": ["Génie Mécanique", "Génie Industriel", "Énergétique"],
+    "cout": "11000 MAD/an",
+    "note": 4.4,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 7,
+    "nom": "Faculté de Médecine et de Pharmacie de Rabat",
+    "ville": "Rabat",
+    "type": "Université Publique de Santé",
+    "description": "Formation médicale et pharmaceutique de référence",
+    "specialites": ["Médecine", "Pharmacie", "Dentaire"],
+    "cout": "10000 MAD/an",
+    "note": 4.6,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 8,
+    "nom": "École Nationale de Commerce et de Gestion",
+    "ville": "Casablanca",
+    "type": "École Publique de Commerce",
+    "description": "Formation en management et sciences commerciales",
+    "specialites": ["Commerce", "Gestion", "Finance", "Marketing"],
+    "cout": "13000 MAD/an",
+    "note": 4.2,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 9,
+    "nom": "Université Hassan II - Faculté des Sciences et Techniques",
+    "ville": "Casablanca",
+    "type": "Université Publique",
+    "description": "Formation technique et scientifique de haut niveau",
+    "specialites": ["Génie Chimique", "Génie des Procédés", "Biotechnologie"],
+    "cout": "9000 MAD/an",
+    "note": 4.1,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 10,
+    "nom": "École Nationale d'Architecture",
+    "ville": "Rabat",
+    "type": "École Publique d'Architecture",
+    "description": "Formation d'architectes et d'urbanistes",
+    "specialites": ["Architecture", "Urbanisme", "Design d'Espace"],
+    "cout": "12500 MAD/an",
+    "note": 4.5,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 11,
+    "nom": "Institut Agronomique et Vétérinaire Hassan II",
+    "ville": "Rabat",
+    "type": "Établissement Public Agronomique",
+    "description": "Excellence dans les domaines agronomiques et vétérinaires",
+    "specialites": ["Agronomie", "Vétérinaire", "Sciences Alimentaires"],
+    "cout": "11500 MAD/an",
+    "note": 4.4,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 12,
+    "nom": "Université Ibn Tofail - Faculté des Sciences",
+    "ville": "Kénitra",
+    "type": "Université Publique",
+    "description": "Enseignement scientifique pluridisciplinaire",
+    "specialites": ["Mathématiques Appliquées", "Informatique", "Sciences de la Matière"],
+    "cout": "7500 MAD/an",
+    "note": 3.9,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 13,
+    "nom": "École Normale Supérieure de l'Enseignement Technique",
+    "ville": "Rabat",
+    "type": "École Publique de Formation",
+    "description": "Formation des enseignants pour l'enseignement technique",
+    "specialites": ["Pédagogie Technique", "Sciences de l'Éducation", "Didactique"],
+    "cout": "8500 MAD/an",
+    "note": 4.0,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 14,
+    "nom": "Université Cadi Ayyad - Faculté des Sciences Semlalia",
+    "ville": "Marrakech",
+    "type": "Université Publique",
+    "description": "Centre de recherche scientifique renommé",
+    "specialites": ["Physique Fondamentale", "Chimie", "Sciences de la Terre"],
+    "cout": "8200 MAD/an",
+    "note": 4.3,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 15,
+    "nom": "École Nationale Forestière d'Ingénieurs",
+    "ville": "Salé",
+    "type": "École Publique d'Ingénieurs",
+    "description": "Spécialisée dans les sciences forestières et environnementales",
+    "specialites": ["Génie Forestier", "Environnement", "Développement Durable"],
+    "cout": "10500 MAD/an",
+    "note": 4.2,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 16,
+    "nom": "Faculté des Sciences Juridiques, Économiques et Sociales",
+    "ville": "Rabat",
+    "type": "Université Publique",
+    "description": "Formation en sciences humaines et sociales",
+    "specialites": ["Droit", "Économie", "Sociologie", "Gestion"],
+    "cout": "9500 MAD/an",
+    "note": 4.1,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 17,
+    "nom": "Institut Supérieur de l'Information et de la Communication",
+    "ville": "Rabat",
+    "type": "Établissement Public",
+    "description": "Formation aux métiers de l'information et de la communication",
+    "specialites": ["Journalisme", "Communication", "Relations Publiques"],
+    "cout": "13500 MAD/an",
+    "note": 4.3,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 18,
+    "nom": "Université Abdelmalek Essaâdi - Faculté des Sciences",
+    "ville": "Tétouan",
+    "type": "Université Publique",
+    "description": "Pôle scientifique dans le nord du Maroc",
+    "specialites": ["Biologie Marine", "Géologie", "Informatique de Gestion"],
+    "cout": "7800 MAD/an",
+    "note": 3.8,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 19,
+    "nom": "École Nationale Supérieure d'Électricité et Mécanique",
+    "ville": "Casablanca",
+    "type": "École Publique d'Ingénieurs",
+    "description": "Formation d'ingénieurs en génie électrique et mécanique",
+    "specialites": ["Génie Électrique", "Automatisme", "Mécanique des Fluides"],
+    "cout": "12800 MAD/an",
+    "note": 4.4,
+    "image": "placeholder-school.jpg"
+  },
+  {
+    "idEcole": 20,
+    "nom": "Faculté des Lettres et des Sciences Humaines",
+    "ville": "Fès",
+    "type": "Université Publique",
+    "description": "Enseignement des humanités et sciences sociales",
+    "specialites": ["Littérature", "Histoire", "Philosophie", "Langues"],
+    "cout": "7000 MAD/an",
+    "note": 3.9,
+    "image": "placeholder-school.jpg"
+  }
+]
