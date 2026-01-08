@@ -20,7 +20,10 @@
   background-color: var(--oxford-blue);
   color: var(--cyan);
   width: 100%;
+<<<<<<< HEAD
   /* position: sticky; */
+=======
+>>>>>>> 0a64e633c691764400a7c0d38519aa0c54835685
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 20px rgba(0, 33, 71, 0.5);
