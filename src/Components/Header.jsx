@@ -121,9 +121,6 @@ const Header = () => {
                 <h2>Fin N9ra?</h2>
               </div>
             </div>
-            <button className="mobile-close" onClick={toggleMenu}>
-              <i className="fas fa-times"></i>
-            </button>
           </div>
 
           <ul className="mobile-nav-items">
@@ -161,7 +158,7 @@ const Header = () => {
               >
                 <i className="fas fa-language"></i>
                 <span>Langue</span>
-                <span className="mobile-language-code">{isFrench ? 'MA_AR' : 'FR'}</span>
+                <span className="mobile-language-code">{isFrench ? 'AR' : 'FR'}</span>
               </button>
             </li>
 

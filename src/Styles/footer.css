@@ -2,31 +2,31 @@
 
 /* ===== FOOTER CONTAINER ===== */
 .footer {
-  background-color: #002147; /* Oxford Blue */
-  color: #00FFFF; /* Cyan */
-  padding: 3rem 0 1.5rem;
+  background-color: #002147;
+  color: #00FFFF;
+  padding: 0.8rem 0 0.3rem; /* Even more compact */
   margin-top: auto;
-  border-top: 3px solid #00CED1;
+  border-top: 1px solid #00CED1;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 0.8rem; /* Reduced side padding */
 }
 
 /* ===== SECTIONS GRID ===== */
 .footer-sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.5rem;
-  margin-bottom: 2.5rem;
-  padding-bottom: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Smaller min-width */
+  gap: 1.5rem; /* Reduced gap */
+  margin-bottom: 1.5rem; /* Reduced margin */
+  padding-bottom: 1rem; /* Reduced padding */
   border-bottom: 1px solid rgba(0, 206, 209, 0.3);
 }
 
 .footer-section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem; /* Reduced margin */
 }
 
 /* ===== LOGO SECTION ===== */
