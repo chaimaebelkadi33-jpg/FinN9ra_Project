@@ -1,13 +1,38 @@
-import Footer from './Components/Footer';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './Styles/global.css';
+
+// Import Components
 import Header from './Components/Header';
+import Footer from './Components/Footer';
+
+// Import Pages
+import Accueil from './Pages/Accueil';
+// import Ecoles from './Pages/Ecoles';
+// import EcoleDetail from './Pages/EcoleDetail';
+import Avis from './Pages/Avis';
+import Contact from './Pages/Contact';
+import Login from './Pages/Login';
 import SearchBar from './Components/SearchBar';
+
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <SearchBar/>
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Accueil />} />
+            {/* <Route path="/ecoles" element={<Ecoles />} /> */}
+            {/* <Route path="/ecole/:id" element={<EcoleDetail />} /> */}
+            <Route path="/avis" element={<Avis />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

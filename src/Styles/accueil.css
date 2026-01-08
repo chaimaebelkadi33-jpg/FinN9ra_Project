@@ -1,0 +1,289 @@
+/* src/Styles/accueil.css */
+
+/* Accueil Page Container - WHITE BACKGROUND */
+.accueil-page {
+  min-height: 100vh;
+  background: white;
+}
+
+/* Hero Section - Keep blue for contrast */
+.hero-section {
+  background: white;
+  padding: 40px 20px 60px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Hero text styling */
+.hero-text {
+  margin-bottom: 40px;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.search-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Results Section - White background */
+.results-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Arabic/French title style */
+.section-title-arabic {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.section-title-french {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: right;
+  font-weight: 400;
+}
+
+/* Schools Grid */
+.schools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* View All Container */
+.view-all-container {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 12px 28px;
+  border: 2px solid #4a90e2;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.view-all-btn:hover {
+  background: #4a90e2;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.3);
+}
+
+/* City Section */
+.city-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  margin-bottom: 60px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.city-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.city-link:hover {
+  background: #f0f7ff;
+  text-decoration: none;
+}
+
+/* No Results */
+.no-results {
+  text-align: center;
+  padding: 60px 40px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  margin: 20px 0;
+  border: 1px solid #e0e0e0;
+}
+
+.no-results p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.back-btn {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-btn:hover {
+  background: #357ae8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.3);
+}
+
+.back-btn:before {
+  content: "←";
+  font-size: 1.1rem;
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  font-size: 1.2rem;
+  color: #666;
+  background: white;
+}
+
+.loading:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 3px solid #e0e0e0;
+  border-top-color: #4a90e2;
+  border-radius: 50%;
+  animation: loading-spin 1s linear infinite;
+  margin-left: 15px;
+}
+
+@keyframes loading-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .schools-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 30px 20px 50px;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.3rem;
+  }
+  
+  .results-section,
+  .city-section {
+    padding: 40px 20px;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .schools-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .no-results {
+    padding: 40px 20px;
+  }
+  
+  .no-results p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 20px 15px 40px;
+  }
+  
+  .results-section,
+  .city-section {
+    padding: 30px 15px;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .view-all-btn,
+  .back-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

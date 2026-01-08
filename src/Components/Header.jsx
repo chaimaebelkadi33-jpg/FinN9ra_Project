@@ -1,5 +1,6 @@
 // src/Components/Header.jsx
 import React, { useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import '../Styles/header.css';
 // Import du logo depuis assets
 import logo from '../Assets/logo/logo.jpg';
@@ -7,6 +8,7 @@ import logo from '../Assets/logo/logo.jpg';
 const Header = () => {
   const [isFrench, setIsFrench] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleLanguage = () => {
     setIsFrench(!isFrench);
@@ -16,13 +18,23 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Function to close mobile menu
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  // Check if a link is active
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
   return (
     <header className="header">
       <div className="header-container">
         
         {/* Logo et Titre à GAUCHE (côte à côte) */}
         <div className="brand-section">
-          <a href="/" className="brand-link">
+          <NavLink to="/" className="brand-link" onClick={closeMobileMenu}>
             {/* Logo image */}
             <div className="logo-container">
               <img 
@@ -45,31 +57,47 @@ const Header = () => {
               <h1 className="brand-title">Fin N9ra?</h1>
               <p className="brand-subtitle">اختيار واضح... مستقبل أوضح</p>
             </div>
-          </a>
+          </NavLink>
         </div>
 
         {/* Navigation à DROITE */}
         <nav className="main-navigation">
           <ul className="nav-items">
             <li className="nav-item">
-              <a href="/" className="nav-link active">
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeMobileMenu}
+              >
                 <span className="nav-text">Accueil</span>
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a href="/ecoles" className="nav-link">
+              <NavLink 
+                to="/ecoles" 
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeMobileMenu}
+              >
                 <span className="nav-text">Écoles</span>
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a href="/avis" className="nav-link">
+              <NavLink 
+                to="/avis" 
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeMobileMenu}
+              >
                 <span className="nav-text">Avis</span>
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a href="/contact" className="nav-link">
+              <NavLink 
+                to="/contact" 
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeMobileMenu}
+              >
                 <span className="nav-text">Contact</span>
-              </a>
+              </NavLink>
             </li>
             
             {/* Language Toggle */}
@@ -85,9 +113,9 @@ const Header = () => {
 
             {/* Login Button */}
             <li className="nav-item login-item">
-              <a href="/login" className="login-button">
+              <NavLink to="/login" className="login-button" onClick={closeMobileMenu}>
                 <span className="login-text">Connexion</span>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -125,28 +153,44 @@ const Header = () => {
 
           <ul className="mobile-nav-items">
             <li className="mobile-nav-item">
-              <a href="/" className="mobile-nav-link active" onClick={toggleMenu}>
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeMobileMenu}
+              >
                 <i className="fas fa-home"></i>
                 <span>Accueil</span>
-              </a>
+              </NavLink>
             </li>
             <li className="mobile-nav-item">
-              <a href="/ecoles" className="mobile-nav-link" onClick={toggleMenu}>
+              <NavLink 
+                to="/ecoles" 
+                className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeMobileMenu}
+              >
                 <i className="fas fa-school"></i>
                 <span>Écoles</span>
-              </a>
+              </NavLink>
             </li>
             <li className="mobile-nav-item">
-              <a href="/avis" className="mobile-nav-link" onClick={toggleMenu}>
+              <NavLink 
+                to="/avis" 
+                className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeMobileMenu}
+              >
                 <i className="fas fa-comment-dots"></i>
                 <span>Avis</span>
-              </a>
+              </NavLink>
             </li>
             <li className="mobile-nav-item">
-              <a href="/contact" className="mobile-nav-link" onClick={toggleMenu}>
+              <NavLink 
+                to="/contact" 
+                className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeMobileMenu}
+              >
                 <i className="fas fa-envelope"></i>
                 <span>Contact</span>
-              </a>
+              </NavLink>
             </li>
             
             <li className="mobile-nav-item">
@@ -163,10 +207,14 @@ const Header = () => {
             </li>
 
             <li className="mobile-nav-item">
-              <a href="/login" className="mobile-login-btn" onClick={toggleMenu}>
+              <NavLink 
+                to="/login" 
+                className="mobile-login-btn"
+                onClick={closeMobileMenu}
+              >
                 <i className="fas fa-sign-in-alt"></i>
                 <span>Connexion</span>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
