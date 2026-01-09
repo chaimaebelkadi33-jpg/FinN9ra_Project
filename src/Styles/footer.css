@@ -22,7 +22,7 @@
   gap: 1.5rem; /* Reduced gap */
   margin-bottom: 1.5rem; /* Reduced margin */
   padding-bottom: 1rem; /* Reduced padding */
-  border-bottom: 1px solid rgba(0, 206, 209, 0.3);
+  border-bottom: 1px solid rgba(214, 222, 223, 0.3);
 }
 
 .footer-section {
@@ -53,7 +53,8 @@
 
 /* ===== SECTION TITLES ===== */
 .section-title {
-  color: #00FFFF;
+ 
+  color: #00FFFF !important;
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
@@ -61,8 +62,8 @@
   border-bottom: 2px solid #00CED1;
   display: inline-block;
   font-family: 'Segoe UI', sans-serif;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
-
 /* ===== FOOTER LINKS ===== */
 .footer-links {
   list-style: none;

@@ -234,12 +234,15 @@
     rgba(0, 255, 255, 0.3));
   color: var(--cyan);
   border: 2px solid var(--cyan-dark);
-  padding: 1.2rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+  white-space: nowrap;
 }
 
 
