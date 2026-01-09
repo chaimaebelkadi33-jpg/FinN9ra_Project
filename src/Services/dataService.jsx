@@ -1,4 +1,4 @@
-// src/Services/dataService.js
+// src/Services/dataService.js - COMPLETE VERSION
 import ecolesData from '../Data/ecoles.json';
 
 export const dataService = {
@@ -7,7 +7,7 @@ export const dataService = {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(ecolesData);
-      }, 500); // Simulate API delay
+      }, 500);
     });
   },
 
@@ -15,7 +15,7 @@ export const dataService = {
   getEcoleById: (id) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const ecole = ecolesData.find(item => item.id === parseInt(id));
+        const ecole = ecolesData.find(item => item.idEcole === parseInt(id));
         if (ecole) {
           resolve(ecole);
         } else {
@@ -25,17 +25,19 @@ export const dataService = {
     });
   },
 
-  // Search schools by name or location
+  // Search schools - ONLY by school name (nom)
   searchEcoles: (searchTerm) => {
     return new Promise((resolve) => {
       setTimeout(() => {
+        const searchLower = searchTerm.toLowerCase();
+        
+        // Search ONLY by school name (nom)
         const results = ecolesData.filter(ecole => 
-          ecole.nom.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          ecole.ville.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          ecole.adresse.toLowerCase().includes(searchTerm.toLowerCase())
+          ecole.nom.toLowerCase().includes(searchLower)
         );
+        
         resolve(results);
-      }, 400);
+      }, 300);
     });
   },
 
@@ -57,9 +59,61 @@ export const dataService = {
           );
         }
         
-        // Add more filters as needed
+        if (filters.specialite) {
+          results = results.filter(ecole => 
+            ecole.specialites && 
+            ecole.specialites.includes(filters.specialite)
+          );
+        }
+        
         resolve(results);
       }, 400);
+    });
+  },
+
+  // Get all unique cities (villes)
+  getVilles: () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const villes = [...new Set(ecolesData.map(ecole => ecole.ville))].sort();
+        resolve(villes);
+      }, 200);
+    });
+  },
+
+  // Get all unique types
+  getTypes: () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const types = [...new Set(ecolesData.map(ecole => ecole.type))].sort();
+        resolve(types);
+      }, 200);
+    });
+  },
+
+  // Get all unique specialties
+  getSpecialites: () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        // Flatten all specialties arrays and get unique values
+        const allSpecialites = ecolesData.flatMap(ecole => ecole.specialites || []);
+        const specialites = [...new Set(allSpecialites)].sort();
+        resolve(specialites);
+      }, 200);
+    });
+  },
+
+  // Get all filter options at once
+  getFilterOptions: () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const villes = [...new Set(ecolesData.map(ecole => ecole.ville))].sort();
+        const types = [...new Set(ecolesData.map(ecole => ecole.type))].sort();
+        const allSpecialites = ecolesData.flatMap(ecole => ecole.specialites || []);
+        const specialites = [...new Set(allSpecialites)].sort();
+        
+        resolve({ villes, types, specialites });
+      }, 300);
     });
   }
 };

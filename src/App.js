@@ -13,8 +13,6 @@ import Accueil from './Pages/Accueil';
 import Avis from './Pages/Avis';
 import Contact from './Pages/Contact';
 import Login from './Pages/Login';
-import SearchBar from './Components/SearchBar';
-
 function App() {
   return (
     <Router>
