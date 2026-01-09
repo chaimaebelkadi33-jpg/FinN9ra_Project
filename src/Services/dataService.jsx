@@ -1,8 +1,8 @@
-// src/Services/dataService.js - COMPLETE VERSION
+
 import ecolesData from '../Data/ecoles.json';
 
 export const dataService = {
-  // Get all schools
+
   getAllEcoles: () => {
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -11,7 +11,7 @@ export const dataService = {
     });
   },
 
-  // Get school by ID
+
   getEcoleById: (id) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -25,13 +25,13 @@ export const dataService = {
     });
   },
 
-  // Search schools - ONLY by school name (nom)
+ 
   searchEcoles: (searchTerm) => {
     return new Promise((resolve) => {
       setTimeout(() => {
         const searchLower = searchTerm.toLowerCase();
         
-        // Search ONLY by school name (nom)
+       
         const results = ecolesData.filter(ecole => 
           ecole.nom.toLowerCase().includes(searchLower)
         );
@@ -41,7 +41,7 @@ export const dataService = {
     });
   },
 
-  // Filter schools
+
   filterEcoles: (filters) => {
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -71,7 +71,7 @@ export const dataService = {
     });
   },
 
-  // Get all unique cities (villes)
+ 
   getVilles: () => {
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -81,7 +81,7 @@ export const dataService = {
     });
   },
 
-  // Get all unique types
+  
   getTypes: () => {
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -91,11 +91,11 @@ export const dataService = {
     });
   },
 
-  // Get all unique specialties
+  
   getSpecialites: () => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        // Flatten all specialties arrays and get unique values
+       
         const allSpecialites = ecolesData.flatMap(ecole => ecole.specialites || []);
         const specialites = [...new Set(allSpecialites)].sort();
         resolve(specialites);
@@ -103,7 +103,7 @@ export const dataService = {
     });
   },
 
-  // Get all filter options at once
+  
   getFilterOptions: () => {
     return new Promise((resolve) => {
       setTimeout(() => {
