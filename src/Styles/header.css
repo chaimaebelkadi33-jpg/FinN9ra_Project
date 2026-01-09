@@ -225,21 +225,28 @@
 
 /* ===== LOGIN BUTTON ===== */
 .login-button {
-  background: linear-gradient(135deg, #00b894, #00cec9);
-  color: var(--oxford-blue);
-  text-decoration: none;
-  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  background: linear-gradient(135deg, 
+    rgba(0, 206, 209, 0.3), 
+    rgba(0, 255, 255, 0.3));
+  color: var(--cyan);
+  border: 2px solid var(--cyan-dark);
+  padding: 1.2rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
   font-weight: 700;
-  padding: 0.8rem 1.8rem;
-  border-radius: 8px;
+  cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
-  font-family: 'Segoe UI', sans-serif;
-  white-space: nowrap;
 }
 
+
 .login-button:hover {
-  background: linear-gradient(135deg, #00cec9, #00b894);
+ background: linear-gradient(135deg, 
+    rgba(0, 206, 209, 0.3), 
+    rgba(0, 255, 255, 0.3));
   transform: translateY(-2px);
   box-shadow: 
     0 5px 20px rgba(0, 206, 201, 0.6),
