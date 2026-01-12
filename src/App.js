@@ -13,6 +13,7 @@ import Accueil from './Pages/Accueil';
 import Avis from './Pages/Avis';
 import Contact from './Pages/Contact';
 import Login from './Pages/Login';
+import PageError from './Components/PageError';
 function App() {
   return (
     <Router>
@@ -26,6 +27,7 @@ function App() {
             <Route path="/avis" element={<Avis />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
+            <Route path="*" element={<PageError/>}/>
           </Routes>
         </main>
         <Footer />
