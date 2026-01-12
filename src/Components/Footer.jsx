@@ -3,20 +3,14 @@ import '../Styles/footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
-        
-        
+      <div className="footer-container"> 
         <div className="footer-section">
           <div className="footer-logo">
             <h2 className="footer-title">Fin N9ra?</h2>
             <p className="footer-tagline">Plateforme intelligente pour aider les parents et étudiants à trouver la meilleure école au Maroc.</p>
           </div>
         </div>
-
-    
         <div className="footer-sections">
-          
-       
           <div className="footer-section">
             <h3 className="section-title">Plateforme</h3>
             <ul className="footer-links">
@@ -24,8 +18,6 @@ const Footer = () => {
               <li><a href="/ecoles" className="footer-link">Liste des écoles</a></li>
             </ul>
           </div>
-
- 
           <div className="footer-section">
             <h3 className="section-title">À propos</h3>
             <ul className="footer-links">
@@ -33,8 +25,6 @@ const Footer = () => {
               <li><a href="/contact" className="footer-link">Contact</a></li>
             </ul>
           </div>
-
-     
           <div className="footer-section">
             <h3 className="section-title">Réseaux sociaux</h3>
             <div className="social-icons">
@@ -53,14 +43,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-
         <div className="footer-bottom">
           <p className="copyright">
             © 2026 Fin N9ra? — Tous droits réservés
           </p>
         </div>
-
       </div>
     </footer>
   );

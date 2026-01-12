@@ -234,8 +234,7 @@ const SearchBar = ({ onSearch, onFilter }) => {
           <button 
             type="button" 
             onClick={clearAllFilters}
-            className="clear-filters-btn"
-          >
+            className="clear-filters-btn" >
             Effacer tous
           </button>
         )}

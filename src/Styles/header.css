@@ -71,7 +71,7 @@
   justify-content: center;
   overflow: hidden;
   box-shadow: 
-    0 0 20px rgba(0, 255, 255, 0.4),
+    0 0 20px rgba(0, 210, 210, 0.5),
     inset 0 0 20px rgba(0, 255, 255, 0.1);
   flex-shrink: 0;
 }
@@ -86,6 +86,8 @@
 }
 
 .logo-fallback {
+
+
   color: var(--cyan);
   font-size: 1.8rem;
   font-weight: 900;
@@ -112,8 +114,8 @@
   margin: 0;
   line-height: 1;
   text-shadow: 
-    0 0 15px rgba(0, 255, 255, 0.6),
-    0 0 30px rgba(0, 255, 255, 0.3);
+    0 0 15px rgba(0, 100, 100, 0.5),
+    0 0 30px rgba(0, 250, 250, 0.3);
   letter-spacing: 1px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -177,8 +179,8 @@
   color: var(--oxford-blue);
   font-weight: 700;
   box-shadow: 
-    0 4px 15px rgba(0, 255, 255, 0.6),
-    0 0 20px rgba(0, 255, 255, 0.3);
+     0 0 15px rgba(0, 100, 100, 0.5),
+    0 0 30px rgba(0, 250, 250, 0.3);
 }
 
 .nav-link.active::after {
