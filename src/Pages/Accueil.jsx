@@ -1,4 +1,4 @@
-// src/Pages/Accueil.jsx
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../Components/SearchBar';
@@ -12,7 +12,7 @@ function Accueil() {
   const [loading, setLoading] = useState(true);
   const [searchResults, setSearchResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
-  const [filters, setFilters] = useState({}); // Add this state
+  const [filters, setFilters] = useState({}); 
 
   useEffect(() => {
     loadSchools();
@@ -22,15 +22,15 @@ function Accueil() {
     try {
       setLoading(true);
       
-      // Get ALL schools first
+     
       const allSchools = await dataService.getAllEcoles();
       
-      // Get top rated schools (sort by note and take first 6)
+     
       const topRated = [...allSchools]
         .sort((a, b) => b.note - a.note)
         .slice(0, 6);
       
-      // Get schools from Rabat
+     
       const rabat = allSchools
         .filter(school => school.ville === 'Rabat')
         .slice(0, 4);
@@ -47,32 +47,32 @@ function Accueil() {
 
   const handleSearch = async (searchTerm) => {
     if (!searchTerm.trim()) {
-      // If search is empty, show featured schools
+      
       setIsSearching(false);
       return;
     }
 
     setIsSearching(true);
     try {
-      // Use the dataService to search
+      
       const results = await dataService.searchEcoles(searchTerm);
-      setSearchResults(results.slice(0, 8)); // Show first 8 results
+      setSearchResults(results.slice(0, 8)); 
     } catch (error) {
       console.error('Search error:', error);
     }
   };
 
-  // ADD THIS FUNCTION - Handles filter changes from SearchBar
+ 
   const handleFilter = async (newFilters) => {
     console.log('Applying filters:', newFilters);
     setFilters(newFilters);
     
     try {
-      // Apply filters using dataService
+    
       const filteredResults = await dataService.filterEcoles(newFilters);
       setSearchResults(filteredResults.slice(0, 8));
       
-      // Switch to search mode if any filter is applied
+      
       if (newFilters.ville || newFilters.specialite || newFilters.type) {
         setIsSearching(true);
       } else {
@@ -83,7 +83,7 @@ function Accueil() {
     }
   };
 
-  // ADD THIS FUNCTION - Combine search and filter results
+
   const getDisplayedResults = () => {
     if (isSearching && searchResults.length > 0) {
       return searchResults;
@@ -101,15 +101,15 @@ function Accueil() {
 
   return (
     <div className="accueil-page">
-      {/* Section 1: Hero with SearchBar */}
+     
       <section className="hero-section">
-        {/* SearchBar Component */}
+       
         <div className="search-container">
           <SearchBar onSearch={handleSearch} onFilter={handleFilter} />
         </div>
       </section>
 
-      {/* Section 2: Search Results OR Featured Schools */}
+     
       <section className="results-section">
         {isSearching ? (
           <>
@@ -132,7 +132,7 @@ function Accueil() {
                 <button 
                   onClick={() => {
                     setIsSearching(false);
-                    handleFilter({}); // Clear all filters
+                    handleFilter({}); 
                   }} 
                   className="back-btn"
                 >
@@ -141,7 +141,7 @@ function Accueil() {
               </div>
             )}
             
-            {/* Show active filters */}
+          
             {(filters.ville || filters.specialite || filters.type) && (
               <div className="active-filters">
                 <p>Filtres actifs:</p>
@@ -201,7 +201,7 @@ function Accueil() {
         )}
       </section>
 
-      {/* Section 3: Rabat Schools (only show when not searching) */}
+     
       {!isSearching && (
         <section className="city-section">
           <div className="section-header">

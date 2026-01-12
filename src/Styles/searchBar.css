@@ -1,4 +1,4 @@
-/* SearchBar Container - Keep your existing style */
+
 .searchbar-container {
   background-color: #00c8d7;
   padding: 40px 40px;
@@ -22,7 +22,7 @@
   font-weight: normal;
 }
 
-/* Search Box - Keep your existing style */
+
 .searchbar-box {
   display: flex;
   justify-content: center;
@@ -53,7 +53,7 @@
   font-size: 16px;
 }
 
-/* NEW: Filters as Tags/Chips - Horizontal like in your image */
+
 .searchbar-filters {
   display: flex;
   flex-wrap: wrap;
@@ -62,13 +62,13 @@
   margin-top: 20px;
 }
 
-/* Filter tag container */
+
 .filter-tag-container {
   position: relative;
   display: inline-block;
 }
 
-/* Filter tags - styled like chips */
+
 .filter-tag {
   background: white;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -121,7 +121,7 @@
   background: rgba(0, 33, 71, 0.2);
 }
 
-/* Dropdown for filter options */
+
 .filter-dropdown {
   display: none;
   position: absolute;
@@ -173,25 +173,25 @@
 }
 
 .dropdown-options::-webkit-scrollbar-track {
-  background: #f0f7ff; /* Light blue background */
+  background: #f0f7ff;
   border-radius: 10px;
 }
 
 .dropdown-options::-webkit-scrollbar-thumb {
-  background: #0a2a43; /* Your dark blue color */
+  background: #0a2a43;
   border-radius: 10px;
 }
 
 .dropdown-options::-webkit-scrollbar-thumb:hover {
-  background: #002147; /* Your darker blue */
+  background: #002147; 
 }
 
-/* For Firefox */
+
 .dropdown-options {
   scrollbar-width: thin;
   scrollbar-color: #0a2a43 #f0f7ff;
 }
-/* Clear All Filters Button */
+
 .clear-filters-btn {
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -209,7 +209,7 @@
   transform: translateY(-2px);
 }
 
-/* Loading State */
+
 .filters-loading {
   color: white;
   font-size: 14px;
@@ -217,7 +217,7 @@
   opacity: 0.9;
 }
 
-/* Active Filters Section (for Accueil page) */
+
 .active-filters {
   background: rgba(255, 255, 255, 0.9);
   border: 2px solid #00c8d7;
@@ -273,7 +273,7 @@
   background: rgba(255, 255, 255, 0.4);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .searchbar-container {
     margin: 30px 30px;
