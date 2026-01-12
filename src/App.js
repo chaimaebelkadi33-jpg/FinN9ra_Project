@@ -8,8 +8,8 @@ import Footer from './Components/Footer';
 
 // Import Pages
 import Accueil from './Pages/Accueil';
-// import Ecoles from './Pages/Ecoles';
-// import EcoleDetail from './Pages/EcoleDetail';
+import Ecoles from './Pages/Ecoles';
+
 import Avis from './Pages/Avis';
 import Contact from './Pages/Contact';
 import Login from './Pages/Login';
@@ -22,8 +22,7 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Accueil />} />
-            {/* <Route path="/ecoles" element={<Ecoles />} /> */}
-            {/* <Route path="/ecole/:id" element={<EcoleDetail />} /> */}
+            <Route path="/ecoles" element={<Ecoles />} />
             <Route path="/avis" element={<Avis />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
