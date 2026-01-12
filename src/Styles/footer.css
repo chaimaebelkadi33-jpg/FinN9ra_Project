@@ -1,10 +1,8 @@
-/* src/Styles/footer.css */
 
-/* ===== FOOTER CONTAINER ===== */
 .footer {
   background-color: #002147;
   color: #00FFFF;
-  padding: 0.8rem 0 0.3rem; /* Even more compact */
+  padding: 0.8rem 0 0.3rem; 
   margin-top: auto;
   border-top: 1px solid #00CED1;
 }
@@ -12,24 +10,22 @@
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 0.8rem; /* Reduced side padding */
+  padding: 0 0.8rem; 
 }
 
-/* ===== SECTIONS GRID ===== */
 .footer-sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Smaller min-width */
-  gap: 1.5rem; /* Reduced gap */
-  margin-bottom: 1.5rem; /* Reduced margin */
-  padding-bottom: 1rem; /* Reduced padding */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem; /
+  margin-bottom: 1.5rem; 
+  padding-bottom: 1rem; 
   border-bottom: 1px solid rgba(214, 222, 223, 0.3);
 }
 
 .footer-section {
-  margin-bottom: 1rem; /* Reduced margin */
+  margin-bottom: 1rem; 
 }
 
-/* ===== LOGO SECTION ===== */
 .footer-logo {
   margin-bottom: 1.5rem;
 }
@@ -51,7 +47,6 @@
   opacity: 0.9;
 }
 
-/* ===== SECTION TITLES ===== */
 .section-title {
  
   color: #00FFFF !important;
@@ -64,7 +59,7 @@
   font-family: 'Segoe UI', sans-serif;
   text-shadow: 0 0 10px rgba(0, 210, 210, 0.5);
 }
-/* ===== FOOTER LINKS ===== */
+
 .footer-links {
   list-style: none;
   padding: 0;
@@ -105,7 +100,6 @@
   opacity: 1;
 }
 
-/* ===== SOCIAL MEDIA ===== */
 .social-icons {
   display: flex;
   gap: 1.2rem;
@@ -135,7 +129,6 @@
   border-color: #00FFFF;
 }
 
-/* ===== FOOTER BOTTOM ===== */
 .footer-bottom {
   text-align: center;
   padding-top: 1.5rem;
@@ -149,7 +142,6 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   .footer-container {
     padding: 0 1.5rem;

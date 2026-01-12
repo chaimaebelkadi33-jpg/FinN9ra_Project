@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import '../Styles/header.css';
-// Import du logo depuis assets
 import logo from '../Assets/logo/logo.jpg';
 
 const Header = () => {
