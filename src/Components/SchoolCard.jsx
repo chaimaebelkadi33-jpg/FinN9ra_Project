@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/schoolCard.css';
+
 function SchoolCard({ school }) {
   // Get school data from props
   const schoolName = school.nom;
@@ -16,37 +17,6 @@ function SchoolCard({ school }) {
   // Use school image or a default one
   const schoolImage = school.image || 'https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=École';
 
-  // Function to create star rating
-  const showStars = () => {
-    let stars = [];
-    // Create 5 stars
-    for (let i = 1; i <= 5; i++) {
-      if (i <= rating) {
-        // Full star
-        stars.push(<span key={i} className="star">★</span>);
-      } else {
-        // Empty star
-        stars.push(<span key={i} className="star empty">☆</span>);
-      }
-    }
-    return stars;
-  };
-
-  // Show only first 2 specialties
-  const showSpecialties = () => {
-    const shortList = specialties.slice(0, 2);
-    return shortList.map((item, index) => (
-      <span key={index} className="specialty">
-        {item}
-      </span>
-    ));
-  };
-
-  // Make description shorter
-  const shortDescription = description.length > 100
-    ? description.substring(0, 100) + '...'
-    : description;
-
   return (
     <div className="school-card">
       {/* School image */}
@@ -54,48 +24,28 @@ function SchoolCard({ school }) {
         <img
           src={schoolImage}
           alt={schoolName}
-          className="school-img" />
+          className="school-img" 
+        />
       </div>
 
-      {/* Card content */}
+      {/* Card content - Simplified layout */}
       <div className="card-content">
-        {/* School name and city */}
-        <div className="school-header">
-          <h3>{schoolName}</h3>
-          <div className="location">
-            <span className="city">{city}</span>
-          </div>
+        {/* School name - Top and larger */}
+        <h3 className="school-name">{schoolName}</h3>
+        
+        {/* School type badge */}
+        <div className="type-badge">{type}</div>
+        
+        {/* City/Location */}
+        <div className="school-location">
+          <span className="city-icon">📍</span>
+          <span className="city-name">{city}</span>
         </div>
-
-        {/* School type */}
-        <div className="school-type">{type}</div>
-
-        {/* Rating */}
-        <div className="rating">
-          <div className="stars">
-            {showStars()}
-            <span className="rating-number">{rating}/5</span>
-          </div>
-        </div>
-
-        {/* Description */}
-        <p className="description">{shortDescription}</p>
-
-        {/* Specialties */}
-        <div className="specialties">
-          {showSpecialties()}
-          {specialties.length > 2 && (
-            <span className="more">+{specialties.length - 2} plus</span>
-          )}
-        </div>
-
-        {/* Price and button */}
-        <div className="card-footer">
-          <div className="price">{price}</div>
-          <Link to={`/ecole/${id}`} className="details-btn">
-            Voir plus
-          </Link>
-        </div>
+        
+        {/* "Voir plus" button */}
+        <Link to={`/ecole/${id}`} className="voir-plus-btn">
+          Voir plus →
+        </Link>
       </div>
     </div>
   );
