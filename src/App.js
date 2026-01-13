@@ -1,11 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './Styles/global.css';
-
 // Import Components
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-
+import EcoleDetails from './Components/EcoleDetail';
 // Import Pages
 import Accueil from './Pages/Accueil';
 import Ecoles from './Pages/Ecoles';
@@ -26,6 +25,8 @@ function App() {
             <Route path="/avis" element={<Avis />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
+        <Route path="/EcoleDetail/:id" element={<EcoleDetails />} />
+        <Route path="/ecole/:id" element={<EcoleDetails />} />
             <Route path="*" element={<PageError/>}/>
           </Routes>
         </main>
