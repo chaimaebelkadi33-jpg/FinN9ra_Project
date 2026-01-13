@@ -1,4 +1,4 @@
-// Updated SearchBar.jsx - Using tags instead of dropdowns
+// Updated SearchBar.jsx with unique class names
 import React, { useState, useEffect } from "react";
 import { dataService } from '../Services/dataService';
 import "../Styles/searchBar.css";
@@ -120,15 +120,15 @@ const SearchBar = ({ onSearch, onFilter }) => {
 
       <div className="searchbar-filters">
         {/* Ville Filter Tag */}
-        <div className="filter-tag-container" style={{ position: 'relative' }}>
+        <div className="sb-filter-tag-container" style={{ position: 'relative' }}>
           <div 
-            className={`filter-tag ${activeFilters.ville ? 'active' : ''}`}
+            className={`sb-filter-tag ${activeFilters.ville ? 'active' : ''}`}
             onClick={() => toggleDropdown('ville')}
           >
             {activeFilters.ville || 'Ville'}
             {activeFilters.ville && (
               <span 
-                className="remove" 
+                className="sb-remove" 
                 onClick={(e) => {
                   e.stopPropagation();
                   clearFilter('ville');
@@ -140,12 +140,12 @@ const SearchBar = ({ onSearch, onFilter }) => {
           </div>
           
           {activeDropdown === 'ville' && (
-            <div className="filter-dropdown active">
-              <div className="dropdown-options">
+            <div className="sb-filter-dropdown active">
+              <div className="sb-dropdown-options">
                 {filterOptions.villes.map((ville, index) => (
                   <div 
                     key={index}
-                    className="dropdown-option"
+                    className="sb-dropdown-option"
                     onClick={() => selectFilter('ville', ville)}
                   >
                     {ville}
@@ -157,15 +157,15 @@ const SearchBar = ({ onSearch, onFilter }) => {
         </div>
 
         {/* Spécialité Filter Tag */}
-        <div className="filter-tag-container" style={{ position: 'relative' }}>
+        <div className="sb-filter-tag-container" style={{ position: 'relative' }}>
           <div 
-            className={`filter-tag ${activeFilters.specialite ? 'active' : ''}`}
+            className={`sb-filter-tag ${activeFilters.specialite ? 'active' : ''}`}
             onClick={() => toggleDropdown('specialite')}
           >
             {activeFilters.specialite || 'Spécialité'}
             {activeFilters.specialite && (
               <span 
-                className="remove" 
+                className="sb-remove" 
                 onClick={(e) => {
                   e.stopPropagation();
                   clearFilter('specialite');
@@ -177,12 +177,12 @@ const SearchBar = ({ onSearch, onFilter }) => {
           </div>
           
           {activeDropdown === 'specialite' && (
-            <div className="filter-dropdown active">
-              <div className="dropdown-options">
+            <div className="sb-filter-dropdown active">
+              <div className="sb-dropdown-options">
                 {filterOptions.specialites.map((specialite, index) => (
                   <div 
                     key={index}
-                    className="dropdown-option"
+                    className="sb-dropdown-option"
                     onClick={() => selectFilter('specialite', specialite)}
                   >
                     {specialite}
@@ -194,15 +194,15 @@ const SearchBar = ({ onSearch, onFilter }) => {
         </div>
 
         {/* Type Filter Tag */}
-        <div className="filter-tag-container" style={{ position: 'relative' }}>
+        <div className="sb-filter-tag-container" style={{ position: 'relative' }}>
           <div 
-            className={`filter-tag ${activeFilters.type ? 'active' : ''}`}
+            className={`sb-filter-tag ${activeFilters.type ? 'active' : ''}`}
             onClick={() => toggleDropdown('type')}
           >
             {activeFilters.type || 'Type'}
             {activeFilters.type && (
               <span 
-                className="remove" 
+                className="sb-remove" 
                 onClick={(e) => {
                   e.stopPropagation();
                   clearFilter('type');
@@ -214,12 +214,12 @@ const SearchBar = ({ onSearch, onFilter }) => {
           </div>
           
           {activeDropdown === 'type' && (
-            <div className="filter-dropdown active">
-              <div className="dropdown-options">
+            <div className="sb-filter-dropdown active">
+              <div className="sb-dropdown-options">
                 {filterOptions.types.map((type, index) => (
                   <div 
                     key={index}
-                    className="dropdown-option"
+                    className="sb-dropdown-option"
                     onClick={() => selectFilter('type', type)}
                   >
                     {type}
@@ -234,14 +234,15 @@ const SearchBar = ({ onSearch, onFilter }) => {
           <button 
             type="button" 
             onClick={clearAllFilters}
-            className="clear-filters-btn" >
+            className="sb-clear-filters-btn"
+          >
             Effacer tous
           </button>
         )}
       </div>
 
       {loading && (
-        <div className="filters-loading">
+        <div className="sb-filters-loading">
           Chargement des options...
         </div>
       )}
