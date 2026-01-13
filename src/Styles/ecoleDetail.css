@@ -1,4 +1,3 @@
-/* src/Styles/ecoleDetails.css */
 
 /* Main Container */
 .ecole-details-container {
@@ -146,7 +145,7 @@
 
 .price-tag {
   background: rgba(255, 255, 255, 0.95);
-  color: #388e3c;
+  color: #4a90e2;
   padding: 10px 20px;
   border-radius: 25px;
   font-size: 1.1rem;
