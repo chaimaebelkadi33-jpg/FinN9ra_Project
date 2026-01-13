@@ -8,7 +8,7 @@
     "specialites": ["Informatique", "IA", "Cybersécurité"],
     "cout": "15000 MAD/an",
     "note": 4.5,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/École Nationale d'Informatique.png"
   },
   {
     "idEcole": 3,
@@ -19,7 +19,7 @@
     "specialites": ["Génie Civil", "Génie Mécanique", "Génie Électrique", "Génie Industriel"],
     "cout": "12000 MAD/an",
     "note": 4.7,
-    "image": "placeholder-school.jpg"
+    "image": "./Assets/images/ecole mohammadia d'ingénieurs.png"
   },
   {
     "idEcole": 4,
@@ -30,7 +30,7 @@
     "specialites": ["Mathématiques", "Physique", "Chimie", "Biologie"],
     "cout": "8000 MAD/an",
     "note": 4.0,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/Université Mohammed V de Rabat - Faculté des Sciences.png"
   },
   {
     "idEcole": 5,
@@ -41,7 +41,7 @@
     "specialites": ["Réseaux et Télécoms", "Informatique", "Digital Marketing"],
     "cout": "14000 MAD/an",
     "note": 4.3,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/institut national des postes et telecommunication.jpg"
   },
   {
     "idEcole": 6,
@@ -52,7 +52,7 @@
     "specialites": ["Génie Mécanique", "Génie Industriel", "Énergétique"],
     "cout": "11000 MAD/an",
     "note": 4.4,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/École Nationale Supérieure d'Arts et Métiers.webp"
   },
   {
     "idEcole": 7,
@@ -63,7 +63,7 @@
     "specialites": ["Médecine", "Pharmacie", "Dentaire"],
     "cout": "10000 MAD/an",
     "note": 4.6,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/Faculté de Médecine et de Pharmacie de Rabat.png"
   },
   {
     "idEcole": 8,
@@ -74,7 +74,7 @@
     "specialites": ["Commerce", "Gestion", "Finance", "Marketing"],
     "cout": "13000 MAD/an",
     "note": 4.2,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/École Nationale de Commerce et de Gestion.webp"
   },
   {
     "idEcole": 9,
@@ -85,7 +85,7 @@
     "specialites": ["Génie Chimique", "Génie des Procédés", "Biotechnologie"],
     "cout": "9000 MAD/an",
     "note": 4.1,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/Université Hassan II - Faculté des Sciences et Techniques.jpg"
   },
   {
     "idEcole": 10,
@@ -96,7 +96,7 @@
     "specialites": ["Architecture", "Urbanisme", "Design d'Espace"],
     "cout": "12500 MAD/an",
     "note": 4.5,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/École Nationale d'Architecture.jpg"
   },
   {
     "idEcole": 11,
@@ -107,7 +107,7 @@
     "specialites": ["Agronomie", "Vétérinaire", "Sciences Alimentaires"],
     "cout": "11500 MAD/an",
     "note": 4.4,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/Institut Agronomique et Vétérinaire Hassan II.webp"
   },
   {
     "idEcole": 12,
@@ -118,7 +118,7 @@
     "specialites": ["Mathématiques Appliquées", "Informatique", "Sciences de la Matière"],
     "cout": "7500 MAD/an",
     "note": 3.9,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/Université Ibn Tofail - Faculté des Sciences.webp"
   },
   {
     "idEcole": 13,
@@ -129,7 +129,7 @@
     "specialites": ["Pédagogie Technique", "Sciences de l'Éducation", "Didactique"],
     "cout": "8500 MAD/an",
     "note": 4.0,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/École Normale Supérieure de l'Enseignement Technique.png"
   },
   {
     "idEcole": 14,
@@ -140,7 +140,7 @@
     "specialites": ["Physique Fondamentale", "Chimie", "Sciences de la Terre"],
     "cout": "8200 MAD/an",
     "note": 4.3,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/Université Cadi Ayyad - Faculté des Sciences Semlalia.jpg"
   },
   {
     "idEcole": 15,
@@ -151,7 +151,7 @@
     "specialites": ["Génie Forestier", "Environnement", "Développement Durable"],
     "cout": "10500 MAD/an",
     "note": 4.2,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/École Nationale Forestière d'Ingénieurs.png"
   },
   {
     "idEcole": 16,
@@ -162,7 +162,7 @@
     "specialites": ["Droit", "Économie", "Sociologie", "Gestion"],
     "cout": "9500 MAD/an",
     "note": 4.1,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/Faculté des Sciences Juridiques, Économiques et Sociales.jpg"
   },
   {
     "idEcole": 17,
@@ -173,7 +173,7 @@
     "specialites": ["Journalisme", "Communication", "Relations Publiques"],
     "cout": "13500 MAD/an",
     "note": 4.3,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/Institut Supérieur de l'Information et de la Communication.webp"
   },
   {
     "idEcole": 18,
@@ -184,7 +184,7 @@
     "specialites": ["Biologie Marine", "Géologie", "Informatique de Gestion"],
     "cout": "7800 MAD/an",
     "note": 3.8,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/Université Abdelmalek Essaâdi - Faculté des Sciences.webp"
   },
   {
     "idEcole": 19,
@@ -195,7 +195,7 @@
     "specialites": ["Génie Électrique", "Automatisme", "Mécanique des Fluides"],
     "cout": "12800 MAD/an",
     "note": 4.4,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/École Nationale Supérieure d'Électricité et Mécanique.png"
   },
   {
     "idEcole": 20,
@@ -206,6 +206,6 @@
     "specialites": ["Littérature", "Histoire", "Philosophie", "Langues"],
     "cout": "7000 MAD/an",
     "note": 3.9,
-    "image": "placeholder-school.jpg"
+    "image": "src/Assets/images/Faculté des Lettres et des Sciences Humaines.jpeg"
   }
 ]

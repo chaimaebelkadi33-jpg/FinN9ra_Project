@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/schoolCard.css';
-const SchoolCard = ({ school }) => {
+function SchoolCard({ school }) {
   // Get school data from props
   const schoolName = school.nom;
   const city = school.ville;
@@ -12,7 +12,7 @@ const SchoolCard = ({ school }) => {
   const price = school.cout;
   const rating = school.note;
   const id = school.idEcole;
-  
+
   // Use school image or a default one
   const schoolImage = school.image || 'https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=École';
 
@@ -43,19 +43,18 @@ const SchoolCard = ({ school }) => {
   };
 
   // Make description shorter
-  const shortDescription = description.length > 100 
-    ? description.substring(0, 100) + '...' 
+  const shortDescription = description.length > 100
+    ? description.substring(0, 100) + '...'
     : description;
 
   return (
     <div className="school-card">
       {/* School image */}
       <div className="card-image">
-        <img 
-          src={schoolImage} 
+        <img
+          src={schoolImage}
           alt={schoolName}
-          className="school-img"
-        />
+          className="school-img" />
       </div>
 
       {/* Card content */}
@@ -100,6 +99,6 @@ const SchoolCard = ({ school }) => {
       </div>
     </div>
   );
-};
+}
 
 export default SchoolCard;
