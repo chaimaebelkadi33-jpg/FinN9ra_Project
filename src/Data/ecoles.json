@@ -8,7 +8,14 @@
     "specialites": ["Informatique", "IA", "Cybersécurité"],
     "cout": "15000 MAD/an",
     "note": 4.5,
-    "image": "/images/École Nationale d'Informatique.png"
+    "image": "/images/École Nationale d'Informatique.png",
+    "presentation": "L'École Nationale d'Informatique de Rabat forme des ingénieurs spécialisés dans les technologies de l'information, l'intelligence artificielle et la cybersécurité, avec une forte orientation pratique et recherche.",
+    "dureeEtudes": "5 ans",
+    "diplome": "Diplôme d'Ingénieur d'État",
+    "admission": "Concours national après classes préparatoires ou licence scientifique",
+    "debouches": ["Développeur", "Ingénieur IA", "Expert cybersécurité", "Architecte logiciel"],
+    "siteWeb": "https://www.eni.ma",
+    "contact": "contact@eni.ma"
   },
   {
     "idEcole": 3,
@@ -19,7 +26,14 @@
     "specialites": ["Génie Civil", "Génie Mécanique", "Génie Électrique", "Génie Industriel"],
     "cout": "12000 MAD/an",
     "note": 4.7,
-    "image": "/images/ecole mohammadia d'ingénieurs.png"
+    "image": "/images/ecole mohammadia d'ingénieurs.png",
+    "presentation": "L’EMI est l’une des écoles d’ingénieurs les plus prestigieuses du Maroc, connue pour la qualité de sa formation et l’employabilité élevée de ses diplômés.",
+    "dureeEtudes": "5 ans",
+    "diplome": "Diplôme d'Ingénieur d'État",
+    "admission": "Concours après classes préparatoires ou licence",
+    "debouches": ["Ingénieur BTP", "Chef de projet", "Ingénieur industriel", "Consultant"],
+    "siteWeb": "https://www.emi.ac.ma",
+    "contact": "info@emi.ac.ma"
   },
   {
     "idEcole": 4,
@@ -30,8 +44,16 @@
     "specialites": ["Mathématiques", "Physique", "Chimie", "Biologie"],
     "cout": "8000 MAD/an",
     "note": 4.0,
-    "image": "/images/Université Mohammed V de Rabat - Faculté des Sciences.png"
+    "image": "/images/Université Mohammed V de Rabat - Faculté des Sciences.png",
+    "presentation": "La Faculté des Sciences de Rabat offre une solide formation scientifique permettant d’accéder à la recherche, à l’enseignement ou aux métiers techniques.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Licence, Master, Doctorat",
+    "admission": "Baccalauréat scientifique",
+    "debouches": ["Enseignant", "Chercheur", "Technicien supérieur"],
+    "siteWeb": "https://www.fs.um5.ac.ma",
+    "contact": "fs@um5.ac.ma"
   },
+
   {
     "idEcole": 5,
     "nom": "Institut National des Postes et Télécommunications",
@@ -41,8 +63,16 @@
     "specialites": ["Réseaux et Télécoms", "Informatique", "Digital Marketing"],
     "cout": "14000 MAD/an",
     "note": 4.3,
-    "image": "/images/institut national des postes et telecommunication.jpg"
+    "image": "/images/institut national des postes et telecommunication.jpg",
+    "presentation": "L’INPT forme des ingénieurs et experts dans les télécommunications, les réseaux et le digital, avec une forte ouverture à l’international.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Ingénieur, Master",
+    "admission": "Concours après bac ou classes préparatoires",
+    "debouches": ["Ingénieur télécom", "Administrateur réseau", "Responsable digital"],
+    "siteWeb": "https://www.inpt.ac.ma",
+    "contact": "contact@inpt.ac.ma"
   },
+
   {
     "idEcole": 6,
     "nom": "École Nationale Supérieure d'Arts et Métiers",
@@ -52,8 +82,16 @@
     "specialites": ["Génie Mécanique", "Génie Industriel", "Énergétique"],
     "cout": "11000 MAD/an",
     "note": 4.4,
-    "image": "/images/École Nationale Supérieure d'Arts et Métiers.webp"
-  },
+    "image": "/images/École Nationale Supérieure d'Arts et Métiers.webp",
+    "presentation": "ENSAM Meknès est une référence dans la formation des ingénieurs en mécanique, industrie et systèmes énergétiques.",
+    "dureeEtudes": "5 ans",
+    "diplome": "Diplôme d'Ingénieur d'État",
+    "admission": "Concours après classes préparatoires ou licence",
+    "debouches": ["Ingénieur industriel", "Responsable maintenance", "Chef d’usine"],
+    "siteWeb": "https://www.ensam.ac.ma",
+    "contact": "contact@ensam.ac.ma"
+  }
+  ,
   {
     "idEcole": 7,
     "nom": "Faculté de Médecine et de Pharmacie de Rabat",
@@ -63,7 +101,14 @@
     "specialites": ["Médecine", "Pharmacie", "Dentaire"],
     "cout": "10000 MAD/an",
     "note": 4.6,
-    "image": "/images/Faculté de Médecine et de Pharmacie de Rabat.png"
+    "image": "/images/Faculté de Médecine et de Pharmacie de Rabat.png",
+    "presentation": "La Faculté de Médecine et de Pharmacie de Rabat est l’un des plus anciens établissements de santé au Maroc, formant des médecins, pharmaciens et chirurgiens-dentistes hautement qualifiés.",
+    "dureeEtudes": "5 à 7 ans",
+    "diplome": "Doctorat en Médecine, Pharmacie ou Médecine Dentaire",
+    "admission": "Concours national après baccalauréat scientifique",
+    "debouches": ["Médecin", "Pharmacien", "Dentiste", "Chercheur en santé"],
+    "siteWeb": "https://www.fmpr.ac.ma",
+    "contact": "contact@fmpr.ac.ma"
   },
   {
     "idEcole": 8,
@@ -74,7 +119,14 @@
     "specialites": ["Commerce", "Gestion", "Finance", "Marketing"],
     "cout": "13000 MAD/an",
     "note": 4.2,
-    "image": "/images/École Nationale de Commerce et de Gestion.webp"
+    "image": "/images/École Nationale de Commerce et de Gestion.webp",
+    "presentation": "L’ENCG de Casablanca prépare les étudiants aux métiers du management, de la finance et du marketing dans un environnement académique et professionnel exigeant.",
+    "dureeEtudes": "5 ans",
+    "diplome": "Diplôme ENCG (Bac+5)",
+    "admission": "Concours national après baccalauréat",
+    "debouches": ["Manager", "Analyste financier", "Responsable marketing", "Consultant"],
+    "siteWeb": "https://www.encg.ac.ma",
+    "contact": "contact@encg.ac.ma"
   },
   {
     "idEcole": 9,
@@ -85,7 +137,14 @@
     "specialites": ["Génie Chimique", "Génie des Procédés", "Biotechnologie"],
     "cout": "9000 MAD/an",
     "note": 4.1,
-    "image": "/images/Université Hassan II - Faculté des Sciences et Techniques.jpg"
+    "image": "/images/Université Hassan II - Faculté des Sciences et Techniques.jpg",
+    "presentation": "La FST Hassan II forme des techniciens et ingénieurs spécialisés dans les sciences appliquées et les technologies industrielles.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Licence, Master, Ingénieur",
+    "admission": "Baccalauréat scientifique",
+    "debouches": ["Ingénieur procédés", "Technicien supérieur", "Chercheur"],
+    "siteWeb": "https://www.fst.ac.ma",
+    "contact": "fst@uh2.ac.ma"
   },
   {
     "idEcole": 10,
@@ -96,7 +155,14 @@
     "specialites": ["Architecture", "Urbanisme", "Design d'Espace"],
     "cout": "12500 MAD/an",
     "note": 4.5,
-    "image": "/images/École Nationale d'Architecture.webp"
+    "image": "/images/École Nationale d'Architecture.webp",
+    "presentation": "L’ENA Rabat forme les futurs architectes du Maroc avec une forte approche créative, technique et urbaine.",
+    "dureeEtudes": "6 ans",
+    "diplome": "Diplôme d’Architecte",
+    "admission": "Concours après baccalauréat",
+    "debouches": ["Architecte", "Urbaniste", "Designer d’espace"],
+    "siteWeb": "https://www.ena.ma",
+    "contact": "contact@ena.ma"
   },
   {
     "idEcole": 11,
@@ -107,7 +173,14 @@
     "specialites": ["Agronomie", "Vétérinaire", "Sciences Alimentaires"],
     "cout": "11500 MAD/an",
     "note": 4.4,
-    "image": "/images/Institut Agronomique et Vétérinaire Hassan II.webp"
+    "image": "/images/Institut Agronomique et Vétérinaire Hassan II.webp",
+    "presentation": "L’IAV Hassan II est une référence nationale pour la formation des ingénieurs agronomes et des vétérinaires.",
+    "dureeEtudes": "5 à 6 ans",
+    "diplome": "Ingénieur, Docteur vétérinaire",
+    "admission": "Concours après classes préparatoires ou bac scientifique",
+    "debouches": ["Ingénieur agronome", "Vétérinaire", "Consultant agricole"],
+    "siteWeb": "https://www.iav.ac.ma",
+    "contact": "contact@iav.ac.ma"
   },
   {
     "idEcole": 12,
@@ -118,7 +191,14 @@
     "specialites": ["Mathématiques Appliquées", "Informatique", "Sciences de la Matière"],
     "cout": "7500 MAD/an",
     "note": 3.9,
-    "image": "/images/Université Ibn Tofail - Faculté des Sciences.webp"
+    "image": "/images/Université Ibn Tofail - Faculté des Sciences.webp",
+    "presentation": "La Faculté des Sciences de Kénitra offre une formation solide en sciences fondamentales et appliquées.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Licence, Master",
+    "admission": "Baccalauréat scientifique",
+    "debouches": ["Développeur", "Enseignant", "Chercheur"],
+    "siteWeb": "https://www.uit.ac.ma",
+    "contact": "contact@uit.ac.ma"
   },
   {
     "idEcole": 13,
@@ -129,7 +209,14 @@
     "specialites": ["Pédagogie Technique", "Sciences de l'Éducation", "Didactique"],
     "cout": "8500 MAD/an",
     "note": 4.0,
-    "image": "/images/École Normale Supérieure de l'Enseignement Technique.png"
+    "image": "/images/École Normale Supérieure de l'Enseignement Technique.png",
+    "presentation": "L’ENSET forme des professeurs et formateurs spécialisés dans l’enseignement technique et professionnel.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Licence, Master en Enseignement",
+    "admission": "Concours après bac ou licence",
+    "debouches": ["Professeur technique", "Formateur", "Inspecteur pédagogique"],
+    "siteWeb": "https://www.enset.ma",
+    "contact": "contact@enset.ma"
   },
   {
     "idEcole": 14,
@@ -140,7 +227,14 @@
     "specialites": ["Physique Fondamentale", "Chimie", "Sciences de la Terre"],
     "cout": "8200 MAD/an",
     "note": 4.3,
-    "image": "/images/Université Cadi Ayyad - Faculté des Sciences Semlalia.jpg"
+    "image": "/images/Université Cadi Ayyad - Faculté des Sciences Semlalia.jpg",
+    "presentation": "La Faculté des Sciences Semlalia est un centre de recherche reconnu à l’échelle nationale et internationale.",
+    "dureeEtudes": "3 à 8 ans",
+    "diplome": "Licence, Master, Doctorat",
+    "admission": "Baccalauréat scientifique",
+    "debouches": ["Chercheur", "Enseignant", "Ingénieur scientifique"],
+    "siteWeb": "https://www.uca.ma",
+    "contact": "contact@uca.ma"
   },
   {
     "idEcole": 15,
@@ -151,7 +245,14 @@
     "specialites": ["Génie Forestier", "Environnement", "Développement Durable"],
     "cout": "10500 MAD/an",
     "note": 4.2,
-    "image": "/images/École Nationale Forestière d'Ingénieurs.png"
+    "image": "/images/École Nationale Forestière d'Ingénieurs.png",
+    "presentation": "Cette école forme des ingénieurs spécialisés dans la protection des forêts, de l’environnement et du développement durable.",
+    "dureeEtudes": "5 ans",
+    "diplome": "Ingénieur d'État",
+    "admission": "Concours après classes préparatoires",
+    "debouches": ["Ingénieur forestier", "Responsable environnement", "Consultant écologique"],
+    "siteWeb": "https://www.enfi.ac.ma",
+    "contact": "contact@enfi.ac.ma"
   },
   {
     "idEcole": 16,
@@ -162,7 +263,14 @@
     "specialites": ["Droit", "Économie", "Sociologie", "Gestion"],
     "cout": "9500 MAD/an",
     "note": 4.1,
-    "image": "/images/Faculté des Sciences Juridiques, Économiques et Sociales.jpg"
+    "image": "/images/Faculté des Sciences Juridiques, Économiques et Sociales.jpg",
+    "presentation": "Cette faculté prépare les étudiants aux métiers du droit, de l’économie et de la gestion publique et privée.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Licence, Master",
+    "admission": "Baccalauréat",
+    "debouches": ["Juriste", "Économiste", "Gestionnaire"],
+    "siteWeb": "https://www.fsjesr.ma",
+    "contact": "contact@fsjesr.ma"
   },
   {
     "idEcole": 17,
@@ -173,7 +281,14 @@
     "specialites": ["Journalisme", "Communication", "Relations Publiques"],
     "cout": "13500 MAD/an",
     "note": 4.3,
-    "image": "/images/Institut Supérieur de l'Information et de la Communication.webp"
+    "image": "/images/Institut Supérieur de l'Information et de la Communication.webp",
+    "presentation": "L’ISIC forme des journalistes et communicants capables de travailler dans les médias modernes.",
+    "dureeEtudes": "3 ans",
+    "diplome": "Licence professionnelle",
+    "admission": "Concours après baccalauréat",
+    "debouches": ["Journaliste", "Chargé de communication", "Attaché de presse"],
+    "siteWeb": "https://www.isic.ma",
+    "contact": "contact@isic.ma"
   },
   {
     "idEcole": 18,
@@ -184,7 +299,14 @@
     "specialites": ["Biologie Marine", "Géologie", "Informatique de Gestion"],
     "cout": "7800 MAD/an",
     "note": 3.8,
-    "image": "/images/Université Abdelmalek Essaâdi - Faculté des Sciences.webp"
+    "image": "/images/Université Abdelmalek Essaâdi - Faculté des Sciences.webp",
+    "presentation": "Cette faculté joue un rôle clé dans le développement scientifique et technologique du nord du Maroc.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Licence, Master",
+    "admission": "Baccalauréat scientifique",
+    "debouches": ["Analyste", "Développeur", "Chercheur"],
+    "siteWeb": "https://www.uae.ma",
+    "contact": "contact@uae.ma"
   },
   {
     "idEcole": 19,
@@ -195,7 +317,14 @@
     "specialites": ["Génie Électrique", "Automatisme", "Mécanique des Fluides"],
     "cout": "12800 MAD/an",
     "note": 4.4,
-    "image": "/images/École Nationale Supérieure d'Électricité et Mécanique.png"
+    "image": "/images/École Nationale Supérieure d'Électricité et Mécanique.png",
+    "presentation": "ENSEM est une école d’ingénieurs réputée pour la qualité de sa formation en électricité, mécanique et automatisme.",
+    "dureeEtudes": "5 ans",
+    "diplome": "Ingénieur d'État",
+    "admission": "Concours après classes préparatoires",
+    "debouches": ["Ingénieur électrique", "Ingénieur maintenance", "Responsable industriel"],
+    "siteWeb": "https://www.ensem.ac.ma",
+    "contact": "contact@ensem.ac.ma"
   },
   {
     "idEcole": 20,
@@ -206,6 +335,13 @@
     "specialites": ["Littérature", "Histoire", "Philosophie", "Langues"],
     "cout": "7000 MAD/an",
     "note": 3.9,
-    "image": "/images/Faculté des Lettres et des Sciences Humaines.jpeg"
+    "image": "/images/Faculté des Lettres et des Sciences Humaines.jpeg",
+    "presentation": "Cette faculté forme des spécialistes des langues, de la culture et des sciences humaines.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Licence, Master",
+    "admission": "Baccalauréat",
+    "debouches": ["Enseignant", "Traducteur", "Chercheur", "Journaliste"],
+    "siteWeb": "https://www.flshfes.ac.ma",
+    "contact": "contact@flshfes.ac.ma"
   }
 ]
