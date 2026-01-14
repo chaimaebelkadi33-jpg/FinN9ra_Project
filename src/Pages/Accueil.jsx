@@ -1,4 +1,4 @@
-
+// src/Pages/Accueil.jsx
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from '../Components/SearchBar';
@@ -22,15 +22,12 @@ function Accueil() {
     try {
       setLoading(true);
       
-     
       const allSchools = await dataService.getAllEcoles();
       
-     
       const topRated = [...allSchools]
         .sort((a, b) => b.note - a.note)
         .slice(0, 6);
       
-     
       const rabat = allSchools
         .filter(school => school.ville === 'Rabat')
         .slice(0, 4);
@@ -47,31 +44,26 @@ function Accueil() {
 
   const handleSearch = async (searchTerm) => {
     if (!searchTerm.trim()) {
-      
       setIsSearching(false);
       return;
     }
 
     setIsSearching(true);
     try {
-      
       const results = await dataService.searchEcoles(searchTerm);
-      setSearchResults(results.slice(0, 8)); 
+      setSearchResults(results.slice(0, 8));
     } catch (error) {
       console.error('Search error:', error);
     }
   };
 
- 
   const handleFilter = async (newFilters) => {
     console.log('Applying filters:', newFilters);
     setFilters(newFilters);
     
     try {
-    
       const filteredResults = await dataService.filterEcoles(newFilters);
       setSearchResults(filteredResults.slice(0, 8));
-      
       
       if (newFilters.ville || newFilters.specialite || newFilters.type) {
         setIsSearching(true);
@@ -83,7 +75,6 @@ function Accueil() {
     }
   };
 
-
   const getDisplayedResults = () => {
     if (isSearching && searchResults.length > 0) {
       return searchResults;
@@ -94,26 +85,25 @@ function Accueil() {
   if (loading) {
     return (
       <div className="accueil-page">
-        <div className="loading">Chargement des écoles...</div>
+        <div className="accueil-loading">Chargement des écoles...</div>
       </div>
     );
   }
 
   return (
     <div className="accueil-page">
-     
-      <section className="hero-section">
-       
-        <div className="search-container">
+      {/* Hero Section with Search */}
+      <section className="accueil-hero">
+        <div className="accueil-search-container">
           <SearchBar onSearch={handleSearch} onFilter={handleFilter} />
         </div>
       </section>
 
-     
-      <section className="results-section">
+      {/* Results Section */}
+      <section className="accueil-results">
         {isSearching ? (
           <>
-            <h2 className="section-title">
+            <h2 className="accueil-title">
               {searchResults.length > 0 
                 ? `Résultats (${searchResults.length})` 
                 : 'Résultats de recherche'
@@ -121,59 +111,59 @@ function Accueil() {
             </h2>
             
             {searchResults.length > 0 ? (
-              <div className="schools-grid">
+              <div className="accueil-schools-grid">
                 {searchResults.map(school => (
                   <SchoolCard key={school.idEcole} school={school} />
                 ))}
               </div>
             ) : (
-              <div className="no-results">
+              <div className="accueil-no-results">
                 <p>Aucune école trouvée. Essayez avec d'autres mots-clés.</p>
                 <button 
                   onClick={() => {
                     setIsSearching(false);
-                    handleFilter({}); 
+                    handleFilter({});
                   }} 
-                  className="back-btn"
+                  className="accueil-back-btn"
                 >
                   Retour aux écoles recommandées
                 </button>
               </div>
             )}
             
-          
+            {/* Active Filters */}
             {(filters.ville || filters.specialite || filters.type) && (
-              <div className="active-filters">
+              <div className="accueil-active-filters">
                 <p>Filtres actifs:</p>
-                <div className="filter-tags">
+                <div className="accueil-filter-tags">
                   {filters.ville && (
-                    <span className="filter-tag">
+                    <span className="accueil-filter-tag">
                       Ville: {filters.ville} 
                       <button 
                         onClick={() => handleFilter({...filters, ville: ''})}
-                        className="remove-filter"
+                        className="accueil-remove-filter"
                       >
                         ✕
                       </button>
                     </span>
                   )}
                   {filters.specialite && (
-                    <span className="filter-tag">
+                    <span className="accueil-filter-tag">
                       Spécialité: {filters.specialite}
                       <button 
                         onClick={() => handleFilter({...filters, specialite: ''})}
-                        className="remove-filter"
+                        className="accueil-remove-filter"
                       >
                         ✕
                       </button>
                     </span>
                   )}
                   {filters.type && (
-                    <span className="filter-tag">
+                    <span className="accueil-filter-tag">
                       Type: {filters.type}
                       <button 
                         onClick={() => handleFilter({...filters, type: ''})}
-                        className="remove-filter"
+                        className="accueil-remove-filter"
                       >
                         ✕
                       </button>
@@ -185,15 +175,15 @@ function Accueil() {
           </>
         ) : (
           <>
-            <h2 className="section-title">Écoles recommandées</h2>
-            <div className="schools-grid">
+            <h2 className="accueil-title">Écoles recommandées</h2>
+            <div className="accueil-schools-grid">
               {featuredSchools.map(school => (
                 <SchoolCard key={school.idEcole} school={school} />
               ))}
             </div>
             
-            <div className="view-all-container">
-              <Link to="/ecoles" className="view-all-btn">
+            <div className="accueil-view-all">
+              <Link to="/ecoles" className="accueil-view-all-btn">
                 Voir toutes les écoles →
               </Link>
             </div>
@@ -201,17 +191,17 @@ function Accueil() {
         )}
       </section>
 
-     
+      {/* Rabat Schools Section */}
       {!isSearching && (
-        <section className="city-section">
-          <div className="section-header">
-            <h2 className="section-title">Écoles à Rabat</h2>
-            <Link to="/ecoles?ville=Rabat" className="city-link">
+        <section className="accueil-city-section">
+          <div className="accueil-section-header">
+            <h2 className="accueil-title">Écoles à Rabat</h2>
+            <Link to="/ecoles?ville=Rabat" className="accueil-city-link">
               Voir toutes les écoles à Rabat →
             </Link>
           </div>
           
-          <div className="schools-grid">
+          <div className="accueil-schools-grid">
             {rabatSchools.map(school => (
               <SchoolCard key={school.idEcole} school={school} />
             ))}
