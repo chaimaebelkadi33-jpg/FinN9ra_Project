@@ -8,7 +8,6 @@ import EcoleDetails from './Components/EcoleDetail';
 // Import Pages
 import Accueil from './Pages/Accueil';
 import Ecoles from './Pages/Ecoles';
-
 import Avis from './Pages/Avis';
 import Contact from './Pages/Contact';
 import Login from './Pages/Login';
