@@ -109,7 +109,7 @@ const SearchBar = ({ onSearch, onFilter }) => {
       <form className="searchbar-box" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="بحث في مدرستك..."
+          placeholder="...بحث عن مدرستك"
           value={query}
           onChange={handleSearch}
         />
