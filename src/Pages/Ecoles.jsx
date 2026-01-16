@@ -35,7 +35,6 @@ function Ecoles() {
       setSchools(allSchools);
       setFilteredSchools(allSchools);
       
-      // Calculate initial price range
       const prices = allSchools.map(school => {
         const priceStr = school.cout;
         const match = priceStr.match(/\d+/);
@@ -61,7 +60,6 @@ function Ecoles() {
   const applyFilters = () => {
     let results = [...schools];
 
-    // Apply filters
     if (filters.ville) {
       results = results.filter(school => 
         school.ville.toLowerCase() === filters.ville.toLowerCase()
@@ -81,7 +79,6 @@ function Ecoles() {
       );
     }
 
-    // Apply price filter
     results = results.filter(school => {
       const priceStr = school.cout;
       const match = priceStr.match(/\d+/);
@@ -89,20 +86,18 @@ function Ecoles() {
       return price >= filters.minPrice && price <= filters.maxPrice;
     });
 
-    // Apply sorting
     results.sort((a, b) => {
       switch (sortBy) {
         case 'note':
-          return b.note - a.note; // Highest rating first
+          return b.note - a.note;
         case 'nom':
-          return a.nom.localeCompare(b.nom); // Alphabetical
+          return a.nom.localeCompare(b.nom);
         case 'price':
-          // Extract number from string like "15000 MAD/an"
           const getPrice = (priceStr) => {
             const match = priceStr.match(/\d+/);
             return match ? parseInt(match[0]) : 0;
           };
-          return getPrice(a.cout) - getPrice(b.cout); // Cheapest first
+          return getPrice(a.cout) - getPrice(b.cout);
         default:
           return 0;
       }
@@ -134,8 +129,8 @@ function Ecoles() {
     });
   };
 
-  const handleSortChange = (e) => {
-    setSortBy(e.target.value);
+  const handleSortChange = (sortValue) => {
+    setSortBy(sortValue);
   };
 
   if (loading) {
@@ -146,71 +141,54 @@ function Ecoles() {
     );
   }
 
- // Update the return structure in Ecoles.jsx
-return (
-  <div className="ecoles-page">
-    {/* Page Header */}
-    <div className="page-header">
-      <h1>Liste des Écoles</h1>
-      <p className="page-subtitle">
-        Découvrez toutes les écoles disponibles. Filtrez par ville, type, spécialité ou prix.
-      </p>
-    </div>
+  return (
+    <div className="ecoles-page">
+      {/* Page Header */}
+      <div className="page-header">
+        <h1>Liste des Écoles</h1>
+        <p className="page-subtitle">
+          Découvrez toutes les écoles disponibles. Filtrez par ville, type, spécialité ou prix.
+        </p>
+      </div>
 
-    <div className="ecoles-container">
-      {/* Filters Sidebar - Now sticky/fixed */}
-      <aside className="filters-sidebar">
-        <Filters 
-          activeFilters={filters}
-          onFilterChange={handleFilterChange}
-          onReset={resetFilters}
-        />
-      </aside>
-
-      {/* Main Content */}
-      <main className="schools-main">
-        {/* Results Header */}
-        <div className="results-header">
-          <div className="results-info">
-            <h2>{filteredSchools.length} école{filteredSchools.length !== 1 ? 's' : ''} trouvée{filteredSchools.length !== 1 ? 's' : ''}</h2>
-            {filteredSchools.length !== schools.length && (
-              <p className="filtered-count">
-                (sur {schools.length} au total)
-              </p>
-            )}
-          </div>
-
-          {/* Sort Options */}
-          <div className="sort-options">
-            <label htmlFor="sortBy">Trier par:</label>
-            <select 
-              id="sortBy" 
-              value={sortBy}
-              onChange={handleSortChange}
-              className="sort-select"
-            >
-              <option value="note">Meilleures notes</option>
-              <option value="nom">Nom (A-Z)</option>
-              <option value="price">Prix (croissant)</option>
-            </select>
-          </div>
+      <div className="ecoles-container">
+        {/* Centered Filter Component */}
+        <div className="centered-filters-container">
+          <Filters 
+            activeFilters={filters}
+            onFilterChange={handleFilterChange}
+            onReset={resetFilters}
+            sortBy={sortBy}
+            onSortChange={handleSortChange}
+            filteredCount={filteredSchools.length}
+            totalCount={schools.length}
+          />
         </div>
 
-        {/* Schools Grid */}
-        {filteredSchools.length > 0 ? (
-          <div className="schools-grid">
-            {filteredSchools.map(school => (
-              <SchoolCard key={school.idEcole} school={school} />
-            ))}
-          </div>
-        ) : (
-          <div className="no-results">
-            {/* ... */}
-          </div>
-        )}
-      </main>
+        {/* Main Content */}
+        <main className="schools-main">
+          {/* Schools Grid */}
+          {filteredSchools.length > 0 ? (
+            <div className="schools-grid">
+              {filteredSchools.map(school => (
+                <SchoolCard key={school.idEcole} school={school} />
+              ))}
+            </div>
+          ) : (
+            <div className="no-results">
+              <div className="no-results-content">
+                <h3>Aucune école ne correspond à vos critères</h3>
+                <p>Essayez de modifier vos filtres pour voir plus de résultats.</p>
+                <button onClick={resetFilters} className="reset-filters-btn">
+                  Réinitialiser tous les filtres
+                </button>
+              </div>
+            </div>
+          )}
+        </main>
+      </div>
     </div>
-  </div>
-);
+  );
 }
+
 export default Ecoles;
