@@ -400,29 +400,6 @@ function EcoleDetails() {
                   <p>{school.ville}, Maroc</p>
                 </div>
               </div>
-              
-              <div className="contact-card">
-                <span className="contact-icon">📞</span>
-                <div className="contact-content">
-                  <h4>Contact</h4>
-                  <p>Voir site web pour les numéros de téléphone</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="action-buttons">
-              <button 
-                className="primary-action-btn"
-                onClick={() => window.open(school.siteWeb, '_blank')}
-              >
-                Visiter le site officiel
-              </button>
-              <button 
-                className="secondary-action-btn"
-                onClick={() => window.location.href = `mailto:${school.contact}`}
-              >
-                Contacter l'école
-              </button>
             </div>
           </div>
         )}

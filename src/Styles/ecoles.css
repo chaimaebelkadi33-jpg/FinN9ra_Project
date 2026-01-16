@@ -1,297 +1,142 @@
 /* src/Styles/ecoles.css */
 
-/* Page Container */
 .ecoles-page {
   min-height: 100vh;
   background: #f8f9fa;
 }
 
-/* Page Header */
 .page-header {
-  background: linear-gradient(135deg, #f8f9fa , #f8f9fa );
-  color: #002147;
-  padding: 2px 2px;
   text-align: center;
+  padding: 40px 20px 20px;
+  background: white;
+  margin-bottom: 20px;
 }
 
 .page-header h1 {
-  font-size: 2rem;
-  margin-bottom: 2px;
-  font-weight: 800;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .page-subtitle {
-  font-size: 1.1rem;
-  opacity: 0.92;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1;
-}
-
-/* Main Container */
-.ecoles-container {
-  display: flex;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 30px 20px;
-  gap: 30px;
-}
-
-/* Filters Sidebar */
-.filters-sidebar {
-  flex: 0 0 300px;
-  height: fit-content;
-  position: sticky;
-  top: 20px;
-}
-
-/* Main Content */
-.schools-main {
-  flex: 1;
-  min-width: 0; /* Prevent flex overflow */
-}
-
-.results-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.results-info h2 {
-  font-size: 1.5rem;
-  color: #002147;
-  margin: 0 0 5px 0;
-}
-
-.filtered-count {
   color: #666;
-  font-size: 0.9rem;
-  margin: 0;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* Sort Options */
-.sort-options {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.ecoles-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.sort-options label {
-  color:#001A36;
-  font-size: 0.95rem;
-  font-weight: 600;
+.schools-main {
+  margin-top: 20px;
 }
 
-.sort-select {
-  padding: 2px 2px;
-  border: 1px solid #e0e0e0;
-  border-radius: 15px;
-  background: white;
-  color: #002147;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.sort-select:hover {
-  border-color: #002147;
-}
-
-.sort-select:focus {
-  outline: none;
-  border-color: #002147;
-}
-
-/* Schools Grid */
 .schools-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 25px;
+  margin-top: 20px;
 }
 
-/* No Results */
-.no-results {
-  background: white;
-  border-radius: 15px;
-  padding: 60px 40px;
+.loading {
   text-align: center;
+  padding: 60px 20px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
 }
 
 .no-results-content h3 {
-  font-size: 1.5rem;
-  color: #333;
+  color: #2c3e50;
   margin-bottom: 15px;
 }
 
 .no-results-content p {
   color: #666;
   margin-bottom: 25px;
-  font-size: 1.1rem;
 }
 
-.reset-btn {
-  background: #00c8d7;
+.reset-filters-btn {
+  background: #4a90e2;
   color: white;
   border: none;
-  padding: 12px 30px;
-  border-radius: 25px;
+  padding: 12px 25px;
+  border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
 
-.reset-btn:hover {
-  background: #00a8b5;
+.reset-filters-btn:hover {
+  background: #357ae8;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 200, 215, 0.3);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.3);
 }
 
-/* Loading */
-.loading {
-  text-align: center;
-  padding: 100px 20px;
-  font-size: 1.2rem;
-  color: #666;
-  background: #f8f9fa;
-}
-
-/* ===== VERSION MOBILE - HORIZONTALE ===== */
-@media (max-width: 768px) {
-  .filters-container {
-    position: relative;
-    top: auto;
-    height: auto; /* Hauteur auto */
-    padding: 15px;
-    margin: 0 10px 20px 10px;
-    overflow-x: auto; /* Défilement horizontal */
-    overflow-y: hidden;
-    border-radius: 12px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .ecoles-container {
+    flex-direction: column;
   }
-
-  /* Changement principal : de vertical à horizontal */
-  .filters-container.vertical-layout {
-    flex-direction: row; /* Ligne au lieu de colonne */
-    gap: 12px;
+  
+  .filters-sidebar {
+    position: static;
+    width: 100%;
+  }
+  
+  .results-header {
+    flex-direction: column;
+    gap: 15px;
     align-items: flex-start;
-    flex-wrap: nowrap;
-  }
-
-  /* Header caché sur mobile */
-  .filters-header {
-    display: none;
-  }
-
-  /* Stack devient horizontal */
-  .filters-stack {
-    flex-direction: row; /* Horizontal! */
-    gap: 12px;
-    flex-wrap: nowrap;
-    width: max-content; /* S'adapte au contenu */
-    min-width: 100%;
-    padding-bottom: 8px; /* Espace pour scrollbar */
-  }
-
-  /* Chaque filtre prend une largeur fixe */
-  .filter-item {
-    min-width: 160px; /* Largeur minimale */
-    max-width: 200px;
-    flex-shrink: 0; /* Ne pas rétrécir */
-    margin: 0;
-  }
-
-  /* Cache les labels */
-  .filter-label {
-    display: none;
-  }
-
-  /* Ajuste les tags */
-  .filter-tag {
-    padding: 12px 15px;
-    font-size: 13px;
-    white-space: nowrap; /* Pas de retour à la ligne */
-    text-align: center;
-    justify-content: center;
-  }
-
-  /* Cache le bouton remove */
-  .filter-tag .remove {
-    display: none;
-  }
-
-  /* Indicateur visuel pour filtre actif */
-  .filter-tag.active {
-    background: #00c8d7;
-    color: white;
-    border-color: #00c8d7;
-  }
-
-  /* Prix en mode horizontal */
-  .price-filter-item {
-    margin-top: 0;
-    min-width: 180px;
-  }
-
-  .price-filter-content {
-    padding: 15px;
-  }
-
-  /* Filtres actifs - cacher le bloc séparé */
-  .active-filters-display {
-    display: none;
-  }
-
-  /* Dropdown mobile amélioré */
-  .filter-dropdown {
-    position: fixed;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 90%;
-    max-width: 320px;
-    max-height: 70vh;
-    z-index: 10000;
-  }
-
-  /* Scrollbar horizontale stylisée */
-  .filters-stack::-webkit-scrollbar {
-    height: 5px;
-  }
-
-  .filters-stack::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-  }
-
-  .filters-stack::-webkit-scrollbar-thumb {
-    background: #00c8d7;
-    border-radius: 10px;
   }
 }
 
-/* ===== VERSION DESKTOP - INCHANGÉ ===== */
-@media (min-width: 769px) {
-  /* Tout reste exactement comme avant */
-  .filters-container {
-    position: sticky;
-    top: 20px;
-    height: 85vh;
-    overflow-y: auto;
+@media (max-width: 768px) {
+  .page-header {
+    padding: 40px 20px;
   }
   
-  .filters-container.vertical-layout {
-    flex-direction: column;
+  .page-header h1 {
+    font-size: 2rem;
   }
   
-  .filters-stack {
-    flex-direction: column;
+  .ecoles-container {
+    padding: 20px 15px;
+  }
+  
+  .schools-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding: 30px 15px;
+  }
+  
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .no-results {
+    padding: 40px 20px;
+  }
+  
+  .reset-btn {
+    width: 100%;
   }
   
   /* ... toutes vos règles desktop actuelles ... */

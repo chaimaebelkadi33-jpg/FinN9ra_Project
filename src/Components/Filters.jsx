@@ -1,9 +1,17 @@
-// src/Components/Filters.jsx - UPDATED: Vertical layout with visible price sliders
-import React, { useState, useEffect } from 'react';
+// src/Components/Filters.jsx
+import React, { useState, useEffect, useRef } from 'react';
 import { dataService } from '../Services/dataService';
 import '../Styles/filters.css';
 
-const Filters = ({ activeFilters, onFilterChange, onReset }) => {
+const Filters = ({ 
+  activeFilters, 
+  onFilterChange, 
+  onReset,
+  sortBy,
+  onSortChange,
+  filteredCount,
+  totalCount 
+}) => {
   const [filterOptions, setFilterOptions] = useState({
     villes: [],
     types: [],
@@ -13,8 +21,9 @@ const Filters = ({ activeFilters, onFilterChange, onReset }) => {
   const [loading, setLoading] = useState(true);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [priceRange, setPriceRange] = useState({ min: 0, max: 20000 });
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
-  // Fetch filter options
   useEffect(() => {
     const loadFilterOptions = async () => {
       try {
@@ -26,7 +35,6 @@ const Filters = ({ activeFilters, onFilterChange, onReset }) => {
           specialites: options.specialites
         });
 
-        // Calculate price range
         const allSchools = await dataService.getAllEcoles();
         const prices = allSchools.map(school => {
           const priceStr = school.cout;
@@ -39,7 +47,6 @@ const Filters = ({ activeFilters, onFilterChange, onReset }) => {
         
         setPriceRange({ min: minPrice, max: maxPrice });
 
-        // Initialize price filters if not set
         if (!activeFilters.minPrice || !activeFilters.maxPrice) {
           onFilterChange({
             ...activeFilters,
@@ -57,22 +64,31 @@ const Filters = ({ activeFilters, onFilterChange, onReset }) => {
     
     loadFilterOptions();
   }, []);
-// Add this useEffect to close dropdowns when clicking outside
-useEffect(() => {
-  const handleClickOutside = (event) => {
-    // Close dropdown if click is outside filter tag and dropdown
-    if (activeDropdown && 
-        !event.target.closest('.filter-tag-container') &&
-        !event.target.closest('.filter-dropdown')) {
-      setActiveDropdown(null);
-    }
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (activeDropdown && 
+          !event.target.closest('.filter-select') &&
+          !event.target.closest('.options-dropdown')) {
+        setActiveDropdown(null);
+      }
+      
+      if (menuOpen && menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [activeDropdown, menuOpen]);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    setActiveDropdown(null);
   };
 
-  document.addEventListener('mousedown', handleClickOutside);
-  return () => {
-    document.removeEventListener('mousedown', handleClickOutside);
-  };
-}, [activeDropdown]);
   const toggleDropdown = (filterType) => {
     setActiveDropdown(activeDropdown === filterType ? null : filterType);
   };
@@ -92,7 +108,6 @@ useEffect(() => {
       ...activeFilters,
       [filterType]: ""
     };
-    
     onFilterChange(newFilters);
   };
 
@@ -102,7 +117,6 @@ useEffect(() => {
       ...activeFilters,
       [name]: parseInt(value)
     };
-    
     onFilterChange(newFilters);
   };
 
@@ -125,160 +139,217 @@ useEffect(() => {
     (activeFilters.minPrice !== undefined && activeFilters.minPrice !== priceRange.min) || 
     (activeFilters.maxPrice !== undefined && activeFilters.maxPrice !== priceRange.max);
 
+  const getActiveFiltersCount = () => {
+    let count = 0;
+    if (activeFilters.ville) count++;
+    if (activeFilters.type) count++;
+    if (activeFilters.specialite) count++;
+    if (activeFilters.minPrice !== priceRange.min || activeFilters.maxPrice !== priceRange.max) count++;
+    return count;
+  };
+
   if (loading) {
     return (
-      <div className="filters-container">
+      <div className="filters-main-container">
         <div className="filters-loading">Chargement des filtres...</div>
       </div>
     );
   }
 
   return (
-    <div className="filters-container vertical-layout">
-      <div className="filters-header">
-        <h3>Filtres</h3>
-        {hasActiveFilters && (
-          <button 
-            onClick={onReset}
-            className="clear-filters-btn"
-          >
-            Réinitialiser
-          </button>
-        )}
+    <div className="filters-main-container" ref={menuRef}>
+      {/* Centered Toggle Bar */}
+      <div className="filter-toggle-bar">
+        <button 
+          className={`filter-toggle-btn ${menuOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+        >
+          <span className="filter-icon">⚙️</span>
+          <span className="filter-text">Filtres & Tri</span>
+          {hasActiveFilters && (
+            <span className="active-badge">{getActiveFiltersCount()}</span>
+          )}
+        </button>
+        
+        <div className="filter-info">
+          <div className="results-count">
+            <span className="count-number">{filteredCount}</span>
+            <span className="count-text">école{filteredCount !== 1 ? 's' : ''}</span>
+            {filteredCount !== totalCount && (
+              <span className="total-count">sur {totalCount}</span>
+            )}
+          </div>
+          
+          {hasActiveFilters && (
+            <button 
+              onClick={onReset}
+              className="clear-all-btn-small"
+              title="Réinitialiser tous les filtres"
+            >
+              ✕
+            </button>
+          )}
+        </div>
       </div>
 
-      {/* Filters Stacked Vertically */}
-      <div className="filters-stack">
-        {/* Ville Filter */}
-        <div className="filter-item">
-          <label className="filter-label">Ville</label>
-          <div className="filter-tag-container">
-            <div 
-              className={`filter-tag ${activeFilters.ville ? 'active' : ''}`}
-              onClick={() => toggleDropdown('ville')}
+      {/* Dropdown Menu Overlay */}
+      <div className={`filter-overlay-menu ${menuOpen ? 'open' : ''}`}>
+        <div className="menu-header">
+          <h3>Filtres & Options de tri</h3>
+          <button 
+            onClick={() => setMenuOpen(false)}
+            className="close-menu-btn"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* Sort Options Section */}
+        <div className="sort-section">
+          <label className="sort-label">Trier par:</label>
+          <div className="sort-buttons">
+            <button 
+              className={`sort-btn ${sortBy === 'note' ? 'active' : ''}`}
+              onClick={() => onSortChange('note')}
             >
-              {activeFilters.ville || 'Toutes les villes'}
+              ⭐ Meilleures notes
+            </button>
+            <button 
+              className={`sort-btn ${sortBy === 'nom' ? 'active' : ''}`}
+              onClick={() => onSortChange('nom')}
+            >
+              🔤 Nom (A-Z)
+            </button>
+            <button 
+              className={`sort-btn ${sortBy === 'price' ? 'active' : ''}`}
+              onClick={() => onSortChange('price')}
+            >
+              💰 Prix (croissant)
+            </button>
+          </div>
+        </div>
+
+        <div className="filters-grid">
+          {/* Ville Filter */}
+          <div className="filter-group">
+            <label className="filter-group-label">
+              Ville
               {activeFilters.ville && (
-                <span 
-                  className="remove" 
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    clearFilter('ville');
-                  }}
-                >
-                  ✕
-                </span>
+                <span className="filter-value">{activeFilters.ville}</span>
+              )}
+            </label>
+            <div className="filter-tag-container">
+              <div 
+                className={`filter-select ${activeFilters.ville ? 'active' : ''}`}
+                onClick={() => toggleDropdown('ville')}
+              >
+                {activeFilters.ville || 'Toutes les villes'}
+                <span className="select-arrow">▼</span>
+              </div>
+              
+              {activeDropdown === 'ville' && (
+                <div className="options-dropdown">
+                  <div className="dropdown-scroll">
+                    {filterOptions.villes.map((ville, index) => (
+                      <div 
+                        key={index}
+                        className={`dropdown-item ${activeFilters.ville === ville ? 'selected' : ''}`}
+                        onClick={() => selectFilter('ville', ville)}
+                      >
+                        {ville}
+                        {activeFilters.ville === ville && <span className="check">✓</span>}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               )}
             </div>
-            
-            {activeDropdown === 'ville' && (
-              <div className="filter-dropdown active">
-                <div className="dropdown-options">
-                  {filterOptions.villes.map((ville, index) => (
-                    <div 
-                      key={index}
-                      className={`dropdown-option ${activeFilters.ville === ville ? 'selected' : ''}`}
-                      onClick={() => selectFilter('ville', ville)}
-                    >
-                      {ville}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
-        </div>
 
-        {/* Type Filter */}
-        <div className="filter-item">
-          <label className="filter-label">Type</label>
-          <div className="filter-tag-container">
-            <div 
-              className={`filter-tag ${activeFilters.type ? 'active' : ''}`}
-              onClick={() => toggleDropdown('type')}
-            >
-              {activeFilters.type || 'Tous les types'}
+          {/* Type Filter */}
+          <div className="filter-group">
+            <label className="filter-group-label">
+              Type d'établissement
               {activeFilters.type && (
-                <span 
-                  className="remove" 
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    clearFilter('type');
-                  }}
-                >
-                  ✕
-                </span>
+                <span className="filter-value">{activeFilters.type}</span>
+              )}
+            </label>
+            <div className="filter-tag-container">
+              <div 
+                className={`filter-select ${activeFilters.type ? 'active' : ''}`}
+                onClick={() => toggleDropdown('type')}
+              >
+                {activeFilters.type || 'Tous les types'}
+                <span className="select-arrow">▼</span>
+              </div>
+              
+              {activeDropdown === 'type' && (
+                <div className="options-dropdown">
+                  <div className="dropdown-scroll">
+                    {filterOptions.types.map((type, index) => (
+                      <div 
+                        key={index}
+                        className={`dropdown-item ${activeFilters.type === type ? 'selected' : ''}`}
+                        onClick={() => selectFilter('type', type)}
+                      >
+                        {type}
+                        {activeFilters.type === type && <span className="check">✓</span>}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               )}
             </div>
-            
-            {activeDropdown === 'type' && (
-              <div className="filter-dropdown active">
-                <div className="dropdown-options">
-                  {filterOptions.types.map((type, index) => (
-                    <div 
-                      key={index}
-                      className={`dropdown-option ${activeFilters.type === type ? 'selected' : ''}`}
-                      onClick={() => selectFilter('type', type)}
-                    >
-                      {type}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
-        </div>
 
-        {/* Spécialité Filter */}
-        <div className="filter-item">
-          <label className="filter-label">Spécialité</label>
-          <div className="filter-tag-container">
-            <div 
-              className={`filter-tag ${activeFilters.specialite ? 'active' : ''}`}
-              onClick={() => toggleDropdown('specialite')}
-            >
-              {activeFilters.specialite || 'Toutes les spécialités'}
+          {/* Spécialité Filter */}
+          <div className="filter-group">
+            <label className="filter-group-label">
+              Spécialité
               {activeFilters.specialite && (
-                <span 
-                  className="remove" 
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    clearFilter('specialite');
-                  }}
-                >
-                  ✕
-                </span>
+                <span className="filter-value">{activeFilters.specialite}</span>
+              )}
+            </label>
+            <div className="filter-tag-container">
+              <div 
+                className={`filter-select ${activeFilters.specialite ? 'active' : ''}`}
+                onClick={() => toggleDropdown('specialite')}
+              >
+                {activeFilters.specialite || 'Toutes les spécialités'}
+                <span className="select-arrow">▼</span>
+              </div>
+              
+              {activeDropdown === 'specialite' && (
+                <div className="options-dropdown">
+                  <div className="dropdown-scroll">
+                    {filterOptions.specialites.slice(0, 15).map((specialite, index) => (
+                      <div 
+                        key={index}
+                        className={`dropdown-item ${activeFilters.specialite === specialite ? 'selected' : ''}`}
+                        onClick={() => selectFilter('specialite', specialite)}
+                      >
+                        {specialite}
+                        {activeFilters.specialite === specialite && <span className="check">✓</span>}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               )}
             </div>
-            
-            {activeDropdown === 'specialite' && (
-              <div className="filter-dropdown active">
-                <div className="dropdown-options">
-                  {filterOptions.specialites.slice(0, 20).map((specialite, index) => (
-                    <div 
-                      key={index}
-                      className={`dropdown-option ${activeFilters.specialite === specialite ? 'selected' : ''}`}
-                      onClick={() => selectFilter('specialite', specialite)}
-                    >
-                      {specialite}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
-        </div>
 
-        {/* Price Filter - ALWAYS VISIBLE with sliders */}
-        <div className="filter-item price-filter-item">
-          <label className="filter-label">
-            Fourchette de prix: {formatPrice(activeFilters.minPrice || priceRange.min)} - {formatPrice(activeFilters.maxPrice || priceRange.max)}
-          </label>
-          
-          <div className="price-filter-content">
-            <div className="price-sliders">
-              <div className="price-slider-container">
-                <span className="price-label">Min: {formatPrice(activeFilters.minPrice || priceRange.min)}</span>
+          {/* Price Filter */}
+          <div className="filter-group price-group">
+            <label className="filter-group-label">
+              Fourchette de prix
+            </label>
+            
+            <div className="current-price-display">
+              {formatPrice(activeFilters.minPrice || priceRange.min)} - {formatPrice(activeFilters.maxPrice || priceRange.max)}
+            </div>
+            
+            <div className="price-slider-container">
+              <div className="slider-wrapper">
                 <input
                   type="range"
                   name="minPrice"
@@ -286,12 +357,8 @@ useEffect(() => {
                   max={priceRange.max}
                   value={activeFilters.minPrice || priceRange.min}
                   onChange={handlePriceChange}
-                  className="price-slider"
+                  className="price-range-slider"
                 />
-              </div>
-              
-              <div className="price-slider-container">
-                <span className="price-label">Max: {formatPrice(activeFilters.maxPrice || priceRange.max)}</span>
                 <input
                   type="range"
                   name="maxPrice"
@@ -299,8 +366,13 @@ useEffect(() => {
                   max={priceRange.max}
                   value={activeFilters.maxPrice || priceRange.max}
                   onChange={handlePriceChange}
-                  className="price-slider"
+                  className="price-range-slider"
                 />
+              </div>
+              
+              <div className="slider-labels">
+                <span>{formatPrice(priceRange.min)}</span>
+                <span>{formatPrice(priceRange.max)}</span>
               </div>
             </div>
             
@@ -314,40 +386,30 @@ useEffect(() => {
             )}
           </div>
         </div>
-      </div>
 
-      {/* Active Filters Display */}
-      {hasActiveFilters && (
-        <div className="active-filters-display">
-          <h4>Filtres actifs:</h4>
-          <div className="active-filter-tags">
-            {activeFilters.ville && (
-              <span className="active-filter-tag">
-                Ville: {activeFilters.ville}
-                <button onClick={() => clearFilter('ville')}>✕</button>
-              </span>
+        <div className="menu-actions">
+          <div className="active-filters-count">
+            <strong>{getActiveFiltersCount()}</strong> filtre{getActiveFiltersCount() !== 1 ? 's' : ''} actif{getActiveFiltersCount() !== 1 ? 's' : ''}
+          </div>
+          
+          <div className="action-buttons">
+            {hasActiveFilters && (
+              <button 
+                onClick={onReset}
+                className="reset-all-btn"
+              >
+                Tout réinitialiser
+              </button>
             )}
-            {activeFilters.type && (
-              <span className="active-filter-tag">
-                Type: {activeFilters.type}
-                <button onClick={() => clearFilter('type')}>✕</button>
-              </span>
-            )}
-            {activeFilters.specialite && (
-              <span className="active-filter-tag">
-                Spécialité: {activeFilters.specialite}
-                <button onClick={() => clearFilter('specialite')}>✕</button>
-              </span>
-            )}
-            {(activeFilters.minPrice !== priceRange.min || activeFilters.maxPrice !== priceRange.max) && (
-              <span className="active-filter-tag">
-                Prix: {formatPrice(activeFilters.minPrice || priceRange.min)} - {formatPrice(activeFilters.maxPrice || priceRange.max)}
-                <button onClick={clearPriceFilter}>✕</button>
-              </span>
-            )}
+            <button 
+              onClick={() => setMenuOpen(false)}
+              className="apply-filters-btn"
+            >
+              Appliquer
+            </button>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };
@@ -355,7 +417,11 @@ useEffect(() => {
 Filters.defaultProps = {
   activeFilters: {},
   onFilterChange: () => {},
-  onReset: () => {}
+  onReset: () => {},
+  sortBy: 'note',
+  onSortChange: () => {},
+  filteredCount: 0,
+  totalCount: 0
 };
 
 export default Filters;

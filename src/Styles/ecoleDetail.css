@@ -1,12 +1,12 @@
-
 /* Main Container */
 .ecole-details-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  direction: rtl;
-  text-align: right;
+  direction: ltr;
+  text-align: left;
+  transition: all 0.3s ease;
 }
 
 /* Back Navigation */
@@ -31,6 +31,11 @@
 .back-button:hover {
   background-color: #f0f7ff;
   color: #357ae8;
+}
+
+.back-button:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
 }
 
 /* Header Section */
@@ -140,7 +145,7 @@
 .image-overlay {
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
 }
 
 .price-tag {
@@ -160,7 +165,6 @@
   margin: 40px 0 30px;
   border-bottom: 2px solid #e0e0e0;
   padding-bottom: 5px;
-  overflow-x: auto;
 }
 
 .tab-button {
@@ -181,6 +185,11 @@
   background-color: #f5f9ff;
 }
 
+.tab-button:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
 .tab-button.active {
   color: #4a90e2;
   font-weight: 600;
@@ -190,8 +199,8 @@
   content: '';
   position: absolute;
   bottom: -7px;
-  right: 0;
   left: 0;
+  right: 0;
   height: 3px;
   background: #4a90e2;
   border-radius: 3px;
@@ -266,7 +275,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   margin: 0;
-  
+  line-height: 1.4;
 }
 
 /* Specialties Tab */
@@ -285,32 +294,33 @@
 }
 
 .specialty-card {
-  background: #f8f9fa; /* cyan-light */
+  background: #f8f9fa;
   border-radius: 10px;
   padding: 15px;
   display: flex;
   align-items: center;
   gap: 12px;
   transition: all 0.3s ease;
-  border: 1px solid #e9ecef;;
+  border: 1px solid #e9ecef;
 }
 
 .specialty-card:hover {
-   transform: translateY(-5px);
+  transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   border-color: #4a90e2;
 }
 
 .specialty-icon {
   font-size: 1.5rem;
-  color: #002147; /* oxford-blue */
+  color: #002147;
 }
 
 .specialty-name {
-  color: #001a36; /* oxford-dark */
+  color: #001a36;
   font-weight: 600;
   font-size: 1rem;
 }
+
 /* Admission Tab */
 .admission-tab h3 {
   color: #2c3e50;
@@ -329,12 +339,12 @@
   background: #f8f9fa;
   border-radius: 12px;
   padding: 20px;
-  border-right: 4px solid #4a90e2;
+  border-left: 4px solid #4a90e2; 
 }
 
 .info-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 12px 0;
   border-bottom: 1px solid #e9ecef;
@@ -348,13 +358,16 @@
   color: #666;
   font-weight: 500;
   font-size: 1rem;
+  min-width: 100px;
+  text-align: left;
+  margin-right: 15px;
 }
 
 .info-value {
   color: #2c3e50;
   font-weight: 600;
   font-size: 1.05rem;
-  text-align: left;
+  text-align: left; 
   max-width: 70%;
 }
 
@@ -366,7 +379,7 @@
 }
 
 .debouché-card {
- background: #f8f9fa;
+  background: #f8f9fa;
   border-radius: 12px;
   padding: 20px;
   display: flex;
@@ -377,7 +390,7 @@
 }
 
 .debouché-card:hover {
- transform: translateY(-5px);
+  transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   border-color: #4a90e2;
 }
@@ -403,8 +416,9 @@
   transition: all 0.3s ease;
   border: 1px solid #e9ecef;
 }
+
 .cost-card:hover {
- transform: translateY(-5px);
+  transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   border-color: #4a90e2;
 }
@@ -451,7 +465,7 @@
 }
 
 .contact-card {
-   background: #f8f9fa;
+  background: #f8f9fa;
   border-radius: 12px;
   padding: 20px;
   display: flex;
@@ -462,7 +476,7 @@
 }
 
 .contact-card:hover {
- transform: translateY(-5px);
+  transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   border-color: #4a90e2;
 }
@@ -493,46 +507,6 @@
   text-decoration: underline;
 }
 
-.action-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.primary-action-btn,
-.secondary-action-btn {
-  padding: 14px 30px;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-}
-
-.primary-action-btn {
-  background: #4a90e2;
-  color: white;
-}
-
-.primary-action-btn:hover {
-  background: #357ae8;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.3);
-}
-
-.secondary-action-btn {
-  background: white;
-  color: #4a90e2;
-  border: 2px solid #4a90e2;
-}
-
-.secondary-action-btn:hover {
-  background: #f0f7ff;
-  transform: translateY(-3px);
-}
-
 /* Loading State */
 .loading-container {
   display: flex;
@@ -557,6 +531,11 @@
   100% { transform: rotate(360deg); }
 }
 
+.loading-container p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
 /* Not Found State */
 .not-found-container {
   text-align: center;
@@ -566,18 +545,20 @@
 .not-found-container h2 {
   color: #2c3e50;
   margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
 .not-found-container p {
   color: #666;
   margin-bottom: 30px;
+  font-size: 1.1rem;
 }
 
 /* Floating Action Button */
 .floating-action {
   position: fixed;
   bottom: 30px;
-  left: 30px;
+  right: 30px; 
   z-index: 1000;
 }
 
@@ -598,6 +579,11 @@
   background: #357ae8;
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(74, 144, 226, 0.5);
+}
+
+.floating-action-btn:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
 }
 
 /* Responsive Design */
@@ -645,7 +631,12 @@
   
   .floating-action {
     bottom: 20px;
-    left: 20px;
+    right: 20px; 
+  }
+  
+  .image-overlay {
+    bottom: 15px;
+    right: 15px; 
   }
 }
 
@@ -669,6 +660,12 @@
     align-items: flex-start;
   }
   
+  .school-type,
+  .school-rating {
+    width: 100%;
+    text-align: center;
+  }
+  
   .info-row {
     flex-direction: column;
     align-items: flex-start;
@@ -677,6 +674,76 @@
   
   .info-value {
     max-width: 100%;
-    text-align: right;
+    text-align: left;
+  }
+  
+  .image-overlay {
+    bottom: 10px;
+    right: 10px; /* Changed for LTR */
+  }
+  
+  .info-box {
+    padding: 15px;
+  }
+  
+  .cost-main {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .cost-icon {
+    font-size: 2rem;
+  }
+  
+  .cost-amount {
+    font-size: 1.5rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .floating-action,
+  .action-buttons,
+  .back-navigation {
+    display: none;
+  }
+  
+  .ecole-details-container {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .main-image-container {
+    height: 200px;
+  }
+  
+  .tab-content {
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  .tabs-navigation {
+    border: none;
+  }
+  
+  .tab-button {
+    display: none;
+  }
+  
+  .tab-button.active {
+    display: block;
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+  
+  .info-card,
+  .specialty-card,
+  .debouché-card,
+  .contact-card,
+  .cost-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
   }
 }
