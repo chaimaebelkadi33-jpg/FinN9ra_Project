@@ -1,4 +1,4 @@
-// src/Pages/Ecoles.jsx
+// src/Pages/Ecoles.jsx - COMPLETELY CORRECTED VERSION
 import React, { useState, useEffect } from 'react';
 import { dataService } from '../Services/dataService';
 import Filters from '../Components/Filters';
@@ -9,13 +9,25 @@ function Ecoles() {
   const [schools, setSchools] = useState([]);
   const [filteredSchools, setFilteredSchools] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [filters, setFilters] = useState({
+  
+  // LOCAL filters - for UI changes only
+  const [localFilters, setLocalFilters] = useState({
     ville: '',
     type: '',
     specialite: '',
     minPrice: 0,
     maxPrice: 20000
   });
+  
+  // APPLIED filters - actual filters that affect results
+  const [appliedFilters, setAppliedFilters] = useState({
+    ville: '',
+    type: '',
+    specialite: '',
+    minPrice: 0,
+    maxPrice: 20000
+  });
+  
   const [sortBy, setSortBy] = useState('note');
 
   // Fetch all schools on component mount
@@ -23,10 +35,10 @@ function Ecoles() {
     loadSchools();
   }, []);
 
-  // Apply filters when filters or sort changes
+  // Apply filters ONLY when appliedFilters or sort changes
   useEffect(() => {
     applyFilters();
-  }, [filters, sortBy, schools]);
+  }, [appliedFilters, sortBy, schools]);
 
   const loadSchools = async () => {
     try {
@@ -44,11 +56,17 @@ function Ecoles() {
       const minPrice = Math.min(...prices);
       const maxPrice = Math.max(...prices);
       
-      setFilters(prev => ({
-        ...prev,
+      // Initialize both filter states
+      const initialFilters = {
+        ville: '',
+        type: '',
+        specialite: '',
         minPrice: minPrice,
         maxPrice: maxPrice
-      }));
+      };
+      
+      setLocalFilters(initialFilters);
+      setAppliedFilters(initialFilters);
       
     } catch (error) {
       console.error('Error loading schools:', error);
@@ -60,32 +78,35 @@ function Ecoles() {
   const applyFilters = () => {
     let results = [...schools];
 
-    if (filters.ville) {
+    // Use APPLIED filters (not local filters)
+    if (appliedFilters.ville) {
       results = results.filter(school => 
-        school.ville.toLowerCase() === filters.ville.toLowerCase()
+        school.ville.toLowerCase() === appliedFilters.ville.toLowerCase()
       );
     }
 
-    if (filters.type) {
+    if (appliedFilters.type) {
       results = results.filter(school => 
-        school.type === filters.type
+        school.type === appliedFilters.type
       );
     }
 
-    if (filters.specialite) {
+    if (appliedFilters.specialite) {
       results = results.filter(school => 
         school.specialites && 
-        school.specialites.includes(filters.specialite)
+        school.specialites.includes(appliedFilters.specialite)
       );
     }
 
+    // Apply price filter using APPLIED filters
     results = results.filter(school => {
       const priceStr = school.cout;
       const match = priceStr.match(/\d+/);
       const price = match ? parseInt(match[0]) : 0;
-      return price >= filters.minPrice && price <= filters.maxPrice;
+      return price >= appliedFilters.minPrice && price <= appliedFilters.maxPrice;
     });
 
+    // Apply sorting
     results.sort((a, b) => {
       switch (sortBy) {
         case 'note':
@@ -106,10 +127,17 @@ function Ecoles() {
     setFilteredSchools(results);
   };
 
+  // Update LOCAL filters when user changes them in UI
   const handleFilterChange = (newFilters) => {
-    setFilters(newFilters);
+    setLocalFilters(newFilters);
   };
 
+  // Apply LOCAL filters to APPLIED filters when user clicks "Apply"
+  const handleApplyFilters = () => {
+    setAppliedFilters(localFilters);
+  };
+
+  // Reset both filter states
   const resetFilters = () => {
     const prices = schools.map(school => {
       const priceStr = school.cout;
@@ -120,13 +148,16 @@ function Ecoles() {
     const minPrice = Math.min(...prices);
     const maxPrice = Math.max(...prices);
     
-    setFilters({
+    const resetFiltersState = {
       ville: '',
       type: '',
       specialite: '',
       minPrice: minPrice,
       maxPrice: maxPrice
-    });
+    };
+    
+    setLocalFilters(resetFiltersState);
+    setAppliedFilters(resetFiltersState);
   };
 
   const handleSortChange = (sortValue) => {
@@ -155,9 +186,10 @@ function Ecoles() {
         {/* Centered Filter Component */}
         <div className="centered-filters-container">
           <Filters 
-            activeFilters={filters}
-            onFilterChange={handleFilterChange}
-            onReset={resetFilters}
+            activeFilters={localFilters} // Pass LOCAL filters for UI
+            onFilterChange={handleFilterChange} // Updates local filters
+            onApply={handleApplyFilters} // Applies local → applied filters
+            onReset={resetFilters} // Resets both filter states
             sortBy={sortBy}
             onSortChange={handleSortChange}
             filteredCount={filteredSchools.length}

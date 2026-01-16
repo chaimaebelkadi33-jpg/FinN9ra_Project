@@ -1,4 +1,4 @@
-// src/Components/Filters.jsx
+// src/Components/Filters.jsx - CORRECTED VERSION
 import React, { useState, useEffect, useRef } from 'react';
 import { dataService } from '../Services/dataService';
 import '../Styles/filters.css';
@@ -6,6 +6,7 @@ import '../Styles/filters.css';
 const Filters = ({ 
   activeFilters, 
   onFilterChange, 
+  onApply,
   onReset,
   sortBy,
   onSortChange,
@@ -132,13 +133,21 @@ const Filters = ({
     return `${price.toLocaleString()} MAD`;
   };
 
-  const hasActiveFilters = 
-    activeFilters.ville || 
-    activeFilters.type || 
-    activeFilters.specialite || 
-    (activeFilters.minPrice !== undefined && activeFilters.minPrice !== priceRange.min) || 
-    (activeFilters.maxPrice !== undefined && activeFilters.maxPrice !== priceRange.max);
+  const handleApplyFilters = () => {
+    if (onApply) {
+      onApply();
+    }
+    setMenuOpen(false);
+  };
 
+  const handleResetFilters = () => {
+    if (onReset) {
+      onReset();
+    }
+    setMenuOpen(false);
+  };
+
+  
   const getActiveFiltersCount = () => {
     let count = 0;
     if (activeFilters.ville) count++;
@@ -147,6 +156,13 @@ const Filters = ({
     if (activeFilters.minPrice !== priceRange.min || activeFilters.maxPrice !== priceRange.max) count++;
     return count;
   };
+
+  const hasActiveFilters = 
+    activeFilters.ville || 
+    activeFilters.type || 
+    activeFilters.specialite || 
+    (activeFilters.minPrice !== undefined && activeFilters.minPrice !== priceRange.min) || 
+    (activeFilters.maxPrice !== undefined && activeFilters.maxPrice !== priceRange.max);
 
   if (loading) {
     return (
@@ -182,7 +198,7 @@ const Filters = ({
           
           {hasActiveFilters && (
             <button 
-              onClick={onReset}
+              onClick={handleResetFilters}
               className="clear-all-btn-small"
               title="Réinitialiser tous les filtres"
             >
@@ -389,20 +405,20 @@ const Filters = ({
 
         <div className="menu-actions">
           <div className="active-filters-count">
-            <strong>{getActiveFiltersCount()}</strong> filtre{getActiveFiltersCount() !== 1 ? 's' : ''} actif{getActiveFiltersCount() !== 1 ? 's' : ''}
+            <strong>{getActiveFiltersCount()}</strong> filtre{getActiveFiltersCount() !== 1 ? 's' : ''} sélectionné{getActiveFiltersCount() !== 1 ? 's' : ''}
           </div>
           
           <div className="action-buttons">
             {hasActiveFilters && (
               <button 
-                onClick={onReset}
+                onClick={handleResetFilters}
                 className="reset-all-btn"
               >
                 Tout réinitialiser
               </button>
             )}
             <button 
-              onClick={() => setMenuOpen(false)}
+              onClick={handleApplyFilters}
               className="apply-filters-btn"
             >
               Appliquer
@@ -417,6 +433,7 @@ const Filters = ({
 Filters.defaultProps = {
   activeFilters: {},
   onFilterChange: () => {},
+  onApply: () => {},
   onReset: () => {},
   sortBy: 'note',
   onSortChange: () => {},
