@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import schoolsData from '../Data/ecoles.json'; 
+import OpenStreetMap from '../Components/OpenStreetMap';
 import '../Styles/ecoleDetail.css';
 
 function EcoleDetails() {
@@ -40,6 +41,24 @@ function EcoleDetails() {
     }
     
     return stars;
+  };
+
+  // Function to get region from city
+  const getRegion = (city) => {
+    const regions = {
+      'Rabat': 'Rabat-Salé-Kénitra',
+      'Salé': 'Rabat-Salé-Kénitra',
+      'Kénitra': 'Rabat-Salé-Kénitra',
+      'Casablanca': 'Casablanca-Settat',
+      'Marrakech': 'Marrakech-Safi',
+      'Fès': 'Fès-Meknès',
+      'Meknès': 'Fès-Meknès',
+      'Tanger': 'Tanger-Tétouan-Al Hoceïma',
+      'Tétouan': 'Tanger-Tétouan-Al Hoceïma',
+      'Agadir': 'Souss-Massa',
+      'Oujda': 'Oriental'
+    };
+    return regions[city] || 'Maroc';
   };
 
   if (loading) {
@@ -126,6 +145,12 @@ function EcoleDetails() {
           onClick={() => setActiveTab('admission')}
         >
           Admission & Débouchés
+        </button>
+        <button 
+          className={`tab-button ${activeTab === 'maps' ? 'active' : ''}`}
+          onClick={() => setActiveTab('maps')}
+        >
+          🗺️ Carte
         </button>
         <button 
           className={`tab-button ${activeTab === 'contact' ? 'active' : ''}`}
@@ -240,6 +265,97 @@ function EcoleDetails() {
                   </div>
                 </div>
                 <p className="cost-note">*Frais d'inscription supplémentaires peuvent s'appliquer</p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Maps Tab - NOUVELLE SECTION */}
+        {activeTab === 'maps' && (
+          <div className="maps-tab">
+            <div className="maps-header">
+              <h2>
+                <span className="map-icon">🗺️</span>
+                Localisation de {school.nom}
+              </h2>
+              <p className="maps-subtitle">
+                Trouvez l'établissement sur la carte interactive
+              </p>
+            </div>
+
+            {/* Carte interactive */}
+            <div className="map-wrapper">
+              <OpenStreetMap 
+                city={school.ville}
+                schoolName={school.nom}
+                type={school.type}
+              />
+            </div>
+
+            {/* Informations de localisation */}
+            <div className="location-info-section">
+              <div className="location-card">
+                <h3 className="location-title">
+                  <span className="icon">📍</span>
+                  Information Géographique
+                </h3>
+                
+                <div className="info-grid">
+                  <div className="info-item">
+                    <span className="info-label">Ville :</span>
+                    <span className="info-value city-badge">{school.ville}</span>
+                  </div>
+                  <div className="info-item">
+                    <span className="info-label">Région :</span>
+                    <span className="info-value">{getRegion(school.ville)}</span>
+                  </div>
+                  <div className="info-item">
+                    <span className="info-label">Type :</span>
+                    <span className="info-value type-badge">{school.type}</span>
+                  </div>
+                </div>
+
+                {/* Boutons d'action */}
+                <div className="maps-action-buttons">
+                  <button 
+                    className="action-btn primary-action"
+                    onClick={() => window.open(`https://www.google.com/maps/search/${school.nom}+${school.ville}+Maroc`, '_blank')}
+                  >
+                    <span className="btn-icon">🗺️</span>
+                    Ouvrir dans Google Maps
+                  </button>
+                  <button 
+                    className="action-btn secondary-action"
+                    onClick={() => window.open(`https://www.waze.com/ul?q=${school.nom}+${school.ville}+Maroc`, '_blank')}
+                  >
+                    <span className="btn-icon">🚗</span>
+                    Itinéraire Waze
+                  </button>
+                  <button 
+                    className="action-btn tertiary-action"
+                    onClick={() => window.open(school.siteWeb, '_blank')}
+                  >
+                    <span className="btn-icon">🌐</span>
+                    Site Officiel
+                  </button>
+                </div>
+
+                {/* Transport et accès */}
+                <div className="transport-section">
+                  <h4 className="transport-title">
+                    <span className="icon">🚌</span>
+                    Accès & Transport
+                  </h4>
+                  <div className="transport-options">
+                    <span className="transport-option" title="Bus">🚌</span>
+                    <span className="transport-option" title="Taxi">🚕</span>
+                    <span className="transport-option" title="Train">🚆</span>
+                    <span className="transport-option" title="Voiture">🚗</span>
+                  </div>
+                  <p className="transport-note">
+                    Consultez le site officiel pour les informations précises d'accès
+                  </p>
+                </div>
               </div>
             </div>
           </div>

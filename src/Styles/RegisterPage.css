@@ -1,5 +1,5 @@
-.login-page-container {
-  max-width: 400px;
+.register-container {
+   max-width: 400px;
   margin: 50px auto;
   padding: 30px;
   background-color: #f8f9fa;
@@ -9,12 +9,11 @@
   text-align: center;
 }
 
-/* HEADER - Classes spécifiques */
-.login-page-header {
+.register-header {
   margin-bottom: 30px;
 }
 
-.login-page-title {
+.project-title {
    color: cyan;
   font-size: 2.2rem;
   font-weight: 900;
@@ -24,9 +23,10 @@
     0 0 15px rgba(0, 100, 100, 0.5),
     0 0 30px rgba(0, 250, 250, 0.3);
   letter-spacing: 1px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
-.login-page-title:hover{background: linear-gradient(135deg, 
+.project-title:hover{ 
+background: linear-gradient(135deg, 
     rgba(0, 206, 209, 0.3), 
     rgba(0, 255, 255, 0.3));
   transform: translateY(-2px);
@@ -35,56 +35,42 @@
     0 0 25px rgba(0, 206, 201, 0.3);
   border-color: var(--cyan);
 }
-.login-page-subtitle {
+.register-subtitle {
   color: #001a36;
   font-size: 22px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #00CED1;
+  border-bottom: 2px solid #00EDC1;
+  padding-bottom: 10px; 
+}
+.register-title {
+  color: #001a36;
+  font-size: 27px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00EDC1;
   padding-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px 10px 20px;
 }
 
-/* Styles pour séparer "دخول" et "Connexion" */
-.login-page-subtitle .login-arabic {
-  color: #001a36;
-  font-weight: bold;
+.register-form {
+  margin-bottom: 25px;
 }
 
-.login-page-subtitle .login-separator {
-  color: #00CED1;
-  margin: 0 10px;
-}
-
-.login-page-subtitle .login-french {
-  color: #001a36;
-  font-weight: bold;
-}
-
-/* FORMULAIRE - Classes spécifiques */
-.login-page-form {
-  margin-bottom: 24px;
-}
-
-.login-page-input-group {
-  margin-bottom: 10px;
+.input-group {
+  margin-bottom: 20px;
   text-align: right;
 }
 
-.login-page-label {
+.input-group label {
   display: block;
   margin-bottom: 8px;
-  color: #002147;
+  color: #333;
   font-weight: 700;
   font-size: 16px;
-  text-align: right;
 }
 
-.login-page-input {
+.input-group input {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid #002147;
+  border: 1px solid #001a36;
   border-radius: 30px;
   font-size: 16px;
   transition: border-color 0.3s;
@@ -92,47 +78,48 @@
   text-align: right;
 }
 
-.login-page-input:focus {
-  border-color: #00CED1;
+.input-group input:focus {
+  border-color: #001a36;
   outline: none;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
-.login-page-button {
-  width: 70%;
+
+
+.register-button {
+  width: 100%;
   padding: 14px;
-  background-color: #002147;
+  background-color: #001a36;
   color: white;
   border: none;
   border-radius: 30px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.login-page-button:hover {
-  background-color: #00CED1;
+.register-button:hover {
+  background-color: #00EDC1;
 }
 
-/* SECTION INSCRIPTION */
-.login-page-register-section {
+.login-section {
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #00CED1;
+  border-top: 1px solid #00EDC1;
 }
 
-.login-page-register-text {
-  color: #002147;
+.login-text {
+  color: #001a36;
   margin-bottom: 15px;
   font-size: 16px;
   line-height: 1.5;
 }
 
-.login-page-register-link {
+.login-link {
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #002147;
+  padding: 10px 30px;
+  background-color: #001a36;
   color: white;
   text-decoration: none;
   border-radius: 30px;
@@ -140,23 +127,22 @@
   transition: background-color 0.3s;
 }
 
-.login-page-register-link:hover {
-  background-color: #00CED1;
+.login-link:hover {
+  background-color: #00EDC1;
 }
 
 /* Responsive design */
 @media (max-width: 480px) {
-  .login-page-container {
+  .register-container {
     margin: 20px;
     padding: 20px;
   }
-  
-  .login-page-title {
+
+  .project-title {
     font-size: 24px;
   }
-  
-  .login-page-subtitle {
+
+  .register-title {
     font-size: 20px;
-    padding: 0 10px 10px 10px;
   }
 }

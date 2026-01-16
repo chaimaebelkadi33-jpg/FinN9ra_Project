@@ -82,29 +82,29 @@
 }
 
 .sort-options label {
-  color: #666;
+  color:#001A36;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .sort-select {
-  padding: 8px 15px;
+  padding: 2px 2px;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 15px;
   background: white;
-  color: #333;
+  color: #002147;
   font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .sort-select:hover {
-  border-color: #00c8d7;
+  border-color: #002147;
 }
 
 .sort-select:focus {
   outline: none;
-  border-color: #00c8d7;
+  border-color: #002147;
 }
 
 /* Schools Grid */
@@ -162,56 +162,137 @@
   background: #f8f9fa;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .ecoles-container {
-    flex-direction: column;
-  }
-  
-  .filters-sidebar {
-    position: static;
-    width: 100%;
-  }
-  
-  .results-header {
-    flex-direction: column;
-    gap: 15px;
-    align-items: flex-start;
-  }
-}
-
+/* ===== VERSION MOBILE - HORIZONTALE ===== */
 @media (max-width: 768px) {
-  .page-header {
-    padding: 40px 20px;
+  .filters-container {
+    position: relative;
+    top: auto;
+    height: auto; /* Hauteur auto */
+    padding: 15px;
+    margin: 0 10px 20px 10px;
+    overflow-x: auto; /* Défilement horizontal */
+    overflow-y: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
   }
-  
-  .page-header h1 {
-    font-size: 2rem;
+
+  /* Changement principal : de vertical à horizontal */
+  .filters-container.vertical-layout {
+    flex-direction: row; /* Ligne au lieu de colonne */
+    gap: 12px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
   }
-  
-  .ecoles-container {
-    padding: 20px 15px;
+
+  /* Header caché sur mobile */
+  .filters-header {
+    display: none;
   }
-  
-  .schools-grid {
-    grid-template-columns: 1fr;
+
+  /* Stack devient horizontal */
+  .filters-stack {
+    flex-direction: row; /* Horizontal! */
+    gap: 12px;
+    flex-wrap: nowrap;
+    width: max-content; /* S'adapte au contenu */
+    min-width: 100%;
+    padding-bottom: 8px; /* Espace pour scrollbar */
+  }
+
+  /* Chaque filtre prend une largeur fixe */
+  .filter-item {
+    min-width: 160px; /* Largeur minimale */
+    max-width: 200px;
+    flex-shrink: 0; /* Ne pas rétrécir */
+    margin: 0;
+  }
+
+  /* Cache les labels */
+  .filter-label {
+    display: none;
+  }
+
+  /* Ajuste les tags */
+  .filter-tag {
+    padding: 12px 15px;
+    font-size: 13px;
+    white-space: nowrap; /* Pas de retour à la ligne */
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Cache le bouton remove */
+  .filter-tag .remove {
+    display: none;
+  }
+
+  /* Indicateur visuel pour filtre actif */
+  .filter-tag.active {
+    background: #00c8d7;
+    color: white;
+    border-color: #00c8d7;
+  }
+
+  /* Prix en mode horizontal */
+  .price-filter-item {
+    margin-top: 0;
+    min-width: 180px;
+  }
+
+  .price-filter-content {
+    padding: 15px;
+  }
+
+  /* Filtres actifs - cacher le bloc séparé */
+  .active-filters-display {
+    display: none;
+  }
+
+  /* Dropdown mobile amélioré */
+  .filter-dropdown {
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 90%;
+    max-width: 320px;
+    max-height: 70vh;
+    z-index: 10000;
+  }
+
+  /* Scrollbar horizontale stylisée */
+  .filters-stack::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .filters-stack::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .filters-stack::-webkit-scrollbar-thumb {
+    background: #00c8d7;
+    border-radius: 10px;
   }
 }
 
-@media (max-width: 480px) {
-  .page-header {
-    padding: 30px 15px;
+/* ===== VERSION DESKTOP - INCHANGÉ ===== */
+@media (min-width: 769px) {
+  /* Tout reste exactement comme avant */
+  .filters-container {
+    position: sticky;
+    top: 20px;
+    height: 85vh;
+    overflow-y: auto;
   }
   
-  .page-header h1 {
-    font-size: 1.8rem;
+  .filters-container.vertical-layout {
+    flex-direction: column;
   }
   
-  .no-results {
-    padding: 40px 20px;
+  .filters-stack {
+    flex-direction: column;
   }
   
-  .reset-btn {
-    width: 100%;
-  }
+  /* ... toutes vos règles desktop actuelles ... */
 }

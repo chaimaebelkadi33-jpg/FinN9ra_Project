@@ -352,72 +352,277 @@
   font-size: 1rem;
 }
 
-/* Mobile-specific fixes */
+/* src/Styles/ecoles.css */
+
+/* ===== VERSION MOBILE - STICKY FILTER ===== */
 @media (max-width: 768px) {
+  /* Page Header Mobile */
+  .page-header {
+    padding: 20px 15px;
+  }
+  
+  .page-header h1 {
+    font-size: 1.6rem;
+  }
+  
+  .page-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  /* Layout en colonne */
+  .ecoles-container {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+  
+  /* Filters Sidebar - STICKY en haut */
+  .filters-sidebar {
+    flex: none;
+    width: 100%;
+    position: sticky; /* Changé à sticky */
+    top: 0; /* Collé en haut */
+    z-index: 1000; /* Au-dessus du contenu */
+    background: #f8f9fa; /* Fond pour la transparence */
+    padding-top: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  /* Conteneur des filtres */
   .filters-container {
-    padding: 20px;
+    position: relative;
+    top: auto;
+    height: auto;
+    padding: 15px;
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    background: white;
+    max-width: 100%;
   }
   
+  /* Layout horizontal pour les filtres */
+  .filters-container.vertical-layout {
+    flex-direction: row;
+    gap: 12px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    min-height: auto;
+  }
+  
+  /* Stack horizontal */
+  .filters-stack {
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: nowrap;
+    width: max-content;
+    min-width: 100%;
+    padding-bottom: 8px;
+  }
+  
+  /* Style des éléments de filtre */
+  .filter-item {
+    min-width: 140px; /* Un peu plus petit pour mobile */
+    max-width: 180px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  
+  /* Cache le header des filtres */
+  .filters-header {
+    display: none;
+  }
+  
+  /* Cache les labels */
+  .filter-label {
+    display: none;
+  }
+  
+  /* Style des tags */
   .filter-tag {
-    padding: 10px 15px;
+    padding: 10px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+    font-weight: 500;
   }
   
-  /* FIXED: Better mobile dropdown positioning */
+  /* Cache le bouton remove */
+  .filter-tag .remove {
+    display: none;
+  }
+  
+  /* Indicateur filtre actif */
+  .filter-tag.active {
+    background: #00c8d7;
+    color: white;
+    border-color: #00c8d7;
+  }
+  
+  /* Filtre de prix horizontal */
+  .price-filter-item {
+    margin-top: 0;
+    min-width: 160px;
+  }
+  
+  .price-filter-content {
+    padding: 12px;
+  }
+  
+  /* Cache l'affichage des filtres actifs */
+  .active-filters-display {
+    display: none;
+  }
+  
+  /* Dropdown mobile centré */
   .filter-dropdown {
-    position: fixed; 
+    position: fixed;
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     width: 90%;
-    max-width: 300px;
-    max-height: 60vh; 
-    z-index: 9999;
+    max-width: 320px;
+    max-height: 70vh;
+    z-index: 10000;
   }
   
-  /* Add overlay for mobile dropdowns */
+  /* Overlay pour dropdown mobile */
   .dropdown-overlay {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 9998;
+    z-index: 9999;
+    display: none;
   }
   
   .dropdown-overlay.active {
     display: block;
   }
   
-  .active-filter-tags {
-    flex-direction: column;
+  /* Main Content (cartes d'écoles) */
+  .schools-main {
+    width: 100%;
+    margin-top: 0;
+    padding-top: 10px; /* Espace au-dessus des cartes */
   }
   
-  .active-filter-tag {
+  /* Header des résultats mobile */
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 120px; /* Position sous les filtres */
+    z-index: 500;
+  }
+  
+  .results-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .filtered-count {
+    font-size: 0.8rem;
+  }
+  
+  /* Options de tri mobile */
+  .sort-options {
     width: 100%;
     justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sort-options label {
+    font-size: 0.9rem;
+  }
+  
+  .sort-select {
+    width: 65%;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  /* Grid des écoles */
+  .schools-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  /* Scrollbar horizontale pour les filtres */
+  .filters-stack::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .filters-stack::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  .filters-stack::-webkit-scrollbar-thumb {
+    background: #00c8d7;
+    border-radius: 10px;
+  }
+  
+  .filters-stack::-webkit-scrollbar-thumb:hover {
+    background: #00a8b5;
+  }
+  
+  /* Style pour les filtres actifs */
+  .filter-tag.active::after {
+    content: ' ✓';
+    font-weight: bold;
+    margin-left: 5px;
+  }
+  
+  /* Ajustement pour le bouton clear price */
+  .clear-price-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  /* Indicateur visuel que le filtre est sticky */
+  .filters-sidebar::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent);
+    pointer-events: none;
   }
 }
 
-/* Desktop-specific improvements */
+/* ===== VERSION DESKTOP - INCHANGÉ ===== */
 @media (min-width: 769px) {
-  /* Ensure dropdowns stay within container on desktop */
-  .filter-item {
-    overflow: visible !important;
-  }
-  
-  .filter-dropdown {
-    position: absolute;
-    top: calc(100% + 5px);
-    left: 0;
-    right: 0;
-    transform: none !important;
-  }
-  
-  /* Prevent dropdown from going off-screen */
-  .filter-dropdown {
-    max-height: 250px;
+  /* Tout reste comme avant */
+  .filters-container {
+    position: sticky;
+    top: 20px;
+    height: 85vh;
     overflow-y: auto;
+  }
+  
+  .filters-container.vertical-layout {
+    flex-direction: column;
+  }
+  
+  .filters-stack {
+    flex-direction: column;
   }
 }
