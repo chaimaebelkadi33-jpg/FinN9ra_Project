@@ -3,6 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import schoolsData from '../Data/ecoles.json'; 
 import OpenStreetMap from '../Components/OpenStreetMap';
 import '../Styles/ecoleDetail.css';
+import '../Styles/OpenStreetMap.css';
+
 
 function EcoleDetails() {
   const { id } = useParams();
@@ -275,7 +277,7 @@ function EcoleDetails() {
           <div className="maps-tab">
             <div className="maps-header">
               <h2>
-                <span className="map-icon">🗺️</span>
+                <span>🗺️</span>
                 Localisation de {school.nom}
               </h2>
               <p className="maps-subtitle">
@@ -284,78 +286,39 @@ function EcoleDetails() {
             </div>
 
             {/* Carte interactive */}
-            <div className="map-wrapper">
-              <OpenStreetMap 
-                city={school.ville}
-                schoolName={school.nom}
-                type={school.type}
-              />
-            </div>
+            <OpenStreetMap 
+              city={school.ville}
+              schoolName={school.nom}
+              type={school.type}
+            />
 
-            {/* Informations de localisation */}
+            {/* Informations de localisation - STYLE SIMPLE */}
             <div className="location-info-section">
-              <div className="location-card">
-                <h3 className="location-title">
-                  <span className="icon">📍</span>
-                  Information Géographique
-                </h3>
-                
-                <div className="info-grid">
-                  <div className="info-item">
-                    <span className="info-label">Ville :</span>
-                    <span className="info-value city-badge">{school.ville}</span>
-                  </div>
-                  <div className="info-item">
-                    <span className="info-label">Région :</span>
-                    <span className="info-value">{getRegion(school.ville)}</span>
-                  </div>
-                  <div className="info-item">
-                    <span className="info-label">Type :</span>
-                    <span className="info-value type-badge">{school.type}</span>
-                  </div>
+              <h3 className="section-title">Information Géographique</h3>
+              
+              <div className="info-grid">
+                <div className="info-item">
+                  <span className="info-label">Ville :</span>
+                  <span className="info-value">{school.ville}</span>
                 </div>
+                <div className="info-item">
+                  <span className="info-label">Région :</span>
+                  <span className="info-value">{getRegion(school.ville)}</span>
+                </div>
+                <div className="info-item">
+                  <span className="info-label">Type :</span>
+                  <span className="info-value">{school.type}</span>
+                </div>
+              </div>
 
-                {/* Boutons d'action */}
-                <div className="maps-action-buttons">
-                  <button 
-                    className="action-btn primary-action"
-                    onClick={() => window.open(`https://www.google.com/maps/search/${school.nom}+${school.ville}+Maroc`, '_blank')}
-                  >
-                    <span className="btn-icon">🗺️</span>
-                    Ouvrir dans Google Maps
-                  </button>
-                  <button 
-                    className="action-btn secondary-action"
-                    onClick={() => window.open(`https://www.waze.com/ul?q=${school.nom}+${school.ville}+Maroc`, '_blank')}
-                  >
-                    <span className="btn-icon">🚗</span>
-                    Itinéraire Waze
-                  </button>
-                  <button 
-                    className="action-btn tertiary-action"
-                    onClick={() => window.open(school.siteWeb, '_blank')}
-                  >
-                    <span className="btn-icon">🌐</span>
-                    Site Officiel
-                  </button>
-                </div>
-
-                {/* Transport et accès */}
-                <div className="transport-section">
-                  <h4 className="transport-title">
-                    <span className="icon">🚌</span>
-                    Accès & Transport
-                  </h4>
-                  <div className="transport-options">
-                    <span className="transport-option" title="Bus">🚌</span>
-                    <span className="transport-option" title="Taxi">🚕</span>
-                    <span className="transport-option" title="Train">🚆</span>
-                    <span className="transport-option" title="Voiture">🚗</span>
-                  </div>
-                  <p className="transport-note">
-                    Consultez le site officiel pour les informations précises d'accès
-                  </p>
-                </div>
+              {/* Boutons d'action - STYLE SIMPLE */}
+              <div className="action-buttons">
+                <button 
+                  className="action-btn"
+                  onClick={() => window.open(`https://www.google.com/maps/search/${school.nom}+${school.ville}+Maroc`, '_blank')}
+                >
+                  Ouvrir dans Google Maps
+                </button>
               </div>
             </div>
           </div>
@@ -409,8 +372,7 @@ function EcoleDetails() {
       <div className="floating-action">
         <button 
           className="floating-action-btn"
-          onClick={() => window.open(school.siteWeb, '_blank')}
-        >
+          onClick={() => window.open(school.siteWeb, '_blank')}>
           Site Web
         </button>
       </div>

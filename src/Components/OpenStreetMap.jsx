@@ -1,4 +1,4 @@
-// src/Components/OpenStreetMap.jsx
+// src/Components/OpenStreetMap.jsx - CORRIGÉ
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -50,37 +50,22 @@ const OpenStreetMap = ({ city, schoolName, type }) => {
   }
 
   return (
-    <div className="finn9ra-map-container">
+    <div className="map-container">
       <MapContainer
         center={[position.lat, position.lng]}
         zoom={13}
-        style={{ height: '450px', width: '100%', borderRadius: '12px' }}
+        style={{ height: '400px', width: '100%', borderRadius: '8px' }}
         scrollWheelZoom={true}
-        className="finn9ra-map"
-      >
+        className="finn9ra-map" >
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | Fin N9ra?'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker 
-          position={[position.lat, position.lng]} 
-          icon={customIcon}
-        >
-          <Popup className="finn9ra-popup">
-            <div className="popup-content">
-              <h4 className="popup-title">{schoolName}</h4>
-              <p className="popup-type">{type}</p>
-              <p className="popup-location">
-                <span className="location-icon">📍</span> {city}, Maroc
-              </p>
-              <div className="popup-actions">
-                <button 
-                  className="popup-btn"
-                  onClick={() => window.open(`https://www.google.com/maps/search/${schoolName}+${city}+Maroc`, '_blank')}
-                >
-                  Itinéraire
-                </button>
-              </div>
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+        <Marker position={[position.lat, position.lng]}>
+          <Popup>
+            <div className="map-popup">
+              <strong>{schoolName}</strong><br />
+              {type}<br />
+              📍 {city}, Maroc
             </div>
           </Popup>
         </Marker>
