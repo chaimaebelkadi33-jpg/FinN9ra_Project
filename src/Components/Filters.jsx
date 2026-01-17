@@ -144,7 +144,6 @@ const Filters = ({
     if (onReset) {
       onReset();
     }
-    setMenuOpen(false);
   };
 
   
@@ -354,53 +353,64 @@ const Filters = ({
             </div>
           </div>
 
-          {/* Price Filter */}
-          <div className="filter-group price-group">
-            <label className="filter-group-label">
-              Fourchette de prix
-            </label>
-            
-            <div className="current-price-display">
-              {formatPrice(activeFilters.minPrice || priceRange.min)} - {formatPrice(activeFilters.maxPrice || priceRange.max)}
-            </div>
-            
-            <div className="price-slider-container">
-              <div className="slider-wrapper">
-                <input
-                  type="range"
-                  name="minPrice"
-                  min={priceRange.min}
-                  max={priceRange.max}
-                  value={activeFilters.minPrice || priceRange.min}
-                  onChange={handlePriceChange}
-                  className="price-range-slider"
-                />
-                <input
-                  type="range"
-                  name="maxPrice"
-                  min={priceRange.min}
-                  max={priceRange.max}
-                  value={activeFilters.maxPrice || priceRange.max}
-                  onChange={handlePriceChange}
-                  className="price-range-slider"
-                />
-              </div>
-              
-              <div className="slider-labels">
-                <span>{formatPrice(priceRange.min)}</span>
-                <span>{formatPrice(priceRange.max)}</span>
-              </div>
-            </div>
-            
-            {(activeFilters.minPrice !== priceRange.min || activeFilters.maxPrice !== priceRange.max) && (
-              <button 
-                onClick={clearPriceFilter}
-                className="clear-price-btn"
-              >
-                Réinitialiser prix
-              </button>
-            )}
-          </div>
+          {/* Price Filter Section */}
+<div className="filter-group price-group">
+  <label className="filter-group-label">
+    Fourchette de prix
+    <span className="filter-value">
+      {formatPrice(activeFilters.minPrice || priceRange.min)} - {formatPrice(activeFilters.maxPrice || priceRange.max)}
+    </span>
+  </label>
+  
+  <div className="price-slider-container">
+  <div className="slider-wrapper">
+    {/* Active range track */}
+    <div 
+      className="active-range-track"
+      style={{
+        left: `${((activeFilters.minPrice || priceRange.min) - priceRange.min) / (priceRange.max - priceRange.min) * 100}%`,
+        right: `${100 - ((activeFilters.maxPrice || priceRange.max) - priceRange.min) / (priceRange.max - priceRange.min) * 100}%`
+      }}
+    ></div>
+    
+    {/* Min price slider */}
+    <input
+      type="range"
+      name="minPrice"
+      min={priceRange.min}
+      max={priceRange.max}
+      value={activeFilters.minPrice || priceRange.min}
+      onChange={handlePriceChange}
+      className="price-range-slider"
+    />
+    
+    {/* Max price slider */}
+    <input
+      type="range"
+      name="maxPrice"
+      min={priceRange.min}
+      max={priceRange.max}
+      value={activeFilters.maxPrice || priceRange.max}
+      onChange={handlePriceChange}
+      className="price-range-slider"
+    />
+  </div>
+  
+  <div className="slider-labels">
+    <span>{formatPrice(priceRange.min)}</span>
+    <span>{formatPrice(priceRange.max)}</span>
+  </div>
+</div>
+  
+  {(activeFilters.minPrice !== priceRange.min || activeFilters.maxPrice !== priceRange.max) && (
+    <button 
+      onClick={clearPriceFilter}
+      className="clear-price-btn"
+    >
+      Réinitialiser prix
+    </button>
+  )}
+</div>
         </div>
 
         <div className="menu-actions">
