@@ -1,5 +1,10 @@
+/* OpenStreetMap.css - Simplified to match ecole-details style */
 .maps-tab {
-  padding: 20px 0;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
 }
 
 .maps-header {
@@ -7,48 +12,55 @@
 }
 
 .maps-header h2 {
-  color: #002147;
+  color: #2c3e50;
   font-size: 1.9rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .maps-subtitle {
   color: #4a90e2;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
-/* Section informations géographiques */
-.location-info-section {
-  background: #f8f9fa;
-  border-radius: 15px;
-  padding: 25px;
-  margin-top: 25px;
+/* Map Container */
+.map-container {
+  margin-top: 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid #e9ecef;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  height: 400px;
+  position: relative;
 }
 
-.location-info-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0, 206, 209, 0.2);
+.map-container:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
   border-color: #4a90e2;
 }
 
-.section-title {
-  color: #002147;
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  padding-bottom: 1px;
-  border-bottom: 2px solid #002147;
+/* Leaflet Map */
+.leaflet-map {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
 }
 
-/* Grille d'informations */
+/* Location Info Section - Simplified to match info-card style */
+.location-info-title {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 30px 0 20px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+/* Info Grid - Match quick-info-grid from overview tab */
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -56,146 +68,99 @@
   margin-bottom: 30px;
 }
 
+/* Info Item - Match info-card style */
 .info-item {
-  background: #fff;
-  border-radius: 30px;
+  background: #f8f9fa;
+  border-radius: 12px;
   padding: 20px;
   display: flex;
   align-items: center;
   gap: 15px;
   transition: all 0.3s ease;
   border: 1px solid #e9ecef;
-  min-height: 40px;
+  border-left: 4px solid #4a90e2;
 }
 
 .info-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 206, 209, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   border-color: #4a90e2;
 }
 
 .info-label {
   color: #666;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 5px;
+  display: block;
   min-width: auto;
 }
 
 .info-value {
-  color: #002147;
+  color: #2c3e50;
   font-size: 1.1rem;
   font-weight: 600;
-  margin-left: 0;
   line-height: 1.4;
+  display: block;
+  margin-left: 0;
 }
 
-/* Boutons d'action */
+/* Action Buttons - Match other button styles */
 .action-buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .action-btn {
-  background: #fff;
+  background: white;
   color: #002147;
-  border: 1px solid #e0e0e0;
-  border-radius: 30px;
-  padding: 30px 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px 24px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-align: left;
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 180px;
 }
 
 .action-btn:hover {
-  background: #e3f2fd;
-  border-color: #00edc1;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 206, 209, 0.2);
-}
-/* ANIMATION DE LA CARTE - NOUVEAU */
-.map-container {
-  margin-top: 25px;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 206, 209, 0.2);
-  border: 1px solid #e9ecef;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform: translateY(0);
-  position: relative;
-}
-
-.map-container:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(74, 144, 226, 0.25);
+  background: #f5f9ff;
   border-color: #4a90e2;
+  color: #4a90e2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
 }
 
-.map-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #4a90e2, #2c3e50);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 15px 15px 0 0;
-}
-
-.map-container:hover::after {
-  opacity: 1;
-}
-
-/* Animation du marqueur */
+/* Custom Marker */
 .custom-marker {
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  filter: drop-shadow(0 3px 8px rgba(0, 206, 209, 0.2));
+  transition: all 0.5s ease;
 }
 
 .map-container:hover .custom-marker {
-  transform: scale(1.2) translateY(-5px);
-  filter: drop-shadow(0 5px 15px rgba(74, 144, 226, 0.4));
+  transform: scale(1.1);
 }
 
-/* Animation d'apparition de la carte */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.map-container {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-/* Popup animé */
+/* Popup style */
 .map-popup {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 12px;
   background: white;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  min-width: 200px;
 }
 
 .map-popup:hover {
   border-color: #4a90e2;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .map-popup strong {
@@ -206,122 +171,128 @@
   font-weight: 700;
 }
 
-.map-popup br {
-  margin: 5px 0;
-}
-
-/* Tuiles de la carte */
-.leaflet-tile {
-  filter: brightness(0.95) contrast(1.05);
-  transition: filter 0.3s ease;
-}
-
-.map-container:hover .leaflet-tile {
-  filter: brightness(1) contrast(1.1);
-}
-
-/* Boutons de contrôle de la carte */
+/* Leaflet Controls */
 .leaflet-control-zoom a {
   background: white !important;
   border: 1px solid #e9ecef !important;
   color: #2c3e50 !important;
   transition: all 0.3s ease !important;
+  width: 36px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  font-size: 1.2rem !important;
 }
 
 .leaflet-control-zoom a:hover {
   background: #4a90e2 !important;
   color: white !important;
   border-color: #4a90e2 !important;
-  transform: scale(1.1);
 }
 
-/* SUPPRIMER COMPLÈTEMENT LE LIEN OPENSTREETMAP */
-.leaflet-container .leaflet-control-attribution {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  width: 0 !important;
-  overflow: hidden !important;
-  pointer-events: none !important;
-}
-
-/* Cacher tous les liens d'attribution */
-.leaflet-control-attribution a {
+/* Hide attribution */
+.leaflet-control-attribution {
   display: none !important;
 }
 
-/* Cacher spécifiquement le texte "Leaflet" */
-.leaflet-control-attribution.leaflet-control:after {
-  content: none !important;
-}
-
-/* Cacher le panneau d'attribution Leaflet */
-.leaflet-control-attribution.leaflet-control {
-  display: none !important;
-}
-
-/* Responsive design */
+/* Mobile Responsive Design */
 @media (max-width: 768px) {
+  .maps-tab {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
   .maps-header h2 {
     font-size: 1.4rem;
   }
   
-  .location-info-section {
-    margin: 20px 0;
-    border-radius: 12px;
-  }
-  
-  .info-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    padding: 15px;
-  }
-  
-  .info-label {
-    min-width: auto;
-  }
-  
-  .info-value {
-    margin-left: 0;
+  .maps-subtitle {
+    font-size: 1rem;
   }
   
   .map-container {
-    transform: none !important;
+    height: 300px;
+    border-radius: 12px;
   }
   
-  .map-container:hover {
-    transform: translateY(-5px) !important;
+  .leaflet-map {
+    border-radius: 12px;
+  }
+  
+  .location-info-title {
+    font-size: 1.2rem;
+    margin: 25px 0 15px 0;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .info-item {
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .info-label {
+    font-size: 0.9rem;
+    min-width: 60px;
+  }
+  
+  .info-value {
+    font-size: 1.1rem;
+    word-break: break-word;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .action-btn {
+    width: 100%;
+    min-width: auto;
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
+  .maps-tab {
+    padding: 15px;
+  }
+  
   .maps-header h2 {
     font-size: 1.3rem;
   }
   
-  .section-title {
-    font-size: 1.2rem;
+  .location-info-title {
+    font-size: 1.1rem;
+  }
+  
+  .info-item {
+    padding: 15px;
+    gap: 12px;
+  }
+  
+  .info-label {
+    font-size: 0.85rem;
+  }
+  
+  .info-value {
+    font-size: 1rem;
   }
   
   .action-btn {
     padding: 10px 15px;
-    font-size: 0.95rem;
-  }
-  
-  .transport-icons {
-    gap: 12px;
-  }
-  
-  .transport-icon {
-    font-size: 1.5rem;
   }
   
   .map-container {
-    border-radius: 10px;
-    margin-left: -10px;
-    margin-right: -10px;
-    width: calc(100% + 20px);
+    height: 250px;
   }
 }

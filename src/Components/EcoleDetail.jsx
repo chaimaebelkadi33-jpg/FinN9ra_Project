@@ -273,56 +273,59 @@ function EcoleDetails() {
         )}
 
         {/* Maps Tab - NOUVELLE SECTION */}
-        {activeTab === 'maps' && (
-          <div className="maps-tab">
-            <div className="maps-header">
-              <h2>
-                <span>🗺️</span>
-                Localisation de {school.nom}
-              </h2>
-              <p className="maps-subtitle">
-                Trouvez l'établissement sur la carte interactive
-              </p>
-            </div>
+      {/* Maps Tab - Simplified structure */}
+{activeTab === 'maps' && (
+  <div className="maps-tab">
+    {/* Header */}
+    <div className="maps-header">
+      <h2>🗺️ Localisation de {school.nom}</h2>
+      <p className="maps-subtitle">
+        Trouvez l'établissement sur la carte interactive
+      </p>
+    </div>
 
-            {/* Carte interactive */}
-            <OpenStreetMap 
-              city={school.ville}
-              schoolName={school.nom}
-              type={school.type}
-            />
+    {/* Map Component - First item */}
+    <OpenStreetMap 
+      city={school.ville}
+      schoolName={school.nom}
+      type={school.type}
+    />
 
-            {/* Informations de localisation - STYLE SIMPLE */}
-            <div className="location-info-section">
-              <h3 className="section-title">Information Géographique</h3>
-              
-              <div className="info-grid">
-                <div className="info-item">
-                  <span className="info-label">Ville :</span>
-                  <span className="info-value">{school.ville}</span>
-                </div>
-                <div className="info-item">
-                  <span className="info-label">Région :</span>
-                  <span className="info-value">{getRegion(school.ville)}</span>
-                </div>
-                <div className="info-item">
-                  <span className="info-label">Type :</span>
-                  <span className="info-value">{school.type}</span>
-                </div>
-              </div>
+    {/* Location Information - Second item */}
+    <h3 className="location-info-title">Informations Géographiques</h3>
+    
+    <div className="info-grid">
+      <div className="info-item">
+        <span className="info-label">Ville :</span>
+        <span className="info-value">{school.ville}</span>
+      </div>
+      <div className="info-item">
+        <span className="info-label">Région :</span>
+        <span className="info-value">{getRegion(school.ville)}</span>
+      </div>
+      <div className="info-item">
+        <span className="info-label">Type :</span>
+        <span className="info-value">{school.type}</span>
+      </div>
+    </div>
 
-              {/* Boutons d'action - STYLE SIMPLE */}
-              <div className="action-buttons">
-                <button 
-                  className="action-btn"
-                  onClick={() => window.open(`https://www.google.com/maps/search/${school.nom}+${school.ville}+Maroc`, '_blank')}
-                >
-                  Ouvrir dans Google Maps
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+    {/* Action Buttons - Third item */}
+    <div className="action-buttons">
+      <button 
+        className="action-btn"
+        onClick={() => window.open(`https://www.google.com/maps/search/${school.nom}+${school.ville}+Maroc`, '_blank')}
+      >
+        <span>📍</span> Ouvrir dans Google Maps
+      </button>
+      <button 
+        className="action-btn"
+        onClick={() => window.open(`https://waze.com/ul?q=${school.nom}+${school.ville}+Maroc`, '_blank')}
+      >
+        <span>🚗</span> Itinéraire Waze
+      </button>
+    </div>
+  </div>
+)}
 
         {/* Contact Tab */}
         {activeTab === 'contact' && (
