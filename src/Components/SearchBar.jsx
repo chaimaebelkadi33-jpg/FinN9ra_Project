@@ -40,7 +40,27 @@ const SearchBar = ({ onSearch, onFilter }) => {
     
     loadFilterOptions();
   }, []);
+useEffect(() => {
+  return () => {
+    // Clean up body class on component unmount
+    document.body.classList.remove('sb-dropdown-open');
+  };
+}, []);
+useEffect(() => {
+  const handleClickOutside = (e) => {
+    if (window.innerWidth <= 768 && activeDropdown && 
+        !e.target.closest('.sb-filter-tag-container') &&
+        !e.target.closest('.sb-filter-dropdown')) {
+      document.body.classList.remove('sb-dropdown-open');
+      setActiveDropdown(null);
+    }
+  };
 
+  document.addEventListener('click', handleClickOutside);
+  return () => {
+    document.removeEventListener('click', handleClickOutside);
+  };
+}, [activeDropdown]);
   const handleSearch = (e) => {
     const value = e.target.value;
     setQuery(value);
@@ -57,8 +77,20 @@ const SearchBar = ({ onSearch, onFilter }) => {
   };
 
   const toggleDropdown = (filterType) => {
+  if (window.innerWidth <= 768) {
+    // On mobile, add/remove class to body to prevent scrolling
+    if (activeDropdown === filterType) {
+      document.body.classList.remove('sb-dropdown-open');
+      setActiveDropdown(null);
+    } else {
+      document.body.classList.add('sb-dropdown-open');
+      setActiveDropdown(filterType);
+    }
+  } else {
+    // On desktop, normal behavior
     setActiveDropdown(activeDropdown === filterType ? null : filterType);
-  };
+  }
+};
 
   const selectFilter = (filterType, value) => {
     const newFilters = {

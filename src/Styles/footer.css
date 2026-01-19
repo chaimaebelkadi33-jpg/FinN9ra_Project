@@ -4,6 +4,7 @@
   padding: 1.2rem 0 0.8rem;
   margin-top: auto;
   border-top: 1px solid #00CED1;
+  width: 100%;
 }
 
 .footer-container {
@@ -193,7 +194,7 @@
 /* Small mobile (2 columns for very small screens) */
 @media (max-width: 600px) {
   .footer-sections {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    grid-template-columns: repeat(1, 1fr); /* 2 columns for small screens */
     gap: 1.5rem;
   }
   
@@ -215,17 +216,18 @@
   }
 
   .footer-sections {
-    grid-template-columns: 1fr; /* Stack everything */
+    grid-template-columns: repeat(3, 1fr); /* Stack everything */
     gap: 1.2rem;
   }
   
   .footer-section:nth-child(3) {
     grid-column: span 1; /* Reset to normal */
-    text-align: left;
+    text-align: center;
   }
   
   .footer-section:nth-child(3) .social-icons {
-    justify-content: flex-start;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   .footer-title {
@@ -233,7 +235,7 @@
   }
 
   .section-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .footer-tagline {
@@ -246,7 +248,7 @@
   }
 
   .footer-link {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .social-icon {
@@ -271,18 +273,19 @@
   }
   
   .footer-section:nth-child(3) .social-icons {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 
 /* Extra small screens optimization */
 @media (max-width: 400px) {
   .footer-sections {
-    grid-template-columns: 1fr; /* Stack on extra small */
+    grid-template-columns: repeat(3, 1fr); 
   }
   
   .footer-section {
     text-align: center;
+    margin-bottom: 5px;
   }
   
   .footer-section .social-icons {

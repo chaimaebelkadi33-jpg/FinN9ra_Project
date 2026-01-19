@@ -213,79 +213,75 @@
 }
 
 /* Responsive Design */
+/* Fix for search bar filters dropdown on mobile */
 @media (max-width: 768px) {
+  /* Ensure the dropdown is visible and properly positioned */
+  .sb-filter-dropdown {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 90vw !important;
+    max-width: 300px !important;
+    max-height: 60vh !important;
+    z-index: 1002 !important;
+    display: block !important;
+    overflow-y: auto !important;
+    margin-top: 0 !important;
+    background: white !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 12px !important;
+  }
+  
+  /* Make sure dropdown options are scrollable */
+  .sb-dropdown-options {
+    max-height: 50vh !important;
+    overflow-y: auto !important;
+  }
+  
+  /* Fix container positioning */
+  .sb-filter-tag-container {
+    position: static !important; /* Change from relative to static for mobile */
+  }
+  
+  /* Prevent body scroll when dropdown is open */
+  body.sb-dropdown-open {
+    overflow: hidden !important;
+  }
+  
+  /* Adjust search bar container for mobile */
   .searchbar-container {
-    margin: 30px 30px;
-    padding: 30px;
+    position: relative;
+    overflow: visible !important;
   }
   
-  .searchbar-title {
-    font-size: 28px;
+  /* Ensure dropdown items are visible */
+  .sb-dropdown-option {
+    padding: 12px 16px !important;
+    font-size: 1rem !important;
+    border-bottom: 1px solid #f0f0f0 !important;
   }
   
-  .searchbar-title span {
-    font-size: 24px;
-  }
-  
-  .searchbar-filters {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  
-  .sb-filter-tag {
-    padding: 6px 15px;
-    font-size: 13px;
-    min-width: 80px;
-  }
-  
-  .sb-clear-filters-btn {
-    margin-top: 10px;
-    width: 100%;
+  /* Fix the active state for mobile */
+  .sb-filter-tag.active {
+    z-index: 1001 !important;
+    position: relative;
   }
 }
 
+/* Extra small screens */
 @media (max-width: 480px) {
-  .searchbar-container {
-    margin: 20px 20px;
-    padding: 25px 20px;
+  .sb-filter-dropdown {
+    width: 95vw !important;
+    max-height: 50vh !important;
   }
   
-  .searchbar-title {
-    font-size: 24px;
+  .sb-dropdown-options {
+    max-height: 45vh !important;
   }
   
-  .searchbar-title span {
-    font-size: 20px;
-  }
-  
-  .searchbar-box {
-    flex-direction: column;
-    gap: 10px;
-    background: transparent;
-  }
-  
-  .searchbar-box input {
-    background: white;
-    border-radius: 25px;
-    padding: 15px;
-    width: 100%;
-  }
-  
-  .search-btn {
-    width: 100%;
-    border-radius: 25px;
-    padding: 12px;
-  }
-  
-  .searchbar-filters {
-    overflow-x: auto;
-    padding-bottom: 10px;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .sb-filter-tag {
-    white-space: nowrap;
+  .sb-dropdown-option {
+    padding: 10px 14px !important;
+    font-size: 0.95rem !important;
   }
 }

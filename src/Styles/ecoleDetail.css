@@ -2,7 +2,7 @@
 .ecole-details-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px !important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   direction: ltr;
   text-align: left;
@@ -211,7 +211,6 @@
   background: white;
   border-radius: 16px;
   padding: 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   margin-bottom: 40px;
 }
 

@@ -12,9 +12,9 @@
   --cyan-light: #E0FFFF;
   --white: #ffffff;
 }
-
 html, body, #root {
   height: 100%;
+  width: 100%;
 }
 
 .App {
