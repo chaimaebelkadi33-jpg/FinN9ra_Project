@@ -9,7 +9,7 @@ import EcoleDetails from './Components/EcoleDetail';
 import Accueil from './Pages/Accueil';
 import Ecoles from './Pages/Ecoles';
 import Avis from './Pages/Avis';
-import Contact from './Pages/Contact';
+import ContactPage from './Components/ContactPage';
 import LoginPage from './Pages/LoginPage';
 import RegisterPage from './Pages/RegisterPage';
 import PageError from './Components/PageError';
@@ -23,7 +23,7 @@ function App() {
             <Route path="/" element={<Accueil />} />
             <Route path="/ecoles" element={<Ecoles />} />
             <Route path="/avis" element={<Avis />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/LoginPage" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />

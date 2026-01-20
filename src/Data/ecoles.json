@@ -343,5 +343,29 @@
     "debouches": ["Enseignant", "Traducteur", "Chercheur", "Journaliste"],
     "siteWeb": "https://www.flshfes.ac.ma",
     "contact": "contact@flshfes.ac.ma"
+  },
+{
+  "idEcole": 22,
+  "nom": "ISTA Bab Tizimi - OFPPT",
+  "ville": "Meknès",
+  "type": "Institut Spécialisé de Technologie Appliquée",
+  "description": "Institut de formation professionnelle technique",
+  "specialites": ["Développement Informatique", "Réseaux Informatiques", "Électronique", "Gestion des Entreprises", "Comptabilité"],
+  "cout": "950 MAD/an",
+  "note": 4.0,
+  "image": "/images/BAB TIZIMI.webp",
+  "presentation": "L'ISTA Bab Tizimi est un établissement de l'OFPPT spécialisé dans les formations techniques et technologiques à Meknès.",
+  "dureeEtudes": "2 ans",
+  "diplome": "Technicien Spécialisé (TS)",
+  "admission": "Baccalauréat (toutes filières selon spécialité)",
+  "debouches": ["Technicien en Informatique", "Technicien Réseaux", "Assistant Comptable", "Agent Commercial"],
+  "siteWeb": "https://www.ofppt.ma",
+  "contact": "istameknes@ofppt.ma",
+  "telephone": "+212 5355-30878",
+  "adresse": "Quartier Bab Tizimi, Route de Fès, Meknès",
+  "localisation": {
+    "latitude": 33.8847,
+    "longitude": -5.5436
   }
-]
+}
+ ]
