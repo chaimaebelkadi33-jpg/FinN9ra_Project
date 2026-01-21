@@ -5,13 +5,17 @@ import OpenStreetMap from '../Components/OpenStreetMap';
 import '../Styles/ecoleDetail.css';
 import '../Styles/OpenStreetMap.css';
 
-
 function EcoleDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
   const [school, setSchool] = useState(null);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('overview');
+  const [newReview, setNewReview] = useState({
+    rating: 5,
+    comment: '',
+    author: ''
+  });
 
   useEffect(() => {
     // Find school by ID
@@ -24,22 +28,43 @@ function EcoleDetails() {
   }, [id]);
 
   // Function to render star rating
-  const renderStars = (rating) => {
+  const renderStars = (rating, clickable = false, onStarClick = null) => {
     const stars = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 >= 0.5;
 
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(<span key={`full-${i}`} className="star full">★</span>);
-    }
-    
-    if (hasHalfStar) {
-      stars.push(<span key="half" className="star half">★</span>);
-    }
-    
-    const emptyStars = 5 - Math.ceil(rating);
-    for (let i = 0; i < emptyStars; i++) {
-      stars.push(<span key={`empty-${i}`} className="star empty">☆</span>);
+    for (let i = 1; i <= 5; i++) {
+      if (i <= fullStars) {
+        stars.push(
+          <span 
+            key={i} 
+            className={`star full ${clickable ? 'clickable' : ''}`}
+            onClick={() => clickable && onStarClick && onStarClick(i)}
+          >
+            ★
+          </span>
+        );
+      } else if (i === fullStars + 1 && hasHalfStar) {
+        stars.push(
+          <span 
+            key={i} 
+            className={`star half ${clickable ? 'clickable' : ''}`}
+            onClick={() => clickable && onStarClick && onStarClick(i)}
+          >
+            ★
+          </span>
+        );
+      } else {
+        stars.push(
+          <span 
+            key={i} 
+            className={`star empty ${clickable ? 'clickable' : ''}`}
+            onClick={() => clickable && onStarClick && onStarClick(i)}
+          >
+            ☆
+          </span>
+        );
+      }
     }
     
     return stars;
@@ -63,6 +88,68 @@ function EcoleDetails() {
     return regions[city] || 'Maroc';
   };
 
+  // Function to handle star rating click
+  const handleStarClick = (rating) => {
+    setNewReview(prev => ({
+      ...prev,
+      rating: rating
+    }));
+  };
+
+  // Function to handle review submission
+  const handleSubmitReview = (e) => {
+    e.preventDefault();
+    
+    if (!newReview.comment.trim() || !newReview.author.trim()) {
+      alert('Veuillez remplir tous les champs requis');
+      return;
+    }
+
+    const reviewToAdd = {
+      id: `rev-${Date.now()}`,
+      rating: newReview.rating,
+      comment: newReview.comment,
+      author: newReview.author,
+      date: new Date().toISOString().split('T')[0],
+      verified: false
+    };
+
+    // In a real app, you would send this to your backend
+    // For now, we'll update the local state
+    setSchool(prev => ({
+      ...prev,
+      reviews: [...prev.reviews, reviewToAdd]
+    }));
+
+    // Reset form
+    setNewReview({
+      rating: 5,
+      comment: '',
+      author: ''
+    });
+
+    alert('Merci pour votre avis! Il sera publié après modération.');
+  };
+
+  // Function to calculate average rating
+  const calculateAverageRating = (reviews) => {
+    if (!reviews || reviews.length === 0) return 0;
+    const total = reviews.reduce((sum, review) => sum + review.rating, 0);
+    return Math.round((total / reviews.length) * 10) / 10;
+  };
+
+  // Function to count reviews by rating
+  const countReviewsByRating = (reviews) => {
+    const counts = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
+    reviews.forEach(review => {
+      const roundedRating = Math.round(review.rating);
+      if (counts[roundedRating] !== undefined) {
+        counts[roundedRating]++;
+      }
+    });
+    return counts;
+  };
+
   if (loading) {
     return (
       <div className="loading-container">
@@ -83,6 +170,11 @@ function EcoleDetails() {
       </div>
     );
   }
+
+  const reviews = school.reviews || [];
+  const averageRating = calculateAverageRating(reviews);
+  const ratingCounts = countReviewsByRating(reviews);
+  const totalReviews = reviews.length;
 
   return (
     <div className="ecole-details-container">
@@ -128,7 +220,7 @@ function EcoleDetails() {
         </div>
       </div>
 
-      {/* Tabs Navigation */}
+      {/* Tabs Navigation - ADDED REVIEWS TAB */}
       <div className="tabs-navigation">
         <button 
           className={`tab-button ${activeTab === 'overview' ? 'active' : ''}`}
@@ -147,6 +239,12 @@ function EcoleDetails() {
           onClick={() => setActiveTab('admission')}
         >
           Admission & Débouchés
+        </button>
+        <button 
+          className={`tab-button ${activeTab === 'reviews' ? 'active' : ''}`}
+          onClick={() => setActiveTab('reviews')}
+        >
+          ⭐ Avis ({totalReviews})
         </button>
         <button 
           className={`tab-button ${activeTab === 'maps' ? 'active' : ''}`}
@@ -272,60 +370,175 @@ function EcoleDetails() {
           </div>
         )}
 
-        {/* Maps Tab - NOUVELLE SECTION */}
-      {/* Maps Tab - Simplified structure */}
-{activeTab === 'maps' && (
-  <div className="maps-tab">
-    {/* Header */}
-    <div className="maps-header">
-      <h2>🗺️ Localisation de {school.nom}</h2>
-      <p className="maps-subtitle">
-        Trouvez l'établissement sur la carte interactive
-      </p>
-    </div>
+        {/* NEW: Reviews Tab */}
+        {activeTab === 'reviews' && (
+          <div className="reviews-tab">
+            {/* Ratings Overview */}
+            <div className="ratings-overview">
+              <div className="overall-rating">
+                <div className="rating-number-large">{averageRating}</div>
+                <div className="rating-stars-large">
+                  {renderStars(averageRating)}
+                </div>
+                <div className="rating-count">{totalReviews} avis</div>
+              </div>
+              
+              <div className="rating-breakdown">
+                {[5, 4, 3, 2, 1].map(star => (
+                  <div key={star} className="rating-row">
+                    <span className="star-label">{star} étoiles</span>
+                    <div className="rating-bar-container">
+                      <div 
+                        className="rating-bar" 
+                        style={{
+                          width: totalReviews > 0 ? `${(ratingCounts[star] / totalReviews) * 100}%` : '0%'
+                        }}
+                      ></div>
+                    </div>
+                    <span className="rating-count-small">{ratingCounts[star]}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-    {/* Map Component - First item */}
-    <OpenStreetMap 
-      city={school.ville}
-      schoolName={school.nom}
-      type={school.type}
-    />
+            {/* Add Review Form */}
+            <div className="add-review-section">
+              <h3>Donner votre avis</h3>
+              <form onSubmit={handleSubmitReview} className="review-form">
+                <div className="form-group">
+                  <label>Votre note :</label>
+                  <div className="rating-input">
+                    {renderStars(newReview.rating, true, handleStarClick)}
+                    <span className="rating-value">{newReview.rating}/5</span>
+                  </div>
+                </div>
+                
+                <div className="form-group">
+                  <label htmlFor="author">Votre nom :</label>
+                  <input
+                    type="text"
+                    id="author"
+                    value={newReview.author}
+                    onChange={(e) => setNewReview(prev => ({...prev, author: e.target.value}))}
+                    placeholder="Votre nom"
+                    required
+                  />
+                </div>
+                
+                <div className="form-group">
+                  <label htmlFor="comment">Votre avis :</label>
+                  <textarea
+                    id="comment"
+                    value={newReview.comment}
+                    onChange={(e) => setNewReview(prev => ({...prev, comment: e.target.value}))}
+                    placeholder="Partagez votre expérience avec cette école..."
+                    rows="4"
+                    required
+                  />
+                </div>
+                
+                <button type="submit" className="submit-review-btn">
+                  Publier votre avis
+                </button>
+              </form>
+            </div>
 
-    {/* Location Information - Second item */}
-    <h3 className="location-info-title">Informations Géographiques</h3>
-    
-    <div className="info-grid">
-      <div className="info-item">
-        <span className="info-label">Ville :</span>
-        <span className="info-value">{school.ville}</span>
-      </div>
-      <div className="info-item">
-        <span className="info-label">Région :</span>
-        <span className="info-value">{getRegion(school.ville)}</span>
-      </div>
-      <div className="info-item">
-        <span className="info-label">Type :</span>
-        <span className="info-value">{school.type}</span>
-      </div>
+            
+{/* Reviews List */}
+<div className="reviews-list">
+  <h3>Avis des étudiants</h3>
+  {reviews.length === 0 ? (
+    <div className="no-reviews">
+      <p>Aucun avis pour le moment. Soyez le premier à donner votre avis !</p>
     </div>
+  ) : (
+    <div className="reviews-grid">
+      {reviews.map((review) => (
+        <div key={review.id} className="review-card">
+          <div className="review-header">
+            <div className="reviewer-info">
+              <span className="reviewer-avatar">
+                {review.author.charAt(0)}
+              </span>
+              <div className="reviewer-name-container">
+                <span className="reviewer-name">{review.author}</span>
+                {review.verified && (
+                  <span className="verified-badge">✓</span>
+                )}
+              </div>
+            </div>
+            <div className="review-rating">
+              {renderStars(review.rating)}
+            </div>
+          </div>
+          
+          <div className="review-content">
+            <p>{review.comment}</p>
+          </div>
+          
+          {/* Add the date under the comment */}
+          <div className="review-footer">
+            <span className="review-date">
+              {new Date(review.date).toLocaleDateString('fr-FR')}
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</div>
+          </div>
+        )}
 
-    {/* Action Buttons - Third item */}
-    <div className="action-buttons">
-      <button 
-        className="action-btn"
-        onClick={() => window.open(`https://www.google.com/maps/search/${school.nom}+${school.ville}+Maroc`, '_blank')}
-      >
-        <span>📍</span> Ouvrir dans Google Maps
-      </button>
-      <button 
-        className="action-btn"
-        onClick={() => window.open(`https://waze.com/ul?q=${school.nom}+${school.ville}+Maroc`, '_blank')}
-      >
-        <span>🚗</span> Itinéraire Waze
-      </button>
-    </div>
-  </div>
-)}
+        {/* Maps Tab */}
+        {activeTab === 'maps' && (
+          <div className="maps-tab">
+            <div className="maps-header">
+              <h2>🗺️ Localisation de {school.nom}</h2>
+              <p className="maps-subtitle">
+                Trouvez l'établissement sur la carte interactive
+              </p>
+            </div>
+
+            <OpenStreetMap 
+              city={school.ville}
+              schoolName={school.nom}
+              type={school.type}
+            />
+
+            <h3 className="location-info-title">Informations Géographiques</h3>
+            
+            <div className="info-grid">
+              <div className="info-item">
+                <span className="info-label">Ville :</span>
+                <span className="info-value">{school.ville}</span>
+              </div>
+              <div className="info-item">
+                <span className="info-label">Région :</span>
+                <span className="info-value">{getRegion(school.ville)}</span>
+              </div>
+              <div className="info-item">
+                <span className="info-label">Type :</span>
+                <span className="info-value">{school.type}</span>
+              </div>
+            </div>
+
+            <div className="action-buttons">
+              <button 
+                className="action-btn"
+                onClick={() => window.open(`https://www.google.com/maps/search/${school.nom}+${school.ville}+Maroc`, '_blank')}
+              >
+                <span>📍</span> Ouvrir dans Google Maps
+              </button>
+              <button 
+                className="action-btn"
+                onClick={() => window.open(`https://waze.com/ul?q=${school.nom}+${school.ville}+Maroc`, '_blank')}
+              >
+                <span>🚗</span> Itinéraire Waze
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Contact Tab */}
         {activeTab === 'contact' && (

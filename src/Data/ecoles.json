@@ -15,10 +15,52 @@
     "admission": "Concours national après classes préparatoires ou licence scientifique",
     "debouches": ["Développeur", "Ingénieur IA", "Expert cybersécurité", "Architecte logiciel"],
     "siteWeb": "https://www.eni.ma",
-    "contact": "contact@eni.ma"
+    "contact": "contact@eni.ma",
+    "reviews": [
+      {
+        "id": "rev-eni-1",
+        "rating": 5,
+        "comment": "Très bonne école, forte orientation pratique et bons professeurs.",
+        "author": "Yassine A.",
+        "date": "2024-03-18",
+        "verified": true
+      },
+      {
+        "id": "rev-eni-2",
+        "rating": 4,
+        "comment": "Programme exigeant mais très formateur, surtout en IA.",
+        "author": "Salma R.",
+        "date": "2023-11-02",
+        "verified": true
+      },
+      {
+        "id": "rev-eni-3",
+        "rating": 5,
+        "comment": "Bonne réputation sur le marché du travail.",
+        "author": "Anas B.",
+        "date": "2022-06-14",
+        "verified": false
+      },
+      {
+        "id": "rev-eni-4",
+        "rating": 4,
+        "comment": "Charge de travail élevée mais résultats garantis.",
+        "author": "Imane L.",
+        "date": "2024-09-07",
+        "verified": true
+      },
+      {
+        "id": "rev-eni-5",
+        "rating": 4,
+        "comment": "Bonne ambiance et projets intéressants.",
+        "author": "Omar K.",
+        "date": "2021-12-21",
+        "verified": true
+      }
+    ]
   },
   {
-    "idEcole": 3,
+    "idEcole": 2,
     "nom": "École Mohammadia d'Ingénieurs",
     "ville": "Rabat",
     "type": "École Publique d'Ingénieurs",
@@ -33,10 +75,52 @@
     "admission": "Concours après classes préparatoires ou licence",
     "debouches": ["Ingénieur BTP", "Chef de projet", "Ingénieur industriel", "Consultant"],
     "siteWeb": "https://www.emi.ac.ma",
-    "contact": "info@emi.ac.ma"
+    "contact": "info@emi.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-emi-1",
+        "rating": 5,
+        "comment": "Excellente école, très reconnue au Maroc.",
+        "author": "Hamza D.",
+        "date": "2025-01-10",
+        "verified": true
+      },
+      {
+        "id": "rev-emi-2",
+        "rating": 5,
+        "comment": "Formation solide et professeurs compétents.",
+        "author": "Nour E.",
+        "date": "2023-04-27",
+        "verified": true
+      },
+      {
+        "id": "rev-emi-3",
+        "rating": 4,
+        "comment": "Pression élevée mais bon niveau.",
+        "author": "Mehdi S.",
+        "date": "2022-10-15",
+        "verified": true
+      },
+      {
+        "id": "rev-emi-4",
+        "rating": 5,
+        "comment": "Très bon réseau d'anciens.",
+        "author": "Sara M.",
+        "date": "2024-06-03",
+        "verified": false
+      },
+      {
+        "id": "rev-emi-5",
+        "rating": 4,
+        "comment": "Infrastructure correcte, contenu excellent.",
+        "author": "Khalid T.",
+        "date": "2021-08-19",
+        "verified": true
+      }
+    ]
   },
   {
-    "idEcole": 4,
+    "idEcole": 3,
     "nom": "Université Mohammed V de Rabat - Faculté des Sciences",
     "ville": "Rabat",
     "type": "Université Publique",
@@ -51,11 +135,53 @@
     "admission": "Baccalauréat scientifique",
     "debouches": ["Enseignant", "Chercheur", "Technicien supérieur"],
     "siteWeb": "https://www.fs.um5.ac.ma",
-    "contact": "fs@um5.ac.ma"
+    "contact": "fs@um5.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-fs-1",
+        "rating": 4,
+        "comment": "Bonne base scientifique.",
+        "author": "Hicham Z.",
+        "date": "2023-02-11",
+        "verified": true
+      },
+      {
+        "id": "rev-fs-2",
+        "rating": 4,
+        "comment": "Cours intéressants mais classes chargées.",
+        "author": "Aya B.",
+        "date": "2024-05-29",
+        "verified": true
+      },
+      {
+        "id": "rev-fs-3",
+        "rating": 3,
+        "comment": "Manque parfois d'encadrement.",
+        "author": "Rachid L.",
+        "date": "2022-01-08",
+        "verified": false
+      },
+      {
+        "id": "rev-fs-4",
+        "rating": 4,
+        "comment": "Bonne préparation pour le master.",
+        "author": "Soukaina F.",
+        "date": "2021-09-16",
+        "verified": true
+      },
+      {
+        "id": "rev-fs-5",
+        "rating": 5,
+        "comment": "Très bon niveau académique.",
+        "author": "Younes M.",
+        "date": "2025-02-03",
+        "verified": true
+      }
+    ]
   },
 
   {
-    "idEcole": 5,
+    "idEcole": 4,
     "nom": "Institut National des Postes et Télécommunications",
     "ville": "Rabat",
     "type": "Établissement Public",
@@ -70,11 +196,37 @@
     "admission": "Concours après bac ou classes préparatoires",
     "debouches": ["Ingénieur télécom", "Administrateur réseau", "Responsable digital"],
     "siteWeb": "https://www.inpt.ac.ma",
-    "contact": "contact@inpt.ac.ma"
+    "contact": "contact@inpt.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-inpt-1",
+        "rating": 5,
+        "comment": "Excellente formation en télécommunications.",
+        "author": "Karim T.",
+        "date": "2024-07-12",
+        "verified": true
+      },
+      {
+        "id": "rev-inpt-2",
+        "rating": 4,
+        "comment": "Bon équilibre théorie/pratique.",
+        "author": "Lina M.",
+        "date": "2023-09-05",
+        "verified": true
+      },
+      {
+        "id": "rev-inpt-3",
+        "rating": 4,
+        "comment": "Bonne insertion professionnelle.",
+        "author": "Othmane K.",
+        "date": "2022-11-30",
+        "verified": true
+      }
+    ]
   },
 
-  {
-    "idEcole": 6,
+ {
+    "idEcole": 5,
     "nom": "École Nationale Supérieure d'Arts et Métiers",
     "ville": "Meknès",
     "type": "École Publique d'Ingénieurs",
@@ -87,13 +239,38 @@
     "dureeEtudes": "5 ans",
     "diplome": "Diplôme d'Ingénieur d'État",
     "admission": "Concours après classes préparatoires ou licence",
-    "debouches": ["Ingénieur industriel", "Responsable maintenance", "Chef d’usine"],
+    "debouches": ["Ingénieur industriel", "Responsable maintenance", "Chef d'usine"],
     "siteWeb": "https://www.ensam.ac.ma",
-    "contact": "contact@ensam.ac.ma"
-  }
-  ,
-  {
-    "idEcole": 7,
+    "contact": "contact@ensam.ac.ma",
+    "reviews": [
+        {
+            "id": "rev-ensam-1",
+            "rating": 5,
+            "comment": "Formation technique solide avec beaucoup de pratique en atelier.",
+            "author": "Karim T.",
+            "date": "2024-04-15",
+            "verified": true
+        },
+        {
+            "id": "rev-ensam-2",
+            "rating": 4,
+            "comment": "Très bon environnement pour l'apprentissage de la mécanique. Les débouchés sont excellents.",
+            "author": "Fatima Z.",
+            "date": "2023-08-22",
+            "verified": true
+        },
+        {
+            "id": "rev-ensam-3",
+            "rating": 4,
+            "comment": "La vie étudiante à Meknès est agréable et le campus est bien équipé.",
+            "author": "Hicham M.",
+            "date": "2022-11-10",
+            "verified": false
+        }
+    ]
+},
+{
+    "idEcole": 6,
     "nom": "Faculté de Médecine et de Pharmacie de Rabat",
     "ville": "Rabat",
     "type": "Université Publique de Santé",
@@ -102,16 +279,42 @@
     "cout": "10000 MAD/an",
     "note": 4.6,
     "image": "/images/Faculté de Médecine et de Pharmacie de Rabat.png",
-    "presentation": "La Faculté de Médecine et de Pharmacie de Rabat est l’un des plus anciens établissements de santé au Maroc, formant des médecins, pharmaciens et chirurgiens-dentistes hautement qualifiés.",
+    "presentation": "La Faculté de Médecine et de Pharmacie de Rabat est l'un des plus anciens établissements de santé au Maroc, formant des médecins, pharmaciens et chirurgiens-dentistes hautement qualifiés.",
     "dureeEtudes": "5 à 7 ans",
     "diplome": "Doctorat en Médecine, Pharmacie ou Médecine Dentaire",
     "admission": "Concours national après baccalauréat scientifique",
     "debouches": ["Médecin", "Pharmacien", "Dentiste", "Chercheur en santé"],
     "siteWeb": "https://www.fmpr.ac.ma",
-    "contact": "contact@fmpr.ac.ma"
-  },
+    "contact": "contact@fmpr.ac.ma",
+    "reviews": [
+        {
+            "id": "rev-fmpr-1",
+            "rating": 5,
+            "comment": "Formation médicale d'excellence avec des professeurs renommés.",
+            "author": "Leila C.",
+            "date": "2024-01-30",
+            "verified": true
+        },
+        {
+            "id": "rev-fmpr-2",
+            "rating": 4,
+            "comment": "Le concours est difficile, mais la formation qui suit en vaut la peine.",
+            "author": "Othmane S.",
+            "date": "2023-06-12",
+            "verified": true
+        },
+        {
+            "id": "rev-fmpr-3",
+            "rating": 5,
+            "comment": "Hôpital universitaire moderne offrant une expérience clinique inestimable.",
+            "author": "Amina K.",
+            "date": "2022-09-05",
+            "verified": true
+        }
+    ]
+},
   {
-    "idEcole": 8,
+    "idEcole": 7,
     "nom": "École Nationale de Commerce et de Gestion",
     "ville": "Casablanca",
     "type": "École Publique de Commerce",
@@ -126,10 +329,36 @@
     "admission": "Concours national après baccalauréat",
     "debouches": ["Manager", "Analyste financier", "Responsable marketing", "Consultant"],
     "siteWeb": "https://www.encg.ac.ma",
-    "contact": "contact@encg.ac.ma"
+    "contact": "contact@encg.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-encg-1",
+        "rating": 4,
+        "comment": "Bonne école de commerce publique.",
+        "author": "Sanaa A.",
+        "date": "2024-05-20",
+        "verified": true
+      },
+      {
+        "id": "rev-encg-2",
+        "rating": 4,
+        "comment": "Programme actualisé avec le marché.",
+        "author": "Mehdi C.",
+        "date": "2023-08-15",
+        "verified": true
+      },
+      {
+        "id": "rev-encg-3",
+        "rating": 5,
+        "comment": "Bon réseau d'anciens étudiants.",
+        "author": "Leila N.",
+        "date": "2022-12-05",
+        "verified": true
+      }
+    ]
   },
   {
-    "idEcole": 9,
+    "idEcole": 8,
     "nom": "Université Hassan II - Faculté des Sciences et Techniques",
     "ville": "Casablanca",
     "type": "Université Publique",
@@ -144,10 +373,36 @@
     "admission": "Baccalauréat scientifique",
     "debouches": ["Ingénieur procédés", "Technicien supérieur", "Chercheur"],
     "siteWeb": "https://www.fst.ac.ma",
-    "contact": "fst@uh2.ac.ma"
-  },
-  {
-    "idEcole": 10,
+    "contact": "fst@uh2.ac.ma",
+    "reviews": [
+        {
+            "id": "rev-fst-1",
+            "rating": 4,
+            "comment": "Formation pratique qui prépare bien au monde industriel.",
+            "author": "Adil M.",
+            "date": "2024-02-10",
+            "verified": true
+        },
+        {
+            "id": "rev-fst-2",
+            "rating": 4,
+            "comment": "Bon rapport qualité/prix pour des études scientifiques solides.",
+            "author": "Nadia R.",
+            "date": "2023-10-05",
+            "verified": true
+        },
+        {
+            "id": "rev-fst-3",
+            "rating": 3,
+            "comment": "Certains laboratoires auraient besoin de matériel plus récent.",
+            "author": "Mehdi K.",
+            "date": "2022-12-18",
+            "verified": false
+        }
+    ]
+},
+{
+    "idEcole": 9,
     "nom": "École Nationale d'Architecture",
     "ville": "Rabat",
     "type": "École Publique d'Architecture",
@@ -162,10 +417,36 @@
     "admission": "Concours après baccalauréat",
     "debouches": ["Architecte", "Urbaniste", "Designer d’espace"],
     "siteWeb": "https://www.ena.ma",
-    "contact": "contact@ena.ma"
-  },
-  {
-    "idEcole": 11,
+    "contact": "contact@ena.ma",
+    "reviews": [
+        {
+            "id": "rev-ena-1",
+            "rating": 5,
+            "comment": "Concours très sélectif mais formation d'excellence en architecture.",
+            "author": "Yasmine B.",
+            "date": "2024-03-25",
+            "verified": true
+        },
+        {
+            "id": "rev-ena-2",
+            "rating": 5,
+            "comment": "Ateliers créatifs stimulants et enseignants inspirants.",
+            "author": "Sami L.",
+            "date": "2023-07-14",
+            "verified": true
+        },
+        {
+            "id": "rev-ena-3",
+            "rating": 4,
+            "comment": "Beaucoup de travail personnel mais très formateur.",
+            "author": "Houda F.",
+            "date": "2022-11-30",
+            "verified": false
+        }
+    ]
+},
+{
+    "idEcole": 10,
     "nom": "Institut Agronomique et Vétérinaire Hassan II",
     "ville": "Rabat",
     "type": "Établissement Public Agronomique",
@@ -180,10 +461,36 @@
     "admission": "Concours après classes préparatoires ou bac scientifique",
     "debouches": ["Ingénieur agronome", "Vétérinaire", "Consultant agricole"],
     "siteWeb": "https://www.iav.ac.ma",
-    "contact": "contact@iav.ac.ma"
-  },
-  {
-    "idEcole": 12,
+    "contact": "contact@iav.ac.ma",
+    "reviews": [
+        {
+            "id": "rev-iav-1",
+            "rating": 5,
+            "comment": "Réputation excellente et débouchés garantis dans le secteur agricole.",
+            "author": "Rachid A.",
+            "date": "2024-01-12",
+            "verified": true
+        },
+        {
+            "id": "rev-iav-2",
+            "rating": 4,
+            "comment": "Ferme pédagogique et laboratoires très utiles pour la pratique.",
+            "author": "Soukaina T.",
+            "date": "2023-09-08",
+            "verified": true
+        },
+        {
+            "id": "rev-iav-3",
+            "rating": 5,
+            "comment": "Formation vétérinaire de très haut niveau.",
+            "author": "Amine K.",
+            "date": "2022-05-20",
+            "verified": true
+        }
+    ]
+},
+{
+    "idEcole": 11,
     "nom": "Université Ibn Tofail - Faculté des Sciences",
     "ville": "Kénitra",
     "type": "Université Publique",
@@ -198,10 +505,36 @@
     "admission": "Baccalauréat scientifique",
     "debouches": ["Développeur", "Enseignant", "Chercheur"],
     "siteWeb": "https://www.uit.ac.ma",
-    "contact": "contact@uit.ac.ma"
-  },
-  {
-    "idEcole": 13,
+    "contact": "contact@uit.ac.ma",
+    "reviews": [
+        {
+            "id": "rev-uit-1",
+            "rating": 4,
+            "comment": "Bonnes formations en informatique avec des professeurs accessibles.",
+            "author": "Hassan M.",
+            "date": "2024-04-02",
+            "verified": true
+        },
+        {
+            "id": "rev-uit-2",
+            "rating": 3,
+            "comment": "Ambiance de travail correcte, mais infrastructure à améliorer.",
+            "author": "Salma E.",
+            "date": "2023-11-15",
+            "verified": false
+        },
+        {
+            "id": "rev-uit-3",
+            "rating": 4,
+            "comment": "Prix très abordable pour une formation scientifique solide.",
+            "author": "Omar Z.",
+            "date": "2022-08-22",
+            "verified": true
+        }
+    ]
+},
+{
+    "idEcole": 12,
     "nom": "École Normale Supérieure de l'Enseignement Technique",
     "ville": "Rabat",
     "type": "École Publique de Formation",
@@ -216,10 +549,36 @@
     "admission": "Concours après bac ou licence",
     "debouches": ["Professeur technique", "Formateur", "Inspecteur pédagogique"],
     "siteWeb": "https://www.enset.ma",
-    "contact": "contact@enset.ma"
-  },
+    "contact": "contact@enset.ma",
+    "reviews": [
+        {
+            "id": "rev-enset-1",
+            "rating": 4,
+            "comment": "Formation pédagogique très complète pour devenir enseignant technique.",
+            "author": "Khalid R.",
+            "date": "2024-03-08",
+            "verified": true
+        },
+        {
+            "id": "rev-enset-2",
+            "rating": 5,
+            "comment": "Débouchés assurés dans l'enseignement public et privé.",
+            "author": "Naima S.",
+            "date": "2023-12-10",
+            "verified": true
+        },
+        {
+            "id": "rev-enset-3",
+            "rating": 4,
+            "comment": "Stage pratique en établissement scolaire très formateur.",
+            "author": "Mohamed L.",
+            "date": "2022-10-05",
+            "verified": false
+        }
+    ]
+},
   {
-    "idEcole": 14,
+    "idEcole": 13,
     "nom": "Université Cadi Ayyad - Faculté des Sciences Semlalia",
     "ville": "Marrakech",
     "type": "Université Publique",
@@ -234,10 +593,36 @@
     "admission": "Baccalauréat scientifique",
     "debouches": ["Chercheur", "Enseignant", "Ingénieur scientifique"],
     "siteWeb": "https://www.uca.ma",
-    "contact": "contact@uca.ma"
+    "contact": "contact@uca.ma",
+    "reviews": [
+      {
+        "id": "rev-uca-1",
+        "rating": 4,
+        "comment": "Bon niveau académique.",
+        "author": "Hamid E.",
+        "date": "2024-01-30",
+        "verified": true
+      },
+      {
+        "id": "rev-uca-2",
+        "rating": 4,
+        "comment": "Chercheurs compétents.",
+        "author": "Khadija M.",
+        "date": "2023-03-22",
+        "verified": true
+      },
+      {
+        "id": "rev-uca-3",
+        "rating": 4,
+        "comment": "Bonne bibliothèque universitaire.",
+        "author": "Rachid B.",
+        "date": "2022-09-11",
+        "verified": true
+      }
+    ]
   },
   {
-    "idEcole": 15,
+    "idEcole": 14,
     "nom": "École Nationale Forestière d'Ingénieurs",
     "ville": "Salé",
     "type": "École Publique d'Ingénieurs",
@@ -246,16 +631,42 @@
     "cout": "10500 MAD/an",
     "note": 4.2,
     "image": "/images/École Nationale Forestière d'Ingénieurs.png",
-    "presentation": "Cette école forme des ingénieurs spécialisés dans la protection des forêts, de l’environnement et du développement durable.",
+    "presentation": "Cette école forme des ingénieurs spécialisés dans la protection des forêts, de l'environnement et du développement durable.",
     "dureeEtudes": "5 ans",
     "diplome": "Ingénieur d'État",
     "admission": "Concours après classes préparatoires",
     "debouches": ["Ingénieur forestier", "Responsable environnement", "Consultant écologique"],
     "siteWeb": "https://www.enfi.ac.ma",
-    "contact": "contact@enfi.ac.ma"
-  },
-  {
-    "idEcole": 16,
+    "contact": "contact@enfi.ac.ma",
+    "reviews": [
+        {
+            "id": "rev-enfi-1",
+            "rating": 5,
+            "comment": "Formation unique au Maroc dans le domaine forestier et environnemental.",
+            "author": "Ilyas B.",
+            "date": "2024-05-12",
+            "verified": true
+        },
+        {
+            "id": "rev-enfi-2",
+            "rating": 4,
+            "comment": "Beaucoup de travaux pratiques sur le terrain et en forêt.",
+            "author": "Zineb M.",
+            "date": "2023-10-18",
+            "verified": true
+        },
+        {
+            "id": "rev-enfi-3",
+            "rating": 4,
+            "comment": "Débouchés spécialisés dans un secteur en plein développement.",
+            "author": "Rachid T.",
+            "date": "2022-11-03",
+            "verified": false
+        }
+    ]
+},
+{
+    "idEcole": 15,
     "nom": "Faculté des Sciences Juridiques, Économiques et Sociales",
     "ville": "Rabat",
     "type": "Université Publique",
@@ -264,16 +675,42 @@
     "cout": "9500 MAD/an",
     "note": 4.1,
     "image": "/images/Faculté des Sciences Juridiques, Économiques et Sociales.jpg",
-    "presentation": "Cette faculté prépare les étudiants aux métiers du droit, de l’économie et de la gestion publique et privée.",
+    "presentation": "Cette faculté prépare les étudiants aux métiers du droit, de l'économie et de la gestion publique et privée.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master",
     "admission": "Baccalauréat",
     "debouches": ["Juriste", "Économiste", "Gestionnaire"],
     "siteWeb": "https://www.fsjesr.ma",
-    "contact": "contact@fsjesr.ma"
-  },
-  {
-    "idEcole": 17,
+    "contact": "contact@fsjesr.ma",
+    "reviews": [
+        {
+            "id": "rev-fsjes-1",
+            "rating": 5,
+            "comment": "Formation juridique très solide avec des enseignants de qualité.",
+            "author": "Meriem A.",
+            "date": "2024-02-25",
+            "verified": true
+        },
+        {
+            "id": "rev-fsjes-2",
+            "rating": 4,
+            "comment": "Bonne réputation et bons débouchés dans la fonction publique.",
+            "author": "Hamza C.",
+            "date": "2023-08-14",
+            "verified": true
+        },
+        {
+            "id": "rev-fsjes-3",
+            "rating": 3,
+            "comment": "Très grande faculté, parfois difficile d'avoir un suivi personnalisé.",
+            "author": "Amina S.",
+            "date": "2022-12-05",
+            "verified": false
+        }
+    ]
+},
+{
+    "idEcole": 16,
     "nom": "Institut Supérieur de l'Information et de la Communication",
     "ville": "Rabat",
     "type": "Établissement Public",
@@ -282,16 +719,42 @@
     "cout": "13500 MAD/an",
     "note": 4.3,
     "image": "/images/Institut Supérieur de l'Information et de la Communication.webp",
-    "presentation": "L’ISIC forme des journalistes et communicants capables de travailler dans les médias modernes.",
+    "presentation": "L'ISIC forme des journalistes et communicants capables de travailler dans les médias modernes.",
     "dureeEtudes": "3 ans",
     "diplome": "Licence professionnelle",
     "admission": "Concours après baccalauréat",
     "debouches": ["Journaliste", "Chargé de communication", "Attaché de presse"],
     "siteWeb": "https://www.isic.ma",
-    "contact": "contact@isic.ma"
-  },
-  {
-    "idEcole": 18,
+    "contact": "contact@isic.ma",
+    "reviews": [
+        {
+            "id": "rev-isic-1",
+            "rating": 5,
+            "comment": "Formation pratique avec de nombreux ateliers et projets médias.",
+            "author": "Nadia L.",
+            "date": "2024-03-30",
+            "verified": true
+        },
+        {
+            "id": "rev-isic-2",
+            "rating": 4,
+            "comment": "Bon réseau professionnel dans le domaine des médias et communication.",
+            "author": "Karim E.",
+            "date": "2023-09-22",
+            "verified": true
+        },
+        {
+            "id": "rev-isic-3",
+            "rating": 4,
+            "comment": "Concours sélectif mais la formation est reconnue par les employeurs.",
+            "author": "Salma K.",
+            "date": "2022-07-15",
+            "verified": false
+        }
+    ]
+},
+{
+    "idEcole": 17,
     "nom": "Université Abdelmalek Essaâdi - Faculté des Sciences",
     "ville": "Tétouan",
     "type": "Université Publique",
@@ -306,10 +769,36 @@
     "admission": "Baccalauréat scientifique",
     "debouches": ["Analyste", "Développeur", "Chercheur"],
     "siteWeb": "https://www.uae.ma",
-    "contact": "contact@uae.ma"
-  },
+    "contact": "contact@uae.ma",
+    "reviews": [
+        {
+            "id": "rev-uae-1",
+            "rating": 4,
+            "comment": "Formation correcte pour le prix, bonne spécialisation en biologie marine.",
+            "author": "Omar F.",
+            "date": "2024-01-08",
+            "verified": true
+        },
+        {
+            "id": "rev-uae-2",
+            "rating": 3,
+            "comment": "La vie étudiante à Tétouan est agréable, mais les locaux sont vieillissants.",
+            "author": "Hafsa M.",
+            "date": "2023-06-19",
+            "verified": false
+        },
+        {
+            "id": "rev-uae-3",
+            "rating": 4,
+            "comment": "Opportunités intéressantes pour la recherche dans les sciences de la mer.",
+            "author": "Younes R.",
+            "date": "2022-10-11",
+            "verified": true
+        }
+    ]
+},
   {
-    "idEcole": 19,
+    "idEcole": 18,
     "nom": "École Nationale Supérieure d'Électricité et Mécanique",
     "ville": "Casablanca",
     "type": "École Publique d'Ingénieurs",
@@ -324,10 +813,36 @@
     "admission": "Concours après classes préparatoires",
     "debouches": ["Ingénieur électrique", "Ingénieur maintenance", "Responsable industriel"],
     "siteWeb": "https://www.ensem.ac.ma",
-    "contact": "contact@ensem.ac.ma"
+    "contact": "contact@ensem.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-ensem-1",
+        "rating": 4,
+        "comment": "Bonne formation technique.",
+        "author": "Youssef B.",
+        "date": "2024-08-10",
+        "verified": true
+      },
+      {
+        "id": "rev-ensem-2",
+        "rating": 5,
+        "comment": "Laboratoires bien équipés.",
+        "author": "Nadia S.",
+        "date": "2023-11-25",
+        "verified": true
+      },
+      {
+        "id": "rev-ensem-3",
+        "rating": 4,
+        "comment": "Bon rapport qualité-prix.",
+        "author": "Hassan M.",
+        "date": "2022-07-14",
+        "verified": true
+      }
+    ]
   },
   {
-    "idEcole": 20,
+    "idEcole": 19,
     "nom": "Faculté des Lettres et des Sciences Humaines",
     "ville": "Fès",
     "type": "Université Publique",
@@ -342,10 +857,36 @@
     "admission": "Baccalauréat",
     "debouches": ["Enseignant", "Traducteur", "Chercheur", "Journaliste"],
     "siteWeb": "https://www.flshfes.ac.ma",
-    "contact": "contact@flshfes.ac.ma"
-  },
+    "contact": "contact@flshfes.ac.ma",
+    "reviews": [
+        {
+            "id": "rev-flsh-1",
+            "rating": 4,
+            "comment": "Formation solide en littérature et langues dans la ville historique de Fès.",
+            "author": "Lamia S.",
+            "date": "2024-03-15",
+            "verified": true
+        },
+        {
+            "id": "rev-flsh-2",
+            "rating": 5,
+            "comment": "Professeurs passionnés et bibliothèque riche pour les recherches en sciences humaines.",
+            "author": "Anouar M.",
+            "date": "2023-11-28",
+            "verified": true
+        },
+        {
+            "id": "rev-flsh-3",
+            "rating": 3,
+            "comment": "Débouchés limités si on ne poursuit pas jusqu'au master ou l'agrégation.",
+            "author": "Sara T.",
+            "date": "2022-09-10",
+            "verified": false
+        }
+    ]
+},
 {
-  "idEcole": 22,
+  "idEcole": 20,
   "nom": "ISTA Bab Tizimi - OFPPT",
   "ville": "Meknès",
   "type": "Institut Spécialisé de Technologie Appliquée",
@@ -366,6 +907,651 @@
   "localisation": {
     "latitude": 33.8847,
     "longitude": -5.5436
-  }
-}
- ]
+  },
+  "reviews": [
+      {
+        "id": "rev-ista-1",
+        "rating": 4,
+        "comment": "Bonne formation pratique, surtout en développement.",
+        "author": "Ayoub H.",
+        "date": "2024-04-06",
+        "verified": true
+      },
+      {
+        "id": "rev-ista-2",
+        "rating": 5,
+        "comment": "Les formateurs sont à l'écoute.",
+        "author": "Kawtar E.",
+        "date": "2023-07-19",
+        "verified": true
+      },
+      {
+        "id": "rev-ista-3",
+        "rating": 3,
+        "comment": "Infrastructure correcte mais perfectible.",
+        "author": "Said M.",
+        "date": "2022-11-02",
+        "verified": false
+      },
+      {
+        "id": "rev-ista-4",
+        "rating": 4,
+        "comment": "Bonne préparation au marché du travail.",
+        "author": "Imad B.",
+        "date": "2025-01-28",
+        "verified": true
+      },
+      {
+        "id": "rev-ista-5",
+        "rating": 4,
+        "comment": "Bon rapport qualité-prix.",
+        "author": "Zineb A.",
+        "date": "2021-05-14",
+        "verified": true
+      }
+    ]
+},
+{
+        "idEcole": 21,
+    "nom": "École Hassania des Travaux Publics",
+    "ville": "Casablanca",
+    "type": "École Publique d'Ingénieurs",
+    "description": "École d'ingénieurs spécialisée en génie civil et travaux publics",
+    "specialites": ["Génie Civil", "BTP", "Infrastructures", "Urbanisme"],
+    "cout": "13000 MAD/an",
+    "note": 4.6,
+    "image": "/images/ehp-casablanca.png",
+    "presentation": "L'EHTP forme des ingénieurs de haut niveau dans les domaines du génie civil, des travaux publics et de l'urbanisme.",
+    "dureeEtudes": "5 ans",
+    "diplome": "Diplôme d'Ingénieur d'État",
+    "admission": "Concours national",
+    "debouches": ["Ingénieur BTP", "Chef de chantier", "Urbaniste", "Ingénieur structures"],
+    "siteWeb": "https://www.ehtp.ac.ma",
+    "contact": "info@ehtp.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-ehtp-1",
+        "rating": 5,
+        "comment": "Très réputée dans le BTP au Maroc.",
+        "author": "Ahmed R.",
+        "date": "2024-02-15",
+        "verified": true
+      },
+      {
+        "id": "rev-ehtp-2",
+        "rating": 4,
+        "comment": "Formation pratique sur chantier.",
+        "author": "Fatima Z.",
+        "date": "2023-06-22",
+        "verified": true
+      },
+      {
+        "id": "rev-ehtp-3",
+        "rating": 5,
+        "comment": "Diplôme très recherché par les entreprises.",
+        "author": "Mourad L.",
+        "date": "2022-04-18",
+        "verified": true
+      }
+    ]},
+    {
+    "idEcole": 22,
+    "nom": "École Supérieure de Technologie",
+    "ville": "Meknès",
+    "type": "École Publique de Technologie",
+    "description": "Formation technologique spécialisée",
+    "specialites": ["Agro-alimentaire", "Biotechnologie", "Génie Civil", "Informatique"],
+    "cout": "8300 MAD/an",
+    "note": 4.0,
+    "image": "/images/est-meknes.png",
+    "presentation": "L'EST Meknès se spécialise dans les technologies agro-alimentaires et biotechnologiques adaptées à la région.",
+    "dureeEtudes": "2 ans",
+    "diplome": "Diplôme de Technicien Supérieur",
+    "admission": "Baccalauréat scientifique ou technique",
+    "debouches": ["Technicien agro-alimentaire", "Technicien biotechnologie", "Technicien BTP"],
+    "siteWeb": "https://www.estmeknes.ac.ma",
+    "contact": "estmeknes@estmeknes.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-estm-1",
+        "rating": 4,
+        "comment": "Spécialisation agro unique.",
+        "author": "Fatima Z.",
+        "date": "2024-06-08",
+        "verified": true
+      },
+      {
+        "id": "rev-estm-2",
+        "rating": 4,
+        "comment": "Bon lien avec les entreprises agricoles.",
+        "author": "Mohamed L.",
+        "date": "2023-10-25",
+        "verified": true
+      },
+      {
+        "id": "rev-estm-3",
+        "rating": 4,
+        "comment": "Laboratoires spécialisés.",
+        "author": "Samira K.",
+        "date": "2022-04-14",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "idEcole": 23,
+    "nom": "École Nationale des Sciences Appliquées",
+    "ville": "Marrakech",
+    "type": "École Publique d'Ingénieurs",
+    "description": "École d'ingénieurs en sciences appliquées",
+    "specialites": ["Génie Informatique", "Génie Civil", "Génie Industriel", "Génie Électrique"],
+    "cout": "10000 MAD/an",
+    "note": 4.3,
+    "image": "/images/ensa-marrakech.png",
+    "presentation": "L'ENSA Marrakech forme des ingénieurs polyvalents dans les domaines de l'informatique, génie civil, industriel et électrique.",
+    "dureeEtudes": "5 ans",
+    "diplome": "Diplôme d'Ingénieur d'État",
+    "admission": "Concours national",
+    "debouches": ["Ingénieur informatique", "Ingénieur BTP", "Ingénieur industriel", "Chef de projet"],
+    "siteWeb": "https://www.ensa.ac.ma",
+    "contact": "ensa@ensa.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-ensa-1",
+        "rating": 4,
+        "comment": "Formation pratique intéressante.",
+        "author": "Nabil R.",
+        "date": "2024-06-18",
+        "verified": true
+      },
+      {
+        "id": "rev-ensa-2",
+        "rating": 5,
+        "comment": "Projets concrets avec entreprises.",
+        "author": "Salma K.",
+        "date": "2023-10-09",
+        "verified": true
+      },
+      {
+        "id": "rev-ensa-3",
+        "rating": 4,
+        "comment": "Enseignants disponibles.",
+        "author": "Omar T.",
+        "date": "2022-02-28",
+        "verified": true
+      }
+    ]},
+    {
+    "idEcole": 24,
+    "nom": "Université Sidi Mohamed Ben Abdellah - Faculté des Sciences",
+    "ville": "Fès",
+    "type": "Université Publique",
+    "description": "Formation scientifique fondamentale",
+    "specialites": ["Mathématiques", "Physique", "Chimie", "Biologie"],
+    "cout": "7000 MAD/an",
+    "note": 3.9,
+    "image": "/images/usmba-fes.png",
+    "presentation": "La Faculté des Sciences de Fès propose des formations scientifiques complètes de la licence au doctorat.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Licence, Master, Doctorat",
+    "admission": "Baccalauréat scientifique",
+    "debouches": ["Enseignant", "Chercheur", "Technicien supérieur"],
+    "siteWeb": "https://www.fs.usmba.ac.ma",
+    "contact": "fs@usmba.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-usmba-1",
+        "rating": 4,
+        "comment": "Bonne formation de base.",
+        "author": "Fatima E.",
+        "date": "2024-03-25",
+        "verified": true
+      },
+      {
+        "id": "rev-usmba-2",
+        "rating": 3,
+        "comment": "Classes parfois surchargées.",
+        "author": "Hicham A.",
+        "date": "2023-07-14",
+        "verified": true
+      },
+      {
+        "id": "rev-usmba-3",
+        "rating": 4,
+        "comment": "Prix accessible.",
+        "author": "Karima S.",
+        "date": "2022-11-03",
+        "verified": true
+      }
+    ]},
+    {
+    "idEcole": 25,
+    "nom": "École Nationale des Sciences Appliquées",
+    "ville": "Fès",
+    "type": "École Publique d'Ingénieurs",
+    "description": "École d'ingénieurs en sciences appliquées",
+    "specialites": ["Génie Informatique", "Génie Civil", "Génie des Procédés"],
+    "cout": "10500 MAD/an",
+    "note": 4.2,
+    "image": "/images/ensa-fes.png",
+    "presentation": "L'ENSA Fès forme des ingénieurs dans les domaines de l'informatique, génie civil et génie des procédés.",
+    "dureeEtudes": "5 ans",
+    "diplome": "Diplôme d'Ingénieur d'État",
+    "admission": "Concours national",
+    "debouches": ["Ingénieur logiciel", "Ingénieur BTP", "Ingénieur procédés"],
+    "siteWeb": "https://www.ensaf.ac.ma",
+    "contact": "contact@ensaf.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-ensaf-1",
+        "rating": 4,
+        "comment": "Niveau correct.",
+        "author": "Yassin M.",
+        "date": "2024-04-12",
+        "verified": true
+      },
+      {
+        "id": "rev-ensaf-2",
+        "rating": 4,
+        "comment": "Infrastructure moderne.",
+        "author": "Nora L.",
+        "date": "2023-09-28",
+        "verified": true
+      },
+      {
+        "id": "rev-ensaf-3",
+        "rating": 5,
+        "comment": "Bon encadrement.",
+        "author": "Adil R.",
+        "date": "2022-05-19",
+        "verified": true
+      }
+    ]},
+    {
+    "idEcole": 26,
+    "nom": "Université Abdelmalek Essaâdi - Faculté des Sciences",
+    "ville": "Tanger",
+    "type": "Université Publique",
+    "description": "Formation scientifique et technique",
+    "specialites": ["Mathématiques", "Physique", "Chimie", "Sciences de la Terre"],
+    "cout": "7200 MAD/an",
+    "note": 3.8,
+    "image": "/images/uae-tanger.png",
+    "presentation": "La Faculté des Sciences de Tanger offre des formations scientifiques avec une orientation vers les sciences de la terre et l'environnement.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Licence, Master, Doctorat",
+    "admission": "Baccalauréat scientifique",
+    "debouches": ["Géologue", "Environnementaliste", "Enseignant", "Chercheur"],
+    "siteWeb": "https://www.fst.ac.ma",
+    "contact": "fst@uae.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-uae-1",
+        "rating": 4,
+        "comment": "Bonne spécialisation géologie.",
+        "author": "Samir T.",
+        "date": "2024-02-08",
+        "verified": true
+      },
+      {
+        "id": "rev-uae-2",
+        "rating": 3,
+        "comment": "Moyens limités.",
+        "author": "Laila M.",
+        "date": "2023-05-17",
+        "verified": true
+      },
+      {
+        "id": "rev-uae-3",
+        "rating": 4,
+        "comment": "Vue sur la mer agréable.",
+        "author": "Hakim B.",
+        "date": "2022-08-24",
+        "verified": true
+      }
+    ]},
+    {
+    "idEcole": 27,
+    "nom": "École Nationale de Commerce et de Gestion",
+    "ville": "Tanger",
+    "type": "École de Commerce Publique",
+    "description": "École de commerce et gestion",
+    "specialites": ["Commerce International", "Logistique", "Marketing", "Finance"],
+    "cout": "11500 MAD/an",
+    "note": 4.1,
+    "image": "/images/encg-tanger.png",
+    "presentation": "L'ENCG Tanger se spécialise dans le commerce international, la logistique et le marketing avec une orientation méditerranéenne.",
+    "dureeEtudes": "5 ans",
+    "diplome": "Diplôme d'École de Commerce",
+    "admission": "Concours national",
+    "debouches": ["Responsable export", "Logisticien", "Responsable marketing", "Analyste financier"],
+    "siteWeb": "https://www.encgt.ma",
+    "contact": "contact@encgt.ma",
+    "reviews": [
+      {
+        "id": "rev-encgt-1",
+        "rating": 4,
+        "comment": "Bonne orientation internationale.",
+        "author": "Sofia R.",
+        "date": "2024-07-03",
+        "verified": true
+      },
+      {
+        "id": "rev-encgt-2",
+        "rating": 4,
+        "comment": "Proximité avec le port de Tanger.",
+        "author": "Mehdi Z.",
+        "date": "2023-10-30",
+        "verified": true
+      },
+      {
+        "id": "rev-encgt-3",
+        "rating": 4,
+        "comment": "Formation pratique en logistique.",
+        "author": "Amina K.",
+        "date": "2022-12-15",
+        "verified": true
+      }
+    ]},
+    {
+    "idEcole": 28,
+    "nom": "Université Ibn Zohr - Faculté des Sciences",
+    "ville": "Agadir",
+    "type": "Université Publique",
+    "description": "Formation scientifique et recherche",
+    "specialites": ["Biologie", "Géologie", "Chimie", "Mathématiques"],
+    "cout": "6800 MAD/an",
+    "note": 3.9,
+    "image": "/images/uiz-agadir.png",
+    "presentation": "La Faculté des Sciences d'Agadir se spécialise dans les sciences de la vie, la géologie et l'environnement avec une orientation régionale.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Licence, Master, Doctorat",
+    "admission": "Baccalauréat scientifique",
+    "debouches": ["Biologiste", "Géologue", "Enseignant", "Chercheur"],
+    "siteWeb": "https://www.fsa.ac.ma",
+    "contact": "fsa@uiz.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-uiz-1",
+        "rating": 4,
+        "comment": "Bonne spécialisation biologie marine.",
+        "author": "Omar S.",
+        "date": "2024-05-05",
+        "verified": true
+      },
+      {
+        "id": "rev-uiz-2",
+        "rating": 3,
+        "comment": "Équipements à améliorer.",
+        "author": "Khadija T.",
+        "date": "2023-08-22",
+        "verified": true
+      },
+      {
+        "id": "rev-uiz-3",
+        "rating": 4,
+        "comment": "Environnement agréable.",
+        "author": "Rachid M.",
+        "date": "2022-03-11",
+        "verified": true
+      }
+    ]},
+    {
+    "idEcole": 29,
+    "nom": "École Nationale des Sciences Appliquées",
+    "ville": "Agadir",
+    "type": "École Publique d'Ingénieurs",
+    "description": "École d'ingénieurs en sciences appliquées",
+    "specialites": ["Génie Informatique", "Génie Civil", "Génie Électrique"],
+    "cout": "9800 MAD/an",
+    "note": 4.0,
+    "image": "/images/ensa-agadir.png",
+    "presentation": "L'ENSA Agadir forme des ingénieurs avec une orientation vers les technologies adaptées au contexte régional du Souss.",
+    "dureeEtudes": "5 ans",
+    "diplome": "Diplôme d'Ingénieur d'État",
+    "admission": "Concours national",
+    "debouches": ["Ingénieur informatique", "Ingénieur BTP", "Ingénieur électrique"],
+    "siteWeb": "https://www.ensa-agadir.ac.ma",
+    "contact": "contact@ensa-agadir.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-ensaa-1",
+        "rating": 4,
+        "comment": "Formation adaptée à la région.",
+        "author": "Hassan A.",
+        "date": "2024-06-25",
+        "verified": true
+      },
+      {
+        "id": "rev-ensaa-2",
+        "rating": 4,
+        "comment": "Campus moderne.",
+        "author": "Nadia R.",
+        "date": "2023-11-19",
+        "verified": true
+      },
+      {
+        "id": "rev-ensaa-3",
+        "rating": 4,
+        "comment": "Enseignants compétents.",
+        "author": "Salim K.",
+        "date": "2022-07-08",
+        "verified": true
+      }
+    ]},
+    {
+    "idEcole": 30,
+    "nom": "Université Mohammed Premier - Faculté des Sciences",
+    "ville": "Oujda",
+    "type": "Université Publique",
+    "description": "Formation scientifique et recherche",
+    "specialites": ["Mathématiques", "Physique", "Chimie", "Sciences de la Vie"],
+    "cout": "6500 MAD/an",
+    "note": 3.7,
+    "image": "/images/ump-oujda.png",
+    "presentation": "La Faculté des Sciences d'Oujda offre des formations scientifiques avec une orientation vers les besoins de la région orientale.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Licence, Master, Doctorat",
+    "admission": "Baccalauréat scientifique",
+    "debouches": ["Enseignant", "Chercheur", "Technicien supérieur"],
+    "siteWeb": "https://www.fso.ump.ac.ma",
+    "contact": "fso@ump.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-ump-1",
+        "rating": 3,
+        "comment": "Formation correcte.",
+        "author": "Mohamed A.",
+        "date": "2024-01-15",
+        "verified": true
+      },
+      {
+        "id": "rev-ump-2",
+        "rating": 4,
+        "comment": "Prix très accessible.",
+        "author": "Khalid L.",
+        "date": "2023-04-08",
+        "verified": true
+      },
+      {
+        "id": "rev-ump-3",
+        "rating": 4,
+        "comment": "Efforts d'amélioration visibles.",
+        "author": "Samira M.",
+        "date": "2022-10-02",
+        "verified": true
+      }
+    ]},
+    {
+    "idEcole": 31,
+    "nom": "École Nationale des Sciences Appliquées",
+    "ville": "Oujda",
+    "type": "École Publique d'Ingénieurs",
+    "description": "École d'ingénieurs en sciences appliquées",
+    "specialites": ["Génie Informatique", "Génie Civil", "Génie Industriel"],
+    "cout": "9500 MAD/an",
+    "note": 3.9,
+    "image": "/images/ensa-oujda.png",
+    "presentation": "L'ENSA Oujda forme des ingénieurs pour répondre aux besoins industriels de la région orientale.",
+    "dureeEtudes": "5 ans",
+    "diplome": "Diplôme d'Ingénieur d'État",
+    "admission": "Concours national",
+    "debouches": ["Ingénieur informatique", "Ingénieur BTP", "Ingénieur industriel"],
+    "siteWeb": "https://www.ensaoujda.ac.ma",
+    "contact": "info@ensaoujda.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-ensao-1",
+        "rating": 4,
+        "comment": "Bonne relation avec les entreprises locales.",
+        "author": "Younes T.",
+        "date": "2024-03-10",
+        "verified": true
+      },
+      {
+        "id": "rev-ensao-2",
+        "rating": 4,
+        "comment": "Formation pratique.",
+        "author": "Hanae M.",
+        "date": "2023-07-05",
+        "verified": true
+      },
+      {
+        "id": "rev-ensao-3",
+        "rating": 3,
+        "comment": "Infrastructure à moderniser.",
+        "author": "Reda K.",
+        "date": "2022-12-22",
+        "verified": true
+      }
+    ]},
+    {
+    "idEcole": 32,
+    "nom": "Université Chouaib Doukkali - Faculté des Sciences",
+    "ville": "El Jadida",
+    "type": "Université Publique",
+    "description": "Formation scientifique et technique",
+    "specialites": ["Mathématiques", "Physique", "Chimie", "Biologie"],
+    "cout": "6700 MAD/an",
+    "note": 3.8,
+    "image": "/images/ucd-eljadida.png",
+    "presentation": "La Faculté des Sciences d'El Jadida propose des formations scientifiques avec une orientation côtière et marine.",
+    "dureeEtudes": "3 à 5 ans",
+    "diplome": "Licence, Master, Doctorat",
+    "admission": "Baccalauréat scientifique",
+    "debouches": ["Enseignant", "Chercheur", "Technicien environnement"],
+    "siteWeb": "https://www.fs.ucd.ac.ma",
+    "contact": "fs@ucd.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-ucd-1",
+        "rating": 4,
+        "comment": "Spécialisation environnement intéressante.",
+        "author": "Said R.",
+        "date": "2024-04-28",
+        "verified": true
+      },
+      {
+        "id": "rev-ucd-2",
+        "rating": 3,
+        "comment": "Moyens limités.",
+        "author": "Naima Z.",
+        "date": "2023-09-11",
+        "verified": true
+      },
+      {
+        "id": "rev-ucd-3",
+        "rating": 4,
+        "comment": "Cadre agréable près de la mer.",
+        "author": "Mustapha B.",
+        "date": "2022-06-30",
+        "verified": true
+      }
+    ]},
+    {
+    "idEcole": 33,
+    "nom": "École Supérieure de Technologie",
+    "ville": "Casablanca",
+    "type": "École Publique de Technologie",
+    "description": "Formation technologique supérieure",
+    "specialites": ["Technologies Industrielles", "Maintenance", "Qualité", "Gestion de Production"],
+    "cout": "8500 MAD/an",
+    "note": 4.0,
+    "image": "/images/est-casablanca.png",
+    "presentation": "L'EST de Casablanca forme des techniciens supérieurs spécialisés dans les technologies industrielles et la maintenance.",
+    "dureeEtudes": "2 ans",
+    "diplome": "Diplôme de Technicien Supérieur",
+    "admission": "Baccalauréat scientifique ou technique",
+    "debouches": ["Technicien supérieur", "Responsable maintenance", "Contrôleur qualité"],
+    "siteWeb": "https://www.est.ac.ma",
+    "contact": "estcasa@est.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-est-1",
+        "rating": 4,
+        "comment": "Formation très pratique.",
+        "author": "Ali M.",
+        "date": "2024-07-22",
+        "verified": true
+      },
+      {
+        "id": "rev-est-2",
+        "rating": 4,
+        "comment": "Bon débouché dans l'industrie.",
+        "author": "Houda T.",
+        "date": "2023-12-14",
+        "verified": true
+      },
+      {
+        "id": "rev-est-3",
+        "rating": 4,
+        "comment": "Ateliers bien équipés.",
+        "author": "Yassin K.",
+        "date": "2022-08-07",
+        "verified": true
+      }
+    ]},
+    {
+    "idEcole": 34,
+    "nom": "École Supérieure de Technologie",
+    "ville": "Salé",
+    "type": "École Publique de Technologie",
+    "description": "Formation technologique appliquée",
+    "specialites": ["Informatique", "Électronique", "Mécanique", "Gestion"],
+    "cout": "8200 MAD/an",
+    "note": 4.1,
+    "image": "/images/est-sale.png",
+    "presentation": "L'EST Salé forme des techniciens supérieurs en informatique, électronique, mécanique et gestion.",
+    "dureeEtudes": "2 ans",
+    "diplome": "Diplôme de Technicien Supérieur",
+    "admission": "Baccalauréat scientifique ou technique",
+    "debouches": ["Technicien informatique", "Technicien électronique", "Assistant de gestion"],
+    "siteWeb": "https://www.estsale.ac.ma",
+    "contact": "estsale@estsale.ac.ma",
+    "reviews": [
+      {
+        "id": "rev-ests-1",
+        "rating": 4,
+        "comment": "Bonne formation courte.",
+        "author": "Kawtar M.",
+        "date": "2024-05-15",
+        "verified": true
+      },
+      {
+        "id": "rev-ests-2",
+        "rating": 4,
+        "comment": "Insertion rapide sur le marché.",
+        "author": "Hamza T.",
+        "date": "2023-08-03",
+        "verified": true
+      },
+      {
+        "id": "rev-ests-3",
+        "rating": 4,
+        "comment": "Prix raisonnable.",
+        "author": "Nadia R.",
+        "date": "2022-11-26",
+        "verified": true
+      }
+    ]}
+]

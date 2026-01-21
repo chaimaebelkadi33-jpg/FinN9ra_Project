@@ -9,10 +9,6 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  const toggleLanguage = () => {
-    setIsFrench(!isFrench);
-  };
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -53,7 +49,7 @@ const Header = () => {
             
             {/* Texte "Fin N9ra?" à côté du logo */}
             <div className="brand-text">
-              <h1 className="brand-title">Fin N9ra?</h1>
+              <h1 className="brand-title">FinN9ra?</h1>
               <p className="brand-subtitle">اختيار واضح... مستقبل أوضح</p>
             </div>
           </NavLink>
@@ -82,15 +78,6 @@ const Header = () => {
             </li>
             <li className="nav-item">
               <NavLink 
-                to="/avis" 
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
-                onClick={closeMobileMenu}
-              >
-                <span className="nav-text">Avis</span>
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink 
                 to="/contact" 
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
                 onClick={closeMobileMenu}
@@ -98,18 +85,6 @@ const Header = () => {
                 <span className="nav-text">Contact</span>
               </NavLink>
             </li>
-            
-            {/* Language Toggle */}
-            <li className="nav-item language-item">
-              <button 
-                onClick={toggleLanguage} 
-                className="language-toggle"
-                aria-label="Toggle language"
-              >
-                <span className="language-code">{isFrench ? 'AR' : 'FR'}</span>
-              </button>
-            </li>
-
             {/* Login Button */}
             <li className="nav-item login-item">
               <NavLink to="/login" className="login-button" onClick={closeMobileMenu}>
@@ -191,20 +166,6 @@ const Header = () => {
                 <span>Contact</span>
               </NavLink>
             </li>
-            
-            <li className="mobile-nav-item">
-              <button 
-                onClick={() => {
-                  toggleLanguage();
-                }} 
-                className="mobile-language-btn"
-              >
-                <i className="fas fa-language"></i>
-                <span>Langue</span>
-                <span className="mobile-language-code">{isFrench ? 'AR' : 'FR'}</span>
-              </button>
-            </li>
-
             <li className="mobile-nav-item">
               <NavLink 
                 to="/login" 
