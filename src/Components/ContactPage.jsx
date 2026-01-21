@@ -41,79 +41,41 @@ const ContactPage = () => {
             </p>
 
             <div className="contact-details">
-              {/* Équipe Finn9ra */}
+              {/* Contact de Finn9ra */}
               <div className="contact-team">
-                <h3 className="team-title">Équipe FinN9ra?</h3>
+                <h3 className="team-title">Contact de FinN9ra?</h3>
                 
-                <div className="team-member">
-                  <h4 className="member-name">Widad Barri</h4>
-                  <div className="member-links">
-                    <a href="https://www.instagram.com/aa.widade?igsh=aWRzY2hxeng3a2hj&utm_source=qr" 
-                       className="member-link" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                      <i className="fab fa-instagram"></i> Instagram
-                    </a>
-                    <a href="https://www.facebook.com/share/1D9oeGJ8Jr/?mibextid=wwXIfr" 
-                       className="member-link" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                      <i className="fab fa-facebook-f"></i> Facebook
-                    </a>
-                    <a href="https://www.linkedin.com/in/widad-barri-aa8b8838a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" 
-                       className="member-link" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                      <i className="fab fa-linkedin-in"></i> LinkedIn
-                    </a>
+                <div className="contact-item">
+                  <div className="contact-icon">
+                    <i className="fas fa-envelope"></i>
+                  </div>
+                  <div className="contact-text">
+                    <h4>Email</h4>
+                    <p>contact@finn9ra.ma</p>
+                  </div>
+                </div>
+                
+                {/* Téléphone */}
+                <div className="contact-item">
+                  <div className="contact-icon">
+                    <i className="fas fa-phone-alt"></i>
+                  </div>
+                  <div className="contact-text">
+                    <h4>Téléphone</h4>
+                    <p>+212 600-123456</p>
                   </div>
                 </div>
 
-                <div className="team-member">
-                  <h4 className="member-name">Chaimae Belkadi</h4>
-                  <div className="member-links">
-                    <a href="https://www.instagram.com/c.blk0?igsh=MXV6ZnF1aG1kcmVmdA%3D%3D&utm_source=qr" 
-                       className="member-link" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                      <i className="fab fa-instagram"></i> Instagram
-                    </a>
-                    <a href="https://www.facebook.com/share/188m4ihA69/?mibextid=wwXIfr" 
-                       className="member-link" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                      <i className="fab fa-facebook-f"></i> Facebook
-                    </a>
-                    <a href="https://www.linkedin.com/in/chaimae-belkadi-2a72ab292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" 
-                       className="member-link" 
-                       target="_blank" 
-                       rel="noopener noreferrer">
-                      <i className="fab fa-linkedin-in"></i> LinkedIn
-                    </a>
+                {/* Localisation */}
+                <div className="contact-item">
+                  <div className="contact-icon">
+                    <i className="fas fa-map-marker-alt"></i>
                   </div>
-                </div>
-              </div>
-
-              {/* Email général */}
-              <div className="contact-item">
-                <div className="contact-icon">
-                  <i className="fas fa-envelope"></i>
-                </div>
-                <div className="contact-text">
-                  <h4>Email</h4>
-                  <p>contact@finn9ra.ma</p>
-                </div>
-              </div>
-
-              {/* Localisation */}
-              <div className="contact-item">
-                <div className="contact-icon">
-                  <i className="fas fa-map-marker-alt"></i>
-                </div>
-                <div className="contact-text">
-                  <h4>Localisation</h4>
-                  <p>Maroc</p>
-                </div>
+                  <div className="contact-text">
+                    <h4>Localisation</h4>
+                    <p>Maroc</p>
+                  </div>
+                </div>             
               </div>
             </div>
           </div>
@@ -127,7 +89,7 @@ const ContactPage = () => {
 
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-group">
-                <label htmlFor="name" className="form-label">Nom complet *</label>
+                <label htmlFor="name" className="form-label">Nom complet </label>
                 <input
                   type="text"
                   id="name"
@@ -141,7 +103,7 @@ const ContactPage = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="email" className="form-label">Email *</label>
+                <label htmlFor="email" className="form-label">Email </label>
                 <input
                   type="email"
                   id="email"
@@ -155,7 +117,7 @@ const ContactPage = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="subject" className="form-label">Sujet *</label>
+                <label htmlFor="subject" className="form-label">Sujet </label>
                 <input
                   type="text"
                   id="subject"
@@ -169,7 +131,7 @@ const ContactPage = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="message" className="form-label">Message *</label>
+                <label htmlFor="message" className="form-label">Message </label>
                 <textarea
                   id="message"
                   name="message"
