@@ -4,7 +4,7 @@
   padding: 30px;
   background-color: #f8f9fa;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 250, 250, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
@@ -15,25 +15,13 @@
 }
 
 .login-page-title {
-   color: cyan;
+   color:#00CED1;
   font-size: 2.2rem;
   font-weight: 900;
-  margin: 0;
+  margin: 10px;
   line-height: 1;
-  text-shadow: 
-    0 0 15px rgba(0, 100, 100, 0.5),
-    0 0 30px rgba(0, 250, 250, 0.3);
   letter-spacing: 1px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.login-page-title:hover{background: linear-gradient(135deg, 
-    rgba(0, 206, 209, 0.3), 
-    rgba(0, 255, 255, 0.3));
-  transform: translateY(-2px);
-  box-shadow: 
-    0 5px 20px rgba(0, 206, 201, 0.6),
-    0 0 25px rgba(0, 206, 201, 0.3);
-  border-color: var(--cyan);
 }
 .login-page-subtitle {
   color: #001a36;

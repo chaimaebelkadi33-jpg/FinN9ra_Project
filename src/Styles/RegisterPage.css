@@ -1,12 +1,12 @@
 .register-container {
-   max-width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 250, 250, 0.4);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
+     max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 
 .register-header {
@@ -14,39 +14,26 @@
 }
 
 .project-title {
-   color: cyan;
-  font-size: 2.2rem;
-  font-weight: 900;
-  margin: 0;
-  line-height: 1;
-  text-shadow: 
-    0 0 15px rgba(0, 100, 100, 0.5),
-    0 0 30px rgba(0, 250, 250, 0.3);
-  letter-spacing: 1px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-}
-.project-title:hover{ 
-background: linear-gradient(135deg, 
-    rgba(0, 206, 209, 0.3), 
-    rgba(0, 255, 255, 0.3));
-  transform: translateY(-2px);
-  box-shadow: 
-    0 5px 20px rgba(0, 206, 201, 0.6),
-    0 0 25px rgba(0, 206, 201, 0.3);
-  border-color: var(--cyan);
+      color: #00CED1;
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin: 10px;
+    line-height: 1;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .register-subtitle {
   color: #001a36;
   font-size: 22px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #00EDC1;
+  border-bottom: 2px solid #00CED1;
   padding-bottom: 10px; 
 }
 .register-title {
   color: #001a36;
   font-size: 27px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #00EDC1;
+  border-bottom: 2px solid #00CED1;
   padding-bottom: 10px;
 }
 
@@ -100,7 +87,7 @@ background: linear-gradient(135deg,
 }
 
 .register-button:hover {
-  background-color: #00EDC1;
+  background-color: #00CED1;
 }
 
 .login-section {
@@ -110,10 +97,11 @@ background: linear-gradient(135deg,
 }
 
 .login-text {
-  color: #001a36;
-  margin-bottom: 15px;
-  font-size: 16px;
+  color: #002147;
+  margin-bottom: 7px;
+  font-size: 1.1rem;
   line-height: 1.5;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .login-link {
@@ -128,7 +116,7 @@ background: linear-gradient(135deg,
 }
 
 .login-link:hover {
-  background-color: #00EDC1;
+  background-color: #00CED1;
 }
 
 /* Responsive design */

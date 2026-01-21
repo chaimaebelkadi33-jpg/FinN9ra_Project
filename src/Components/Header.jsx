@@ -85,6 +85,16 @@ const Header = () => {
                 <span className="nav-text">Contact</span>
               </NavLink>
             </li>
+            {/* A propos Link */}
+            <li className="nav-item">
+              <NavLink 
+                to="/About" 
+                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+                onClick={closeMobileMenu}
+              >
+                <span className="nav-text">A propos</span>
+              </NavLink>
+            </li>
             {/* Login Button */}
             <li className="nav-item login-item">
               <NavLink to="/login" className="login-button" onClick={closeMobileMenu}>
@@ -120,7 +130,7 @@ const Header = () => {
                 <div className="mobile-logo-fallback">FN</div>
               </div>
               <div className="mobile-brand-text">
-                <h2>Fin N9ra?</h2>
+                <h2>FinN9ra?</h2>
               </div>
             </div>
           </div>
@@ -148,12 +158,12 @@ const Header = () => {
             </li>
             <li className="mobile-nav-item">
               <NavLink 
-                to="/avis" 
+                to="/About" 
                 className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
                 onClick={closeMobileMenu}
               >
                 <i className="fas fa-comment-dots"></i>
-                <span>Avis</span>
+                <span>A propos</span>
               </NavLink>
             </li>
             <li className="mobile-nav-item">

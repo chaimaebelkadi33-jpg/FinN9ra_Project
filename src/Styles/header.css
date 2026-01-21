@@ -194,46 +194,15 @@
   border-radius: 2px;
 }
 
-.language-toggle {
-  background: linear-gradient(135deg, 
-    rgba(0, 206, 209, 0.2), 
-    rgba(0, 255, 255, 0.2));
-  color: var(--cyan);
-  border: 2px solid var(--cyan-dark);
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: 'Segoe UI', sans-serif;
-  white-space: nowrap;
-}
-
-.language-toggle:hover {
-  background: linear-gradient(135deg, 
-    rgba(0, 206, 209, 0.4), 
-    rgba(0, 255, 255, 0.4));
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
-}
-
-.language-code {
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
 .login-button {
   display: flex;
   align-items: center;
   gap: 1rem;
   width: auto;
-  background: linear-gradient(135deg, 
-    rgba(0, 206, 209, 0.3), 
-    rgba(0, 255, 255, 0.3));
+  background:var(--cyan-dark);
   color: var(--cyan);
   border: 2px solid var(--cyan-dark);
-  padding: 0.8rem 1.5rem;
+  padding: 0.2rem 1.2rem;
   border-radius: 10px;
   font-size: 2rem;
   font-weight: 800;
@@ -246,13 +215,8 @@
 
 
 .login-button:hover {
- background: linear-gradient(135deg, 
-    rgba(0, 206, 209, 0.3), 
-    rgba(0, 255, 255, 0.3));
-  transform: translateY(-2px);
-  box-shadow: 
-    0 5px 20px rgba(0, 206, 201, 0.6),
-    0 0 25px rgba(0, 206, 201, 0.3);
+ background:#00FFFF;
+  transform: translateY(-1px);
   border-color: var(--cyan);
 }
 
@@ -473,7 +437,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: linear-gradient(135deg, #00b894, #00cec9);
+  background: var(--cyan-dark);
   color: var(--oxford-blue);
   text-decoration: none;
   font-size: 1.2rem;
