@@ -46,12 +46,12 @@
 .school-header {
   margin-bottom: 25px;
 }
-
-.school-badge {
+.school-info-row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  gap: 20px;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .school-type {
@@ -61,6 +61,9 @@
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 600;
+   order: unset;
+  margin-top: 0;
+  position: static;
 }
 
 .school-rating {
@@ -71,6 +74,9 @@
   padding: 8px 16px;
   border-radius: 20px;
   border: 1px solid #ffd54f;
+   position: static;
+  right: unset;
+  top: unset;
 }
 
 .star {
@@ -99,18 +105,20 @@
 .school-title {
   color: #2c3e50;
   font-size: 2.2rem;
-  margin: 10px 0;
+  margin: 0;
   line-height: 1.3;
   font-weight: 700;
+  width: 100%;
 }
 
 .school-location {
-  display: flex;
+    display: flex;
   align-items: center;
   gap: 8px;
   color: #666;
   font-size: 1.1rem;
-  margin-top: 10px;
+  margin-top: 15px;
+  width: 100%;
 }
 
 .location-icon {
@@ -594,7 +602,21 @@
   .school-title {
     font-size: 1.8rem;
   }
+  .school-info-row {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
   
+  .school-type,
+  .school-rating {
+    align-self: flex-start;
+  }
+  
+  .school-location {
+    margin-top: 10px;
+  }
+
   .main-image-container {
     height: 250px;
   }
@@ -771,7 +793,12 @@
   .school-title {
     font-size: 1.5rem;
   }
-  
+    .school-type,
+  .school-rating {
+    width: 100%;
+    text-align: center;
+  }
+
   .main-image-container {
     height: 200px;
   }

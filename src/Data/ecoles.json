@@ -13,8 +13,13 @@
     "dureeEtudes": "5 ans",
     "diplome": "Diplôme d'Ingénieur d'État",
     "admission": "Concours national après classes préparatoires ou licence scientifique",
-    "debouches": ["Développeur", "Ingénieur IA", "Expert cybersécurité", "Architecte logiciel"],
-    "siteWeb": "https://www.eni.ma",
+    "debouches": [
+      "Développeur",
+      "Ingénieur IA",
+      "Expert cybersécurité",
+      "Architecte logiciel"
+    ],
+    "siteWeb": "https://ensias.um5.ac.ma/",
     "contact": "contact@eni.ma",
     "reviews": [
       {
@@ -65,15 +70,25 @@
     "ville": "Rabat",
     "type": "École Publique d'Ingénieurs",
     "description": "Prestigieuse école d'ingénieurs marocaine",
-    "specialites": ["Génie Civil", "Génie Mécanique", "Génie Électrique", "Génie Industriel"],
+    "specialites": [
+      "Génie Civil",
+      "Génie Mécanique",
+      "Génie Électrique",
+      "Génie Industriel"
+    ],
     "cout": "12000 MAD/an",
     "note": 4.7,
     "image": "/images/ecole mohammadia d'ingénieurs.png",
-    "presentation": "L’EMI est l’une des écoles d’ingénieurs les plus prestigieuses du Maroc, connue pour la qualité de sa formation et l’employabilité élevée de ses diplômés.",
+    "presentation": "L'EMI est l'une des écoles d'ingénieurs les plus prestigieuses du Maroc, connue pour la qualité de sa formation et l'employabilité élevée de ses diplômés.",
     "dureeEtudes": "5 ans",
     "diplome": "Diplôme d'Ingénieur d'État",
     "admission": "Concours après classes préparatoires ou licence",
-    "debouches": ["Ingénieur BTP", "Chef de projet", "Ingénieur industriel", "Consultant"],
+    "debouches": [
+      "Ingénieur BTP",
+      "Chef de projet",
+      "Ingénieur industriel",
+      "Consultant"
+    ],
     "siteWeb": "https://www.emi.ac.ma",
     "contact": "info@emi.ac.ma",
     "reviews": [
@@ -129,7 +144,7 @@
     "cout": "8000 MAD/an",
     "note": 4.0,
     "image": "/images/Université Mohammed V de Rabat - Faculté des Sciences.png",
-    "presentation": "La Faculté des Sciences de Rabat offre une solide formation scientifique permettant d’accéder à la recherche, à l’enseignement ou aux métiers techniques.",
+    "presentation": "La Faculté des Sciences de Rabat offre une solide formation scientifique permettant d'accéder à la recherche, à l'enseignement ou aux métiers techniques.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Doctorat",
     "admission": "Baccalauréat scientifique",
@@ -179,7 +194,6 @@
       }
     ]
   },
-
   {
     "idEcole": 4,
     "nom": "Institut National des Postes et Télécommunications",
@@ -190,11 +204,15 @@
     "cout": "14000 MAD/an",
     "note": 4.3,
     "image": "/images/institut national des postes et telecommunication.jpg",
-    "presentation": "L’INPT forme des ingénieurs et experts dans les télécommunications, les réseaux et le digital, avec une forte ouverture à l’international.",
+    "presentation": "L'INPT forme des ingénieurs et experts dans les télécommunications, les réseaux et le digital, avec une forte ouverture à l'international.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Ingénieur, Master",
     "admission": "Concours après bac ou classes préparatoires",
-    "debouches": ["Ingénieur télécom", "Administrateur réseau", "Responsable digital"],
+    "debouches": [
+      "Ingénieur télécom",
+      "Administrateur réseau",
+      "Responsable digital"
+    ],
     "siteWeb": "https://www.inpt.ac.ma",
     "contact": "contact@inpt.ac.ma",
     "reviews": [
@@ -224,8 +242,7 @@
       }
     ]
   },
-
- {
+  {
     "idEcole": 5,
     "nom": "École Nationale Supérieure d'Arts et Métiers",
     "ville": "Meknès",
@@ -239,37 +256,41 @@
     "dureeEtudes": "5 ans",
     "diplome": "Diplôme d'Ingénieur d'État",
     "admission": "Concours après classes préparatoires ou licence",
-    "debouches": ["Ingénieur industriel", "Responsable maintenance", "Chef d'usine"],
+    "debouches": [
+      "Ingénieur industriel",
+      "Responsable maintenance",
+      "Chef d'usine"
+    ],
     "siteWeb": "https://www.ensam.ac.ma",
     "contact": "contact@ensam.ac.ma",
     "reviews": [
-        {
-            "id": "rev-ensam-1",
-            "rating": 5,
-            "comment": "Formation technique solide avec beaucoup de pratique en atelier.",
-            "author": "Karim T.",
-            "date": "2024-04-15",
-            "verified": true
-        },
-        {
-            "id": "rev-ensam-2",
-            "rating": 4,
-            "comment": "Très bon environnement pour l'apprentissage de la mécanique. Les débouchés sont excellents.",
-            "author": "Fatima Z.",
-            "date": "2023-08-22",
-            "verified": true
-        },
-        {
-            "id": "rev-ensam-3",
-            "rating": 4,
-            "comment": "La vie étudiante à Meknès est agréable et le campus est bien équipé.",
-            "author": "Hicham M.",
-            "date": "2022-11-10",
-            "verified": false
-        }
+      {
+        "id": "rev-ensam-1",
+        "rating": 5,
+        "comment": "Formation technique solide avec beaucoup de pratique en atelier.",
+        "author": "Karim T.",
+        "date": "2024-04-15",
+        "verified": true
+      },
+      {
+        "id": "rev-ensam-2",
+        "rating": 4,
+        "comment": "Très bon environnement pour l'apprentissage de la mécanique. Les débouchés sont excellents.",
+        "author": "Fatima Z.",
+        "date": "2023-08-22",
+        "verified": true
+      },
+      {
+        "id": "rev-ensam-3",
+        "rating": 4,
+        "comment": "La vie étudiante à Meknès est agréable et le campus est bien équipé.",
+        "author": "Hicham M.",
+        "date": "2022-11-10",
+        "verified": false
+      }
     ]
-},
-{
+  },
+  {
     "idEcole": 6,
     "nom": "Faculté de Médecine et de Pharmacie de Rabat",
     "ville": "Rabat",
@@ -287,49 +308,110 @@
     "siteWeb": "https://www.fmpr.ac.ma",
     "contact": "contact@fmpr.ac.ma",
     "reviews": [
-        {
-            "id": "rev-fmpr-1",
-            "rating": 5,
-            "comment": "Formation médicale d'excellence avec des professeurs renommés.",
-            "author": "Leila C.",
-            "date": "2024-01-30",
-            "verified": true
-        },
-        {
-            "id": "rev-fmpr-2",
-            "rating": 4,
-            "comment": "Le concours est difficile, mais la formation qui suit en vaut la peine.",
-            "author": "Othmane S.",
-            "date": "2023-06-12",
-            "verified": true
-        },
-        {
-            "id": "rev-fmpr-3",
-            "rating": 5,
-            "comment": "Hôpital universitaire moderne offrant une expérience clinique inestimable.",
-            "author": "Amina K.",
-            "date": "2022-09-05",
-            "verified": true
-        }
+      {
+        "id": "rev-fmpr-1",
+        "rating": 5,
+        "comment": "Formation médicale d'excellence avec des professeurs renommés.",
+        "author": "Leila C.",
+        "date": "2024-01-30",
+        "verified": true
+      },
+      {
+        "id": "rev-fmpr-2",
+        "rating": 4,
+        "comment": "Le concours est difficile, mais la formation qui suit en vaut la peine.",
+        "author": "Othmane S.",
+        "date": "2023-06-12",
+        "verified": true
+      },
+      {
+        "id": "rev-fmpr-3",
+        "rating": 5,
+        "comment": "Hôpital universitaire moderne offrant une expérience clinique inestimable.",
+        "author": "Amina K.",
+        "date": "2022-09-05",
+        "verified": true
+      }
     ]
-},
+  },
   {
     "idEcole": 7,
-    "nom": "École Nationale de Commerce et de Gestion",
+    "nom": "École Nationale de Commerce et de Gestion de Casablanca",
     "ville": "Casablanca",
     "type": "École Publique de Commerce",
     "description": "Formation en management et sciences commerciales",
     "specialites": ["Commerce", "Gestion", "Finance", "Marketing"],
     "cout": "13000 MAD/an",
     "note": 4.2,
-    "image": "/images/École Nationale de Commerce et de Gestion.webp",
-    "presentation": "L’ENCG de Casablanca prépare les étudiants aux métiers du management, de la finance et du marketing dans un environnement académique et professionnel exigeant.",
-    "dureeEtudes": "5 ans",
-    "diplome": "Diplôme ENCG (Bac+5)",
-    "admission": "Concours national après baccalauréat",
-    "debouches": ["Manager", "Analyste financier", "Responsable marketing", "Consultant"],
-    "siteWeb": "https://www.encg.ac.ma",
-    "contact": "contact@encg.ac.ma",
+    "image": "/images/encg casa.png",
+    "presentation": "L'ENCG Casablanca, composante de l'Université Hassan II de Casablanca et créée en 2007, forme des cadres de haut niveau dans les domaines du commerce et de la gestion. L'école propose un enseignement interactif associant expérience et théorie pour former des managers capables d'appréhender les grands enjeux socio-économiques dans un cadre multinational.",
+    "dureeEtudes": "5 ans (dont 3 ans de tronc commun)",
+    "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
+    "admission": "Concours national après baccalauréat via la plateforme tafem.ma",
+    "debouches": [
+      "Manager",
+      "Analyste financier",
+      "Responsable marketing",
+      "Consultant",
+      "Auditeur",
+      "Contrôleur de gestion",
+      "Responsable des ressources humaines",
+      "Responsable logistique",
+      "Chargé de communication",
+      "Responsable commerce international"
+    ],
+    "siteWeb": "https://www.encgcasa.ac.ma",
+    "contact": "encgcasa@encgcasa.ac.ma",
+    "telephone": "05 22 66 08 52",
+    "adresse": "Beau site, B.P 2725 Ain Sebaâ, Casablanca",
+    "universiteAffiliation": "Université Hassan II Casablanca",
+    "anneeCreation": 2007,
+    "missions": [
+      "Former des cadres de haut niveau dans les domaines du Commerce et de la Gestion",
+      "Faire participer les futurs cadres à l'animation culturelle et scientifique de la région",
+      "Doter les futurs cadres de compétences managériales"
+    ],
+    "filiereGestion": [
+      "Gestion Financière et Comptable (GFC)",
+      "Audit et Contrôle de Gestion (ACG)",
+      "Management des Ressources Humaines (MRH)",
+      "Management de la Logistique (ML)"
+    ],
+    "filiereCommerce": [
+      "Marketing et Actions Commerciales (MAC)",
+      "Publicité et communication (PC)",
+      "Commerce International (CI)",
+      "Management de la Relation Client (MRC)"
+    ],
+    "mastersSpecialisesInitiale": [
+      "Management des établissements de Santé",
+      "Management Stratégique et Gestion de l'Innovation",
+      "Management Logistique et Transports"
+    ],
+    "licencesProfessionnelles": [
+      "Management et Administration des Entreprises",
+      "Comptabilité Finances",
+      "Management logistique et commerce international",
+      "Stratégie Digitale et Management des Organisations",
+      "Communication Digitale de l'Entreprise et Relation Client",
+      "Management et Gouvernance des PME/PMI",
+      "Marketing et Techniques Commerciales",
+      "Management et Gestion des Entreprises"
+    ],
+    "mastersSpecialisesUniversite": [
+      "Management Logistique et Transports (MLT)",
+      "Comptabilité, Contrôle de gestion et Audit (MCCA)",
+      "Management des Ressources Humaines (MRH)",
+      "Stratégie et Ingénierie Financière (MSIF)",
+      "Actuariat et Finance (MAF)",
+      "Marketing et Stratégie Commerciale (MMSC)",
+      "Management des Etablissement de Santé (MMES)",
+      "Management Touristique (MMT)",
+      "Management des Risques et RSE (MMRRSE)",
+      "Management Stratégique et Gestion de l'Innovation (MSGI)"
+    ],
+    "equipements": ["Centre de documentation", "Réseau informatique"],
+    "motsCles": ["commerce", "gestion", "management", "finance", "marketing", "logistique", "audit", "ressources humaines"],
     "reviews": [
       {
         "id": "rev-encg-1",
@@ -375,33 +457,33 @@
     "siteWeb": "https://www.fst.ac.ma",
     "contact": "fst@uh2.ac.ma",
     "reviews": [
-        {
-            "id": "rev-fst-1",
-            "rating": 4,
-            "comment": "Formation pratique qui prépare bien au monde industriel.",
-            "author": "Adil M.",
-            "date": "2024-02-10",
-            "verified": true
-        },
-        {
-            "id": "rev-fst-2",
-            "rating": 4,
-            "comment": "Bon rapport qualité/prix pour des études scientifiques solides.",
-            "author": "Nadia R.",
-            "date": "2023-10-05",
-            "verified": true
-        },
-        {
-            "id": "rev-fst-3",
-            "rating": 3,
-            "comment": "Certains laboratoires auraient besoin de matériel plus récent.",
-            "author": "Mehdi K.",
-            "date": "2022-12-18",
-            "verified": false
-        }
+      {
+        "id": "rev-fst-1",
+        "rating": 4,
+        "comment": "Formation pratique qui prépare bien au monde industriel.",
+        "author": "Adil M.",
+        "date": "2024-02-10",
+        "verified": true
+      },
+      {
+        "id": "rev-fst-2",
+        "rating": 4,
+        "comment": "Bon rapport qualité/prix pour des études scientifiques solides.",
+        "author": "Nadia R.",
+        "date": "2023-10-05",
+        "verified": true
+      },
+      {
+        "id": "rev-fst-3",
+        "rating": 3,
+        "comment": "Certains laboratoires auraient besoin de matériel plus récent.",
+        "author": "Mehdi K.",
+        "date": "2022-12-18",
+        "verified": false
+      }
     ]
-},
-{
+  },
+  {
     "idEcole": 9,
     "nom": "École Nationale d'Architecture",
     "ville": "Rabat",
@@ -411,41 +493,41 @@
     "cout": "12500 MAD/an",
     "note": 4.5,
     "image": "/images/École Nationale d'Architecture.webp",
-    "presentation": "L’ENA Rabat forme les futurs architectes du Maroc avec une forte approche créative, technique et urbaine.",
+    "presentation": "L'ENA Rabat forme les futurs architectes du Maroc avec une forte approche créative, technique et urbaine.",
     "dureeEtudes": "6 ans",
-    "diplome": "Diplôme d’Architecte",
+    "diplome": "Diplôme d'Architecte",
     "admission": "Concours après baccalauréat",
-    "debouches": ["Architecte", "Urbaniste", "Designer d’espace"],
+    "debouches": ["Architecte", "Urbaniste", "Designer d'espace"],
     "siteWeb": "https://www.ena.ma",
     "contact": "contact@ena.ma",
     "reviews": [
-        {
-            "id": "rev-ena-1",
-            "rating": 5,
-            "comment": "Concours très sélectif mais formation d'excellence en architecture.",
-            "author": "Yasmine B.",
-            "date": "2024-03-25",
-            "verified": true
-        },
-        {
-            "id": "rev-ena-2",
-            "rating": 5,
-            "comment": "Ateliers créatifs stimulants et enseignants inspirants.",
-            "author": "Sami L.",
-            "date": "2023-07-14",
-            "verified": true
-        },
-        {
-            "id": "rev-ena-3",
-            "rating": 4,
-            "comment": "Beaucoup de travail personnel mais très formateur.",
-            "author": "Houda F.",
-            "date": "2022-11-30",
-            "verified": false
-        }
+      {
+        "id": "rev-ena-1",
+        "rating": 5,
+        "comment": "Concours très sélectif mais formation d'excellence en architecture.",
+        "author": "Yasmine B.",
+        "date": "2024-03-25",
+        "verified": true
+      },
+      {
+        "id": "rev-ena-2",
+        "rating": 5,
+        "comment": "Ateliers créatifs stimulants et enseignants inspirants.",
+        "author": "Sami L.",
+        "date": "2023-07-14",
+        "verified": true
+      },
+      {
+        "id": "rev-ena-3",
+        "rating": 4,
+        "comment": "Beaucoup de travail personnel mais très formateur.",
+        "author": "Houda F.",
+        "date": "2022-11-30",
+        "verified": false
+      }
     ]
-},
-{
+  },
+  {
     "idEcole": 10,
     "nom": "Institut Agronomique et Vétérinaire Hassan II",
     "ville": "Rabat",
@@ -455,7 +537,7 @@
     "cout": "11500 MAD/an",
     "note": 4.4,
     "image": "/images/Institut Agronomique et Vétérinaire Hassan II.webp",
-    "presentation": "L’IAV Hassan II est une référence nationale pour la formation des ingénieurs agronomes et des vétérinaires.",
+    "presentation": "L'IAV Hassan II est une référence nationale pour la formation des ingénieurs agronomes et des vétérinaires.",
     "dureeEtudes": "5 à 6 ans",
     "diplome": "Ingénieur, Docteur vétérinaire",
     "admission": "Concours après classes préparatoires ou bac scientifique",
@@ -463,39 +545,43 @@
     "siteWeb": "https://www.iav.ac.ma",
     "contact": "contact@iav.ac.ma",
     "reviews": [
-        {
-            "id": "rev-iav-1",
-            "rating": 5,
-            "comment": "Réputation excellente et débouchés garantis dans le secteur agricole.",
-            "author": "Rachid A.",
-            "date": "2024-01-12",
-            "verified": true
-        },
-        {
-            "id": "rev-iav-2",
-            "rating": 4,
-            "comment": "Ferme pédagogique et laboratoires très utiles pour la pratique.",
-            "author": "Soukaina T.",
-            "date": "2023-09-08",
-            "verified": true
-        },
-        {
-            "id": "rev-iav-3",
-            "rating": 5,
-            "comment": "Formation vétérinaire de très haut niveau.",
-            "author": "Amine K.",
-            "date": "2022-05-20",
-            "verified": true
-        }
+      {
+        "id": "rev-iav-1",
+        "rating": 5,
+        "comment": "Réputation excellente et débouchés garantis dans le secteur agricole.",
+        "author": "Rachid A.",
+        "date": "2024-01-12",
+        "verified": true
+      },
+      {
+        "id": "rev-iav-2",
+        "rating": 4,
+        "comment": "Ferme pédagogique et laboratoires très utiles pour la pratique.",
+        "author": "Soukaina T.",
+        "date": "2023-09-08",
+        "verified": true
+      },
+      {
+        "id": "rev-iav-3",
+        "rating": 5,
+        "comment": "Formation vétérinaire de très haut niveau.",
+        "author": "Amine K.",
+        "date": "2022-05-20",
+        "verified": true
+      }
     ]
-},
-{
+  },
+  {
     "idEcole": 11,
     "nom": "Université Ibn Tofail - Faculté des Sciences",
     "ville": "Kénitra",
     "type": "Université Publique",
     "description": "Enseignement scientifique pluridisciplinaire",
-    "specialites": ["Mathématiques Appliquées", "Informatique", "Sciences de la Matière"],
+    "specialites": [
+      "Mathématiques Appliquées",
+      "Informatique",
+      "Sciences de la Matière"
+    ],
     "cout": "7500 MAD/an",
     "note": 3.9,
     "image": "/images/Université Ibn Tofail - Faculté des Sciences.webp",
@@ -507,76 +593,84 @@
     "siteWeb": "https://www.uit.ac.ma",
     "contact": "contact@uit.ac.ma",
     "reviews": [
-        {
-            "id": "rev-uit-1",
-            "rating": 4,
-            "comment": "Bonnes formations en informatique avec des professeurs accessibles.",
-            "author": "Hassan M.",
-            "date": "2024-04-02",
-            "verified": true
-        },
-        {
-            "id": "rev-uit-2",
-            "rating": 3,
-            "comment": "Ambiance de travail correcte, mais infrastructure à améliorer.",
-            "author": "Salma E.",
-            "date": "2023-11-15",
-            "verified": false
-        },
-        {
-            "id": "rev-uit-3",
-            "rating": 4,
-            "comment": "Prix très abordable pour une formation scientifique solide.",
-            "author": "Omar Z.",
-            "date": "2022-08-22",
-            "verified": true
-        }
+      {
+        "id": "rev-uit-1",
+        "rating": 4,
+        "comment": "Bonnes formations en informatique avec des professeurs accessibles.",
+        "author": "Hassan M.",
+        "date": "2024-04-02",
+        "verified": true
+      },
+      {
+        "id": "rev-uit-2",
+        "rating": 3,
+        "comment": "Ambiance de travail correcte, mais infrastructure à améliorer.",
+        "author": "Salma E.",
+        "date": "2023-11-15",
+        "verified": false
+      },
+      {
+        "id": "rev-uit-3",
+        "rating": 4,
+        "comment": "Prix très abordable pour une formation scientifique solide.",
+        "author": "Omar Z.",
+        "date": "2022-08-22",
+        "verified": true
+      }
     ]
-},
-{
+  },
+  {
     "idEcole": 12,
     "nom": "École Normale Supérieure de l'Enseignement Technique",
     "ville": "Rabat",
     "type": "École Publique de Formation",
     "description": "Formation des enseignants pour l'enseignement technique",
-    "specialites": ["Pédagogie Technique", "Sciences de l'Éducation", "Didactique"],
+    "specialites": [
+      "Pédagogie Technique",
+      "Sciences de l'Éducation",
+      "Didactique"
+    ],
     "cout": "8500 MAD/an",
     "note": 4.0,
     "image": "/images/École Normale Supérieure de l'Enseignement Technique.png",
-    "presentation": "L’ENSET forme des professeurs et formateurs spécialisés dans l’enseignement technique et professionnel.",
+    "presentation": "L'ENSET forme des professeurs et formateurs spécialisés dans l'enseignement technique et professionnel.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master en Enseignement",
     "admission": "Concours après bac ou licence",
-    "debouches": ["Professeur technique", "Formateur", "Inspecteur pédagogique"],
+    "debouches": [
+      "Professeur technique",
+      "Formateur",
+      "Inspecteur pédagogique"
+    ],
     "siteWeb": "https://www.enset.ma",
     "contact": "contact@enset.ma",
     "reviews": [
-        {
-            "id": "rev-enset-1",
-            "rating": 4,
-            "comment": "Formation pédagogique très complète pour devenir enseignant technique.",
-            "author": "Khalid R.",
-            "date": "2024-03-08",
-            "verified": true
-        },
-        {
-            "id": "rev-enset-2",
-            "rating": 5,
-            "comment": "Débouchés assurés dans l'enseignement public et privé.",
-            "author": "Naima S.",
-            "date": "2023-12-10",
-            "verified": true
-        },
-        {
-            "id": "rev-enset-3",
-            "rating": 4,
-            "comment": "Stage pratique en établissement scolaire très formateur.",
-            "author": "Mohamed L.",
-            "date": "2022-10-05",
-            "verified": false
-        }
+      {
+        "id": "rev-enset-1",
+        "rating": 4,
+        "comment": "Formation pédagogique très complète pour devenir enseignant technique.",
+        "author": "Khalid R.",
+        "date": "2024-03-08",
+        "verified": true
+      },
+      {
+        "id": "rev-enset-2",
+        "rating": 5,
+        "comment": "Débouchés assurés dans l'enseignement public et privé.",
+        "author": "Naima S.",
+        "date": "2023-12-10",
+        "verified": true
+      },
+      {
+        "id": "rev-enset-3",
+        "rating": 4,
+        "comment": "Stage pratique en établissement scolaire très formateur.",
+        "author": "Mohamed L.",
+        "date": "2022-10-05",
+        "verified": false
+      }
     ]
-},
+  },
   {
     "idEcole": 13,
     "nom": "Université Cadi Ayyad - Faculté des Sciences Semlalia",
@@ -587,7 +681,7 @@
     "cout": "8200 MAD/an",
     "note": 4.3,
     "image": "/images/Université Cadi Ayyad - Faculté des Sciences Semlalia.jpg",
-    "presentation": "La Faculté des Sciences Semlalia est un centre de recherche reconnu à l’échelle nationale et internationale.",
+    "presentation": "La Faculté des Sciences Semlalia est un centre de recherche reconnu à l'échelle nationale et internationale.",
     "dureeEtudes": "3 à 8 ans",
     "diplome": "Licence, Master, Doctorat",
     "admission": "Baccalauréat scientifique",
@@ -627,7 +721,11 @@
     "ville": "Salé",
     "type": "École Publique d'Ingénieurs",
     "description": "Spécialisée dans les sciences forestières et environnementales",
-    "specialites": ["Génie Forestier", "Environnement", "Développement Durable"],
+    "specialites": [
+      "Génie Forestier",
+      "Environnement",
+      "Développement Durable"
+    ],
     "cout": "10500 MAD/an",
     "note": 4.2,
     "image": "/images/École Nationale Forestière d'Ingénieurs.png",
@@ -635,37 +733,41 @@
     "dureeEtudes": "5 ans",
     "diplome": "Ingénieur d'État",
     "admission": "Concours après classes préparatoires",
-    "debouches": ["Ingénieur forestier", "Responsable environnement", "Consultant écologique"],
+    "debouches": [
+      "Ingénieur forestier",
+      "Responsable environnement",
+      "Consultant écologique"
+    ],
     "siteWeb": "https://www.enfi.ac.ma",
     "contact": "contact@enfi.ac.ma",
     "reviews": [
-        {
-            "id": "rev-enfi-1",
-            "rating": 5,
-            "comment": "Formation unique au Maroc dans le domaine forestier et environnemental.",
-            "author": "Ilyas B.",
-            "date": "2024-05-12",
-            "verified": true
-        },
-        {
-            "id": "rev-enfi-2",
-            "rating": 4,
-            "comment": "Beaucoup de travaux pratiques sur le terrain et en forêt.",
-            "author": "Zineb M.",
-            "date": "2023-10-18",
-            "verified": true
-        },
-        {
-            "id": "rev-enfi-3",
-            "rating": 4,
-            "comment": "Débouchés spécialisés dans un secteur en plein développement.",
-            "author": "Rachid T.",
-            "date": "2022-11-03",
-            "verified": false
-        }
+      {
+        "id": "rev-enfi-1",
+        "rating": 5,
+        "comment": "Formation unique au Maroc dans le domaine forestier et environnemental.",
+        "author": "Ilyas B.",
+        "date": "2024-05-12",
+        "verified": true
+      },
+      {
+        "id": "rev-enfi-2",
+        "rating": 4,
+        "comment": "Beaucoup de travaux pratiques sur le terrain et en forêt.",
+        "author": "Zineb M.",
+        "date": "2023-10-18",
+        "verified": true
+      },
+      {
+        "id": "rev-enfi-3",
+        "rating": 4,
+        "comment": "Débouchés spécialisés dans un secteur en plein développement.",
+        "author": "Rachid T.",
+        "date": "2022-11-03",
+        "verified": false
+      }
     ]
-},
-{
+  },
+  {
     "idEcole": 15,
     "nom": "Faculté des Sciences Juridiques, Économiques et Sociales",
     "ville": "Rabat",
@@ -683,33 +785,33 @@
     "siteWeb": "https://www.fsjesr.ma",
     "contact": "contact@fsjesr.ma",
     "reviews": [
-        {
-            "id": "rev-fsjes-1",
-            "rating": 5,
-            "comment": "Formation juridique très solide avec des enseignants de qualité.",
-            "author": "Meriem A.",
-            "date": "2024-02-25",
-            "verified": true
-        },
-        {
-            "id": "rev-fsjes-2",
-            "rating": 4,
-            "comment": "Bonne réputation et bons débouchés dans la fonction publique.",
-            "author": "Hamza C.",
-            "date": "2023-08-14",
-            "verified": true
-        },
-        {
-            "id": "rev-fsjes-3",
-            "rating": 3,
-            "comment": "Très grande faculté, parfois difficile d'avoir un suivi personnalisé.",
-            "author": "Amina S.",
-            "date": "2022-12-05",
-            "verified": false
-        }
+      {
+        "id": "rev-fsjes-1",
+        "rating": 5,
+        "comment": "Formation juridique très solide avec des enseignants de qualité.",
+        "author": "Meriem A.",
+        "date": "2024-02-25",
+        "verified": true
+      },
+      {
+        "id": "rev-fsjes-2",
+        "rating": 4,
+        "comment": "Bonne réputation et bons débouchés dans la fonction publique.",
+        "author": "Hamza C.",
+        "date": "2023-08-14",
+        "verified": true
+      },
+      {
+        "id": "rev-fsjes-3",
+        "rating": 3,
+        "comment": "Très grande faculté, parfois difficile d'avoir un suivi personnalisé.",
+        "author": "Amina S.",
+        "date": "2022-12-05",
+        "verified": false
+      }
     ]
-},
-{
+  },
+  {
     "idEcole": 16,
     "nom": "Institut Supérieur de l'Information et de la Communication",
     "ville": "Rabat",
@@ -723,37 +825,41 @@
     "dureeEtudes": "3 ans",
     "diplome": "Licence professionnelle",
     "admission": "Concours après baccalauréat",
-    "debouches": ["Journaliste", "Chargé de communication", "Attaché de presse"],
+    "debouches": [
+      "Journaliste",
+      "Chargé de communication",
+      "Attaché de presse"
+    ],
     "siteWeb": "https://www.isic.ma",
     "contact": "contact@isic.ma",
     "reviews": [
-        {
-            "id": "rev-isic-1",
-            "rating": 5,
-            "comment": "Formation pratique avec de nombreux ateliers et projets médias.",
-            "author": "Nadia L.",
-            "date": "2024-03-30",
-            "verified": true
-        },
-        {
-            "id": "rev-isic-2",
-            "rating": 4,
-            "comment": "Bon réseau professionnel dans le domaine des médias et communication.",
-            "author": "Karim E.",
-            "date": "2023-09-22",
-            "verified": true
-        },
-        {
-            "id": "rev-isic-3",
-            "rating": 4,
-            "comment": "Concours sélectif mais la formation est reconnue par les employeurs.",
-            "author": "Salma K.",
-            "date": "2022-07-15",
-            "verified": false
-        }
+      {
+        "id": "rev-isic-1",
+        "rating": 5,
+        "comment": "Formation pratique avec de nombreux ateliers et projets médias.",
+        "author": "Nadia L.",
+        "date": "2024-03-30",
+        "verified": true
+      },
+      {
+        "id": "rev-isic-2",
+        "rating": 4,
+        "comment": "Bon réseau professionnel dans le domaine des médias et communication.",
+        "author": "Karim E.",
+        "date": "2023-09-22",
+        "verified": true
+      },
+      {
+        "id": "rev-isic-3",
+        "rating": 4,
+        "comment": "Concours sélectif mais la formation est reconnue par les employeurs.",
+        "author": "Salma K.",
+        "date": "2022-07-15",
+        "verified": false
+      }
     ]
-},
-{
+  },
+  {
     "idEcole": 17,
     "nom": "Université Abdelmalek Essaâdi - Faculté des Sciences",
     "ville": "Tétouan",
@@ -771,32 +877,32 @@
     "siteWeb": "https://www.uae.ma",
     "contact": "contact@uae.ma",
     "reviews": [
-        {
-            "id": "rev-uae-1",
-            "rating": 4,
-            "comment": "Formation correcte pour le prix, bonne spécialisation en biologie marine.",
-            "author": "Omar F.",
-            "date": "2024-01-08",
-            "verified": true
-        },
-        {
-            "id": "rev-uae-2",
-            "rating": 3,
-            "comment": "La vie étudiante à Tétouan est agréable, mais les locaux sont vieillissants.",
-            "author": "Hafsa M.",
-            "date": "2023-06-19",
-            "verified": false
-        },
-        {
-            "id": "rev-uae-3",
-            "rating": 4,
-            "comment": "Opportunités intéressantes pour la recherche dans les sciences de la mer.",
-            "author": "Younes R.",
-            "date": "2022-10-11",
-            "verified": true
-        }
+      {
+        "id": "rev-uae-1",
+        "rating": 4,
+        "comment": "Formation correcte pour le prix, bonne spécialisation en biologie marine.",
+        "author": "Omar F.",
+        "date": "2024-01-08",
+        "verified": true
+      },
+      {
+        "id": "rev-uae-2",
+        "rating": 3,
+        "comment": "La vie étudiante à Tétouan est agréable, mais les locaux sont vieillissants.",
+        "author": "Hafsa M.",
+        "date": "2023-06-19",
+        "verified": false
+      },
+      {
+        "id": "rev-uae-3",
+        "rating": 4,
+        "comment": "Opportunités intéressantes pour la recherche dans les sciences de la mer.",
+        "author": "Younes R.",
+        "date": "2022-10-11",
+        "verified": true
+      }
     ]
-},
+  },
   {
     "idEcole": 18,
     "nom": "École Nationale Supérieure d'Électricité et Mécanique",
@@ -807,11 +913,15 @@
     "cout": "12800 MAD/an",
     "note": 4.4,
     "image": "/images/École Nationale Supérieure d'Électricité et Mécanique.png",
-    "presentation": "ENSEM est une école d’ingénieurs réputée pour la qualité de sa formation en électricité, mécanique et automatisme.",
+    "presentation": "ENSEM est une école d'ingénieurs réputée pour la qualité de sa formation en électricité, mécanique et automatisme.",
     "dureeEtudes": "5 ans",
     "diplome": "Ingénieur d'État",
     "admission": "Concours après classes préparatoires",
-    "debouches": ["Ingénieur électrique", "Ingénieur maintenance", "Responsable industriel"],
+    "debouches": [
+      "Ingénieur électrique",
+      "Ingénieur maintenance",
+      "Responsable industriel"
+    ],
     "siteWeb": "https://www.ensem.ac.ma",
     "contact": "contact@ensem.ac.ma",
     "reviews": [
@@ -859,56 +969,67 @@
     "siteWeb": "https://www.flshfes.ac.ma",
     "contact": "contact@flshfes.ac.ma",
     "reviews": [
-        {
-            "id": "rev-flsh-1",
-            "rating": 4,
-            "comment": "Formation solide en littérature et langues dans la ville historique de Fès.",
-            "author": "Lamia S.",
-            "date": "2024-03-15",
-            "verified": true
-        },
-        {
-            "id": "rev-flsh-2",
-            "rating": 5,
-            "comment": "Professeurs passionnés et bibliothèque riche pour les recherches en sciences humaines.",
-            "author": "Anouar M.",
-            "date": "2023-11-28",
-            "verified": true
-        },
-        {
-            "id": "rev-flsh-3",
-            "rating": 3,
-            "comment": "Débouchés limités si on ne poursuit pas jusqu'au master ou l'agrégation.",
-            "author": "Sara T.",
-            "date": "2022-09-10",
-            "verified": false
-        }
+      {
+        "id": "rev-flsh-1",
+        "rating": 4,
+        "comment": "Formation solide en littérature et langues dans la ville historique de Fès.",
+        "author": "Lamia S.",
+        "date": "2024-03-15",
+        "verified": true
+      },
+      {
+        "id": "rev-flsh-2",
+        "rating": 5,
+        "comment": "Professeurs passionnés et bibliothèque riche pour les recherches en sciences humaines.",
+        "author": "Anouar M.",
+        "date": "2023-11-28",
+        "verified": true
+      },
+      {
+        "id": "rev-flsh-3",
+        "rating": 3,
+        "comment": "Débouchés limités si on ne poursuit pas jusqu'au master ou l'agrégation.",
+        "author": "Sara T.",
+        "date": "2022-09-10",
+        "verified": false
+      }
     ]
-},
-{
-  "idEcole": 20,
-  "nom": "ISTA Bab Tizimi - OFPPT",
-  "ville": "Meknès",
-  "type": "Institut Spécialisé de Technologie Appliquée",
-  "description": "Institut de formation professionnelle technique",
-  "specialites": ["Développement Informatique", "Réseaux Informatiques", "Électronique", "Gestion des Entreprises", "Comptabilité"],
-  "cout": "950 MAD/an",
-  "note": 4.0,
-  "image": "/images/BAB TIZIMI.webp",
-  "presentation": "L'ISTA Bab Tizimi est un établissement de l'OFPPT spécialisé dans les formations techniques et technologiques à Meknès.",
-  "dureeEtudes": "2 ans",
-  "diplome": "Technicien Spécialisé (TS)",
-  "admission": "Baccalauréat (toutes filières selon spécialité)",
-  "debouches": ["Technicien en Informatique", "Technicien Réseaux", "Assistant Comptable", "Agent Commercial"],
-  "siteWeb": "https://www.ofppt.ma",
-  "contact": "istameknes@ofppt.ma",
-  "telephone": "+212 5355-30878",
-  "adresse": "Quartier Bab Tizimi, Route de Fès, Meknès",
-  "localisation": {
-    "latitude": 33.8847,
-    "longitude": -5.5436
   },
-  "reviews": [
+  {
+    "idEcole": 20,
+    "nom": "ISTA Bab Tizimi - OFPPT",
+    "ville": "Meknès",
+    "type": "Institut Spécialisé de Technologie Appliquée",
+    "description": "Institut de formation professionnelle technique",
+    "specialites": [
+      "Développement Informatique",
+      "Réseaux Informatiques",
+      "Électronique",
+      "Gestion des Entreprises",
+      "Comptabilité"
+    ],
+    "cout": "950 MAD/an",
+    "note": 4.0,
+    "image": "/images/BAB TIZIMI.webp",
+    "presentation": "L'ISTA Bab Tizimi est un établissement de l'OFPPT spécialisé dans les formations techniques et technologiques à Meknès.",
+    "dureeEtudes": "2 ans",
+    "diplome": "Technicien Spécialisé (TS)",
+    "admission": "Baccalauréat (toutes filières selon spécialité)",
+    "debouches": [
+      "Technicien en Informatique",
+      "Technicien Réseaux",
+      "Assistant Comptable",
+      "Agent Commercial"
+    ],
+    "siteWeb": "https://www.ofppt.ma",
+    "contact": "istameknes@ofppt.ma",
+    "telephone": "+212 5355-30878",
+    "adresse": "Quartier Bab Tizimi, Route de Fès, Meknès",
+    "localisation": {
+      "latitude": 33.8847,
+      "longitude": -5.5436
+    },
+    "reviews": [
       {
         "id": "rev-ista-1",
         "rating": 4,
@@ -950,9 +1071,9 @@
         "verified": true
       }
     ]
-},
-{
-        "idEcole": 21,
+  },
+  {
+    "idEcole": 21,
     "nom": "École Hassania des Travaux Publics",
     "ville": "Casablanca",
     "type": "École Publique d'Ingénieurs",
@@ -960,12 +1081,17 @@
     "specialites": ["Génie Civil", "BTP", "Infrastructures", "Urbanisme"],
     "cout": "13000 MAD/an",
     "note": 4.6,
-    "image": "/images/ehp-casablanca.png",
+    "image": "/images/ecole hassania des travaux public.png",
     "presentation": "L'EHTP forme des ingénieurs de haut niveau dans les domaines du génie civil, des travaux publics et de l'urbanisme.",
     "dureeEtudes": "5 ans",
     "diplome": "Diplôme d'Ingénieur d'État",
     "admission": "Concours national",
-    "debouches": ["Ingénieur BTP", "Chef de chantier", "Urbaniste", "Ingénieur structures"],
+    "debouches": [
+      "Ingénieur BTP",
+      "Chef de chantier",
+      "Urbaniste",
+      "Ingénieur structures"
+    ],
     "siteWeb": "https://www.ehtp.ac.ma",
     "contact": "info@ehtp.ac.ma",
     "reviews": [
@@ -993,22 +1119,32 @@
         "date": "2022-04-18",
         "verified": true
       }
-    ]},
-    {
+    ]
+  },
+  {
     "idEcole": 22,
-    "nom": "École Supérieure de Technologie",
+    "nom": "École Supérieure de Technologie de Meknès",
     "ville": "Meknès",
     "type": "École Publique de Technologie",
     "description": "Formation technologique spécialisée",
-    "specialites": ["Agro-alimentaire", "Biotechnologie", "Génie Civil", "Informatique"],
+    "specialites": [
+      "Agro-alimentaire",
+      "Biotechnologie",
+      "Génie Civil",
+      "Informatique"
+    ],
     "cout": "8300 MAD/an",
     "note": 4.0,
-    "image": "/images/est-meknes.png",
+    "image": "/images/est meknes.png",
     "presentation": "L'EST Meknès se spécialise dans les technologies agro-alimentaires et biotechnologiques adaptées à la région.",
     "dureeEtudes": "2 ans",
     "diplome": "Diplôme de Technicien Supérieur",
     "admission": "Baccalauréat scientifique ou technique",
-    "debouches": ["Technicien agro-alimentaire", "Technicien biotechnologie", "Technicien BTP"],
+    "debouches": [
+      "Technicien agro-alimentaire",
+      "Technicien biotechnologie",
+      "Technicien BTP"
+    ],
     "siteWeb": "https://www.estmeknes.ac.ma",
     "contact": "estmeknes@estmeknes.ac.ma",
     "reviews": [
@@ -1040,21 +1176,29 @@
   },
   {
     "idEcole": 23,
-    "nom": "École Nationale des Sciences Appliquées",
+    "nom": "École Nationale des Sciences Appliquées de Marrakech",
     "ville": "Marrakech",
     "type": "École Publique d'Ingénieurs",
-    "description": "École d'ingénieurs en sciences appliquées",
-    "specialites": ["Génie Informatique", "Génie Civil", "Génie Industriel", "Génie Électrique"],
+    "description": "Professional public engineering school created to diversify university offerings and train versatile state engineers to meet regional and national socio-economic needs.",
+    "specialites": ["Génie Électrique", "Génie Informatique", "Génie Réseaux et Télécommunications", "Génie Industriel et Logistique"],
     "cout": "10000 MAD/an",
     "note": 4.3,
-    "image": "/images/ensa-marrakech.png",
-    "presentation": "L'ENSA Marrakech forme des ingénieurs polyvalents dans les domaines de l'informatique, génie civil, industriel et électrique.",
-    "dureeEtudes": "5 ans",
-    "diplome": "Diplôme d'Ingénieur d'État",
-    "admission": "Concours national",
-    "debouches": ["Ingénieur informatique", "Ingénieur BTP", "Ingénieur industriel", "Chef de projet"],
-    "siteWeb": "https://www.ensa.ac.ma",
-    "contact": "ensa@ensa.ac.ma",
+    "image": "/images/ensa marrakech.png",
+    "presentation": "ENSA Marrakech (ENSAM), established in 2000, is a public professional higher education institution and a component of Cadi Ayyad University. Its creation aimed to diversify the university's programs and stimulate the socio-economic and industrial environment of the Marrakech region. The school's mission is to train versatile, highly qualified state engineers in open specializations with strong development potential.",
+    "dureeEtudes": "5 ans (2 ans de cycle préparatoire + 3 ans de cycle ingénieur)",
+    "diplome": "Diplôme d'Ingénieur d'État (Bac+5)",
+    "admission": "Concours national via la plateforme www.ensa-concours.ma",
+    "debouches": ["Ingénieur Électricien", "Ingénieur Informaticien", "Ingénieur en Télécoms et Réseaux", "Ingénieur Industriel et Logistique", "Cadre technique et managérial"],
+    "siteWeb": "www.ensa.ac.ma",
+    "contact": "sefyani@ensa.ac.ma",
+    "telephone": "0524434745",
+    "adresse": "E.N.S.A - BP 575 Avenue Abdelkarim Khattabi, Guéliz Marrakech Maroc",
+    "universiteAffiliation": "Université Cadi Ayyad Marrakech",
+    "anneeCreation": 2000,
+    "formationsOffertes": ["Formation d'Ingénieur d'État"],
+    "objectifs": ["Persifier les formations à l'Université Cadi Ayyad", "Former des ingénieurs d'état pour répondre aux attentes du tissu socio-économique", "Recherche Scientifique et Technique et R&D"],
+    "equipements": ["Information non spécifiée sur la page"],
+    "motsCles": ["ensa", "ingénieur", "marrakech", "génie industriel", "logistique", "université cadi ayyad"],
     "reviews": [
       {
         "id": "rev-ensa-1",
@@ -1080,8 +1224,9 @@
         "date": "2022-02-28",
         "verified": true
       }
-    ]},
-    {
+    ]
+  },
+  {
     "idEcole": 24,
     "nom": "Université Sidi Mohamed Ben Abdellah - Faculté des Sciences",
     "ville": "Fès",
@@ -1090,7 +1235,7 @@
     "specialites": ["Mathématiques", "Physique", "Chimie", "Biologie"],
     "cout": "7000 MAD/an",
     "note": 3.9,
-    "image": "/images/usmba-fes.png",
+    "image": "/images/fst fes.png",
     "presentation": "La Faculté des Sciences de Fès propose des formations scientifiques complètes de la licence au doctorat.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Doctorat",
@@ -1123,17 +1268,18 @@
         "date": "2022-11-03",
         "verified": true
       }
-    ]},
-    {
+    ]
+  },
+  {
     "idEcole": 25,
-    "nom": "École Nationale des Sciences Appliquées",
+    "nom": "École Nationale des Sciences Appliquées de Fès",
     "ville": "Fès",
     "type": "École Publique d'Ingénieurs",
     "description": "École d'ingénieurs en sciences appliquées",
     "specialites": ["Génie Informatique", "Génie Civil", "Génie des Procédés"],
     "cout": "10500 MAD/an",
     "note": 4.2,
-    "image": "/images/ensa-fes.png",
+    "image": "/images/ensa fes.png",
     "presentation": "L'ENSA Fès forme des ingénieurs dans les domaines de l'informatique, génie civil et génie des procédés.",
     "dureeEtudes": "5 ans",
     "diplome": "Diplôme d'Ingénieur d'État",
@@ -1166,17 +1312,23 @@
         "date": "2022-05-19",
         "verified": true
       }
-    ]},
-    {
+    ]
+  },
+  {
     "idEcole": 26,
-    "nom": "Université Abdelmalek Essaâdi - Faculté des Sciences",
+    "nom": "Université Abdelmalek Essaâdi - Faculté des Sciences de Tanger",
     "ville": "Tanger",
     "type": "Université Publique",
     "description": "Formation scientifique et technique",
-    "specialites": ["Mathématiques", "Physique", "Chimie", "Sciences de la Terre"],
+    "specialites": [
+      "Mathématiques",
+      "Physique",
+      "Chimie",
+      "Sciences de la Terre"
+    ],
     "cout": "7200 MAD/an",
     "note": 3.8,
-    "image": "/images/uae-tanger.png",
+    "image": "/images/fst tanger.png",
     "presentation": "La Faculté des Sciences de Tanger offre des formations scientifiques avec une orientation vers les sciences de la terre et l'environnement.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Doctorat",
@@ -1209,24 +1361,61 @@
         "date": "2022-08-24",
         "verified": true
       }
-    ]},
-    {
+    ]
+  },
+  {
     "idEcole": 27,
-    "nom": "École Nationale de Commerce et de Gestion",
+    "nom": "École Nationale de Commerce et de Gestion de Tanger",
     "ville": "Tanger",
-    "type": "École de Commerce Publique",
-    "description": "École de commerce et gestion",
-    "specialites": ["Commerce International", "Logistique", "Marketing", "Finance"],
+    "type": "École Publique de Commerce",
+    "description": "Établissement supérieur public de haute formation à la gestion des entreprises et des organisations.",
+    "specialites": ["Commerce", "Gestion", "Finance", "Marketing", "Logistique"],
     "cout": "11500 MAD/an",
-    "note": 4.1,
-    "image": "/images/encg-tanger.png",
-    "presentation": "L'ENCG Tanger se spécialise dans le commerce international, la logistique et le marketing avec une orientation méditerranéenne.",
-    "dureeEtudes": "5 ans",
-    "diplome": "Diplôme d'École de Commerce",
-    "admission": "Concours national",
-    "debouches": ["Responsable export", "Logisticien", "Responsable marketing", "Analyste financier"],
-    "siteWeb": "https://www.encgt.ma",
-    "contact": "contact@encgt.ma",
+    "note": 4.3,
+    "image": "/images/encg tanger.png",
+    "presentation": "L'ENCG Tanger, ouverte en 1995 et rattachée à l'Université Abdelmalek Essaadi, est l'une des premières ENCG du Maroc. Elle s'est construite sur un héritage prestigieux en sciences de gestion. Son activité structurée autour de trois axes (formation initiale, formation continue, recherche appliquée-conseil) vise à former des gestionnaires modernes, aptes à relever le défi de la compétitivité de l'entreprise marocaine.",
+    "dureeEtudes": "5 ans (10 semestres, dont un tronc commun de 3 ans/6 semestres)",
+    "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
+    "admission": "Concours national via la plateforme tafem.ma pour les bacheliers, avec présélection sur la moyenne du baccalauréat, suivi du test TAFEM.",
+    "debouches": [
+      "Manager en Commerce International",
+      "Responsable Marketing et Action Commerciale",
+      "Responsable des Ressources Humaines",
+      "Auditeur et Contrôleur de Gestion",
+      "Gestionnaire Financier et Comptable",
+      "Responsable Logistique",
+      "Consultant en Management et Gouvernance"
+    ],
+    "siteWeb": "www.encgt.ma",
+    "contact": "encgtanger@encgt.ma",
+    "telephone": "0539313487/88/89",
+    "adresse": "ENCG de Tanger Route de l'aéroport B.P 1255 - 90000 Tanger Principal",
+    "universiteAffiliation": "Université Abdelmalek Essaadi Tétouan",
+    "anneeCreation": 1995,
+    "missions": [
+      "Former des gestionnaires modernes et compétitifs pour répondre aux attentes du tissu entrepreneurial national et international.",
+      "Promouvoir l'excellence à travers un édifice pédagogique exigeant basé sur l'initiative, la compétence et la responsabilité.",
+      "Assurer l'employabilité des lauréats par une conception des formations en étroite collaboration avec le monde professionnel."
+    ],
+    "filiereGestion": [
+      "Management des Ressources Humaines",
+      "Audit et Contrôle de Gestion",
+      "Gestion Financière et Comptable",
+      "Management Logistique"
+    ],
+    "filiereCommerce": [
+      "Commerce International",
+      "Marketing et Action Commerciale"
+    ],
+    "mastersSpecialisesInitiale": [],
+    "licencesProfessionnelles": [],
+    "mastersSpecialisesUniversite": [
+      "Management et Gouvernance des Entreprises (MGE)",
+      "Finance et Gouvernance des Organisations",
+      "Conseil et Audit des Organisations (Master Spécialisé)"
+    ],
+    "equipements": ["Information non spécifiée sur la page"],
+    "motsCles": ["commerce", "gestion", "tanger", "management", "audit", "finance", "logistique", "université abdelmalek essaadi"],
     "reviews": [
       {
         "id": "rev-encgt-1",
@@ -1252,8 +1441,9 @@
         "date": "2022-12-15",
         "verified": true
       }
-    ]},
-    {
+    ]
+  },
+  {
     "idEcole": 28,
     "nom": "Université Ibn Zohr - Faculté des Sciences",
     "ville": "Agadir",
@@ -1262,7 +1452,7 @@
     "specialites": ["Biologie", "Géologie", "Chimie", "Mathématiques"],
     "cout": "6800 MAD/an",
     "note": 3.9,
-    "image": "/images/uiz-agadir.png",
+    "image": "/images/Université Ibn Zohr  Faculté des Sciences.jpg",
     "presentation": "La Faculté des Sciences d'Agadir se spécialise dans les sciences de la vie, la géologie et l'environnement avec une orientation régionale.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Doctorat",
@@ -1295,24 +1485,33 @@
         "date": "2022-03-11",
         "verified": true
       }
-    ]},
-    {
+    ]
+  },
+  {
     "idEcole": 29,
-    "nom": "École Nationale des Sciences Appliquées",
+    "nom": "École Nationale des Sciences Appliquées d'Agadir",
     "ville": "Agadir",
     "type": "École Publique d'Ingénieurs",
-    "description": "École d'ingénieurs en sciences appliquées",
-    "specialites": ["Génie Informatique", "Génie Civil", "Génie Électrique"],
+    "description": "Public engineering school aiming to train engineers in diverse technological disciplines through a 5-year program.",
+    "specialites": ["Génie Industriel", "Génie Informatique", "Génie des Procédés, de l'Énergie et de l'Environnement", "Ingénierie Financière", "Ingénierie de Projet et des Affaires", "Génie Électrique", "Génie Agroalimentaire"],
     "cout": "9800 MAD/an",
     "note": 4.0,
-    "image": "/images/ensa-agadir.png",
-    "presentation": "L'ENSA Agadir forme des ingénieurs avec une orientation vers les technologies adaptées au contexte régional du Souss.",
-    "dureeEtudes": "5 ans",
-    "diplome": "Diplôme d'Ingénieur d'État",
-    "admission": "Concours national",
-    "debouches": ["Ingénieur informatique", "Ingénieur BTP", "Ingénieur électrique"],
-    "siteWeb": "https://www.ensa-agadir.ac.ma",
+    "image": "/images/ensa agadir.jpg",
+    "presentation": "ENSA Agadir, founded in September 1999 and affiliated with Ibn Zohr University, is a polytechnic school open to multiple technologies. Its goal is to train engineers through a curriculum that includes a 2-year preparatory cycle followed by 3 years of specialization. The school's success is attributed to its policy of aligning with industry needs and continuously updating its programs to integrate new technologies. It is also active in scientific research and hosts a doctoral program.",
+    "dureeEtudes": "5 ans (2 ans de cycle préparatoire + 3 ans de cycle ingénieur)",
+    "diplome": "Diplôme d'Ingénieur d'État (Bac+5)",
+    "admission": "Concours national via la plateforme www.ensa-concours.ma",
+    "debouches": ["Ingénieur d'État", "Chef de projet", "Chercheur", "Consultant technique", "Cadre dans l'industrie"],
+    "siteWeb": "www.ensa-agadir.ac.ma",
     "contact": "contact@ensa-agadir.ac.ma",
+    "telephone": "0528228313",
+    "adresse": "E.N.S.A - B.P: 1136 Agadir - Maroc",
+    "universiteAffiliation": "Université Ibn Zohr Agadir",
+    "anneeCreation": 1999,
+    "formationsOffertes": ["Ingénieurs", "Masters", "Masters de recherche", "Doctorat"],
+    "laboratoiresRecherche": ["Laboratoire de Mécanique, procédés, Energie et Environnement (LMPEE)", "Laboratoire de Génie Industriel et Informatique (LG2I)", "Equipe de Signaux Systèmes et Informatiques (ESSI)"],
+    "equipements": ["Information non spécifiée sur la page"],
+    "motsCles": ["ensa", "ingénieur", "agadir", "génie", "polytechnique", "université ibn zohr", "recherche"],
     "reviews": [
       {
         "id": "rev-ensaa-1",
@@ -1338,17 +1537,23 @@
         "date": "2022-07-08",
         "verified": true
       }
-    ]},
-    {
+    ]
+  },
+  {
     "idEcole": 30,
     "nom": "Université Mohammed Premier - Faculté des Sciences",
     "ville": "Oujda",
     "type": "Université Publique",
     "description": "Formation scientifique et recherche",
-    "specialites": ["Mathématiques", "Physique", "Chimie", "Sciences de la Vie"],
+    "specialites": [
+      "Mathématiques",
+      "Physique",
+      "Chimie",
+      "Sciences de la Vie"
+    ],
     "cout": "6500 MAD/an",
     "note": 3.7,
-    "image": "/images/ump-oujda.png",
+    "image": "/images/Universite Mohammed Premier Oujda.png",
     "presentation": "La Faculté des Sciences d'Oujda offre des formations scientifiques avec une orientation vers les besoins de la région orientale.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Doctorat",
@@ -1381,24 +1586,33 @@
         "date": "2022-10-02",
         "verified": true
       }
-    ]},
-    {
+    ]
+  },
+  {
     "idEcole": 31,
-    "nom": "École Nationale des Sciences Appliquées",
+    "nom": "École Nationale des Sciences Appliquées d'Oujda",
     "ville": "Oujda",
     "type": "École Publique d'Ingénieurs",
-    "description": "École d'ingénieurs en sciences appliquées",
-    "specialites": ["Génie Informatique", "Génie Civil", "Génie Industriel"],
+    "description": "First and only major state engineering school in the Oriental region, with a comprehensive mission covering initial and continuous training, research, and strong industrial partnership.",
+    "specialites": ["Génie Informatique", "Génie Électrique", "Génie Industriel", "Génie Télécommunications et Réseaux", "Génie Mécanique et Productique", "Génie Civil", "Ingénierie Data Sciences et Cloud Computing", "Sécurité Informatique et Cyber Sécurité", "Management des Systèmes d'Information"],
     "cout": "9500 MAD/an",
-    "note": 3.9,
-    "image": "/images/ensa-oujda.png",
-    "presentation": "L'ENSA Oujda forme des ingénieurs pour répondre aux besoins industriels de la région orientale.",
-    "dureeEtudes": "5 ans",
-    "diplome": "Diplôme d'Ingénieur d'État",
-    "admission": "Concours national",
-    "debouches": ["Ingénieur informatique", "Ingénieur BTP", "Ingénieur industriel"],
-    "siteWeb": "https://www.ensaoujda.ac.ma",
-    "contact": "info@ensaoujda.ac.ma",
+    "note": 4.1,
+    "image": "/images/ENSA Oujda.png",
+    "presentation": "ENSA Oujda (ENSAO), created in 2001, is the first and only major state engineering school in the Oriental region. Located on the university campus, it aims to diversify training within Mohammed Premier University and energize the regional and national socio-economic and industrial environment. It has a broad mission encompassing the training of highly qualified state engineers, scientific and technological research, R&D, and continuous training, with a strong focus on industrial synergy.",
+    "dureeEtudes": "5 ans (2 ans de cycle préparatoire + 3 ans de cycle ingénieur)",
+    "diplome": "Diplôme d'Ingénieur d'État (Bac+5)",
+    "admission": "Concours national via la plateforme www.ensa-concours.ma",
+    "debouches": ["Ingénieur dans tous les domaines techniques listés", "Chercheur", "Cadre R&D", "Consultant en formation continue", "Manager des Systèmes d'Information"],
+    "siteWeb": "wwwensa.univ-oujda.ac.ma",
+    "contact": "omar@ensa.ump.ma",
+    "telephone": "0536 50 54 70 / 0536 50 54 71",
+    "adresse": "ENSA, BP 669, OUJDA 60000 MAROC",
+    "universiteAffiliation": "Université Mohammed Premier Oujda",
+    "anneeCreation": 2001,
+    "missions": ["Former des ingénieurs d'état hautement qualifiés", "Recherche scientifique et technologique / R&D", "Formation continue"],
+    "diplomesDelivres": ["Diplôme universitaire de technologie (DUT)", "Diplôme d'ingénieur d'état", "Diplômes d'études supérieures spécialisées/appliquées", "Doctorat"],
+    "equipements": ["Information non spécifiée sur la page"],
+    "motsCles": ["ensa", "oujda", "oriental", "école majeure", "formation continue", "doctorat", "université mohammed premier"],
     "reviews": [
       {
         "id": "rev-ensao-1",
@@ -1424,8 +1638,9 @@
         "date": "2022-12-22",
         "verified": true
       }
-    ]},
-    {
+    ]
+  },
+  {
     "idEcole": 32,
     "nom": "Université Chouaib Doukkali - Faculté des Sciences",
     "ville": "El Jadida",
@@ -1434,7 +1649,7 @@
     "specialites": ["Mathématiques", "Physique", "Chimie", "Biologie"],
     "cout": "6700 MAD/an",
     "note": 3.8,
-    "image": "/images/ucd-eljadida.png",
+    "image": "/images/Université Chouaib Doukkali  Faculté des Sciences el jadida.jpg",
     "presentation": "La Faculté des Sciences d'El Jadida propose des formations scientifiques avec une orientation côtière et marine.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Doctorat",
@@ -1467,22 +1682,32 @@
         "date": "2022-06-30",
         "verified": true
       }
-    ]},
-    {
+    ]
+  },
+  {
     "idEcole": 33,
-    "nom": "École Supérieure de Technologie",
+    "nom": "École Supérieure de Technologie de Casablanca",
     "ville": "Casablanca",
     "type": "École Publique de Technologie",
     "description": "Formation technologique supérieure",
-    "specialites": ["Technologies Industrielles", "Maintenance", "Qualité", "Gestion de Production"],
+    "specialites": [
+      "Technologies Industrielles",
+      "Maintenance",
+      "Qualité",
+      "Gestion de Production"
+    ],
     "cout": "8500 MAD/an",
     "note": 4.0,
-    "image": "/images/est-casablanca.png",
+    "image": "/images/est casablanca.png",
     "presentation": "L'EST de Casablanca forme des techniciens supérieurs spécialisés dans les technologies industrielles et la maintenance.",
     "dureeEtudes": "2 ans",
     "diplome": "Diplôme de Technicien Supérieur",
     "admission": "Baccalauréat scientifique ou technique",
-    "debouches": ["Technicien supérieur", "Responsable maintenance", "Contrôleur qualité"],
+    "debouches": [
+      "Technicien supérieur",
+      "Responsable maintenance",
+      "Contrôleur qualité"
+    ],
     "siteWeb": "https://www.est.ac.ma",
     "contact": "estcasa@est.ac.ma",
     "reviews": [
@@ -1510,22 +1735,27 @@
         "date": "2022-08-07",
         "verified": true
       }
-    ]},
-    {
+    ]
+  },
+  {
     "idEcole": 34,
-    "nom": "École Supérieure de Technologie",
+    "nom": "École Supérieure de Technologie de Salé",
     "ville": "Salé",
     "type": "École Publique de Technologie",
     "description": "Formation technologique appliquée",
     "specialites": ["Informatique", "Électronique", "Mécanique", "Gestion"],
     "cout": "8200 MAD/an",
     "note": 4.1,
-    "image": "/images/est-sale.png",
+    "image": "/images/ESTS sale.webp",
     "presentation": "L'EST Salé forme des techniciens supérieurs en informatique, électronique, mécanique et gestion.",
     "dureeEtudes": "2 ans",
     "diplome": "Diplôme de Technicien Supérieur",
     "admission": "Baccalauréat scientifique ou technique",
-    "debouches": ["Technicien informatique", "Technicien électronique", "Assistant de gestion"],
+    "debouches": [
+      "Technicien informatique",
+      "Technicien électronique",
+      "Assistant de gestion"
+    ],
     "siteWeb": "https://www.estsale.ac.ma",
     "contact": "estsale@estsale.ac.ma",
     "reviews": [
@@ -1553,5 +1783,529 @@
         "date": "2022-11-26",
         "verified": true
       }
-    ]}
+    ]
+  },
+  {
+    "idEcole": 35,
+    "nom": "École Nationale de Commerce et de Gestion de Kénitra",
+    "ville": "Kénitra",
+    "type": "École Publique de Commerce",
+    "description": "Formation en techniques commerciales et sciences de gestion des entreprises",
+    "specialites": ["Commerce", "Gestion", "Finance", "Marketing"],
+    "cout": "Information non spécifiée sur la page",
+    "note": 4.0,
+    "image": "/images/encg kenitra.jpg",
+    "presentation": "L'ENCG Kénitra, faisant partie du réseau national des ENCG et affiliée à l'Université Ibn Tofail, a été créée en 2005. Elle est un établissement public d'enseignement supérieur spécialisé dans la formation, la recherche et la formation continue dans le domaine du commerce et de la gestion. L'école propose un enseignement modulaire de haut niveau, alternant théorie et pratique, et accorde une large place à la participation des étudiants à la vie associative et à leur ouverture sur l'environnement socio-économique.",
+    "dureeEtudes": "5 ans (10 semestres, dont un tronc commun de 3 ans/6 semestres)",
+    "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
+    "admission": "Concours national via la plateforme tafem.ma pour les titulaires d'un baccalauréat pertinent (sciences économiques, maths, sciences expérimentales, etc.) suivi d'un test (TAFEM) et d'un entretien.",
+    "debouches": [
+      "Métiers de la comptabilité et de la finance",
+      "Métiers de gestion des ressources humaines",
+      "Métiers d'audit et de contrôle de gestion",
+      "Métiers de conseil en management des organisations",
+      "Métiers du marketing et du commerce"
+    ],
+    "siteWeb": "www.univ-ibntofail.ac.ma",
+    "contact": "Information non spécifiée sur la page",
+    "telephone": "05 37 32 94 21/22",
+    "adresse": "ENCG B.P 1420, Kénitra 14000- Maroc",
+    "universiteAffiliation": "Université Ibn Tofail Kénitra",
+    "anneeCreation": 2005,
+    "missions": [
+      "Enseignement, formation continue et recherche dans les domaines des techniques commerciales et des sciences de gestion",
+      "Former des cadres de haut niveau par des méthodes pédagogiques rigoureuses associant théorie et pratique",
+      "Ouvrir les étudiants sur l'environnement socio-économique national et international et favoriser leur participation à la vie associative"
+    ],
+    "filiereGestion": [
+      "Audit et contrôle de gestion",
+      "Gestion financière et comptable",
+      "Management des ressources humaines"
+    ],
+    "filiereCommerce": [
+      "Marketing et Action Commerciale",
+      "Commerce international",
+      "Publicité et Communication"
+    ],
+    "mastersSpecialisesInitiale": [],
+    "licencesProfessionnelles": [],
+    "mastersSpecialisesUniversite": [
+      "Actuariat et Finance",
+      "Finance, Audit et Contrôle de Gestion",
+      "Gestion Financière et Comptable",
+      "Management des Organisations Financières et Bancaires",
+      "Management des Réseaux Logistiques",
+      "Marketing & Commerce International",
+      "Marketing, Pratiques Commerciales et Management des Services"
+    ],
+    "equipements": ["Information non spécifiée sur la page"],
+    "motsCles": ["commerce", "gestion", "finance", "marketing", "audit", "ressources humaines", "logistique", "kénitra"],
+    "reviews": [
+      {
+        "id": "rev-encgk-1",
+        "rating": 4,
+        "comment": "École sérieuse avec une bonne insertion professionnelle dans la région.",
+        "author": "Karim T.",
+        "date": "2024-06-10",
+        "verified": true
+      },
+      {
+        "id": "rev-encgk-2",
+        "rating": 4,
+        "comment": "Formation exigeante qui prépare bien au monde de l'entreprise.",
+        "author": "Fatima Z.",
+        "date": "2023-11-18",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "idEcole": 36,
+    "nom": "École Nationale de Commerce et de Gestion de Settat",
+    "ville": "Settat",
+    "type": "École Publique de Commerce",
+    "description": "Formation en sciences de gestion et techniques commerciales",
+    "specialites": ["Commerce", "Gestion", "Finance", "Marketing", "Logistique"],
+    "cout": "Information non spécifiée sur la page",
+    "note": 4.1,
+    "image": "/images/encg settat.jpg",
+    "presentation": "L'ENCG Settat, constituante de l'Université Hassan 1er, est une école de commerce publique créée en 2007. Elle a pour vocation de former des cadres supérieurs et des décideurs dans les domaines du management et du commerce, capables de s'adapter aux évolutions du monde économique. L'école promeut une pédagogie active basée sur des études de cas, des simulations et une forte interaction avec le monde professionnel.",
+    "dureeEtudes": "5 ans (10 semestres, dont un tronc commun de 3 ans/6 semestres)",
+    "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
+    "admission": "Concours national après le baccalauréat via la plateforme tafem.ma. Les titulaires d'un bac scientifique, économique ou technique sont les principaux concernés.",
+    "debouches": [
+      "Responsable Marketing et Commercial",
+      "Contrôleur de Gestion et Auditeur",
+      "Responsable Financier",
+      "Chef de Projet Logistique",
+      "Responsable des Ressources Humaines",
+      "Consultant en Management",
+      "Entrepreneur / Créateur d'entreprise",
+      "Chargé d'Affaires Internationales"
+    ],
+    "siteWeb": "https://encgset.ac.ma/",
+    "contact": "contact@encgset.ac.ma",
+    "telephone": "05 23 72 04 50",
+    "adresse": "B.P 539, Route de Casablanca, Settat, Maroc",
+    "universiteAffiliation": "Université Hassan 1er Settat",
+    "anneeCreation": 2007,
+    "missions": [
+      "Former des cadres supérieurs et des leaders dans les métiers du commerce et de la gestion",
+      "Développer l'esprit d'innovation et d'entrepreneuriat chez les étudiants",
+      "Contribuer au développement socio-économique de la région par la recherche et le partenariat avec les entreprises"
+    ],
+    "filiereGestion": [
+      "Finance, Audit et Contrôle (FAC)",
+      "Management des Ressources Humaines (MRH)",
+      "Management Logistique et Supply Chain (MLSC)"
+    ],
+    "filiereCommerce": [
+      "Marketing et Stratégies Commerciales (MSC)",
+      "Commerce International et Douane (CID)",
+      "Management Digital et E-commerce (MDEC)"
+    ],
+    "mastersSpecialisesInitiale": [
+      "Management Stratégique des Organisations",
+      "Contrôle de Gestion et Audit Performance",
+      "Marketing Digital et Intelligence Commerciale"
+    ],
+    "licencesProfessionnelles": [
+      "Management des Unités Commerciales",
+      "Gestion Logistique et Transport",
+      "Assistant Manager Bilingue"
+    ],
+    "mastersSpecialisesUniversite": [
+      "Management International et Affaires Interculturelles",
+      "Ingénierie Financière et Risk Management",
+      "Management de la Qualité et Performance Durable"
+    ],
+    "equipements": [
+      "Centre de Langues et de Communication",
+      "Incubateur d'Entreprises (ENCG Start)",
+      "Salles de simulation et de trading",
+      "Bibliothèque et centre de ressources"
+    ],
+    "motsCles": ["commerce", "gestion", "settat", "management", "entrepreneuriat", "logistique", "finance", "marketing digital"],
+    "reviews": [
+      {
+        "id": "rev-encgs-1",
+        "rating": 5,
+        "comment": "Un excellent incubateur pour les projets entrepreneuriaux. Le soutien de l'école est remarquable.",
+        "author": "Youssef L.",
+        "date": "2024-04-22",
+        "verified": true
+      },
+      {
+        "id": "rev-encgs-2",
+        "rating": 4,
+        "comment": "Formation pratique avec beaucoup de cas concrets. Les liens avec les entreprises sont un vrai plus.",
+        "author": "Salma K.",
+        "date": "2023-10-15",
+        "verified": true
+      },
+      {
+        "id": "rev-encgs-3",
+        "rating": 4,
+        "comment": "Bonne ambiance et corps professoral accessible. La spécialisation en commerce international est très bien structurée.",
+        "author": "Omar D.",
+        "date": "2023-05-30",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "idEcole": 37,
+    "nom": "École Nationale de Commerce et de Gestion de Marrakech",
+    "ville": "Marrakech",
+    "type": "École Publique de Commerce",
+    "description": "École de commerce et de gestion créée pour répondre aux besoins des entreprises en cadres et managers.",
+    "specialites": ["Commerce", "Gestion", "Ressources Humaines", "Marketing", "Finance", "Audit", "Logistique"],
+    "cout": "Information non spécifiée sur la page",
+    "note": 4.0,
+    "image": "/images/encg marrakech.png",
+    "presentation": "L'ENCG Marrakech, créée en 2004 et affiliée à l'Université Cadi Ayyad, a pour vocation de former des managers performants, dotés d'aptitudes relationnelles et d'un savoir-faire adapté au développement de l'environnement économique national et international. Elle vise à répondre directement aux attentes des entreprises privées et publiques en matière de cadres dans les domaines du commerce et de la gestion.",
+    "dureeEtudes": "5 ans (10 semestres, dont un tronc commun de 3 ans/6 semestres)",
+    "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
+    "admission": "Concours national après le baccalauréat via la plateforme tafem.ma",
+    "debouches": [
+      "Manager en Gestion Financière et Comptable",
+      "Responsable des Ressources Humaines",
+      "Auditeur et Contrôleur de Gestion",
+      "Responsable Logistique",
+      "Chargé de Marketing et d'Action Commerciale",
+      "Responsable Commerce International",
+      "Spécialiste en Publicité et Communication",
+      "Consultant en Intelligence Economique et Innovation"
+    ],
+    "siteWeb": "www.encg.ucam.ac.ma",
+    "contact": "encg@encg.ucam.ac.ma",
+    "telephone": "05 24 30 46 92",
+    "adresse": "ENCG de Marrakech av. Allal El Fassi BP 3748",
+    "universiteAffiliation": "Université Cadi Ayyad Marrakech",
+    "anneeCreation": 2004,
+    "missions": [
+      "Mettre sur le marché du travail des managers performants, dotés de capacités de concrétisation et d'aptitudes relationnelles.",
+      "Répondre aux besoins spécifiques des entreprises privées et publiques en cadres qualifiés en commerce et gestion.",
+      "Adapter la formation au développement de l'environnement économique national et international."
+    ],
+    "filiereGestion": [
+      "Gestion Financière et Comptable (GFC)",
+      "Management des Ressources Humaines (MRH)",
+      "Audit et Contrôle de Gestion (ACG)",
+      "Management Logistique (MALO)"
+    ],
+    "filiereCommerce": [
+      "Marketing et Action Commerciale (MAC)",
+      "Commerce International (COI)",
+      "Publicité et Communication (PCOM)"
+    ],
+    "mastersSpecialisesInitiale": [],
+    "licencesProfessionnelles": [],
+    "mastersSpecialisesUniversite": [
+      "Master Spécialisé Management de l'Innovation : Intelligence Economique"
+    ],
+    "equipements": ["Information non spécifiée sur la page"],
+    "motsCles": ["commerce", "gestion", "marrakech", "management", "cadi ayyad", "marketing", "audit", "intelligence économique"],
+    "reviews": [
+      {
+        "id": "rev-encgm-1",
+        "rating": 4,
+        "comment": "École bien implantée dans la région de Marrakech, offrant de bonnes opportunités de stage locales.",
+        "author": "Kamal R.",
+        "date": "2024-03-10",
+        "verified": true
+      },
+      {
+        "id": "rev-encgm-2",
+        "rating": 4,
+        "comment": "Formation pratique avec des spécialisations variées. L'option Publicité et Communication est intéressante.",
+        "author": "Soraya E.",
+        "date": "2023-09-25",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "idEcole": 38,
+    "nom": "École Nationale de Commerce et de Gestion d'El Jadida",
+    "ville": "El Jadida",
+    "type": "École Publique de Commerce",
+    "description": "Formation professionnalisante en commerce et gestion basée sur les normes des grandes écoles.",
+    "specialites": ["Commerce", "Gestion", "Finance", "Marketing", "Audit", "Ressources Humaines"],
+    "cout": "Information non spécifiée sur la page",
+    "note": 3.9,
+    "image": "/images/encg eljadida.png",
+    "presentation": "L'ENCG El Jadida, affiliée à l'Université Chouaïb Doukkali, offre une formation professionnalisante conçue sur le modèle des grandes écoles de commerce. Son cursus vise à préparer les futurs lauréats à relever les défis de la mondialisation, du développement technologique et de l'évolution des marchés. L'école met l'accent sur l'acquisition de compétences fondamentales et une spécialisation progressive, le tout étalé sur un programme de 10 semestres.",
+    "dureeEtudes": "5 ans (10 semestres, dont un tronc commun de 3 ans/6 semestres)",
+    "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
+    "admission": "Concours national après le baccalauréat via la plateforme tafem.ma",
+    "debouches": [
+      "Responsable Marketing et Action Commerciale",
+      "Gestionnaire Financier et Comptable",
+      "Auditeur et Contrôleur de Gestion",
+      "Responsable des Ressources Humaines",
+      "Cadre Commercial",
+      "Analyste Financier"
+    ],
+    "siteWeb": "www.encgj.ac.ma",
+    "contact": "Information non spécifiée sur la page",
+    "telephone": "05 23 39 44 35",
+    "adresse": "ENCG - El Jadida Angle Avenue Ahmed Chaouki et Rue de Fés - B.P.122 – 24000 El Jadida",
+    "universiteAffiliation": "Université Chouaïb Doukkali Eljadida",
+    "anneeCreation": "Information non spécifiée sur la page, appartient au réseau des ENCG créées vers 2005.",
+    "missions": [
+      "Dispenser une formation professionnalisante de haut niveau en commerce et gestion, conforme aux standards internationaux.",
+      "Préparer les étudiants aux défis de l'économie mondialisée et des nouvelles technologies.",
+      "Offrir un parcours de spécialisation permettant aux lauréats de s'insérer avec compétence sur le marché du travail."
+    ],
+    "filiereGestion": [
+      "Gestion Financière et Comptable",
+      "Audit et Contrôle de Gestion",
+      "Management des Ressources Humaines"
+    ],
+    "filiereCommerce": [
+      "Marketing et Action Commerciale"
+    ],
+    "mastersSpecialisesInitiale": [],
+    "licencesProfessionnelles": [],
+    "mastersSpecialisesUniversite": [],
+    "equipements": ["Information non spécifiée sur la page"],
+    "motsCles": ["commerce", "gestion", "el jadida", "marketing", "audit", "finance", "ressources humaines", "université chouaïb doukkali"],
+    "reviews": [
+      {
+        "id": "rev-encgj-1",
+        "rating": 4,
+        "comment": "École à taille humaine, le suivi des étudiants est bon. La spécialisation en marketing est bien structurée.",
+        "author": "Ahmed S.",
+        "date": "2024-02-14",
+        "verified": true
+      },
+      {
+        "id": "rev-encgj-2",
+        "rating": 3,
+        "comment": "Formation correcte, mais l'offre de spécialités est moins large que dans d'autres ENCG plus anciennes.",
+        "author": "Lina K.",
+        "date": "2023-11-05",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "idEcole": 39,
+    "nom": "École Nationale de Commerce et de Gestion d'Agadir",
+    "ville": "Agadir",
+    "type": "École Publique de Commerce",
+    "description": "Établissement public modélisé sur les grandes écoles européennes, connu pour son excellence et son fort taux d'insertion professionnelle.",
+    "specialites": ["Commerce", "Gestion", "Marketing", "Commerce International", "Finance", "Audit", "Ressources Humaines", "Logistique", "Communication", "Tourisme"],
+    "cout": "Information non spécifiée sur la page",
+    "note": 4.4,
+    "image": "/images/encg agadir.png",
+    "presentation": "L'ENCG Agadir, créée en 1994 et affiliée à l'Université Ibn Zohr, est l'une des plus anciennes et prestigieuses ENCG du Maroc. Modélisée sur les grandes écoles de commerce européennes, elle s'est distinguée en remportant des prix nationaux et internationaux en gestion. L'école est réputée pour son taux d'insertion professionnelle exceptionnel, dépassant les 95%. Elle propose un arsenal pédagogique riche et une grande diversité de choix de spécialités, tout en ayant été pionnière dans l'adoption du système LMD.",
+    "dureeEtudes": "5 ans (10 semestres organisés selon le système LMD, avec un tronc commun de 3 ans)",
+    "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
+    "admission": "Concours national après le baccalauréat via la plateforme tafem.ma",
+    "debouches": [
+      "Manager en Marketing et Action Commerciale",
+      "Responsable Commerce International",
+      "Spécialiste en Publicité et Communication ou Management de la Relation Client",
+      "Gestionnaire Financier et Comptable",
+      "Auditeur et Contrôleur de Gestion",
+      "Responsable des Ressources Humaines",
+      "Manager Logistique",
+      "Expert en Banque et Finance Islamique",
+      "Manager du Tourisme",
+      "Consultant en Systèmes d'Information"
+    ],
+    "siteWeb": "www.encg-agadir.ac.ma",
+    "contact": "info@encg-agadir.ac.ma",
+    "telephone": "0528225739/48",
+    "adresse": "ENCG BP 37/S 80000, Agadir",
+    "universiteAffiliation": "Université Ibn Zohr Agadir",
+    "anneeCreation": 1994,
+    "missions": [
+      "Former des cadres de haut niveau sur le modèle des grandes écoles de commerce européennes.",
+      "Assurer une employabilité maximale grâce à des programmes adaptés aux besoins du marché et un taux d'insertion record.",
+      "Développer une offre de formation diversifiée et innovante, incluant des licences professionnelles et des masters spécialisés dans des secteurs porteurs."
+    ],
+    "filiereGestion": [
+      "Gestion Financière et comptable",
+      "Audit et contrôle de Gestion",
+      "Management des Ressources Humaines",
+      "Management de la Logistique"
+    ],
+    "filiereCommerce": [
+      "Marketing et action Commerciale",
+      "Commerce International",
+      "Publicité et Communication",
+      "CRM ou Management de la Relation Client"
+    ],
+    "mastersSpecialisesInitiale": [
+      "Banques et Finance Islamique",
+      "Finance des Marches & Management des Risques",
+      "Gouvernance et Communication des Organisations",
+      "Logistique et Gestion de Plateformes",
+      "Marketing et Management Touristique",
+      "Management des Systèmes d'Information"
+    ],
+    "licencesProfessionnelles": [
+      "Management des Organisations de L'Economie Sociale et Solidaire",
+      "Management du Tourisme (sur les sites d'Agadir, Tata et El Ouatia)"
+    ],
+    "mastersSpecialisesUniversite": [],
+    "equipements": ["Information non spécifiée sur la page"],
+    "motsCles": ["commerce", "gestion", "agadir", "grande école", "taux d'insertion", "LMD", "tourisme", "finance islamique", "université ibn zohr"],
+    "reviews": [
+      {
+        "id": "rev-encga-1",
+        "rating": 5,
+        "comment": "La référence du sud ! Excellence académique, reconnaissance nationale et insertion professionnelle garantie. Fierté d'être un ancien.",
+        "author": "Omar T.",
+        "date": "2024-06-01",
+        "verified": true
+      },
+      {
+        "id": "rev-encga-2",
+        "rating": 5,
+        "comment": "Offre de formation incroyablement diversifiée, avec des masters spécialisés uniques comme la finance islamique. Très proche du milieu professionnel.",
+        "author": "Zineb M.",
+        "date": "2024-04-18",
+        "verified": true
+      },
+      {
+        "id": "rev-encga-3",
+        "rating": 4,
+        "comment": "École exigeante qui délivre. La renommée et le réseau dans la région sont des atouts majeurs pour trouver un stage et un emploi.",
+        "author": "Yassin F.",
+        "date": "2023-12-09",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "idEcole": 40,
+    "nom": "École Nationale de Commerce et de Gestion de Fès",
+    "ville": "Fès",
+    "type": "École Publique de Commerce",
+    "description": "Établissement leader dans la formation en gestion d'entreprises et d'organisations.",
+    "specialites": ["Commerce International", "Marketing", "Finance", "Audit", "Logistique", "Communication", "Ressources Humaines"],
+    "cout": "Information non spécifiée sur la page",
+    "note": 4.0,
+    "image": "/images/encg fes.png",
+    "presentation": "Implantée à Fès en 2007 et composante de l'Université Sidi Mohamed Ben Abdellah, l'ENCG Fès est reconnue comme un établissement leader au Maroc. Fondée sur la devise « Instruire pour construire », elle s'appuie sur un corps professoral dévoué pour former des cadres capables de répondre aux besoins évolutifs et compétitifs du marché national et international. L'école a pour vocation la formation initiale, la formation continue et la recherche dans le commerce et la gestion.",
+    "dureeEtudes": "5 ans (dont 3 ans de tronc commun)",
+    "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
+    "admission": "Concours national après baccalauréat via la plateforme tafem.ma. Des passerelles existent pour les titulaires de Bac+2 (au 5ème semestre) et Bac+3 (au 7ème semestre).",
+    "debouches": [
+      "Responsable Commerce International",
+      "Cadre en Marketing et Action Commerciale",
+      "Gestionnaire Financier et Comptable",
+      "Auditeur et Contrôleur de Gestion",
+      "Manager Logistique",
+      "Spécialiste en Publicité et Communication",
+      "Responsable des Ressources Humaines"
+    ],
+    "siteWeb": "www.encg-usmba.ma",
+    "contact": "Information non spécifiée sur la page",
+    "telephone": "0535605057",
+    "adresse": "ENCG Route d'Imouzzer B.P.2626 Fès 30000 Maroc",
+    "universiteAffiliation": "Université Sidi Mohamed Ben Abdellah Fès",
+    "anneeCreation": 2007,
+    "missions": [
+      "Former des cadres compétitifs pour répondre aux besoins évolutifs du marché du travail national et international.",
+      "Dispenser un enseignement de qualité fondé sur les compétences et le savoir-faire.",
+      "Assurer une formation initiale et continue, ainsi que la recherche dans les domaines du commerce et de la gestion."
+    ],
+    "filiereGestion": [
+      "Gestion Financière et Comptable",
+      "Audit et Contrôle de Gestion",
+      "Management logistique",
+      "Management des Ressources Humaines"
+    ],
+    "filiereCommerce": [
+      "Commerce International",
+      "Marketing et Action Commerciale",
+      "Publicité et Communication"
+    ],
+    "mastersSpecialisesInitiale": [],
+    "licencesProfessionnelles": [],
+    "mastersSpecialisesUniversite": [],
+    "equipements": ["Information non spécifiée sur la page"],
+    "motsCles": ["commerce", "gestion", "fès", "université sidi mohamed ben abdellah", "commerce international", "marketing", "audit"],
+    "reviews": [
+      {
+        "id": "rev-encgf-1",
+        "rating": 4,
+        "comment": "École dynamique avec une offre de filières très complète. Bon tremplin pour la région Fès-Meknès.",
+        "author": "Hassan M.",
+        "date": "2024-05-30",
+        "verified": true
+      },
+      {
+        "id": "rev-encgf-2",
+        "rating": 4,
+        "comment": "Corps professoral investi. La filière Management Logistique est particulièrement intéressante.",
+        "author": "Amina R.",
+        "date": "2023-11-12",
+        "verified": true
+      }
+    ]
+  },
+  {
+    "idEcole": 41,
+    "nom": "École Nationale de Commerce et de Gestion d'Oujda",
+    "ville": "Oujda",
+    "type": "École Publique de Commerce",
+    "description": "Établissement public de haute formation à la gestion des entreprises, répondant aux besoins en cadres de haut niveau.",
+    "specialites": ["Commerce", "Gestion"],
+    "cout": "Information non spécifiée sur la page",
+    "note": 3.8,
+    "image": "/images/encg oujda.webp",
+    "presentation": "L'ENCG Oujda, rattachée à l'Université Mohammed Premier, a été créée par décret en 2006 mais a démarré ses activités d'enseignement dès 2004. Elle fait partie du réseau des ENCG et vise à répondre aux besoins croissants des entreprises en cadres de haut niveau. L'école a d'abord délivré un diplôme Bac+4 avant de se conformer au standard Bac+5 du réseau.",
+    "dureeEtudes": "5 ans (dont 3 ans de tronc commun)",
+    "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
+    "admission": "Concours national après baccalauréat via la plateforme tafem.ma",
+    "debouches": [
+      "Cadre en Commerce",
+      "Cadre en Gestion d'Entreprise",
+      "Manager",
+      "Analyste",
+      "Contrôleur de Gestion"
+    ],
+    "siteWeb": "www.encgo.ump.ma",
+    "contact": "service.informatique.encgo@gmail.com",
+    "telephone": "536506983/85/89",
+    "adresse": "ENCG Complexe universitaire BP 658 - Oujda principale 60000",
+    "universiteAffiliation": "Université Mohammed Premier Oujda",
+    "anneeCreation": 2006,
+    "missions": [
+      "Former des cadres de haut niveau pour répondre aux besoins des entreprises.",
+      "Participer au réseau national des ENCG pour harmoniser l'excellence de la formation en commerce et gestion.",
+      "Servir de pôle de compétence en gestion pour la région de l'Oriental."
+    ],
+    "filiereGestion": ["Information à préciser sur le site officiel"],
+    "filiereCommerce": ["Information à préciser sur le site officiel"],
+    "mastersSpecialisesInitiale": [],
+    "licencesProfessionnelles": [],
+    "mastersSpecialisesUniversite": [],
+    "equipements": ["Information non spécifiée sur la page"],
+    "motsCles": ["commerce", "gestion", "oujda", "université mohammed premier", "réseau encg"],
+    "reviews": [
+      {
+        "id": "rev-encgo-1",
+        "rating": 4,
+        "comment": "École essentielle pour la région de l'Oriental. Formation solide qui répond aux besoins locaux des entreprises.",
+        "author": "Khalid B.",
+        "date": "2024-04-05",
+        "verified": true
+      },
+      {
+        "id": "rev-encgo-2",
+        "rating": 3,
+        "comment": "École en développement. Les informations sur les spécialités précises sont moins accessibles que pour d'autres ENCG.",
+        "author": "Samira E.",
+        "date": "2023-10-20",
+        "verified": true
+      }
+    ]
+  }
 ]

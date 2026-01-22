@@ -5,7 +5,7 @@
   background-color: #f8f9fa;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
 
@@ -15,19 +15,19 @@
 }
 
 .login-page-title {
-   color:#00CED1;
+  color: #00ced1;
   font-size: 2.2rem;
   font-weight: 900;
   margin: 10px;
   line-height: 1;
   letter-spacing: 1px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .login-page-subtitle {
   color: #001a36;
   font-size: 22px;
   margin-bottom: 20px;
-  border-bottom: 2px solid #00CED1;
+  border-bottom: 2px solid #00ced1;
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,7 @@
 }
 
 .login-page-subtitle .login-separator {
-  color: #00CED1;
+  color: #00ced1;
   margin: 0 10px;
 }
 
@@ -81,7 +81,7 @@
 }
 
 .login-page-input:focus {
-  border-color: #00CED1;
+  border-color: #00ced1;
   outline: none;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
@@ -100,14 +100,14 @@
 }
 
 .login-page-button:hover {
-  background-color: #00CED1;
+  background-color: #00ced1;
 }
 
 /* SECTION INSCRIPTION */
 .login-page-register-section {
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #00CED1;
+  border-top: 1px solid #00ced1;
 }
 
 .login-page-register-text {
@@ -129,7 +129,7 @@
 }
 
 .login-page-register-link:hover {
-  background-color: #00CED1;
+  background-color: #00ced1;
 }
 
 /* Responsive design */
@@ -138,11 +138,11 @@
     margin: 20px;
     padding: 20px;
   }
-  
+
   .login-page-title {
     font-size: 24px;
   }
-  
+
   .login-page-subtitle {
     font-size: 20px;
     padding: 0 10px 10px 10px;
