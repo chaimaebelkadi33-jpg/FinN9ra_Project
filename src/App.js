@@ -5,6 +5,7 @@ import "./Styles/global.css";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import EcoleDetails from "./Pages/EcoleDetail";
+import About from "./Components/About";
 // Import Pages
 import Accueil from "./Pages/Accueil";
 import Ecoles from "./Pages/Ecoles";
