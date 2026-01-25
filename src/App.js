@@ -4,7 +4,7 @@ import './Styles/global.css';
 // Import Components
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import EcoleDetails from './Components/EcoleDetail';
+import EcoleDetails from './Pages/EcoleDetail';
 // Import Pages
 import Accueil from './Pages/Accueil';
 import Ecoles from './Pages/Ecoles';

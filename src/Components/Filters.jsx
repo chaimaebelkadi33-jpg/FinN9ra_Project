@@ -316,42 +316,42 @@ const Filters = ({
               )}
             </div>
           </div>
-
-          {/* Spécialité Filter */}
-          <div className="filter-group">
-            <label className="filter-group-label">
-              Spécialité
-              {activeFilters.specialite && (
-                <span className="filter-value">{activeFilters.specialite}</span>
-              )}
-            </label>
-            <div className="filter-tag-container">
-              <div 
-                className={`filter-select ${activeFilters.specialite ? 'active' : ''}`}
-                onClick={() => toggleDropdown('specialite')}
-              >
-                {activeFilters.specialite || 'Toutes les spécialités'}
-                <span className="select-arrow">▼</span>
-              </div>
-              
-              {activeDropdown === 'specialite' && (
-                <div className="options-dropdown">
-                  <div className="dropdown-scroll">
-                    {filterOptions.specialites.slice(0, 15).map((specialite, index) => (
-                      <div 
-                        key={index}
-                        className={`dropdown-item ${activeFilters.specialite === specialite ? 'selected' : ''}`}
-                        onClick={() => selectFilter('specialite', specialite)}
-                      >
-                        {specialite}
-                        {activeFilters.specialite === specialite && <span className="check">✓</span>}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+{/* Spécialité Filter */}
+<div className="filter-group">
+  <label className="filter-group-label">
+    Spécialité
+    {activeFilters.specialite && (
+      <span className="filter-value">{activeFilters.specialite}</span>
+    )}
+  </label>
+  <div className="filter-tag-container">
+    <div 
+      className={`filter-select ${activeFilters.specialite ? 'active' : ''}`}
+      onClick={() => toggleDropdown('specialite')}
+    >
+      {activeFilters.specialite || 'Toutes les spécialités'}
+      <span className="select-arrow">▼</span>
+    </div>
+    
+    {activeDropdown === 'specialite' && (
+      <div className="options-dropdown specialite-dropdown">
+        
+        <div className="dropdown-scroll">
+          {filterOptions.specialites.map((specialite, index) => (
+            <div 
+              key={index}
+              className={`dropdown-item ${activeFilters.specialite === specialite ? 'selected' : ''}`}
+              onClick={() => selectFilter('specialite', specialite)}
+            >
+              {specialite}
+              {activeFilters.specialite === specialite && <span className="check">✓</span>}
             </div>
-          </div>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</div>
 
           {/* Price Filter Section */}
 <div className="filter-group price-group">
