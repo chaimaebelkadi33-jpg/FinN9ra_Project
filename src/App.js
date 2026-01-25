@@ -13,6 +13,7 @@ import ContactPage from './Components/ContactPage';
 import LoginPage from './Pages/LoginPage';
 import RegisterPage from './Pages/RegisterPage';
 import PageError from './Components/PageError';
+import About from './Components/About';
 function App() {
   return (
     <Router>
@@ -30,6 +31,7 @@ function App() {
         <Route path="/EcoleDetail/:id" element={<EcoleDetails />} />
         <Route path="/ecole/:id" element={<EcoleDetails />} />
             <Route path="*" element={<PageError/>}/>
+            <Route path="/About" element={<About/>}/>
           </Routes>
         </main>
         <Footer />

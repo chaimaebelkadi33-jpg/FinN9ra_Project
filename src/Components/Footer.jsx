@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../Styles/footer.css';
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -14,30 +16,38 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="section-title">Plateforme</h3>
             <ul className="footer-links">
-              <li><a href="/" className="footer-link">Accueil</a></li>
-              <li><a href="/ecoles" className="footer-link">Liste des écoles</a></li>
+              <li>
+                <Link to="/" className="footer-link">Accueil</Link>
+              </li>
+              <li>
+                <Link to="/ecoles" className="footer-link">Liste des écoles</Link>
+              </li>
             </ul>
           </div>
           <div className="footer-section">
             <h3 className="section-title">À propos</h3>
             <ul className="footer-links">
-              <li><a href="/about" className="footer-link">Qui sommes-nous</a></li>
-              <li><a href="/contact" className="footer-link">Contact</a></li>
+              <li>
+                <Link to="/about" className="footer-link">Qui sommes-nous</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="footer-link">Contact</Link>
+              </li>
             </ul>
           </div>
           <div className="footer-section">
             <h3 className="section-title">Réseaux sociaux</h3>
             <div className="social-icons">
-              <a href="#" className="social-icon" aria-label="Facebook">
+              <a href="https://www.facebook.com/" className="social-icon" aria-label="Facebook">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="#" className="social-icon" aria-label="Instagram">
+              <a href="https://www.instagram.com/" className="social-icon" aria-label="Instagram">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#" className="social-icon" aria-label="Twitter">
+              <a href="https://x.com/" className="social-icon" aria-label="Twitter">
                 <i className="fab fa-twitter"></i>
               </a>
-              <a href="#" className="social-icon" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/login/" className="social-icon" aria-label="LinkedIn">
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
@@ -45,7 +55,16 @@ const Footer = () => {
         </div>
         <div className="footer-bottom">
           <p className="copyright">
-            © 2026 Fin N9ra? — Tous droits réservés
+            © {new Date().getFullYear()} Fin N9ra? — Tous droits réservés
+            <br />
+            Développé avec passion par{' '}
+            <Link to="/about" style={{ 
+              color: '#00FFFF', 
+              textDecoration: 'none',
+              fontWeight: 'bold'
+            }}>
+              Widad & Chaimae
+            </Link>
           </p>
         </div>
       </div>
