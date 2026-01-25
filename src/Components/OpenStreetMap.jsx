@@ -12,7 +12,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
 });
 
-const OpenStreetMap = ({ city, schoolName, type }) => {
+const OpenStreetMap = ({ city, schoolName, adress }) => {
   // Coordonnées exactes pour les villes marocaines (centres-villes)
   const cityCoordinates = {
     'Rabat': { lat: 34.020882, lng: -6.841650 },
@@ -30,15 +30,7 @@ const OpenStreetMap = ({ city, schoolName, type }) => {
 
   // Récupérer les coordonnées ou utiliser Rabat par défaut
   const position = cityCoordinates[city] || { lat: 34.020882, lng: -6.841650 };
-  
-  // Icône personnalisée selon le type d'école
-  const customIcon = new L.Icon({
-    iconUrl: getIconByType(type),
-    iconSize: [40, 40],
-    iconAnchor: [20, 40],
-    popupAnchor: [0, -40],
-    className: 'custom-marker'
-  });
+
 
   function getIconByType(type) {
     if (type.includes('Ingénieur')) return '🎓';
@@ -64,7 +56,7 @@ const OpenStreetMap = ({ city, schoolName, type }) => {
           <Popup>
             <div className="map-popup">
               <strong>{schoolName}</strong><br />
-              {type}<br />
+              {adress}<br />
               📍 {city}, Maroc
             </div>
           </Popup>
