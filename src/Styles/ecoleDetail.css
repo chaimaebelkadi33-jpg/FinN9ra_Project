@@ -2366,8 +2366,8 @@
 
   .main-image-container {
     flex: 1;
-    height: 350px;
-    max-width: 500px;
+    height: 100px;
+    max-width: 1000px;
   }
 
   .school-title {
