@@ -14,16 +14,16 @@ const RegisterPage = () => {
     confirmPassword: '',
   });
 
-  // Options pour les types d'école
+  // Options pour les types d'école - FRANÇAIS À GAUCHE, ARABE À DROITE
   const schoolTypeOptions = [
-    { value: '', label: 'اختر نوع المؤسسة / Choisir le type d\'établissement' },
-    { value: 'public', label: 'مدرسة عمومية / École publique' },
-    { value: 'private', label: 'مدرسة خاصة / École privée' },
-    { value: 'international', label: 'مدرسة دولية / École internationale' },
-    { value: 'professional', label: 'مؤسسة تكوين مهني / Centre de formation professionnelle' },
-    { value: 'language', label: 'معهد لغة / Institut de langue' },
-    { value: 'university', label: 'جامعة / Université' },
-    { value: 'other', label: 'أخرى / Autre' }
+    { value: '', label: 'Type d\'établissement / نوع المؤسسة' },
+    { value: 'public', label: 'École publique / مدرسة عمومية' },
+    { value: 'private', label: 'École privée / مدرسة خاصة' },
+    { value: 'international', label: 'École internationale / مدرسة دولية' },
+    { value: 'professional', label: 'Centre de formation professionnelle / مؤسسة تكوين مهني' },
+    { value: 'language', label: 'Institut de langue / معهد لغة' },
+    { value: 'university', label: 'Université / جامعة' },
+    { value: 'other', label: 'Autre / أخرى' }
   ];
 
   const handleChange = (e) => {
@@ -37,120 +37,36 @@ const RegisterPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Validation du mot de passe
     if (formData.password !== formData.confirmPassword) {
-      alert('كلمات المرور غير متطابقة / Les mots de passe ne correspondent pas');
+      alert('Les mots de passe ne correspondent pas / كلمات المرور غير متطابقة');
       return;
     }
 
-    // Validation du type d'école
     if (!formData.schoolType) {
-      alert('الرجاء اختيار نوع المؤسسة / Veuillez choisir le type d\'établissement');
+      alert('Type d\'établissement / نوع المؤسسة');
       return;
     }
 
     console.log('Registration Data:', formData);
-    // Logique d'inscription de l'école ici
   };
 
   return (
     <div className="register-container">
+      {/* HEADER: FRANÇAIS À GAUCHE, ARABE À DROITE */}
       <div className="register-header">
         <h1 className="project-title">?FinN9ra</h1>
-        <h2 className="register-title">تسجيل مؤسسة تعليمية / Inscription d'établissement</h2>
+        <div className="register-subtitle">
+          <span className="register-french">Inscription</span>
+          <span className="register-separator">/</span>
+          <span className="register-arabic">تسجيل</span>
+        </div>
       </div>
 
       <form onSubmit={handleSubmit} className="register-form">
-        {/* Nom de l'école */}
-        <div className="input-group">
-          <label htmlFor="schoolName">
-            اسم المؤسسة / Nom de l'établissement
-          </label>
-          <input
-            type="text"
-            id="schoolName"
-            name="schoolName"
-            value={formData.schoolName}
-            onChange={handleChange}
-            placeholder="ادخل اسم المؤسسة / Entrez le nom de l'établissement"
-            required
-          />
-        </div>
-
-        {/* Ville */}
-        <div className="input-group">
-          <label htmlFor="city">
-            المدينة / Ville
-          </label>
-          <input
-            type="text"
-            id="city"
-            name="city"
-            value={formData.city}
-            onChange={handleChange}
-            placeholder="ادخل المدينة / Entrez la ville"
-            required
-          />
-        </div>
-
-        {/* Coût */}
-        <div className="input-group">
-          <label htmlFor="cost">
-            التكلفة الشهرية  / Coût mensuel 
-          </label>
-          <input
-            type="number"
-            id="cost"
-            name="cost"
-            value={formData.cost}
-            onChange={handleChange}
-            placeholder=" التكلفة الشهرية /  le coût mensuel"
-            min="0"
-            step="100000"
-            required
-          />
-        </div>
-
-        {/* Type d'école */}
-        <div className="input-group">
-          <label htmlFor="schoolType">
-            نوع المؤسسة / Type d'établissement
-          </label>
-          <select
-            id="schoolType"
-            name="schoolType"
-            value={formData.schoolType}
-            onChange={handleChange}
-            required
-          >
-            {schoolTypeOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {/* Description */}
-        <div className="input-group">
-          <label htmlFor="description">
-            وصف المؤسسة / Description 
-          </label>
-          <textarea
-            id="description"
-            name="description"
-            value={formData.description}
-            onChange={handleChange}
-            placeholder="ادخل وصفًا للمؤسسة  "
-            rows="4"
-            required
-          />
-        </div>
-
         {/* Email */}
         <div className="input-group">
           <label htmlFor="email">
-            البريد الإلكتروني / Email
+            Email / البريد الإلكتروني
           </label>
           <input
             type="email"
@@ -158,15 +74,79 @@ const RegisterPage = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="ادخل بريد المؤسسة الإلكتروني / Entrez l'email de l'établissement"
+            placeholder="Entrez l'email de l'établissement / ادخل بريد المؤسسة الإلكتروني"
+            required
+          />
+        </div>
+        {/* Nom de l'école */}
+        <div className="input-group">
+          <label htmlFor="schoolName">
+            Nom de l'établissement / اسم المؤسسة
+          </label>
+          <input
+            type="text"
+            id="schoolName"
+            name="schoolName"
+            value={formData.schoolName}
+            onChange={handleChange}
+            placeholder="Entrez le nom de l'établissement / ادخل اسم المؤسسة"
             required
           />
         </div>
 
+        {/* Ville */}
+        <div className="input-group">
+          <label htmlFor="city">
+            Ville / المدينة
+          </label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            value={formData.city}
+            onChange={handleChange}
+            placeholder="Entrez la ville / ادخل المدينة"
+            required
+          />
+        </div>
+
+        {/* Type d'école */}
+        <div className="input-group">
+          <label htmlFor="schoolType">
+            Type d'établissement / نوع المؤسسة
+          </label>
+          <select
+            id="schoolType"
+            name="schoolType"
+            value={formData.schoolType}
+            onChange={handleChange}
+            required>
+            {schoolTypeOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
+        {/* Description */}
+        <div className="input-group">
+          <label htmlFor="description">
+            Description / وصف المؤسسة
+          </label>
+          <textarea
+            id="description"
+            name="description"
+            value={formData.description}
+            onChange={handleChange}
+            placeholder="Entrez une description de l'établissement / ادخل وصفًا للمؤسسة"
+            rows="4"
+            required
+          />
+        </div>
         {/* Mot de passe */}
         <div className="input-group">
           <label htmlFor="password">
-            كلمة المرور / Mot de passe
+            Mot de passe / كلمة المرور
           </label>
           <input
             type="password"
@@ -174,16 +154,16 @@ const RegisterPage = () => {
             name="password"
             value={formData.password}
             onChange={handleChange}
-            placeholder="ادخل كلمة المرور / Entrez votre mot de passe"
+            placeholder="Entrez votre mot de passe / ادخل كلمة المرور"
             minLength="6"
             required
           />
         </div>
 
-        {/* Confirmation du mot de passe */}
+        {/* Confirmation mot de passe */}
         <div className="input-group">
           <label htmlFor="confirmPassword">
-            تأكيد كلمة المرور / Confirmer le mot de passe
+            Confirmer le mot de passe / تأكيد كلمة المرور
           </label>
           <input
             type="password"
@@ -191,25 +171,26 @@ const RegisterPage = () => {
             name="confirmPassword"
             value={formData.confirmPassword}
             onChange={handleChange}
-            placeholder="أعد إدخال كلمة المرور / Confirmez votre mot de passe"
+            placeholder="Confirmez votre mot de passe / أعد إدخال كلمة المرور"
             minLength="6"
             required
           />
         </div>
 
-        {/* Bouton d'inscription */}
+        {/* Bouton */}
         <button type="submit" className="register-button">
-          تسجيل المؤسسة / Enregistrer l'établissement
+          Enregistrer l'établissement / تسجيل المؤسسة
         </button>
       </form>
 
+      {/* Section Login */}
       <div className="login-section">
         <p className="login-text">
-          لديك حساب بالفعل؟<br />
-          ?Vous avez déjà un compte
+          Vous avez déjà un compte ?<br />
+          لديك حساب بالفعل؟
         </p>
         <Link to="/login" className="login-link">
-          تسجيل الدخول / Se connecter
+          Se connecter / تسجيل الدخول
         </Link>
       </div>
     </div>
