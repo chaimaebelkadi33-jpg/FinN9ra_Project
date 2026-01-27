@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import schoolsData from "../Data/ecoles.json";
-import OpenStreetMap from "../Components/OpenStreetMap";
+// Import Styles
 import "../Styles/ecoleDetail.css";
 import "../Styles/OpenStreetMap.css";
 
@@ -21,14 +21,70 @@ function EcoleDetails() {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("overview");
   const [expandedSections, setExpandedSections] = useState({});
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     const foundSchool = schoolsData.find((s) => s.idEcole === parseInt(id));
     if (foundSchool) {
       setSchool(foundSchool);
+      // Reset image index when school changes
+      setCurrentImageIndex(0);
     }
     setLoading(false);
   }, [id]);
+
+  // Get all images (logo + images array)
+  const getAllImages = useCallback(() => {
+    if (!school) return [];
+    
+    const allImages = [
+      school.logo, // Logo first
+      ...(school.images || []) // Then other images
+    ].filter(img => img && img.trim() !== ''); // Remove empty/null images
+    
+    return allImages.length > 0 ? allImages : [
+      "https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=" + encodeURIComponent(school.nom)
+    ];
+  }, [school]);
+
+  // Auto-slide effect
+  useEffect(() => {
+    if (!isHovering && school) {
+      const allImages = getAllImages();
+      if (allImages.length > 1) {
+        const interval = setInterval(() => {
+          setCurrentImageIndex((prevIndex) => 
+            (prevIndex + 1) % allImages.length
+          );
+        }, 4000); // Change image every 4 seconds
+
+        return () => clearInterval(interval);
+      }
+    }
+  }, [isHovering, school, getAllImages]);
+
+  const goToNextImage = useCallback(() => {
+    if (school) {
+      const allImages = getAllImages();
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % allImages.length
+      );
+    }
+  }, [school, getAllImages]);
+
+  const goToPrevImage = useCallback(() => {
+    if (school) {
+      const allImages = getAllImages();
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === 0 ? allImages.length - 1 : prevIndex - 1
+      );
+    }
+  }, [school, getAllImages]);
+
+  const goToImage = useCallback((index) => {
+    setCurrentImageIndex(index);
+  }, []);
 
   const renderStars = (rating) => {
     const stars = [];
@@ -101,6 +157,14 @@ function EcoleDetails() {
     );
   }
 
+  const allImages = getAllImages();
+  const currentImage = allImages[currentImageIndex] || school.logo || "https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=École";
+
+  const handleImageError = (e) => {
+    e.target.onerror = null;
+    e.target.src = "https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=" + encodeURIComponent(school.nom);
+  };
+
   const shouldShowFormationsTab =
     (school.filiereGestion && school.filiereGestion.length > 0) ||
     (school.filiereCommerce && school.filiereCommerce.length > 0);
@@ -138,20 +202,71 @@ function EcoleDetails() {
       <div className="header-section">
         <div className="school-header">
           <h1 className="school-title">{school.nom}</h1>
-          <div className="school-info-row"></div>
         </div>
 
-        {/* School Image with Price */}
-        <div className="main-image-container">
+        {/* School Image Slider with Price */}
+        <div 
+          className="main-image-container"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+        >
           <img
-            src={school.image}
-            alt={school.nom}
+            src={currentImage}
+            alt={`${school.nom} - Image ${currentImageIndex + 1}`}
             className="main-image"
-            onError={(e) => {
-              e.target.src =
-                "https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=École+Image";
-            }}
+            onError={handleImageError}
           />
+          
+          {/* Navigation arrows */}
+          {allImages.length > 1 && (
+            <>
+              <button 
+                className="nav-arrow prev-arrow"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goToPrevImage();
+                }}
+                aria-label="Image précédente"
+              >
+                ◀
+              </button>
+              <button 
+                className="nav-arrow next-arrow"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  goToNextImage();
+                }}
+                aria-label="Image suivante"
+              >
+                ▶
+              </button>
+            </>
+          )}
+
+          {/* Image indicators */}
+          {allImages.length > 1 && (
+            <div className="image-indicators">
+              {allImages.map((_, index) => (
+                <button
+                  key={index}
+                  className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    goToImage(index);
+                  }}
+                  aria-label={`Aller à l'image ${index + 1}`}
+                />
+              ))}
+            </div>
+          )}
+
+          {/* Image counter */}
+          {allImages.length > 1 && (
+            <div className="image-counter">
+              {currentImageIndex + 1} / {allImages.length}
+            </div>
+          )}
+
           <div className="image-overlay">
             <span className="price-tag">{school.cout}</span>
           </div>

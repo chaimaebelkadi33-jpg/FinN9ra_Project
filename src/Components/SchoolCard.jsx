@@ -15,7 +15,7 @@ function SchoolCard({ school }) {
   const id = school.idEcole;
 
   // Use school image or a default one
-  const schoolImage = school.image || 'https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=École';
+  const schoolImage = school.logo || 'https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=École';
 
   return (
     <div className="school-card">

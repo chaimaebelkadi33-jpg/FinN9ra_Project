@@ -8,7 +8,12 @@
     "specialites": ["Informatique", "IA", "Cybersécurité"],
     "cout": "15000 MAD/an",
     "note": 4.5,
-    "image": "/images/École Nationale d'Informatique.png",
+    "logo": "/images/ecole info logo.png",
+    "images": [
+      "/images/ecole info rabat1.jpeg",
+      "/images/ecole info rabart2.png",
+      "/images/École Nationale d'Informatique.png"
+    ],
     "presentation": "L'École Nationale d'Informatique de Rabat forme des ingénieurs spécialisés dans les technologies de l'information, l'intelligence artificielle et la cybersécurité, avec une forte orientation pratique et recherche.",
     "dureeEtudes": "5 ans",
     "diplome": "Diplôme d'Ingénieur d'État",
@@ -78,7 +83,12 @@
     ],
     "cout": "12000 MAD/an",
     "note": 4.7,
-    "image": "/images/ecole mohammadia d'ingénieurs.png",
+    "logo": "/images/ecole mohammadia logo.png",
+    "images": [
+      "/images/mohammadia3.webp",
+      "/images/mohammadia1.jpg",
+      "/images/mohammadia2.jpg"
+    ],
     "presentation": "L'EMI est l'une des écoles d'ingénieurs les plus prestigieuses du Maroc, connue pour la qualité de sa formation et l'employabilité élevée de ses diplômés.",
     "dureeEtudes": "5 ans",
     "diplome": "Diplôme d'Ingénieur d'État",
@@ -143,7 +153,12 @@
     "specialites": ["Mathématiques", "Physique", "Chimie", "Biologie"],
     "cout": "8000 MAD/an",
     "note": 4.0,
-    "image": "/images/Université Mohammed V de Rabat - Faculté des Sciences.png",
+    "logo": "/images/Université Mohammed V de Rabat - Faculté des Sciences logo.png",
+    "images": [
+      "/images/Université Mohammed V de Rabat - Faculté des Sciences1.webp",
+      "/images/Université Mohammed V de Rabat - Faculté des Sciences.png",
+      "/images/schools/3-3.jpg"
+    ],
     "presentation": "La Faculté des Sciences de Rabat offre une solide formation scientifique permettant d'accéder à la recherche, à l'enseignement ou aux métiers techniques.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Doctorat",
@@ -203,7 +218,12 @@
     "specialites": ["Réseaux et Télécoms", "Informatique", "Digital Marketing"],
     "cout": "14000 MAD/an",
     "note": 4.3,
-    "image": "/images/institut national des postes et telecommunication.jpg",
+    "logo": "/images/Institut National des Postes et Télécommunications logo.PNG",
+    "images": [
+      "/images/institut national des postes et telecommunication.jpg",
+      "/images/institut national des postes et telecommunication.jpg",
+      "/images/institut national des postes et telecommunication.jpg"
+    ],
     "presentation": "L'INPT forme des ingénieurs et experts dans les télécommunications, les réseaux et le digital, avec une forte ouverture à l'international.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Ingénieur, Master",
@@ -251,7 +271,12 @@
     "specialites": ["Génie Mécanique", "Génie Industriel", "Énergétique"],
     "cout": "11000 MAD/an",
     "note": 4.4,
-    "image": "/images/École Nationale Supérieure d'Arts et Métiers.webp",
+    "logo": "/images/ENSAM Meknès logo.png",
+    "images": [
+      "/images/École Nationale Supérieure d'Arts et Métiers.webp",
+      "/images/École Nationale Supérieure d'Arts et Métiers.webp",
+      "/images/École Nationale Supérieure d'Arts et Métiers.webp"
+    ],
     "presentation": "ENSAM Meknès est une référence dans la formation des ingénieurs en mécanique, industrie et systèmes énergétiques.",
     "dureeEtudes": "5 ans",
     "diplome": "Diplôme d'Ingénieur d'État",
@@ -299,7 +324,12 @@
     "specialites": ["Médecine", "Pharmacie", "Dentaire"],
     "cout": "10000 MAD/an",
     "note": 4.6,
-    "image": "/images/Faculté de Médecine et de Pharmacie de Rabat.png",
+    "logo": "/images/medecine rabat logo.png",
+    "images": [
+      "/images/medecine rabat1.webp",
+      "/images/medecine rabat2.webp",
+      "/images/Faculté Médecine Rabat.webp"
+    ],
     "presentation": "La Faculté de Médecine et de Pharmacie de Rabat est l'un des plus anciens établissements de santé au Maroc, formant des médecins, pharmaciens et chirurgiens-dentistes hautement qualifiés.",
     "dureeEtudes": "5 à 7 ans",
     "diplome": "Doctorat en Médecine, Pharmacie ou Médecine Dentaire",
@@ -343,7 +373,12 @@
     "specialites": ["Commerce", "Gestion", "Finance", "Marketing"],
     "cout": "13000 MAD/an",
     "note": 4.2,
-    "image": "/images/encg casa.png",
+    "logo": "/images/encg casa.png",
+    "images": [
+      "/images/schools/7-1.jpg",
+      "/images/schools/7-2.jpg",
+      "/images/schools/7-3.jpg"
+    ],
     "presentation": "L'ENCG Casablanca, composante de l'Université Hassan II de Casablanca et créée en 2007, forme des cadres de haut niveau dans les domaines du commerce et de la gestion. L'école propose un enseignement interactif associant expérience et théorie pour former des managers capables d'appréhender les grands enjeux socio-économiques dans un cadre multinational.",
     "dureeEtudes": "5 ans (dont 3 ans de tronc commun)",
     "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
@@ -411,7 +446,16 @@
       "Management Stratégique et Gestion de l'Innovation (MSGI)"
     ],
     "equipements": ["Centre de documentation", "Réseau informatique"],
-    "motsCles": ["commerce", "gestion", "management", "finance", "marketing", "logistique", "audit", "ressources humaines"],
+    "motsCles": [
+      "commerce",
+      "gestion",
+      "management",
+      "finance",
+      "marketing",
+      "logistique",
+      "audit",
+      "ressources humaines"
+    ],
     "reviews": [
       {
         "id": "rev-encg-1",
@@ -448,7 +492,12 @@
     "specialites": ["Génie Chimique", "Génie des Procédés", "Biotechnologie"],
     "cout": "9000 MAD/an",
     "note": 4.1,
-    "image": "/images/Université Hassan II - Faculté des Sciences et Techniques.jpg",
+    "logo": "/images/Université Hassan II - Faculté des Sciences et Techniques logo.png",
+    "images": [
+      "/images/Université Hassan II - Faculté des Sciences et Techniques.jpg",
+      "/images/Université Hassan II - Faculté des Sciences et Techniques.jpg",
+      "/images/Université Hassan II - Faculté des Sciences et Techniques.jpg"
+    ],
     "presentation": "La FST Hassan II forme des techniciens et ingénieurs spécialisés dans les sciences appliquées et les technologies industrielles.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Ingénieur",
@@ -492,7 +541,12 @@
     "specialites": ["Architecture", "Urbanisme", "Design d'Espace"],
     "cout": "12500 MAD/an",
     "note": 4.5,
-    "image": "/images/École Nationale d'Architecture.webp",
+    "logo": "/images/ecole rchitecture rabat logo.png",
+    "images": [
+      "/images/École Nationale d'Architecture.webp",
+      "/images/schools/9-2.jpg",
+      "/images/schools/9-3.jpg"
+    ],
     "presentation": "L'ENA Rabat forme les futurs architectes du Maroc avec une forte approche créative, technique et urbaine.",
     "dureeEtudes": "6 ans",
     "diplome": "Diplôme d'Architecte",
@@ -536,7 +590,12 @@
     "specialites": ["Agronomie", "Vétérinaire", "Sciences Alimentaires"],
     "cout": "11500 MAD/an",
     "note": 4.4,
-    "image": "/images/Institut Agronomique et Vétérinaire Hassan II.webp",
+    "logo": "/images/Institut Agronomique et Vétérinaire Hassan II logo.png",
+    "images": [
+      "/images/Institut Agronomique et Vétérinaire Hassan II.webp",
+      "/images/schools/10-2.jpg",
+      "/images/schools/10-3.jpg"
+    ],
     "presentation": "L'IAV Hassan II est une référence nationale pour la formation des ingénieurs agronomes et des vétérinaires.",
     "dureeEtudes": "5 à 6 ans",
     "diplome": "Ingénieur, Docteur vétérinaire",
@@ -584,7 +643,12 @@
     ],
     "cout": "7500 MAD/an",
     "note": 3.9,
-    "image": "/images/Université Ibn Tofail - Faculté des Sciences.webp",
+    "logo": "/images/Université Ibn Tofail - Faculté des Sciences logo.png",
+    "images": [
+      "/images/Université Ibn Tofail - Faculté des Sciences.webp",
+      "/images/Université Ibn Tofail - Faculté des Sciences.webp",
+      "/images/Université Ibn Tofail - Faculté des Sciences.webp"
+    ],
     "presentation": "La Faculté des Sciences de Kénitra offre une formation solide en sciences fondamentales et appliquées.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master",
@@ -632,7 +696,12 @@
     ],
     "cout": "8500 MAD/an",
     "note": 4.0,
-    "image": "/images/École Normale Supérieure de l'Enseignement Technique.png",
+    "logo": "/images/École Normale Supérieure de l'Enseignement Technique logo.png",
+    "images": [
+      "/images/École Normale Supérieure de l'Enseignement Technique.png",
+      "/images/École Normale Supérieure de l'Enseignement Technique.png",
+      "/images/École Normale Supérieure de l'Enseignement Technique.png"
+    ],
     "presentation": "L'ENSET forme des professeurs et formateurs spécialisés dans l'enseignement technique et professionnel.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master en Enseignement",
@@ -680,7 +749,12 @@
     "specialites": ["Physique Fondamentale", "Chimie", "Sciences de la Terre"],
     "cout": "8200 MAD/an",
     "note": 4.3,
-    "image": "/images/Université Cadi Ayyad - Faculté des Sciences Semlalia.jpg",
+    "logo": "/images/Université Cadi Ayyad - Faculté des Sciences Semlalia logo.png",
+    "images": [
+      "/images/Université Cadi Ayyad - Faculté des Sciences Semlalia.jpg",
+      "/images/Université Cadi Ayyad - Faculté des Sciences Semlalia.jpg",
+      "/images/Université Cadi Ayyad - Faculté des Sciences Semlalia.jpg"
+    ],
     "presentation": "La Faculté des Sciences Semlalia est un centre de recherche reconnu à l'échelle nationale et internationale.",
     "dureeEtudes": "3 à 8 ans",
     "diplome": "Licence, Master, Doctorat",
@@ -728,7 +802,12 @@
     ],
     "cout": "10500 MAD/an",
     "note": 4.2,
-    "image": "/images/École Nationale Forestière d'Ingénieurs.png",
+    "logo": "/images/École Nationale Forestièr logoe d'Ingénieurs.png",
+    "images": [
+      "/images/École Nationale Forestière d'Ingénieurs.png",
+      "/images/École Nationale Forestière d'Ingénieurs.png",
+      "/images/École Nationale Forestière d'Ingénieurs.png"
+    ],
     "presentation": "Cette école forme des ingénieurs spécialisés dans la protection des forêts, de l'environnement et du développement durable.",
     "dureeEtudes": "5 ans",
     "diplome": "Ingénieur d'État",
@@ -776,7 +855,12 @@
     "specialites": ["Droit", "Économie", "Sociologie", "Gestion"],
     "cout": "9500 MAD/an",
     "note": 4.1,
-    "image": "/images/Faculté des Sciences Juridiques, Économiques et Sociales.jpg",
+    "logo": "/images/Faculté des Sciences Juridiques, Économiques et Sociales logo.png",
+    "images": [
+      "/images/Faculté des Sciences Juridiques, Économiques et Sociales.jpg",
+      "/images/Faculté des Sciences Juridiques, Économiques et Sociales.jpg",
+      "/images/Faculté des Sciences Juridiques, Économiques et Sociales.jpg"
+    ],
     "presentation": "Cette faculté prépare les étudiants aux métiers du droit, de l'économie et de la gestion publique et privée.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master",
@@ -820,7 +904,12 @@
     "specialites": ["Journalisme", "Communication", "Relations Publiques"],
     "cout": "13500 MAD/an",
     "note": 4.3,
-    "image": "/images/Institut Supérieur de l'Information et de la Communication.webp",
+    "logo": "/images/Institut Supérieur de l'Information et de la Communication logo.png",
+    "images": [
+      "/images/Institut Supérieur de l'Information et de la Communication.webp",
+      "/images/Institut Supérieur de l'Information et de la Communication1.webp",
+      "/images/Institut Supérieur de l'Information et de la Communication.webp"
+    ],
     "presentation": "L'ISIC forme des journalistes et communicants capables de travailler dans les médias modernes.",
     "dureeEtudes": "3 ans",
     "diplome": "Licence professionnelle",
@@ -868,7 +957,12 @@
     "specialites": ["Biologie Marine", "Géologie", "Informatique de Gestion"],
     "cout": "7800 MAD/an",
     "note": 3.8,
-    "image": "/images/Université Abdelmalek Essaâdi - Faculté des Sciences.webp",
+    "logo": "/images/Université Abdelmalek Essaâdi - Faculté des Sciences logo.png",
+    "images": [
+      "/images/Université Abdelmalek Essaâdi - Faculté des Sciences.webp",
+      "/images/Université Abdelmalek Essaâdi - Faculté des Sciences.webp",
+      "/images/Université Abdelmalek Essaâdi - Faculté des Sciences.webp"
+    ],
     "presentation": "Cette faculté joue un rôle clé dans le développement scientifique et technologique du nord du Maroc.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master",
@@ -912,7 +1006,12 @@
     "specialites": ["Génie Électrique", "Automatisme", "Mécanique des Fluides"],
     "cout": "12800 MAD/an",
     "note": 4.4,
-    "image": "/images/École Nationale Supérieure d'Électricité et Mécanique.png",
+    "logo": "/images/École Nationale Supérieure d'Électricité et Mécanique logo.jpg",
+    "images": [
+      "/images/École Nationale Supérieure d'Électricité et Mécanique.png",
+      "/images/École Nationale Supérieure d'Électricité et Mécanique.png",
+      "/images/École Nationale Supérieure d'Électricité et Mécanique.png"
+    ],
     "presentation": "ENSEM est une école d'ingénieurs réputée pour la qualité de sa formation en électricité, mécanique et automatisme.",
     "dureeEtudes": "5 ans",
     "diplome": "Ingénieur d'État",
@@ -960,7 +1059,12 @@
     "specialites": ["Littérature", "Histoire", "Philosophie", "Langues"],
     "cout": "7000 MAD/an",
     "note": 3.9,
-    "image": "/images/Faculté des Lettres et des Sciences Humaines.jpeg",
+    "logo": "/images/Faculté des Lettres et des Sciences Humaines logo.jpg",
+    "images": [
+      "/images/Faculté des Lettres et des Sciences Humaines.jpeg",
+      "/images/Faculté des Lettres et des Sciences Humaines.jpeg",
+      "/images/Faculté des Lettres et des Sciences Humaines.jpeg"
+    ],
     "presentation": "Cette faculté forme des spécialistes des langues, de la culture et des sciences humaines.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master",
@@ -1010,7 +1114,12 @@
     ],
     "cout": "950 MAD/an",
     "note": 4.0,
-    "image": "/images/BAB TIZIMI.webp",
+    "logo": "/images/ofppt.png",
+    "images": [
+      "/images/BAB TIZIMI.webp",
+      "/images/BAB TIZIMI.webp",
+      "/images/BAB TIZIMI.webp"
+    ],
     "presentation": "L'ISTA Bab Tizimi est un établissement de l'OFPPT spécialisé dans les formations techniques et technologiques à Meknès.",
     "dureeEtudes": "2 ans",
     "diplome": "Technicien Spécialisé (TS)",
@@ -1081,7 +1190,12 @@
     "specialites": ["Génie Civil", "BTP", "Infrastructures", "Urbanisme"],
     "cout": "13000 MAD/an",
     "note": 4.6,
-    "image": "/images/ecole hassania des travaux public.png",
+    "logo": "/images/ecole hassania des travaux public.png",
+    "images": [
+      "/images/schools/21-1.jpg",
+      "/images/schools/21-2.jpg",
+      "/images/schools/21-3.jpg"
+    ],
     "presentation": "L'EHTP forme des ingénieurs de haut niveau dans les domaines du génie civil, des travaux publics et de l'urbanisme.",
     "dureeEtudes": "5 ans",
     "diplome": "Diplôme d'Ingénieur d'État",
@@ -1135,7 +1249,12 @@
     ],
     "cout": "8300 MAD/an",
     "note": 4.0,
-    "image": "/images/est meknes.png",
+    "logo": "/images/est meknes logo.png",
+    "images": [
+      "/images/est meknes.png",
+      "/images/est meknes.png",
+      "/images/est meknes.png"
+    ],
     "presentation": "L'EST Meknès se spécialise dans les technologies agro-alimentaires et biotechnologiques adaptées à la région.",
     "dureeEtudes": "2 ans",
     "diplome": "Diplôme de Technicien Supérieur",
@@ -1180,15 +1299,31 @@
     "ville": "Marrakech",
     "type": "École Publique d'Ingénieurs",
     "description": "Professional public engineering school created to diversify university offerings and train versatile state engineers to meet regional and national socio-economic needs.",
-    "specialites": ["Génie Électrique", "Génie Informatique", "Génie Réseaux et Télécommunications", "Génie Industriel et Logistique"],
+    "specialites": [
+      "Génie Électrique",
+      "Génie Informatique",
+      "Génie Réseaux et Télécommunications",
+      "Génie Industriel et Logistique"
+    ],
     "cout": "10000 MAD/an",
     "note": 4.3,
-    "image": "/images/ensa marrakech.png",
+    "logo": "/images/ensa marrakech.png",
+    "images": [
+      "/images/schools/23-1.jpg",
+      "/images/schools/23-2.jpg",
+      "/images/schools/23-3.jpg"
+    ],
     "presentation": "ENSA Marrakech (ENSAM), established in 2000, is a public professional higher education institution and a component of Cadi Ayyad University. Its creation aimed to diversify the university's programs and stimulate the socio-economic and industrial environment of the Marrakech region. The school's mission is to train versatile, highly qualified state engineers in open specializations with strong development potential.",
     "dureeEtudes": "5 ans (2 ans de cycle préparatoire + 3 ans de cycle ingénieur)",
     "diplome": "Diplôme d'Ingénieur d'État (Bac+5)",
     "admission": "Concours national via la plateforme www.ensa-concours.ma",
-    "debouches": ["Ingénieur Électricien", "Ingénieur Informaticien", "Ingénieur en Télécoms et Réseaux", "Ingénieur Industriel et Logistique", "Cadre technique et managérial"],
+    "debouches": [
+      "Ingénieur Électricien",
+      "Ingénieur Informaticien",
+      "Ingénieur en Télécoms et Réseaux",
+      "Ingénieur Industriel et Logistique",
+      "Cadre technique et managérial"
+    ],
     "siteWeb": "www.ensa.ac.ma",
     "contact": "sefyani@ensa.ac.ma",
     "telephone": "0524434745",
@@ -1196,9 +1331,20 @@
     "universiteAffiliation": "Université Cadi Ayyad Marrakech",
     "anneeCreation": 2000,
     "formationsOffertes": ["Formation d'Ingénieur d'État"],
-    "objectifs": ["Persifier les formations à l'Université Cadi Ayyad", "Former des ingénieurs d'état pour répondre aux attentes du tissu socio-économique", "Recherche Scientifique et Technique et R&D"],
+    "objectifs": [
+      "Persifier les formations à l'Université Cadi Ayyad",
+      "Former des ingénieurs d'état pour répondre aux attentes du tissu socio-économique",
+      "Recherche Scientifique et Technique et R&D"
+    ],
     "equipements": ["Information non spécifiée sur la page"],
-    "motsCles": ["ensa", "ingénieur", "marrakech", "génie industriel", "logistique", "université cadi ayyad"],
+    "motsCles": [
+      "ensa",
+      "ingénieur",
+      "marrakech",
+      "génie industriel",
+      "logistique",
+      "université cadi ayyad"
+    ],
     "reviews": [
       {
         "id": "rev-ensa-1",
@@ -1235,7 +1381,12 @@
     "specialites": ["Mathématiques", "Physique", "Chimie", "Biologie"],
     "cout": "7000 MAD/an",
     "note": 3.9,
-    "image": "/images/fst fes.png",
+    "logo": "/images/fst fes.png",
+    "images": [
+      "/images/schools/24-1.jpg",
+      "/images/schools/24-2.jpg",
+      "/images/schools/24-3.jpg"
+    ],
     "presentation": "La Faculté des Sciences de Fès propose des formations scientifiques complètes de la licence au doctorat.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Doctorat",
@@ -1279,7 +1430,12 @@
     "specialites": ["Génie Informatique", "Génie Civil", "Génie des Procédés"],
     "cout": "10500 MAD/an",
     "note": 4.2,
-    "image": "/images/ensa fes.png",
+    "logo": "/images/ensa fes logo.png",
+    "images": [
+      "/images/ensa fes.png",
+      "/images/ensa fes.png",
+      "/images/ensa fes.png"
+    ],
     "presentation": "L'ENSA Fès forme des ingénieurs dans les domaines de l'informatique, génie civil et génie des procédés.",
     "dureeEtudes": "5 ans",
     "diplome": "Diplôme d'Ingénieur d'État",
@@ -1328,7 +1484,12 @@
     ],
     "cout": "7200 MAD/an",
     "note": 3.8,
-    "image": "/images/fst tanger.png",
+    "logo": "/images/fst tanger.png",
+    "images": [
+      "/images/schools/26-1.jpg",
+      "/images/schools/26-2.jpg",
+      "/images/schools/26-3.jpg"
+    ],
     "presentation": "La Faculté des Sciences de Tanger offre des formations scientifiques avec une orientation vers les sciences de la terre et l'environnement.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Doctorat",
@@ -1369,10 +1530,21 @@
     "ville": "Tanger",
     "type": "École Publique de Commerce",
     "description": "Établissement supérieur public de haute formation à la gestion des entreprises et des organisations.",
-    "specialites": ["Commerce", "Gestion", "Finance", "Marketing", "Logistique"],
+    "specialites": [
+      "Commerce",
+      "Gestion",
+      "Finance",
+      "Marketing",
+      "Logistique"
+    ],
     "cout": "11500 MAD/an",
     "note": 4.3,
-    "image": "/images/encg tanger.png",
+    "logo": "/images/encg tanger.png",
+    "images": [
+      "/images/schools/27-1.jpg",
+      "/images/schools/27-2.jpg",
+      "/images/schools/27-3.jpg"
+    ],
     "presentation": "L'ENCG Tanger, ouverte en 1995 et rattachée à l'Université Abdelmalek Essaadi, est l'une des premières ENCG du Maroc. Elle s'est construite sur un héritage prestigieux en sciences de gestion. Son activité structurée autour de trois axes (formation initiale, formation continue, recherche appliquée-conseil) vise à former des gestionnaires modernes, aptes à relever le défi de la compétitivité de l'entreprise marocaine.",
     "dureeEtudes": "5 ans (10 semestres, dont un tronc commun de 3 ans/6 semestres)",
     "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
@@ -1415,7 +1587,16 @@
       "Conseil et Audit des Organisations (Master Spécialisé)"
     ],
     "equipements": ["Information non spécifiée sur la page"],
-    "motsCles": ["commerce", "gestion", "tanger", "management", "audit", "finance", "logistique", "université abdelmalek essaadi"],
+    "motsCles": [
+      "commerce",
+      "gestion",
+      "tanger",
+      "management",
+      "audit",
+      "finance",
+      "logistique",
+      "université abdelmalek essaadi"
+    ],
     "reviews": [
       {
         "id": "rev-encgt-1",
@@ -1452,7 +1633,12 @@
     "specialites": ["Biologie", "Géologie", "Chimie", "Mathématiques"],
     "cout": "6800 MAD/an",
     "note": 3.9,
-    "image": "/images/Université Ibn Zohr  Faculté des Sciences.jpg",
+    "logo": "/images/université ibn zohr faculté des sciences agadir logo.png",
+    "images": [
+      "/images/Université Ibn Zohr  Faculté des Sciences.jpg",
+      "/images/Université Ibn Zohr - Faculté des Sciences1.webp",
+      "/images/Université Ibn Zohr  Faculté des Sciences.jpg"
+    ],
     "presentation": "La Faculté des Sciences d'Agadir se spécialise dans les sciences de la vie, la géologie et l'environnement avec une orientation régionale.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Doctorat",
@@ -1493,25 +1679,61 @@
     "ville": "Agadir",
     "type": "École Publique d'Ingénieurs",
     "description": "Public engineering school aiming to train engineers in diverse technological disciplines through a 5-year program.",
-    "specialites": ["Génie Industriel", "Génie Informatique", "Génie des Procédés, de l'Énergie et de l'Environnement", "Ingénierie Financière", "Ingénierie de Projet et des Affaires", "Génie Électrique", "Génie Agroalimentaire"],
+    "specialites": [
+      "Génie Industriel",
+      "Génie Informatique",
+      "Génie des Procédés, de l'Énergie et de l'Environnement",
+      "Ingénierie Financière",
+      "Ingénierie de Projet et des Affaires",
+      "Génie Électrique",
+      "Génie Agroalimentaire"
+    ],
     "cout": "9800 MAD/an",
     "note": 4.0,
-    "image": "/images/ensa agadir.jpg",
+    "logo": "/images/ensa agadir logo.jpg",
+    "images": [
+      "/images/ensa agadir.jpg",
+      "/images/ensa agadir.webp",
+      "/images/ensa agadir.jpg"
+    ],
     "presentation": "ENSA Agadir, founded in September 1999 and affiliated with Ibn Zohr University, is a polytechnic school open to multiple technologies. Its goal is to train engineers through a curriculum that includes a 2-year preparatory cycle followed by 3 years of specialization. The school's success is attributed to its policy of aligning with industry needs and continuously updating its programs to integrate new technologies. It is also active in scientific research and hosts a doctoral program.",
     "dureeEtudes": "5 ans (2 ans de cycle préparatoire + 3 ans de cycle ingénieur)",
     "diplome": "Diplôme d'Ingénieur d'État (Bac+5)",
     "admission": "Concours national via la plateforme www.ensa-concours.ma",
-    "debouches": ["Ingénieur d'État", "Chef de projet", "Chercheur", "Consultant technique", "Cadre dans l'industrie"],
+    "debouches": [
+      "Ingénieur d'État",
+      "Chef de projet",
+      "Chercheur",
+      "Consultant technique",
+      "Cadre dans l'industrie"
+    ],
     "siteWeb": "www.ensa-agadir.ac.ma",
     "contact": "contact@ensa-agadir.ac.ma",
     "telephone": "0528228313",
     "adresse": "E.N.S.A - B.P: 1136 Agadir - Maroc",
     "universiteAffiliation": "Université Ibn Zohr Agadir",
     "anneeCreation": 1999,
-    "formationsOffertes": ["Ingénieurs", "Masters", "Masters de recherche", "Doctorat"],
-    "laboratoiresRecherche": ["Laboratoire de Mécanique, procédés, Energie et Environnement (LMPEE)", "Laboratoire de Génie Industriel et Informatique (LG2I)", "Equipe de Signaux Systèmes et Informatiques (ESSI)"],
+    "formationsOffertes": [
+      "Ingénieurs",
+      "Masters",
+      "Masters de recherche",
+      "Doctorat"
+    ],
+    "laboratoiresRecherche": [
+      "Laboratoire de Mécanique, procédés, Energie et Environnement (LMPEE)",
+      "Laboratoire de Génie Industriel et Informatique (LG2I)",
+      "Equipe de Signaux Systèmes et Informatiques (ESSI)"
+    ],
     "equipements": ["Information non spécifiée sur la page"],
-    "motsCles": ["ensa", "ingénieur", "agadir", "génie", "polytechnique", "université ibn zohr", "recherche"],
+    "motsCles": [
+      "ensa",
+      "ingénieur",
+      "agadir",
+      "génie",
+      "polytechnique",
+      "université ibn zohr",
+      "recherche"
+    ],
     "reviews": [
       {
         "id": "rev-ensaa-1",
@@ -1553,7 +1775,12 @@
     ],
     "cout": "6500 MAD/an",
     "note": 3.7,
-    "image": "/images/Universite Mohammed Premier Oujda.png",
+    "logo": "/images/Universite Mohammed Premier Oujda.png",
+    "images": [
+      "/images/schools/30-1.jpg",
+      "/images/schools/30-2.jpg",
+      "/images/schools/30-3.jpg"
+    ],
     "presentation": "La Faculté des Sciences d'Oujda offre des formations scientifiques avec une orientation vers les besoins de la région orientale.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Doctorat",
@@ -1594,25 +1821,63 @@
     "ville": "Oujda",
     "type": "École Publique d'Ingénieurs",
     "description": "First and only major state engineering school in the Oriental region, with a comprehensive mission covering initial and continuous training, research, and strong industrial partnership.",
-    "specialites": ["Génie Informatique", "Génie Électrique", "Génie Industriel", "Génie Télécommunications et Réseaux", "Génie Mécanique et Productique", "Génie Civil", "Ingénierie Data Sciences et Cloud Computing", "Sécurité Informatique et Cyber Sécurité", "Management des Systèmes d'Information"],
+    "specialites": [
+      "Génie Informatique",
+      "Génie Électrique",
+      "Génie Industriel",
+      "Génie Télécommunications et Réseaux",
+      "Génie Mécanique et Productique",
+      "Génie Civil",
+      "Ingénierie Data Sciences et Cloud Computing",
+      "Sécurité Informatique et Cyber Sécurité",
+      "Management des Systèmes d'Information"
+    ],
     "cout": "9500 MAD/an",
     "note": 4.1,
-    "image": "/images/ENSA Oujda.png",
+    "logo": "/images/École Nationale des Sciences Appliquées d'Oujda logo.png",
+    "images": [
+      "/images/ENSA Oujda.png",
+      "/images/ENSA Oujda.png",
+      "/images/ENSA Oujda.png"
+    ],
     "presentation": "ENSA Oujda (ENSAO), created in 2001, is the first and only major state engineering school in the Oriental region. Located on the university campus, it aims to diversify training within Mohammed Premier University and energize the regional and national socio-economic and industrial environment. It has a broad mission encompassing the training of highly qualified state engineers, scientific and technological research, R&D, and continuous training, with a strong focus on industrial synergy.",
     "dureeEtudes": "5 ans (2 ans de cycle préparatoire + 3 ans de cycle ingénieur)",
     "diplome": "Diplôme d'Ingénieur d'État (Bac+5)",
     "admission": "Concours national via la plateforme www.ensa-concours.ma",
-    "debouches": ["Ingénieur dans tous les domaines techniques listés", "Chercheur", "Cadre R&D", "Consultant en formation continue", "Manager des Systèmes d'Information"],
+    "debouches": [
+      "Ingénieur dans tous les domaines techniques listés",
+      "Chercheur",
+      "Cadre R&D",
+      "Consultant en formation continue",
+      "Manager des Systèmes d'Information"
+    ],
     "siteWeb": "wwwensa.univ-oujda.ac.ma",
     "contact": "omar@ensa.ump.ma",
     "telephone": "0536 50 54 70 / 0536 50 54 71",
     "adresse": "ENSA, BP 669, OUJDA 60000 MAROC",
     "universiteAffiliation": "Université Mohammed Premier Oujda",
     "anneeCreation": 2001,
-    "missions": ["Former des ingénieurs d'état hautement qualifiés", "Recherche scientifique et technologique / R&D", "Formation continue"],
-    "diplomesDelivres": ["Diplôme universitaire de technologie (DUT)", "Diplôme d'ingénieur d'état", "Diplômes d'études supérieures spécialisées/appliquées", "Doctorat"],
+    "missions": [
+      "Former des ingénieurs d'état hautement qualifiés",
+      "Recherche scientifique et technologique / R&D",
+      "Formation continue"
+    ],
+    "diplomesDelivres": [
+      "Diplôme universitaire de technologie (DUT)",
+      "Diplôme d'ingénieur d'état",
+      "Diplômes d'études supérieures spécialisées/appliquées",
+      "Doctorat"
+    ],
     "equipements": ["Information non spécifiée sur la page"],
-    "motsCles": ["ensa", "oujda", "oriental", "école majeure", "formation continue", "doctorat", "université mohammed premier"],
+    "motsCles": [
+      "ensa",
+      "oujda",
+      "oriental",
+      "école majeure",
+      "formation continue",
+      "doctorat",
+      "université mohammed premier"
+    ],
     "reviews": [
       {
         "id": "rev-ensao-1",
@@ -1649,7 +1914,12 @@
     "specialites": ["Mathématiques", "Physique", "Chimie", "Biologie"],
     "cout": "6700 MAD/an",
     "note": 3.8,
-    "image": "/images/Université Chouaib Doukkali  Faculté des Sciences el jadida.jpg",
+    "logo": "/images/Université Chouaib Doukkali - Faculté des Sciences logo.png",
+    "images": [
+      "/images/Université Chouaib Doukkali  Faculté des Sciences el jadida.jpg",
+      "/images/Université Chouaib Doukkali  Faculté des Sciences el jadida.jpg",
+      "/images/Université Chouaib Doukkali  Faculté des Sciences el jadida.jpg"
+    ],
     "presentation": "La Faculté des Sciences d'El Jadida propose des formations scientifiques avec une orientation côtière et marine.",
     "dureeEtudes": "3 à 5 ans",
     "diplome": "Licence, Master, Doctorat",
@@ -1698,7 +1968,12 @@
     ],
     "cout": "8500 MAD/an",
     "note": 4.0,
-    "image": "/images/est casablanca.png",
+    "logo": "/images/est casablanca.png",
+    "images": [
+      "/images/schools/33-1.jpg",
+      "/images/schools/33-2.jpg",
+      "/images/schools/33-3.jpg"
+    ],
     "presentation": "L'EST de Casablanca forme des techniciens supérieurs spécialisés dans les technologies industrielles et la maintenance.",
     "dureeEtudes": "2 ans",
     "diplome": "Diplôme de Technicien Supérieur",
@@ -1746,7 +2021,12 @@
     "specialites": ["Informatique", "Électronique", "Mécanique", "Gestion"],
     "cout": "8200 MAD/an",
     "note": 4.1,
-    "image": "/images/ESTS sale.webp",
+    "logo": "/images/ESTS sale.webp",
+    "images": [
+      "/images/schools/34-1.jpg",
+      "/images/schools/34-2.jpg",
+      "/images/schools/34-3.jpg"
+    ],
     "presentation": "L'EST Salé forme des techniciens supérieurs en informatique, électronique, mécanique et gestion.",
     "dureeEtudes": "2 ans",
     "diplome": "Diplôme de Technicien Supérieur",
@@ -1794,7 +2074,12 @@
     "specialites": ["Commerce", "Gestion", "Finance", "Marketing"],
     "cout": "Information non spécifiée sur la page",
     "note": 4.0,
-    "image": "/images/encg kenitra.jpg",
+    "logo": "/images/École Nationale de Commerce et de Gestion de Kénitra logo.png",
+    "images": [
+      "/images/encg kenitra.jpg",
+      "/images/encg kenitra.jpg",
+      "/images/encg kenitra.jpg"
+    ],
     "presentation": "L'ENCG Kénitra, faisant partie du réseau national des ENCG et affiliée à l'Université Ibn Tofail, a été créée en 2005. Elle est un établissement public d'enseignement supérieur spécialisé dans la formation, la recherche et la formation continue dans le domaine du commerce et de la gestion. L'école propose un enseignement modulaire de haut niveau, alternant théorie et pratique, et accorde une large place à la participation des étudiants à la vie associative et à leur ouverture sur l'environnement socio-économique.",
     "dureeEtudes": "5 ans (10 semestres, dont un tronc commun de 3 ans/6 semestres)",
     "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
@@ -1839,7 +2124,16 @@
       "Marketing, Pratiques Commerciales et Management des Services"
     ],
     "equipements": ["Information non spécifiée sur la page"],
-    "motsCles": ["commerce", "gestion", "finance", "marketing", "audit", "ressources humaines", "logistique", "kénitra"],
+    "motsCles": [
+      "commerce",
+      "gestion",
+      "finance",
+      "marketing",
+      "audit",
+      "ressources humaines",
+      "logistique",
+      "kénitra"
+    ],
     "reviews": [
       {
         "id": "rev-encgk-1",
@@ -1865,10 +2159,21 @@
     "ville": "Settat",
     "type": "École Publique de Commerce",
     "description": "Formation en sciences de gestion et techniques commerciales",
-    "specialites": ["Commerce", "Gestion", "Finance", "Marketing", "Logistique"],
+    "specialites": [
+      "Commerce",
+      "Gestion",
+      "Finance",
+      "Marketing",
+      "Logistique"
+    ],
     "cout": "Information non spécifiée sur la page",
     "note": 4.1,
-    "image": "/images/encg settat.jpg",
+    "logo": "/images/encg settat.jpg",
+    "images": [
+      "/images/schools/36-1.jpg",
+      "/images/schools/36-2.jpg",
+      "/images/schools/36-3.jpg"
+    ],
     "presentation": "L'ENCG Settat, constituante de l'Université Hassan 1er, est une école de commerce publique créée en 2007. Elle a pour vocation de former des cadres supérieurs et des décideurs dans les domaines du management et du commerce, capables de s'adapter aux évolutions du monde économique. L'école promeut une pédagogie active basée sur des études de cas, des simulations et une forte interaction avec le monde professionnel.",
     "dureeEtudes": "5 ans (10 semestres, dont un tronc commun de 3 ans/6 semestres)",
     "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
@@ -1925,7 +2230,16 @@
       "Salles de simulation et de trading",
       "Bibliothèque et centre de ressources"
     ],
-    "motsCles": ["commerce", "gestion", "settat", "management", "entrepreneuriat", "logistique", "finance", "marketing digital"],
+    "motsCles": [
+      "commerce",
+      "gestion",
+      "settat",
+      "management",
+      "entrepreneuriat",
+      "logistique",
+      "finance",
+      "marketing digital"
+    ],
     "reviews": [
       {
         "id": "rev-encgs-1",
@@ -1959,10 +2273,23 @@
     "ville": "Marrakech",
     "type": "École Publique de Commerce",
     "description": "École de commerce et de gestion créée pour répondre aux besoins des entreprises en cadres et managers.",
-    "specialites": ["Commerce", "Gestion", "Ressources Humaines", "Marketing", "Finance", "Audit", "Logistique"],
+    "specialites": [
+      "Commerce",
+      "Gestion",
+      "Ressources Humaines",
+      "Marketing",
+      "Finance",
+      "Audit",
+      "Logistique"
+    ],
     "cout": "Information non spécifiée sur la page",
     "note": 4.0,
-    "image": "/images/encg marrakech.png",
+    "logo": "/images/encg marrakech.png",
+    "images": [
+      "/images/schools/37-1.jpg",
+      "/images/schools/37-2.jpg",
+      "/images/schools/37-3.jpg"
+    ],
     "presentation": "L'ENCG Marrakech, créée en 2004 et affiliée à l'Université Cadi Ayyad, a pour vocation de former des managers performants, dotés d'aptitudes relationnelles et d'un savoir-faire adapté au développement de l'environnement économique national et international. Elle vise à répondre directement aux attentes des entreprises privées et publiques en matière de cadres dans les domaines du commerce et de la gestion.",
     "dureeEtudes": "5 ans (10 semestres, dont un tronc commun de 3 ans/6 semestres)",
     "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
@@ -2005,7 +2332,16 @@
       "Master Spécialisé Management de l'Innovation : Intelligence Economique"
     ],
     "equipements": ["Information non spécifiée sur la page"],
-    "motsCles": ["commerce", "gestion", "marrakech", "management", "cadi ayyad", "marketing", "audit", "intelligence économique"],
+    "motsCles": [
+      "commerce",
+      "gestion",
+      "marrakech",
+      "management",
+      "cadi ayyad",
+      "marketing",
+      "audit",
+      "intelligence économique"
+    ],
     "reviews": [
       {
         "id": "rev-encgm-1",
@@ -2031,10 +2367,22 @@
     "ville": "El Jadida",
     "type": "École Publique de Commerce",
     "description": "Formation professionnalisante en commerce et gestion basée sur les normes des grandes écoles.",
-    "specialites": ["Commerce", "Gestion", "Finance", "Marketing", "Audit", "Ressources Humaines"],
+    "specialites": [
+      "Commerce",
+      "Gestion",
+      "Finance",
+      "Marketing",
+      "Audit",
+      "Ressources Humaines"
+    ],
     "cout": "Information non spécifiée sur la page",
     "note": 3.9,
-    "image": "/images/encg eljadida.png",
+    "logo": "/images/encg eljadida.png",
+    "images": [
+      "/images/schools/38-1.jpg",
+      "/images/schools/38-2.jpg",
+      "/images/schools/38-3.jpg"
+    ],
     "presentation": "L'ENCG El Jadida, affiliée à l'Université Chouaïb Doukkali, offre une formation professionnalisante conçue sur le modèle des grandes écoles de commerce. Son cursus vise à préparer les futurs lauréats à relever les défis de la mondialisation, du développement technologique et de l'évolution des marchés. L'école met l'accent sur l'acquisition de compétences fondamentales et une spécialisation progressive, le tout étalé sur un programme de 10 semestres.",
     "dureeEtudes": "5 ans (10 semestres, dont un tronc commun de 3 ans/6 semestres)",
     "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
@@ -2063,14 +2411,21 @@
       "Audit et Contrôle de Gestion",
       "Management des Ressources Humaines"
     ],
-    "filiereCommerce": [
-      "Marketing et Action Commerciale"
-    ],
+    "filiereCommerce": ["Marketing et Action Commerciale"],
     "mastersSpecialisesInitiale": [],
     "licencesProfessionnelles": [],
     "mastersSpecialisesUniversite": [],
     "equipements": ["Information non spécifiée sur la page"],
-    "motsCles": ["commerce", "gestion", "el jadida", "marketing", "audit", "finance", "ressources humaines", "université chouaïb doukkali"],
+    "motsCles": [
+      "commerce",
+      "gestion",
+      "el jadida",
+      "marketing",
+      "audit",
+      "finance",
+      "ressources humaines",
+      "université chouaïb doukkali"
+    ],
     "reviews": [
       {
         "id": "rev-encgj-1",
@@ -2096,10 +2451,26 @@
     "ville": "Agadir",
     "type": "École Publique de Commerce",
     "description": "Établissement public modélisé sur les grandes écoles européennes, connu pour son excellence et son fort taux d'insertion professionnelle.",
-    "specialites": ["Commerce", "Gestion", "Marketing", "Commerce International", "Finance", "Audit", "Ressources Humaines", "Logistique", "Communication", "Tourisme"],
+    "specialites": [
+      "Commerce",
+      "Gestion",
+      "Marketing",
+      "Commerce International",
+      "Finance",
+      "Audit",
+      "Ressources Humaines",
+      "Logistique",
+      "Communication",
+      "Tourisme"
+    ],
     "cout": "Information non spécifiée sur la page",
     "note": 4.4,
-    "image": "/images/encg agadir.png",
+    "logo": "/images/encg agadir.png",
+    "images": [
+      "/images/schools/39-1.jpg",
+      "/images/schools/39-2.jpg",
+      "/images/schools/39-3.jpg"
+    ],
     "presentation": "L'ENCG Agadir, créée en 1994 et affiliée à l'Université Ibn Zohr, est l'une des plus anciennes et prestigieuses ENCG du Maroc. Modélisée sur les grandes écoles de commerce européennes, elle s'est distinguée en remportant des prix nationaux et internationaux en gestion. L'école est réputée pour son taux d'insertion professionnelle exceptionnel, dépassant les 95%. Elle propose un arsenal pédagogique riche et une grande diversité de choix de spécialités, tout en ayant été pionnière dans l'adoption du système LMD.",
     "dureeEtudes": "5 ans (10 semestres organisés selon le système LMD, avec un tronc commun de 3 ans)",
     "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
@@ -2153,7 +2524,17 @@
     ],
     "mastersSpecialisesUniversite": [],
     "equipements": ["Information non spécifiée sur la page"],
-    "motsCles": ["commerce", "gestion", "agadir", "grande école", "taux d'insertion", "LMD", "tourisme", "finance islamique", "université ibn zohr"],
+    "motsCles": [
+      "commerce",
+      "gestion",
+      "agadir",
+      "grande école",
+      "taux d'insertion",
+      "LMD",
+      "tourisme",
+      "finance islamique",
+      "université ibn zohr"
+    ],
     "reviews": [
       {
         "id": "rev-encga-1",
@@ -2187,10 +2568,23 @@
     "ville": "Fès",
     "type": "École Publique de Commerce",
     "description": "Établissement leader dans la formation en gestion d'entreprises et d'organisations.",
-    "specialites": ["Commerce International", "Marketing", "Finance", "Audit", "Logistique", "Communication", "Ressources Humaines"],
+    "specialites": [
+      "Commerce International",
+      "Marketing",
+      "Finance",
+      "Audit",
+      "Logistique",
+      "Communication",
+      "Ressources Humaines"
+    ],
     "cout": "Information non spécifiée sur la page",
     "note": 4.0,
-    "image": "/images/encg fes.png",
+    "logo": "/images/encg fes.png",
+    "images": [
+      "/images/schools/40-1.jpg",
+      "/images/schools/40-2.jpg",
+      "/images/schools/40-3.jpg"
+    ],
     "presentation": "Implantée à Fès en 2007 et composante de l'Université Sidi Mohamed Ben Abdellah, l'ENCG Fès est reconnue comme un établissement leader au Maroc. Fondée sur la devise « Instruire pour construire », elle s'appuie sur un corps professoral dévoué pour former des cadres capables de répondre aux besoins évolutifs et compétitifs du marché national et international. L'école a pour vocation la formation initiale, la formation continue et la recherche dans le commerce et la gestion.",
     "dureeEtudes": "5 ans (dont 3 ans de tronc commun)",
     "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
@@ -2230,7 +2624,15 @@
     "licencesProfessionnelles": [],
     "mastersSpecialisesUniversite": [],
     "equipements": ["Information non spécifiée sur la page"],
-    "motsCles": ["commerce", "gestion", "fès", "université sidi mohamed ben abdellah", "commerce international", "marketing", "audit"],
+    "motsCles": [
+      "commerce",
+      "gestion",
+      "fès",
+      "université sidi mohamed ben abdellah",
+      "commerce international",
+      "marketing",
+      "audit"
+    ],
     "reviews": [
       {
         "id": "rev-encgf-1",
@@ -2259,7 +2661,12 @@
     "specialites": ["Commerce", "Gestion"],
     "cout": "Information non spécifiée sur la page",
     "note": 3.8,
-    "image": "/images/encg oujda.webp",
+    "logo": "/images/École Nationale de Commerce et de Gestion d'Oujda logo.jpg",
+    "images": [
+      "/images/encg oujda.webp",
+      "/images/encg oujda.webp",
+      "/images/encg oujda.webp"
+    ],
     "presentation": "L'ENCG Oujda, rattachée à l'Université Mohammed Premier, a été créée par décret en 2006 mais a démarré ses activités d'enseignement dès 2004. Elle fait partie du réseau des ENCG et vise à répondre aux besoins croissants des entreprises en cadres de haut niveau. L'école a d'abord délivré un diplôme Bac+4 avant de se conformer au standard Bac+5 du réseau.",
     "dureeEtudes": "5 ans (dont 3 ans de tronc commun)",
     "diplome": "Diplôme des Écoles Nationales de Commerce et de Gestion (Bac+5)",
@@ -2288,7 +2695,13 @@
     "licencesProfessionnelles": [],
     "mastersSpecialisesUniversite": [],
     "equipements": ["Information non spécifiée sur la page"],
-    "motsCles": ["commerce", "gestion", "oujda", "université mohammed premier", "réseau encg"],
+    "motsCles": [
+      "commerce",
+      "gestion",
+      "oujda",
+      "université mohammed premier",
+      "réseau encg"
+    ],
     "reviews": [
       {
         "id": "rev-encgo-1",

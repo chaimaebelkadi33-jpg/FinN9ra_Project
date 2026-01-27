@@ -26,10 +26,10 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/LoginPage" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
-        <Route path="/EcoleDetail/:id" element={<EcoleDetails />} />
-        <Route path="/ecole/:id" element={<EcoleDetails />} />
-            <Route path="*" element={<PageError/>}/>
-            <Route path="/About" element={<About/>}/>
+            <Route path="/EcoleDetail/:id" element={<EcoleDetails />} />
+            <Route path="/ecole/:id" element={<EcoleDetails />} />
+            <Route path="*" element={<PageError />} />
+            <Route path="/About" element={<About />} />
           </Routes>
         </main>
         <Footer />

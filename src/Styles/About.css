@@ -1,9 +1,8 @@
-/* src/Styles/AboutPage.css */
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #001247;
 }
 
@@ -12,7 +11,7 @@
   margin-bottom: 40px;
   padding: 25px;
   background: #f8f9fa;
-  color: #00EDC1;
+  color: #00edc1;
   border-radius: 30px;
   box-shadow: 0 4px 15px rgba(0, 33, 71, 0.1);
 }
@@ -43,7 +42,7 @@
   padding-bottom: 10px;
   display: inline-block;
   font-weight: 700;
-  border-bottom: 3px solid #00EDC1;
+  border-bottom: 3px solid #00edc1;
   color: #001247;
   text-shadow: none; /* Ajouté pour s'assurer qu'il n'y a pas d'ombre de texte */
 }
@@ -53,7 +52,7 @@
 .about-mission-title,
 .about-team-title {
   color: #002147 !important;
-  border-bottom: 3px solid #00EDC1 !important; /* Changé pour correspondre à la couleur principale */
+  border-bottom: 3px solid #00edc1 !important; /* Changé pour correspondre à la couleur principale */
   box-shadow: none !important; /* Ajouté pour enlever toute ombre */
 }
 
@@ -95,7 +94,7 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: #00EDC1;
+  color: #00edc1;
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -207,14 +206,14 @@
 }
 
 .member-link.email-icon i::before {
-  color: #00EDC1;
+  color: #00edc1;
   content: "✉";
   font-style: normal;
   font-size: 1.3rem;
 }
 
 .member-link.linkedin-icon i::before {
-  color: #00EDC1;
+  color: #00edc1;
   content: "in";
   font-family: Arial, sans-serif;
   font-weight: bold;
@@ -222,12 +221,12 @@
   font-size: 1.1rem;
 }
 
-.member-link:hover { 
-  background-color: #00FFFF;
+.member-link:hover {
+  background-color: #00ffff;
   color: #002147;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 210, 210, 0.4);
-  border-color: #00FFFF;
+  border-color: #00ffff;
 }
 
 /* Responsive Design */
@@ -235,50 +234,50 @@
   .about-container {
     padding: 15px;
   }
-  
+
   .about-title {
     font-size: 2.2rem;
     text-shadow: none; /* Ajouté pour mobile */
   }
-  
+
   .about-header {
     padding: 20px 15px;
     margin-bottom: 30px;
   }
-  
+
   .about-subtitle {
     font-size: 1rem;
     text-shadow: none; /* Ajouté pour mobile */
   }
-  
+
   .section {
     margin-bottom: 40px;
   }
-  
+
   .section-title {
     font-size: 1.8rem;
     text-shadow: none; /* Ajouté pour mobile */
   }
-  
+
   .team-grid {
     flex-direction: column;
     gap: 30px;
     margin-top: 15px;
   }
-  
+
   .team-member {
     width: 100%;
     padding: 25px;
   }
-  
+
   .platform-description {
     padding: 20px;
   }
-  
+
   .member-links {
     gap: 15px;
   }
-  
+
   .member-link {
     width: 45px;
     height: 45px;
@@ -290,38 +289,38 @@
     font-size: 1.9rem;
     text-shadow: none; /* Ajouté pour mobile */
   }
-  
+
   .section-title {
     font-size: 1.6rem;
     text-shadow: none; /* Ajouté pour mobile */
   }
-  
+
   .member-avatar {
     width: 100px;
     height: 100px;
     font-size: 2.2rem;
     margin-bottom: 20px;
   }
-  
+
   .member-name {
     font-size: 1.4rem;
     text-shadow: none; /* Ajouté pour mobile */
   }
-  
+
   .member-role {
     font-size: 1.1rem;
     text-shadow: none; /* Ajouté pour mobile */
   }
-  
+
   .member-links {
     gap: 12px;
   }
-  
+
   .member-link {
     width: 40px;
     height: 40px;
   }
-  
+
   .member-link i {
     font-size: 1.2rem;
   }

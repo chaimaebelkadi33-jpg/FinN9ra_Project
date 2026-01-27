@@ -1,4 +1,3 @@
-/* OpenStreetMap.css - Simplified to match ecole-details style */
 .maps-tab {
   background: white;
   border-radius: 16px;
@@ -49,7 +48,6 @@
   border-radius: 16px;
 }
 
-/* Location Info Section - Simplified to match info-card style */
 .location-info-title {
   color: #2c3e50;
   font-size: 1.4rem;
@@ -67,7 +65,6 @@
   margin-bottom: 30px;
 }
 
-/* Info Item - Match info-card style */
 .info-item {
   background: #f8f9fa;
   border-radius: 12px;
@@ -147,7 +144,7 @@
 
 /* Popup style */
 .map-popup {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 15px;
   border-radius: 12px;
   background: white;
@@ -199,35 +196,35 @@
     padding: 20px;
     margin-bottom: 20px;
   }
-  
+
   .maps-header h2 {
     font-size: 1.4rem;
   }
-  
+
   .maps-subtitle {
     font-size: 1rem;
   }
-  
+
   .map-container {
     height: 300px;
     border-radius: 12px;
   }
-  
+
   .leaflet-map {
     border-radius: 12px;
   }
-  
+
   .location-info-title {
     font-size: 1.2rem;
     margin: 25px 0 15px 0;
   }
-  
+
   .info-grid {
     grid-template-columns: 1fr;
     gap: 15px;
     margin-bottom: 20px;
   }
-  
+
   .info-item {
     width: 100%;
     box-sizing: border-box;
@@ -238,22 +235,22 @@
     align-items: center;
     gap: 15px;
   }
-  
+
   .info-label {
     font-size: 0.9rem;
     min-width: 60px;
   }
-  
+
   .info-value {
     font-size: 1.1rem;
     word-break: break-word;
   }
-  
+
   .action-buttons {
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .action-btn {
     width: 100%;
     min-width: auto;
@@ -265,32 +262,32 @@
   .maps-tab {
     padding: 15px;
   }
-  
+
   .maps-header h2 {
     font-size: 1.3rem;
   }
-  
+
   .location-info-title {
     font-size: 1.1rem;
   }
-  
+
   .info-item {
     padding: 15px;
     gap: 12px;
   }
-  
+
   .info-label {
     font-size: 0.85rem;
   }
-  
+
   .info-value {
     font-size: 1rem;
   }
-  
+
   .action-btn {
     padding: 10px 15px;
   }
-  
+
   .map-container {
     height: 250px;
   }

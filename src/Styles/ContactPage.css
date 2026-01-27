@@ -1,17 +1,14 @@
-/* ContactPage.css */
-
-/* Variables de couleurs Finn9ra */
 :root {
-  --secondary-color: #00C8D7; 
-  --accent-color: #00C8D7; 
-  --light-color: #F8F9FA;
-  --dark-color: #2C3E50;
+  --secondary-color: #00c8d7;
+  --accent-color: #00c8d7;
+  --light-color: #f8f9fa;
+  --dark-color: #2c3e50;
   --gray-color: #001247;
   --success-color: #001247;
 }
 
 .contact-page {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #001247;
   background: white;
   min-height: 7vh;
@@ -56,7 +53,7 @@
   background: white;
   border-radius: 30px;
   padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   border-left: 5px solid var(--secondary-color);
 }
 
@@ -88,7 +85,7 @@
   padding: 1.5rem;
   background: white;
   border-radius: 30px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border: 1px solid #eaeaea;
 }
 
@@ -100,7 +97,8 @@
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
   flex-shrink: 0;
-  margin-top: 2px;}
+  margin-top: 2px;
+}
 
 .contact-text h4 {
   color: #001247;
@@ -118,7 +116,7 @@
   background: white;
   border-radius: 30px;
   padding: 1rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .form-title {
@@ -195,7 +193,7 @@
 
 .submit-btn:hover {
   transform: translateY(-3px);
-  box-shadow: #00EDC1 0px 8px 15px -5px;
+  box-shadow: #00edc1 0px 8px 15px -5px;
 }
 
 .submit-btn:active {
@@ -211,7 +209,7 @@
   .contact-container {
     gap: 1rem;
   }
-  
+
   .contact-title {
     font-size: 2.5rem;
   }
@@ -221,16 +219,16 @@
   .contact-hero {
     padding: 2rem 1rem;
   }
-  
+
   .contact-title {
     font-size: 2rem;
   }
-  
+
   .contact-container {
     grid-template-columns: 1fr;
     padding: 0 1rem;
   }
-  
+
   .contact-info-card,
   .contact-form-section {
     padding: 1.3rem;

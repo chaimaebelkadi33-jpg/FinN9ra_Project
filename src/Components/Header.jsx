@@ -1,8 +1,7 @@
-// src/Components/Header.jsx
-import React, { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import '../Styles/header.css';
-import logo from '../Assets/logo/logo.jpg';
+import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import "../Styles/header.css";
+import logo from "../Assets/logo/logo.jpg";
 
 const Header = () => {
   const [isFrench, setIsFrench] = useState(true);
@@ -10,15 +9,34 @@ const Header = () => {
   const location = useLocation();
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    const newMenuState = !isMenuOpen;
+    setIsMenuOpen(newMenuState);
+
+    // Add/remove class to body when menu opens/closes
+    if (newMenuState) {
+      document.body.classList.add("mobile-nav-active");
+      // Prevent scrolling when menu is open
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.classList.remove("mobile-nav-active");
+      document.body.style.overflow = "";
+    }
   };
 
-  // Function to close mobile menu
   const closeMobileMenu = () => {
     setIsMenuOpen(false);
+    document.body.classList.remove("mobile-nav-active");
+    document.body.style.overflow = "";
   };
 
-  // Check if a link is active
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove("mobile-nav-active");
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   const isActive = (path) => {
     return location.pathname === path;
   };
@@ -26,27 +44,26 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-        
         {/* Logo et Titre à GAUCHE (côte à côte) */}
         <div className="brand-section">
           <NavLink to="/" className="brand-link" onClick={closeMobileMenu}>
             {/* Logo image */}
             <div className="logo-container">
-              <img 
-                src={logo} 
-                alt="Fin N9ra? Logo" 
+              <img
+                src={logo}
+                alt="Fin N9ra? Logo"
                 className="logo-image"
                 onError={(e) => {
                   console.log("Logo non chargé, utilisation du fallback");
-                  e.target.style.display = 'none';
-                  const fallback = document.querySelector('.logo-fallback');
-                  if (fallback) fallback.style.display = 'block';
+                  e.target.style.display = "none";
+                  const fallback = document.querySelector(".logo-fallback");
+                  if (fallback) fallback.style.display = "block";
                 }}
               />
               {/* Fallback si l'image ne charge pas */}
               <div className="logo-fallback">FN</div>
             </div>
-            
+
             {/* Texte "Fin N9ra?" à côté du logo */}
             <div className="brand-text">
               <h1 className="brand-title">FinN9ra?</h1>
@@ -59,27 +76,33 @@ const Header = () => {
         <nav className="main-navigation">
           <ul className="nav-items">
             <li className="nav-item">
-              <NavLink 
-                to="/" 
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
                 onClick={closeMobileMenu}
               >
                 <span className="nav-text">Accueil</span>
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink 
-                to="/ecoles" 
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              <NavLink
+                to="/ecoles"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
                 onClick={closeMobileMenu}
               >
                 <span className="nav-text">Écoles</span>
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink 
-                to="/contact" 
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
                 onClick={closeMobileMenu}
               >
                 <span className="nav-text">Contact</span>
@@ -87,9 +110,11 @@ const Header = () => {
             </li>
             {/* A propos Link */}
             <li className="nav-item">
-              <NavLink 
-                to="/About" 
-                className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+              <NavLink
+                to="/About"
+                className={({ isActive }) =>
+                  `nav-link ${isActive ? "active" : ""}`
+                }
                 onClick={closeMobileMenu}
               >
                 <span className="nav-text">A propos</span>
@@ -97,7 +122,11 @@ const Header = () => {
             </li>
             {/* Login Button */}
             <li className="nav-item login-item">
-              <NavLink to="/login" className="login-button" onClick={closeMobileMenu}>
+              <NavLink
+                to="/login"
+                className="login-button"
+                onClick={closeMobileMenu}
+              >
                 <span className="login-text">Connexion</span>
               </NavLink>
             </li>
@@ -105,26 +134,25 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="mobile-toggle"
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+          <i className={`fas ${isMenuOpen ? "fa-times" : "fa-bars"}`}></i>
         </button>
-
       </div>
 
       {/* Mobile Navigation Overlay */}
-      <div className={`mobile-nav-overlay ${isMenuOpen ? 'active' : ''}`}>
+      <div className={`mobile-nav-overlay ${isMenuOpen ? "active" : ""}`}>
         <div className="mobile-nav-content">
           <div className="mobile-nav-header">
             {/* Logo et texte dans mobile */}
             <div className="mobile-brand-section">
               <div className="mobile-logo-container">
-                <img 
-                  src={logo} 
-                  alt="Fin N9ra? Logo" 
+                <img
+                  src={logo}
+                  alt="Fin N9ra? Logo"
                   className="mobile-logo-image"
                 />
                 <div className="mobile-logo-fallback">FN</div>
@@ -137,9 +165,11 @@ const Header = () => {
 
           <ul className="mobile-nav-items">
             <li className="mobile-nav-item">
-              <NavLink 
-                to="/" 
-                className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `mobile-nav-link ${isActive ? "active" : ""}`
+                }
                 onClick={closeMobileMenu}
               >
                 <i className="fas fa-home"></i>
@@ -147,9 +177,11 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="mobile-nav-item">
-              <NavLink 
-                to="/ecoles" 
-                className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
+              <NavLink
+                to="/ecoles"
+                className={({ isActive }) =>
+                  `mobile-nav-link ${isActive ? "active" : ""}`
+                }
                 onClick={closeMobileMenu}
               >
                 <i className="fas fa-school"></i>
@@ -157,9 +189,11 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="mobile-nav-item">
-              <NavLink 
-                to="/About" 
-                className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
+              <NavLink
+                to="/About"
+                className={({ isActive }) =>
+                  `mobile-nav-link ${isActive ? "active" : ""}`
+                }
                 onClick={closeMobileMenu}
               >
                 <i className="fas fa-comment-dots"></i>
@@ -167,9 +201,11 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="mobile-nav-item">
-              <NavLink 
-                to="/contact" 
-                className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `mobile-nav-link ${isActive ? "active" : ""}`
+                }
                 onClick={closeMobileMenu}
               >
                 <i className="fas fa-envelope"></i>
@@ -177,13 +213,15 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="mobile-nav-item">
-              <NavLink 
-                to="/login" 
-                className="mobile-login-btn"
+              <NavLink
+                to="/login"
+                className="login-button"
                 onClick={closeMobileMenu}
               >
-                <i className="fas fa-sign-in-alt"></i>
-                <span>Connexion</span>
+                <span className="login-content">
+                  <i className="fas fa-sign-in-alt"></i>
+                  <span className="login-text">Connexion</span>
+                </span>
               </NavLink>
             </li>
           </ul>
