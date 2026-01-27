@@ -2355,7 +2355,7 @@
   }
 
   .header-section {
-    flex-direction: row;
+    flex-direction: column;
     gap: 40px;
     align-items: flex-start;
   }
@@ -2497,11 +2497,8 @@
     display: none;
   }
 }
-/* ============================= */
-/* Fix for mobile menu overlap issue */
-/* ============================= */
 
-/* Hide floating button when mobile menu is active */
+/* Hide Floating Action and Map Controls when Mobile Nav is Active */
 @media (max-width: 768px) {
   body.mobile-nav-active .floating-action {
     display: none !important;
@@ -2512,7 +2509,7 @@
     transition: all 0.3s ease !important;
   }
 
-  /* Hide Leaflet controls when mobile menu is active */
+/* Assuming Leaflet map controls are used */
   body.mobile-nav-active .leaflet-control-container,
   body.mobile-nav-active .leaflet-bar,
   body.mobile-nav-active .leaflet-top,
