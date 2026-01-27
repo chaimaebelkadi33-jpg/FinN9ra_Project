@@ -12,10 +12,9 @@ const Header = () => {
     const newMenuState = !isMenuOpen;
     setIsMenuOpen(newMenuState);
 
-    // Add/remove class to body when menu opens/closes
+    // Manage body classes and scrolling for mobile menu
     if (newMenuState) {
       document.body.classList.add("mobile-nav-active");
-      // Prevent scrolling when menu is open
       document.body.style.overflow = "hidden";
     } else {
       document.body.classList.remove("mobile-nav-active");
@@ -127,6 +126,7 @@ const Header = () => {
                 className="login-button"
                 onClick={closeMobileMenu}
               >
+                <i className="fas fa-sign-in-alt"></i>
                 <span className="login-text">Connexion</span>
               </NavLink>
             </li>
@@ -218,10 +218,8 @@ const Header = () => {
                 className="login-button"
                 onClick={closeMobileMenu}
               >
-                <span className="login-content">
-                  <i className="fas fa-sign-in-alt"></i>
-                  <span className="login-text">Connexion</span>
-                </span>
+                <i className="fas fa-sign-in-alt"></i>
+                <span className="login-text">Connexion</span>
               </NavLink>
             </li>
           </ul>

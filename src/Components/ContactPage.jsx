@@ -1,35 +1,39 @@
-import React, { useState } from 'react';
-import '../Styles/ContactPage.css';
+import React, { useState } from "react";
+import "../Styles/ContactPage.css";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
+    setFormData((prevState) => ({
       ...prevState,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Ici vous pouvez ajouter la logique pour envoyer le formulaire
-    console.log('Formulaire soumis:', formData);
-    alert('Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    // TODO: Implement form submission logic
+    console.log("Formulaire soumis:", formData);
+    alert(
+      "Merci pour votre message ! Nous vous répondrons dans les plus brefs délais."
+    );
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
     <div className="contact-page">
       <div className="contact-hero">
         <h1 className="contact-title">Contactez-nous</h1>
-        <p className="contact-subtitle">Nous sommes là pour vous aider à trouver la meilleure école</p>
+        <p className="contact-subtitle">
+          Nous sommes là pour vous aider à trouver la meilleure école
+        </p>
       </div>
 
       <div className="contact-container">
@@ -37,14 +41,16 @@ const ContactPage = () => {
           <div className="contact-info-card">
             <h2 className="info-title">Informations de contact</h2>
             <p className="info-description">
-              Pour toute question concernant notre plateforme ou pour obtenir de l'aide dans votre recherche d'école, n'hésitez pas à nous contacter.
+              Pour toute question concernant notre plateforme ou pour obtenir de
+              l'aide dans votre recherche d'école, n'hésitez pas à nous
+              contacter.
             </p>
 
             <div className="contact-details">
               {/* Contact de Finn9ra */}
               <div className="contact-team">
                 <h3 className="team-title">Contact de FinN9ra?</h3>
-                
+
                 <div className="contact-item">
                   <div className="contact-icon">
                     <i className="fas fa-envelope"></i>
@@ -54,7 +60,7 @@ const ContactPage = () => {
                     <p>contact@finn9ra.ma</p>
                   </div>
                 </div>
-                
+
                 {/* Téléphone */}
                 <div className="contact-item">
                   <div className="contact-icon">
@@ -75,7 +81,7 @@ const ContactPage = () => {
                     <h4>Localisation</h4>
                     <p>Maroc</p>
                   </div>
-                </div>             
+                </div>
               </div>
             </div>
           </div>
@@ -85,11 +91,16 @@ const ContactPage = () => {
         <div className="contact-form-section">
           <div className="contact-form-card">
             <h2 className="form-title">Envoyez-nous un message</h2>
-            <p className="form-subtitle">Remplissez le formulaire ci-dessous et nous vous répondrons rapidement</p>
+            <p className="form-subtitle">
+              Remplissez le formulaire ci-dessous et nous vous répondrons
+              rapidement
+            </p>
 
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-group">
-                <label htmlFor="name" className="form-label">Nom complet </label>
+                <label htmlFor="name" className="form-label">
+                  Nom complet{" "}
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -103,7 +114,9 @@ const ContactPage = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="email" className="form-label">Email </label>
+                <label htmlFor="email" className="form-label">
+                  Email{" "}
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -117,7 +130,9 @@ const ContactPage = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="subject" className="form-label">Sujet </label>
+                <label htmlFor="subject" className="form-label">
+                  Sujet{" "}
+                </label>
                 <input
                   type="text"
                   id="subject"
@@ -131,7 +146,9 @@ const ContactPage = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="message" className="form-label">Message </label>
+                <label htmlFor="message" className="form-label">
+                  Message{" "}
+                </label>
                 <textarea
                   id="message"
                   name="message"

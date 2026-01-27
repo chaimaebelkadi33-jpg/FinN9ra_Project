@@ -1,29 +1,32 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../Styles/RegisterPage.css';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "../Styles/RegisterPage.css";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
-    schoolName: '',
-    city: '',
-    cost: '',
-    description: '',
-    schoolType: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
+    schoolName: "",
+    city: "",
+    cost: "",
+    description: "",
+    schoolType: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
   });
 
-  // Options pour les types d'école - FRANÇAIS À GAUCHE, ARABE À DROITE
+  // School type options with French and Arabic labels
   const schoolTypeOptions = [
-    { value: '', label: 'Type d\'établissement / نوع المؤسسة' },
-    { value: 'public', label: 'École publique / مدرسة عمومية' },
-    { value: 'private', label: 'École privée / مدرسة خاصة' },
-    { value: 'international', label: 'École internationale / مدرسة دولية' },
-    { value: 'professional', label: 'Centre de formation professionnelle / مؤسسة تكوين مهني' },
-    { value: 'language', label: 'Institut de langue / معهد لغة' },
-    { value: 'university', label: 'Université / جامعة' },
-    { value: 'other', label: 'Autre / أخرى' }
+    { value: "", label: "Type d'établissement / نوع المؤسسة" },
+    { value: "public", label: "École publique / مدرسة عمومية" },
+    { value: "private", label: "École privée / مدرسة خاصة" },
+    { value: "international", label: "École internationale / مدرسة دولية" },
+    {
+      value: "professional",
+      label: "Centre de formation professionnelle / مؤسسة تكوين مهني",
+    },
+    { value: "language", label: "Institut de langue / معهد لغة" },
+    { value: "university", label: "Université / جامعة" },
+    { value: "other", label: "Autre / أخرى" },
   ];
 
   const handleChange = (e) => {
@@ -36,18 +39,20 @@ const RegisterPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (formData.password !== formData.confirmPassword) {
-      alert('Les mots de passe ne correspondent pas / كلمات المرور غير متطابقة');
+      alert(
+        "Les mots de passe ne correspondent pas / كلمات المرور غير متطابقة"
+      );
       return;
     }
 
     if (!formData.schoolType) {
-      alert('Type d\'établissement / نوع المؤسسة');
+      alert("Type d'établissement / نوع المؤسسة");
       return;
     }
 
-    console.log('Registration Data:', formData);
+    console.log("Registration Data:", formData);
   };
 
   return (
@@ -65,9 +70,7 @@ const RegisterPage = () => {
       <form onSubmit={handleSubmit} className="register-form">
         {/* Email */}
         <div className="input-group">
-          <label htmlFor="email">
-            Email / البريد الإلكتروني
-          </label>
+          <label htmlFor="email">Email / البريد الإلكتروني</label>
           <input
             type="email"
             id="email"
@@ -96,9 +99,7 @@ const RegisterPage = () => {
 
         {/* Ville */}
         <div className="input-group">
-          <label htmlFor="city">
-            Ville / المدينة
-          </label>
+          <label htmlFor="city">Ville / المدينة</label>
           <input
             type="text"
             id="city"
@@ -112,15 +113,14 @@ const RegisterPage = () => {
 
         {/* Type d'école */}
         <div className="input-group">
-          <label htmlFor="schoolType">
-            Type d'établissement / نوع المؤسسة
-          </label>
+          <label htmlFor="schoolType">Type d'établissement / نوع المؤسسة</label>
           <select
             id="schoolType"
             name="schoolType"
             value={formData.schoolType}
             onChange={handleChange}
-            required>
+            required
+          >
             {schoolTypeOptions.map((option) => (
               <option key={option.value} value={option.value}>
                 {option.label}
@@ -130,9 +130,7 @@ const RegisterPage = () => {
         </div>
         {/* Description */}
         <div className="input-group">
-          <label htmlFor="description">
-            Description / وصف المؤسسة
-          </label>
+          <label htmlFor="description">Description / وصف المؤسسة</label>
           <textarea
             id="description"
             name="description"
@@ -145,9 +143,7 @@ const RegisterPage = () => {
         </div>
         {/* Mot de passe */}
         <div className="input-group">
-          <label htmlFor="password">
-            Mot de passe / كلمة المرور
-          </label>
+          <label htmlFor="password">Mot de passe / كلمة المرور</label>
           <input
             type="password"
             id="password"

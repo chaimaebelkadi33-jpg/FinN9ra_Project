@@ -1,4 +1,3 @@
-// src/Pages/Accueil.jsx - UPDATED with accent-insensitive search
 import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "../Components/SearchBar";
@@ -6,13 +5,13 @@ import SchoolCard from "../Components/SchoolCard";
 import { dataService } from "../Services/dataService";
 import "../Styles/accueil.css";
 
-// Helper function to remove accents
+// Helper function to remove accents for accent-insensitive search
 const removeAccents = (str) => {
   if (!str) return "";
   return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 };
 
-// Memoized SchoolCard for better performance
+// Memoized SchoolCard component for better performance
 const MemoizedSchoolCard = React.memo(SchoolCard);
 
 function Accueil() {

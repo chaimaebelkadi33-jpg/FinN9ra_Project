@@ -1,13 +1,12 @@
-// src/Pages/Ecoles.jsx - COMPLETE VERSION
-import React, { useState, useEffect, useMemo } from 'react';
-import { dataService } from '../Services/dataService';
-import Filters from '../Components/Filters';
-import SchoolCard from '../Components/SchoolCard';
-import '../Styles/ecoles.css';
+import React, { useState, useEffect, useMemo } from "react";
+import { dataService } from "../Services/dataService";
+import Filters from "../Components/Filters";
+import SchoolCard from "../Components/SchoolCard";
+import "../Styles/ecoles.css";
 
 // Helper function to remove accents for accent-insensitive search
 const normalizeString = (str) => {
-  if (!str) return '';
+  if (!str) return "";
   return str
     .toLowerCase()
     .normalize("NFD")
@@ -22,27 +21,27 @@ function Ecoles() {
   const [schools, setSchools] = useState([]);
   const [filteredSchools, setFilteredSchools] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState('');
-  
+  const [searchQuery, setSearchQuery] = useState("");
+
   // LOCAL filters - for UI changes only
   const [localFilters, setLocalFilters] = useState({
-    ville: '',
-    type: '',
-    specialite: '',
+    ville: "",
+    type: "",
+    specialite: "",
     minPrice: 0,
-    maxPrice: 20000
+    maxPrice: 20000,
   });
-  
+
   // APPLIED filters - actual filters that affect results
   const [appliedFilters, setAppliedFilters] = useState({
-    ville: '',
-    type: '',
-    specialite: '',
+    ville: "",
+    type: "",
+    specialite: "",
     minPrice: 0,
-    maxPrice: 20000
+    maxPrice: 20000,
   });
-  
-  const [sortBy, setSortBy] = useState('note');
+
+  const [sortBy, setSortBy] = useState("note");
 
   // Fetch all schools on component mount
   useEffect(() => {
@@ -60,31 +59,32 @@ function Ecoles() {
       const allSchools = await dataService.getAllEcoles();
       setSchools(allSchools);
       setFilteredSchools(allSchools);
-      
+
       // Calculate price range
-      const prices = allSchools.map(school => {
-        const priceStr = school.cout || '0';
-        const match = priceStr.match(/\d+/g);
-        return match ? parseInt(match.join('')) : 0;
-      }).filter(price => !isNaN(price));
-      
+      const prices = allSchools
+        .map((school) => {
+          const priceStr = school.cout || "0";
+          const match = priceStr.match(/\d+/g);
+          return match ? parseInt(match.join("")) : 0;
+        })
+        .filter((price) => !isNaN(price));
+
       const minPrice = prices.length > 0 ? Math.min(...prices) : 0;
       const maxPrice = prices.length > 0 ? Math.max(...prices) : 20000;
-      
+
       // Initialize both filter states
       const initialFilters = {
-        ville: '',
-        type: '',
-        specialite: '',
+        ville: "",
+        type: "",
+        specialite: "",
         minPrice: minPrice,
-        maxPrice: maxPrice
+        maxPrice: maxPrice,
       };
-      
+
       setLocalFilters(initialFilters);
       setAppliedFilters(initialFilters);
-      
     } catch (error) {
-      console.error('Error loading schools:', error);
+      console.error("Error loading schools:", error);
     } finally {
       setLoading(false);
     }
@@ -96,11 +96,11 @@ function Ecoles() {
     // Apply search filter if query exists
     if (searchQuery.trim()) {
       const normalizedQuery = normalizeString(searchQuery);
-      results = results.filter(school => {
+      results = results.filter((school) => {
         const schoolName = normalizeString(school.nom);
         const schoolCity = normalizeString(school.ville);
         const schoolType = normalizeString(school.type);
-        
+
         return (
           schoolName.includes(normalizedQuery) ||
           schoolCity.includes(normalizedQuery) ||
@@ -112,7 +112,7 @@ function Ecoles() {
     // Use APPLIED filters (not local filters)
     if (appliedFilters.ville) {
       const normalizedVille = normalizeString(appliedFilters.ville);
-      results = results.filter(school => {
+      results = results.filter((school) => {
         const schoolVille = normalizeString(school.ville);
         return schoolVille === normalizedVille;
       });
@@ -120,7 +120,7 @@ function Ecoles() {
 
     if (appliedFilters.type) {
       const normalizedType = normalizeString(appliedFilters.type);
-      results = results.filter(school => {
+      results = results.filter((school) => {
         const schoolType = normalizeString(school.type);
         return schoolType === normalizedType;
       });
@@ -128,10 +128,11 @@ function Ecoles() {
 
     if (appliedFilters.specialite) {
       const normalizedSpecialite = normalizeString(appliedFilters.specialite);
-      results = results.filter(school => {
-        if (!school.specialites || !Array.isArray(school.specialites)) return false;
-        
-        return school.specialites.some(specialite => {
+      results = results.filter((school) => {
+        if (!school.specialites || !Array.isArray(school.specialites))
+          return false;
+
+        return school.specialites.some((specialite) => {
           const normalizedSchoolSpecialite = normalizeString(specialite);
           return normalizedSchoolSpecialite === normalizedSpecialite;
         });
@@ -139,24 +140,28 @@ function Ecoles() {
     }
 
     // Apply price filter using APPLIED filters
-    results = results.filter(school => {
-      const priceStr = school.cout || '0';
+    results = results.filter((school) => {
+      const priceStr = school.cout || "0";
       const match = priceStr.match(/\d+/g);
-      const price = match ? parseInt(match.join('')) : 0;
-      return price >= appliedFilters.minPrice && price <= appliedFilters.maxPrice;
+      const price = match ? parseInt(match.join("")) : 0;
+      return (
+        price >= appliedFilters.minPrice && price <= appliedFilters.maxPrice
+      );
     });
 
     // Apply sorting
     results.sort((a, b) => {
       switch (sortBy) {
-        case 'note':
+        case "note":
           return (b.note || 0) - (a.note || 0);
-        case 'nom':
-          return (a.nom || '').localeCompare(b.nom || '', 'fr', { sensitivity: 'base' });
-        case 'price':
+        case "nom":
+          return (a.nom || "").localeCompare(b.nom || "", "fr", {
+            sensitivity: "base",
+          });
+        case "price":
           const getPrice = (priceStr) => {
-            const match = (priceStr || '0').match(/\d+/g);
-            return match ? parseInt(match.join('')) : 0;
+            const match = (priceStr || "0").match(/\d+/g);
+            return match ? parseInt(match.join("")) : 0;
           };
           return getPrice(a.cout) - getPrice(b.cout);
         default:
@@ -184,26 +189,28 @@ function Ecoles() {
 
   // Reset both filter states
   const resetFilters = () => {
-    const prices = schools.map(school => {
-      const priceStr = school.cout || '0';
-      const match = priceStr.match(/\d+/g);
-      return match ? parseInt(match.join('')) : 0;
-    }).filter(price => !isNaN(price));
-    
+    const prices = schools
+      .map((school) => {
+        const priceStr = school.cout || "0";
+        const match = priceStr.match(/\d+/g);
+        return match ? parseInt(match.join("")) : 0;
+      })
+      .filter((price) => !isNaN(price));
+
     const minPrice = prices.length > 0 ? Math.min(...prices) : 0;
     const maxPrice = prices.length > 0 ? Math.max(...prices) : 20000;
-    
+
     const resetFiltersState = {
-      ville: '',
-      type: '',
-      specialite: '',
+      ville: "",
+      type: "",
+      specialite: "",
       minPrice: minPrice,
-      maxPrice: maxPrice
+      maxPrice: maxPrice,
     };
-    
+
     setLocalFilters(resetFiltersState);
     setAppliedFilters(resetFiltersState);
-    setSearchQuery('');
+    setSearchQuery("");
   };
 
   const handleSortChange = (sortValue) => {
@@ -215,7 +222,7 @@ function Ecoles() {
     return {
       total: schools.length,
       filtered: filteredSchools.length,
-      hasResults: filteredSchools.length > 0
+      hasResults: filteredSchools.length > 0,
     };
   }, [schools.length, filteredSchools.length]);
 
@@ -234,18 +241,19 @@ function Ecoles() {
       <div className="page-header">
         <h1>Liste des Écoles</h1>
         <p className="page-subtitle">
-          Découvrez toutes les écoles disponibles. Filtrez par ville, type, spécialité ou prix.
+          Découvrez toutes les écoles disponibles. Filtrez par ville, type,
+          spécialité ou prix.
         </p>
       </div>
 
       <div className="ecoles-container">
         {/* Centered Filter Component */}
         <div className="centered-filters-container">
-          <Filters 
-            activeFilters={localFilters} 
-            onFilterChange={handleFilterChange} 
-            onApply={handleApplyFilters} 
-            onReset={resetFilters} 
+          <Filters
+            activeFilters={localFilters}
+            onFilterChange={handleFilterChange}
+            onApply={handleApplyFilters}
+            onReset={resetFilters}
             sortBy={sortBy}
             onSortChange={handleSortChange}
             filteredCount={schoolStats.filtered}
@@ -258,15 +266,21 @@ function Ecoles() {
           {/* Schools Grid */}
           {schoolStats.hasResults ? (
             <div className="schools-grid">
-              {filteredSchools.map(school => (
-                <MemoizedSchoolCard key={school.idEcole || school.id} school={school} />
+              {filteredSchools.map((school) => (
+                <MemoizedSchoolCard
+                  key={school.idEcole || school.id}
+                  school={school}
+                />
               ))}
             </div>
           ) : (
             <div className="no-results">
               <div className="no-results-content">
                 <h3>Aucune école ne correspond à vos critères</h3>
-                <p>Essayez de modifier vos filtres ou votre recherche pour voir plus de résultats.</p>
+                <p>
+                  Essayez de modifier vos filtres ou votre recherche pour voir
+                  plus de résultats.
+                </p>
                 <button onClick={resetFilters} className="reset-filters-btn">
                   Réinitialiser tous les filtres
                 </button>

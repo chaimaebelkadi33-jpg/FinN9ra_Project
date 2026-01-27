@@ -56,15 +56,6 @@ const Footer = () => {
         <div className="footer-bottom">
           <p className="copyright">
             © {new Date().getFullYear()} Fin N9ra? — Tous droits réservés
-            <br />
-            Développé avec passion par{' '}
-            <Link to="/about" style={{ 
-              color: '#00FFFF', 
-              textDecoration: 'none',
-              fontWeight: 'bold'
-            }}>
-              Widad & Chaimae
-            </Link>
           </p>
         </div>
       </div>

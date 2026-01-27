@@ -1,5 +1,6 @@
 /* RegisterPage.css - Styles pour Fin N9ra? */
 
+/* Register Page Container */
 .register-container {
   max-width: 500px;
   margin: 2rem auto;
@@ -8,7 +9,7 @@
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   direction: rtl;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .register-subtitle {
   display: flex;
@@ -39,7 +40,6 @@
   order: 3; /* Arabe en dernier (à droite) */
   direction: rtl; /* Pour l'affichage correct de l'arabe */
 }
-
 
 .register-header {
   text-align: center;
@@ -95,7 +95,9 @@
   transition: all 0.3s ease;
   width: 100%;
   box-sizing: border-box;
-  background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%233498db' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E") no-repeat right 1rem center;
+  background: white
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%233498db' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E")
+    no-repeat right 1rem center;
   background-size: 12px;
   appearance: none;
   cursor: pointer;
@@ -185,13 +187,15 @@
 
 /* Style spécial pour l'input de coût */
 .input-group input[type="number"] {
-  background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232ecc71' viewBox='0 0 16 16'%3E%3Cpath d='M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z'/%3E%3C/svg%3E") no-repeat right 1rem center;
+  background: white
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%232ecc71' viewBox='0 0 16 16'%3E%3Cpath d='M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z'/%3E%3C/svg%3E")
+    no-repeat right 1rem center;
   background-size: 14px;
 }
 
 /* Bouton d'inscription */
 .register-button {
-  background:#002147;
+  background: #002147;
   color: white;
   padding: 1.1rem;
   border: none;
@@ -275,21 +279,21 @@
     padding: 1.5rem;
     border-radius: 10px;
   }
-  
+
   .project-title {
     font-size: 2.2rem;
   }
-  
+
   .register-title {
     font-size: 1.4rem;
   }
-  
+
   .input-group select,
   .input-group textarea,
   .input-group input {
     padding: 0.8rem;
   }
-  
+
   .register-button {
     padding: 1rem;
     font-size: 1rem;
@@ -301,5 +305,6 @@
 .input-group textarea:focus,
 .input-group input:focus {
   border-color: #3498db;
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2), inset 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2),
+    inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }

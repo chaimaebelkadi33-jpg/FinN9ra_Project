@@ -138,15 +138,15 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Tablet and small mobile (side by side) */
+
 @media (max-width: 768px) {
   .footer-container {
     padding: 0 1.2rem;
   }
 
   .footer-sections {
-    grid-template-columns: repeat(3, 1fr); /* Changed to 3 columns */
-    gap: 1.2rem; /* Reduced gap for 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem; 
   }
 
   .footer-title {
@@ -156,7 +156,7 @@
 
   .section-title {
     font-size: 1.1rem;
-    margin-bottom: 0.8rem; /* Slightly more for social section */
+    margin-bottom: 0.8rem; 
   }
 
   .footer-link {
@@ -164,9 +164,9 @@
   }
 
   .social-icons {
-    gap: 0.6rem; /* Reduced gap for mobile */
+    gap: 0.6rem; 
     margin-top: 0.5rem;
-    flex-wrap: wrap; /* Allow wrapping if needed */
+    flex-wrap: wrap; 
   }
 
   .social-icon {
@@ -184,22 +184,22 @@
     margin: 0 0 0.6rem 0;
   }
   
-  /* Make social media section compact */
+  
   .footer-section:last-child {
-    grid-column: span 1; /* Ensure it takes one column */
+    grid-column: span 1; 
   }
 }
 
-/* Small mobile (2 columns for very small screens) */
+
 @media (max-width: 600px) {
   .footer-sections {
-    grid-template-columns: repeat(1, 1fr); /* 2 columns for small screens */
+    grid-template-columns: repeat(1, 1fr); 
     gap: 1.5rem;
   }
   
-  /* Make the 3rd column (social) move to next row */
+ 
   .footer-section:nth-child(3) {
-    grid-column: span 2; /* Social section takes full width on 2nd row */
+    grid-column: span 2; 
     text-align: center;
   }
   
@@ -208,19 +208,19 @@
   }
 }
 
-/* Very small mobile (stacked) */
+
 @media (max-width: 480px) {
   .footer {
     padding: 1rem 0 0.6rem;
   }
 
   .footer-sections {
-    grid-template-columns: repeat(3, 1fr); /* Stack everything */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 1.2rem;
   }
   
   .footer-section:nth-child(3) {
-    grid-column: span 1; /* Reset to normal */
+    grid-column: span 1; 
     text-align: center;
   }
   
@@ -261,14 +261,14 @@
   }
 }
 
-/* Landscape phones - keep 3 columns */
+
 @media (max-width: 768px) and (orientation: landscape) {
   .footer-sections {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns in landscape */
+    grid-template-columns: repeat(3, 1fr); 
   }
   
   .footer-section:nth-child(3) {
-    grid-column: span 1; /* Social in its own column */
+    grid-column: span 1;
   }
   
   .footer-section:nth-child(3) .social-icons {
@@ -276,7 +276,7 @@
   }
 }
 
-/* Extra small screens optimization */
+
 @media (max-width: 400px) {
   .footer-sections {
     grid-template-columns: repeat(3, 1fr); 
@@ -431,15 +431,15 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Tablet and small mobile (side by side) */
+
 @media (max-width: 768px) {
   .footer-container {
     padding: 0 1.2rem;
   }
 
   .footer-sections {
-    grid-template-columns: repeat(3, 1fr); /* Changed to 3 columns */
-    gap: 1.2rem; /* Reduced gap for 3 columns */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.2rem;
   }
 
   .footer-title {
@@ -449,7 +449,7 @@
 
   .section-title {
     font-size: 1.1rem;
-    margin-bottom: 0.8rem; /* Slightly more for social section */
+    margin-bottom: 0.8rem; 
   }
 
   .footer-link {
@@ -457,9 +457,9 @@
   }
 
   .social-icons {
-    gap: 0.6rem; /* Reduced gap for mobile */
+    gap: 0.6rem; 
     margin-top: 0.5rem;
-    flex-wrap: wrap; /* Allow wrapping if needed */
+    flex-wrap: wrap; 
   }
 
   .social-icon {
@@ -477,22 +477,22 @@
     margin: 0 0 0.6rem 0;
   }
   
-  /* Make social media section compact */
+  
   .footer-section:last-child {
-    grid-column: span 1; /* Ensure it takes one column */
+    grid-column: span 1; 
   }
 }
 
-/* Small mobile (2 columns for very small screens) */
+
 @media (max-width: 600px) {
   .footer-sections {
-    grid-template-columns: repeat(1, 1fr); /* 2 columns for small screens */
+    grid-template-columns: repeat(1, 1fr); 
     gap: 1.5rem;
   }
   
-  /* Make the 3rd column (social) move to next row */
+
   .footer-section:nth-child(3) {
-    grid-column: span 2; /* Social section takes full width on 2nd row */
+    grid-column: span 2; 
     text-align: center;
   }
   
@@ -501,7 +501,7 @@
   }
 }
 
-/* Very small mobile (stacked) */
+
 @media (max-width: 480px) {
   .footer {
     padding: 1rem 0 0.6rem;

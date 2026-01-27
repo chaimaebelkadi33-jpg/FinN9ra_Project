@@ -1,5 +1,4 @@
-/* src/Styles/ecoles.css */
-
+/* Ecoles Page Layout */
 .ecoles-page {
   min-height: 100vh;
   background: #f8f9fa;
@@ -42,6 +41,7 @@
   margin-top: 20px;
 }
 
+/* Loading States */
 .loading {
   text-align: center;
   padding: 60px 20px;
@@ -49,6 +49,81 @@
   color: #666;
 }
 
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #4a90e2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Search Bar */
+.ecoles-search-bar {
+  max-width: 600px;
+  margin: 20px auto 0;
+  position: relative;
+}
+
+.ecoles-search-input {
+  width: 100%;
+  padding: 12px 20px 12px 45px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  background: #f8f9fa
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E")
+    no-repeat 15px center;
+}
+
+.ecoles-search-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+  background-color: white;
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.clear-search-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* No Results */
 .no-results {
   text-align: center;
   padding: 60px 20px;
@@ -86,15 +161,37 @@
   box-shadow: 0 6px 20px rgba(74, 144, 226, 0.3);
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
   .schools-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
   }
-  
+
   .page-header h1 {
     font-size: 2rem;
+  }
+
+  .page-header {
+    padding: 20px 15px;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .ecoles-search-bar {
+    padding: 0 15px;
+  }
+
+  .no-results {
+    padding: 40px 15px;
+    margin: 15px;
+  }
+
+  .no-results-content h3 {
+    font-size: 1.2rem;
   }
 }
 
@@ -102,175 +199,8 @@
   .schools-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .ecoles-container {
     padding: 0 15px;
-  }
-}
-/* Ecole page specific styles */
-.ecoles-page {
-  min-height: 100vh;
-  background: #f8f9fa;
-}
-
-.loading-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
-}
-
-.loading-spinner {
-  width: 50px;
-  height: 50px;
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #4a90e2;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-bottom: 20px;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Page header styles */
-.page-header {
-  text-align: center;
-  padding: 30px 20px;
-  background: white;
-  border-bottom: 1px solid #e9ecef;
-}
-
-.page-header h1 {
-  color: #2c3e50;
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.page-subtitle {
-  color: #666;
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto 20px;
-  line-height: 1.5;
-}
-
-/* Search bar styles */
-.ecoles-search-bar {
-  max-width: 600px;
-  margin: 20px auto 0;
-  position: relative;
-}
-
-.ecoles-search-input {
-  width: 100%;
-  padding: 12px 20px 12px 45px;
-  border: 2px solid #e0e0e0;
-  border-radius: 25px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  box-sizing: border-box;
-  background: #f8f9fa url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E") no-repeat 15px center;
-}
-
-.ecoles-search-input:focus {
-  outline: none;
-  border-color: #4a90e2;
-  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
-  background-color: white;
-}
-
-.clear-search-btn {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: #666;
-  cursor: pointer;
-  font-size: 1.2rem;
-  padding: 5px;
-  border-radius: 50%;
-  transition: all 0.2s ease;
-}
-
-.clear-search-btn:hover {
-  background: #f0f0f0;
-  color: #333;
-}
-
-/* No results */
-.no-results {
-  text-align: center;
-  padding: 60px 20px;
-  background: white;
-  border-radius: 16px;
-  margin: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
-
-.no-results-content h3 {
-  color: #2c3e50;
-  margin-bottom: 15px;
-  font-size: 1.4rem;
-}
-
-.no-results-content p {
-  color: #666;
-  margin-bottom: 25px;
-  font-size: 1.1rem;
-}
-
-.reset-filters-btn {
-  background: #4a90e2;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.reset-filters-btn:hover {
-  background: #357ae8;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .page-header {
-    padding: 20px 15px;
-  }
-  
-  .page-header h1 {
-    font-size: 1.8rem;
-  }
-  
-  .page-subtitle {
-    font-size: 1rem;
-    padding: 0 10px;
-  }
-  
-  .ecoles-search-bar {
-    padding: 0 15px;
-  }
-  
- 
-  
-  .no-results {
-    padding: 40px 15px;
-    margin: 15px;
-  }
-  
-  .no-results-content h3 {
-    font-size: 1.2rem;
   }
 }

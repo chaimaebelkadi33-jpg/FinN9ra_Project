@@ -1,5 +1,3 @@
-/* src/Styles/schoolCard.css - REDESIGNED: Clean layout with requested order */
-
 /* SchoolCard Container - Clean and modern */
 .school-card {
   border: 1px solid #e0e0e0;
@@ -60,8 +58,8 @@
   font-weight: 700;
   text-align: right;
   display: -webkit-box;
-  -webkit-line-clamp: 2; 
-  line-clamp: 2; 
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   min-height: 2.6em;
@@ -120,7 +118,7 @@
 }
 
 .voir-plus-btn:hover {
-  background: #00CED1;
+  background: #00ced1;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(74, 144, 226, 0.25);
 }
@@ -132,28 +130,28 @@
     height: 300px;
     max-width: 320px;
   }
-  
+
   .card-image {
     height: 140px;
   }
-  
+
   .card-content {
     padding: 15px;
   }
-  
+
   .school-name {
     font-size: 1.1rem;
   }
-  
+
   .type-badge {
     font-size: 0.7rem;
     padding: 3px 8px;
   }
-  
+
   .school-location {
     font-size: 0.85rem;
   }
-  
+
   .voir-plus-btn {
     padding: 9px 16px;
     font-size: 0.85rem;
@@ -164,16 +162,16 @@
   .school-card {
     height: 280px;
   }
-  
+
   .card-image {
     height: 130px;
   }
-  
+
   .school-name {
     font-size: 1rem;
     margin-bottom: 10px;
   }
-  
+
   .voir-plus-btn {
     padding: 8px 14px;
     font-size: 0.8rem;

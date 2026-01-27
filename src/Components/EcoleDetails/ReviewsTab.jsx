@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function ReviewsTab({ school, addReview, renderStars }) {
   const [newReview, setNewReview] = useState({
     rating: 5,
     comment: "",
     author: "",
-    email: ""
+    email: "",
   });
 
   const [showSubscriptionModal, setShowSubscriptionModal] = useState(false);
   const [tempReview, setTempReview] = useState(null);
-  const [subscriptionMethod, setSubscriptionMethod] = useState(''); // 'email' or 'google'
+  const [subscriptionMethod, setSubscriptionMethod] = useState(""); // 'email' or 'google'
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [subscriptionEmail, setSubscriptionEmail] = useState('');
+  const [subscriptionEmail, setSubscriptionEmail] = useState("");
 
   const reviews = school.reviews || [];
-  
+
   const calculateAverageRating = (reviews) => {
     if (!reviews || reviews.length === 0) return 0;
     const total = reviews.reduce((sum, review) => sum + review.rating, 0);
@@ -51,7 +51,7 @@ function ReviewsTab({ school, addReview, renderStars }) {
     // Check if user is subscribed
     if (!isSubscribed) {
       // Save the review temporarily and show subscription modal
-      setTempReview({...newReview});
+      setTempReview({ ...newReview });
       setShowSubscriptionModal(true);
       return;
     }
@@ -64,79 +64,85 @@ function ReviewsTab({ school, addReview, renderStars }) {
       rating: 5,
       comment: "",
       author: "",
-      email: ""
+      email: "",
     });
 
     alert("Merci pour votre avis! Il sera publié après modération.");
   };
 
   const handleSubscribeWithEmail = () => {
-    if (!subscriptionEmail || !subscriptionEmail.includes('@')) {
+    if (!subscriptionEmail || !subscriptionEmail.includes("@")) {
       alert("Veuillez entrer une adresse email valide");
       return;
     }
 
     // Simulate email subscription
     console.log("Subscribing with email:", subscriptionEmail);
-    
+
     // In a real app, you would send this to your backend
     setIsSubscribed(true);
-    setSubscriptionMethod('email');
-    
+    setSubscriptionMethod("email");
+
     // Submit the review after subscription
     if (tempReview) {
       const reviewToSubmit = {
         ...tempReview,
-        email: subscriptionEmail
+        email: subscriptionEmail,
       };
       addReview(reviewToSubmit);
-      
+
       // Reset form
       setNewReview({
         rating: 5,
         comment: "",
         author: "",
-        email: ""
+        email: "",
       });
-      
-      alert("Merci pour votre inscription et votre avis! Votre avis sera publié après modération.");
+
+      alert(
+        "Merci pour votre inscription et votre avis! Votre avis sera publié après modération."
+      );
     }
-    
+
     setShowSubscriptionModal(false);
     setTempReview(null);
-    setSubscriptionEmail('');
+    setSubscriptionEmail("");
   };
 
   const handleSubscribeWithGoogle = () => {
     // Simulate Google OAuth
     console.log("Starting Google OAuth flow");
-    
+
     // In a real app, you would integrate with Google OAuth
     // For now, simulate successful login
-    const mockGoogleEmail = `${newReview.author.toLowerCase().replace(/\s+/g, '.')}@gmail.com`;
-    
+    const mockGoogleEmail = `${newReview.author
+      .toLowerCase()
+      .replace(/\s+/g, ".")}@gmail.com`;
+
     setIsSubscribed(true);
-    setSubscriptionMethod('google');
-    
+    setSubscriptionMethod("google");
+
     if (tempReview) {
       const reviewToSubmit = {
         ...tempReview,
         email: mockGoogleEmail,
-        verified: true
+        verified: true,
       };
       addReview(reviewToSubmit);
-      
+
       // Reset form
       setNewReview({
         rating: 5,
         comment: "",
         author: "",
-        email: ""
+        email: "",
       });
-      
-      alert("Merci pour votre inscription avec Google! Votre avis a été publié.");
+
+      alert(
+        "Merci pour votre inscription avec Google! Votre avis a été publié."
+      );
     }
-    
+
     setShowSubscriptionModal(false);
     setTempReview(null);
   };
@@ -144,7 +150,7 @@ function ReviewsTab({ school, addReview, renderStars }) {
   const closeSubscriptionModal = () => {
     setShowSubscriptionModal(false);
     setTempReview(null);
-    setSubscriptionEmail('');
+    setSubscriptionEmail("");
   };
 
   const skipSubscription = () => {
@@ -152,20 +158,22 @@ function ReviewsTab({ school, addReview, renderStars }) {
     if (tempReview) {
       addReview({
         ...tempReview,
-        verified: false
+        verified: false,
       });
-      
+
       // Reset form
       setNewReview({
         rating: 5,
         comment: "",
         author: "",
-        email: ""
+        email: "",
       });
-      
-      alert("Votre avis a été soumis. Les avis non vérifiés peuvent être mis en attente de modération.");
+
+      alert(
+        "Votre avis a été soumis. Les avis non vérifiés peuvent être mis en attente de modération."
+      );
     }
-    
+
     setShowSubscriptionModal(false);
     setTempReview(null);
   };
@@ -182,20 +190,21 @@ function ReviewsTab({ school, addReview, renderStars }) {
           <div className="subscription-modal">
             <div className="modal-header">
               <h3>Inscription Requise</h3>
-              <button 
+              <button
                 onClick={closeSubscriptionModal}
                 className="modal-close-btn"
               >
                 ✕
               </button>
             </div>
-            
+
             <div className="modal-content">
               <p className="modal-description">
-                Pour publier un avis, nous vous recommandons de vous inscrire. 
-                Cela permet de vérifier votre identité et d'améliorer la crédibilité des avis.
+                Pour publier un avis, nous vous recommandons de vous inscrire.
+                Cela permet de vérifier votre identité et d'améliorer la
+                crédibilité des avis.
               </p>
-              
+
               <div className="subscription-options">
                 <div className="subscription-option">
                   <div className="option-header">
@@ -214,14 +223,14 @@ function ReviewsTab({ school, addReview, renderStars }) {
                       className="email-input"
                     />
                   </div>
-                  <button 
+                  <button
                     onClick={handleSubscribeWithEmail}
                     className="subscribe-btn email-btn"
                   >
                     S'inscrire avec Email
                   </button>
                 </div>
-                
+
                 <div className="subscription-option">
                   <div className="option-header">
                     <span className="option-icon">🔐</span>
@@ -230,7 +239,7 @@ function ReviewsTab({ school, addReview, renderStars }) {
                   <p className="option-description">
                     Inscrivez-vous rapidement avec votre compte Google
                   </p>
-                  <button 
+                  <button
                     onClick={handleSubscribeWithGoogle}
                     className="subscribe-btn google-btn"
                   >
@@ -239,20 +248,18 @@ function ReviewsTab({ school, addReview, renderStars }) {
                   </button>
                 </div>
               </div>
-              
+
               <div className="modal-footer">
                 <p className="privacy-notice">
-                  En vous inscrivant, vous acceptez nos conditions d'utilisation et notre politique de confidentialité.
+                  En vous inscrivant, vous acceptez nos conditions d'utilisation
+                  et notre politique de confidentialité.
                 </p>
-                
+
                 <div className="modal-actions">
-                  <button 
-                    onClick={skipSubscription}
-                    className="skip-btn"
-                  >
+                  <button onClick={skipSubscription} className="skip-btn">
                     Publier sans inscription
                   </button>
-                  <button 
+                  <button
                     onClick={closeSubscriptionModal}
                     className="cancel-btn"
                   >
@@ -277,7 +284,9 @@ function ReviewsTab({ school, addReview, renderStars }) {
             {isSubscribed && (
               <div className="subscription-status">
                 <span className="subscription-badge">
-                  {subscriptionMethod === 'email' ? '📧 Inscrit' : '🔐 Connecté Google'}
+                  {subscriptionMethod === "email"
+                    ? "📧 Inscrit"
+                    : "🔐 Connecté Google"}
                 </span>
               </div>
             )}
@@ -298,9 +307,7 @@ function ReviewsTab({ school, addReview, renderStars }) {
                     }}
                   ></div>
                 </div>
-                <span className="rating-count-small">
-                  {ratingCounts[star]}
-                </span>
+                <span className="rating-count-small">{ratingCounts[star]}</span>
               </div>
             ))}
           </div>
@@ -312,9 +319,7 @@ function ReviewsTab({ school, addReview, renderStars }) {
         <div className="review-form-header">
           <h3>Donner votre avis</h3>
           {isSubscribed && (
-            <span className="already-subscribed">
-              ✓ Vous êtes inscrit
-            </span>
+            <span className="already-subscribed">✓ Vous êtes inscrit</span>
           )}
         </div>
         <form onSubmit={handleSubmitReview} className="review-form">
@@ -361,11 +366,16 @@ function ReviewsTab({ school, addReview, renderStars }) {
           </div>
 
           <div className="form-notice">
-            <p>⚠️ Pour publier votre avis, vous devrez vous inscrire avec un email ou Google.</p>
+            <p>
+              ⚠️ Pour publier votre avis, vous devrez vous inscrire avec un
+              email ou Google.
+            </p>
           </div>
 
           <button type="submit" className="submit-review-btn">
-            {isSubscribed ? 'Publier votre avis' : 'Publier votre avis (inscription requise)'}
+            {isSubscribed
+              ? "Publier votre avis"
+              : "Publier votre avis (inscription requise)"}
           </button>
         </form>
       </div>
@@ -388,16 +398,19 @@ function ReviewsTab({ school, addReview, renderStars }) {
         ) : (
           <div className="reviews-grid">
             {reviews.map((review) => (
-              <div key={review.id} className={`review-card ${review.verified ? 'verified' : 'unverified'}`}>
+              <div
+                key={review.id}
+                className={`review-card ${
+                  review.verified ? "verified" : "unverified"
+                }`}
+              >
                 <div className="review-header">
                   <div className="reviewer-info">
                     <span className="reviewer-avatar">
                       {review.author.charAt(0)}
                     </span>
                     <div className="reviewer-name-container">
-                      <span className="reviewer-name">
-                        {review.author}
-                      </span>
+                      <span className="reviewer-name">{review.author}</span>
                       {review.verified && (
                         <span className="verified-badge">✓ Vérifié</span>
                       )}
@@ -421,7 +434,10 @@ function ReviewsTab({ school, addReview, renderStars }) {
                   </span>
                   {review.email && (
                     <span className="review-email">
-                      📧 {review.email.includes('@gmail.com') ? 'Inscrit avec Google' : 'Inscrit par email'}
+                      📧{" "}
+                      {review.email.includes("@gmail.com")
+                        ? "Inscrit avec Google"
+                        : "Inscrit par email"}
                     </span>
                   )}
                 </div>

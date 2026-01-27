@@ -1,18 +1,24 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* CSS Variables */
 :root {
   --oxford-blue: #002147;
   --oxford-dark: #001a36;
-  --cyan: #00FFFF;
-  --cyan-dark: #00CED1;
-  --cyan-light: #E0FFFF;
+  --cyan: #00ffff;
+  --cyan-dark: #00ced1;
+  --cyan-light: #e0ffff;
   --white: #ffffff;
 }
-html, body, #root {
+
+/* Base Layout */
+html,
+body,
+#root {
   height: 100%;
   width: 100%;
 }

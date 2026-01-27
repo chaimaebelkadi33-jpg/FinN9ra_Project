@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="about-container">
       <header className="about-header">
-        <h1 className="about-title">À Propos de Fin N9ra?</h1>
+        <h1 className="about-title">À Propos de FinN9ra?</h1>
         <p className="about-subtitle">Découvrez notre mission, notre plateforme et notre équipe</p>
       </header>
 
@@ -47,11 +47,11 @@ const About = () => {
       </section>
 
       <section className="section">
-        <h2 className="section-title about-team-title">L'Équipe Derrière Fin N9ra</h2> {/* Modifié */}
+        <h2 className="section-title about-team-title">L'Équipe Derrière Fin N9ra</h2>
         <div className="team-grid">
           <div className="team-member">
-            <div className="member-avatar">WB</div>
-            <h3 className="member-name">Widad Barri</h3>
+            <div className="member-avatar">BW</div>
+            <h3 className="member-name">BARRI Widad</h3>
             <p className="member-role">Développeuse Full-Stack</p>
             <p className="member-description">
               Étudiante en Développement Digital en établissement ISTAG BAB TIZIMI
@@ -68,8 +68,8 @@ const About = () => {
           </div>
 
           <div className="team-member">
-            <div className="member-avatar">CB</div>
-            <h3 className="member-name">Chaimae Belkadi</h3>
+            <div className="member-avatar">BC</div>
+            <h3 className="member-name">BELKADI Chaimae</h3>
             <p className="member-role">Développeuse Full-Stack</p>
             <p className="member-description">
               Étudiante en Développement Digital en établissement ISTAG BAB TIZIMI

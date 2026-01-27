@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import schoolsData from "../Data/ecoles.json";
-// Import Styles
 import "../Styles/ecoleDetail.css";
 import "../Styles/OpenStreetMap.css";
 
@@ -37,15 +36,18 @@ function EcoleDetails() {
   // Get all images (logo + images array)
   const getAllImages = useCallback(() => {
     if (!school) return [];
-    
+
     const allImages = [
       school.logo, // Logo first
-      ...(school.images || []) // Then other images
-    ].filter(img => img && img.trim() !== ''); // Remove empty/null images
-    
-    return allImages.length > 0 ? allImages : [
-      "https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=" + encodeURIComponent(school.nom)
-    ];
+      ...(school.images || []), // Then other images
+    ].filter((img) => img && img.trim() !== ""); // Remove empty/null images
+
+    return allImages.length > 0
+      ? allImages
+      : [
+          "https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=" +
+            encodeURIComponent(school.nom),
+        ];
   }, [school]);
 
   // Auto-slide effect
@@ -54,8 +56,8 @@ function EcoleDetails() {
       const allImages = getAllImages();
       if (allImages.length > 1) {
         const interval = setInterval(() => {
-          setCurrentImageIndex((prevIndex) => 
-            (prevIndex + 1) % allImages.length
+          setCurrentImageIndex(
+            (prevIndex) => (prevIndex + 1) % allImages.length
           );
         }, 4000); // Change image every 4 seconds
 
@@ -67,16 +69,14 @@ function EcoleDetails() {
   const goToNextImage = useCallback(() => {
     if (school) {
       const allImages = getAllImages();
-      setCurrentImageIndex((prevIndex) => 
-        (prevIndex + 1) % allImages.length
-      );
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % allImages.length);
     }
   }, [school, getAllImages]);
 
   const goToPrevImage = useCallback(() => {
     if (school) {
       const allImages = getAllImages();
-      setCurrentImageIndex((prevIndex) => 
+      setCurrentImageIndex((prevIndex) =>
         prevIndex === 0 ? allImages.length - 1 : prevIndex - 1
       );
     }
@@ -158,11 +158,16 @@ function EcoleDetails() {
   }
 
   const allImages = getAllImages();
-  const currentImage = allImages[currentImageIndex] || school.logo || "https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=École";
+  const currentImage =
+    allImages[currentImageIndex] ||
+    school.logo ||
+    "https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=École";
 
   const handleImageError = (e) => {
     e.target.onerror = null;
-    e.target.src = "https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=" + encodeURIComponent(school.nom);
+    e.target.src =
+      "https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=" +
+      encodeURIComponent(school.nom);
   };
 
   const shouldShowFormationsTab =
@@ -205,7 +210,7 @@ function EcoleDetails() {
         </div>
 
         {/* School Image Slider with Price */}
-        <div 
+        <div
           className="main-image-container"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
@@ -216,11 +221,11 @@ function EcoleDetails() {
             className="main-image"
             onError={handleImageError}
           />
-          
+
           {/* Navigation arrows */}
           {allImages.length > 1 && (
             <>
-              <button 
+              <button
                 className="nav-arrow prev-arrow"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -230,7 +235,7 @@ function EcoleDetails() {
               >
                 ◀
               </button>
-              <button 
+              <button
                 className="nav-arrow next-arrow"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -249,7 +254,9 @@ function EcoleDetails() {
               {allImages.map((_, index) => (
                 <button
                   key={index}
-                  className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
+                  className={`indicator ${
+                    index === currentImageIndex ? "active" : ""
+                  }`}
                   onClick={(e) => {
                     e.stopPropagation();
                     goToImage(index);

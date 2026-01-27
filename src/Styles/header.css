@@ -1,20 +1,19 @@
-
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
+/* CSS Variables */
 :root {
   --oxford-blue: #002147;
   --oxford-dark: #001a36;
-  --cyan: #00FFFF;
-  --cyan-dark: #00CED1;
-  --cyan-light: #E0FFFF;
+  --cyan: #00ffff;
+  --cyan-dark: #00ced1;
+  --cyan-light: #e0ffff;
   --white: #ffffff;
 }
-
 
 .header {
   background-color: var(--oxford-blue);
@@ -40,7 +39,6 @@
   position: relative;
 }
 
-
 .brand-section {
   display: flex;
   align-items: center;
@@ -59,7 +57,6 @@
   transform: translateY(-2px);
 }
 
-
 .logo-container {
   width: 70px;
   height: 70px;
@@ -70,8 +67,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-shadow: 
-    0 0 20px rgba(0, 210, 210, 0.5),
+  box-shadow: 0 0 20px rgba(0, 210, 210, 0.5),
     inset 0 0 20px rgba(0, 255, 255, 0.1);
   flex-shrink: 0;
 }
@@ -86,12 +82,10 @@
 }
 
 .logo-fallback {
-
-
   color: var(--cyan);
   font-size: 1.8rem;
   font-weight: 900;
-  font-family: 'Arial Black', sans-serif;
+  font-family: "Arial Black", sans-serif;
   text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
   display: none;
   align-items: center;
@@ -99,7 +93,6 @@
   width: 100%;
   height: 100%;
 }
-
 
 .brand-text {
   display: flex;
@@ -113,11 +106,9 @@
   font-weight: 800;
   margin: 0;
   line-height: 1;
-  text-shadow: 
-    0 0 15px rgba(0, 100, 100, 0.5),
-    0 0 30px rgba(0, 250, 250, 0.3);
+  text-shadow: 0 0 15px rgba(0, 100, 100, 0.5), 0 0 30px rgba(0, 250, 250, 0.3);
   letter-spacing: 1px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .brand-subtitle {
@@ -128,7 +119,7 @@
   font-style: italic;
   opacity: 0.9;
   letter-spacing: 0.5px;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   padding-left: 2px;
 }
 
@@ -161,7 +152,7 @@
   border-radius: 8px;
   transition: all 0.3s ease;
   background: transparent;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   white-space: nowrap;
   border: 2px solid transparent;
 }
@@ -177,13 +168,11 @@
   background-color: var(--cyan);
   color: var(--oxford-blue);
   font-weight: 700;
-  box-shadow: 
-     0 0 15px rgba(0, 100, 100, 0.5),
-    0 0 30px rgba(0, 250, 250, 0.3);
+  box-shadow: 0 0 15px rgba(0, 100, 100, 0.5), 0 0 30px rgba(0, 250, 250, 0.3);
 }
 
 .nav-link.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8px;
   left: 50%;
@@ -198,63 +187,50 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   width: auto;
-  background: linear-gradient(135deg, #00CED1, #20B2AA);
+  background: linear-gradient(135deg, #00ced1, #25c6be);
   color: white;
-  border: 2px solid #00CED1;
+  border: 2px solid #00ced1;
   padding: 0.5rem 1.5rem;
-  padding-left: 2.5rem; 
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   white-space: nowrap;
-  position: relative;
   height: 45px;
-  line-height: 1; 
-  padding-bottom: 5px;
+  line-height: 1;
 }
 
-
-.login-button::before {
-  content: "\f2f6"; 
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+.login-button i.fa-sign-in-alt {
   font-size: 1.1rem;
-  position: absolute;
-  left: 1rem; 
-  top: 30%;
-  transform: translateY(-50%);
   color: #002147;
-  line-height: 1; 
+  transform: translateY(-6px);
 }
 
 .login-text {
   font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  text-align: center;
+  letter-spacing: 0.7px;
   line-height: 1;
-  display: inline-block;
-  vertical-align: middle; 
 }
 
 .login-button:hover {
-  background: linear-gradient(135deg, #20B2AA, #00CED1);
+  background: linear-gradient(135deg, #20b2aa, #00ced1);
   transform: translateY(-2px);
-  border-color: #00FFFF;
+  border-color: #00ffff;
   box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
   color: #002147;
 }
 
-.login-button:hover::before {
-  color: #002147; 
+.login-button:hover i.fa-sign-in-alt {
+  color: #002147;
 }
 .mobile-toggle {
-  display: none; 
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
@@ -262,27 +238,23 @@
   z-index: 10001;
 }
 
-
 .mobile-toggle i.fa-bars {
   color: white;
   font-size: 1.8rem;
 }
-
 
 .mobile-toggle i.fa-times {
   color: white;
   font-size: 1.8rem;
 }
 
-
 .mobile-toggle:hover i {
   color: var(--cyan-light);
 }
 
-
 @media (max-width: 768px) {
   .mobile-toggle {
-    display: block; 
+    display: block;
   }
 }
 
@@ -332,7 +304,6 @@
   border-bottom: 2px solid rgba(0, 206, 209, 0.3);
 }
 
-
 .mobile-brand-section {
   display: flex;
   align-items: center;
@@ -363,7 +334,7 @@
   color: var(--cyan);
   font-size: 1.5rem;
   font-weight: 900;
-  font-family: 'Arial Black', sans-serif;
+  font-family: "Arial Black", sans-serif;
   display: none;
   align-items: center;
   justify-content: center;
@@ -430,78 +401,41 @@
   text-align: center;
   font-size: 1.1rem;
 }
-
-.mobile-language-btn {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-  background: linear-gradient(135deg, 
-    rgba(0, 206, 209, 0.3), 
-    rgba(0, 255, 255, 0.3));
-  color: var(--cyan);
-  border: 2px solid var(--cyan-dark);
-  padding: 1.2rem;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.mobile-nav-item .login-button {
+  width: 50%;
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+  height: 50px;
+  margin-top: 0.5rem;
 }
 
-.mobile-language-btn:hover {
-  background: linear-gradient(135deg, 
-    rgba(0, 206, 209, 0.5), 
-    rgba(0, 255, 255, 0.5));
+.mobile-nav-item .login-button i.fa-sign-in-alt {
+  font-size: 1.15rem;
+  height: 29px;
 }
 
-.mobile-language-code {
-  background-color: var(--oxford-blue);
-  color: var(--cyan);
-  padding: 0.3rem 0.8rem;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  margin-left: auto;
-  font-weight: 800;
+.mobile-nav-item .login-button .login-text {
+  font-size: 1.05rem;
 }
-
-.mobile-login-btn {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: var(--cyan-dark);
-  color: var(--oxford-blue);
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding: 1.2rem;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-.mobile-login-btn:hover {
-  transform: scale(1.02);
-}
-
 
 @media (max-width: 1200px) {
   .header-container {
     padding: 0 1.5rem;
   }
-  
+
   .brand-title {
     font-size: 2rem;
   }
-  
+
   .brand-subtitle {
     font-size: 0.9rem;
   }
-  
+
   .logo-container {
     width: 65px;
     height: 65px;
   }
-  
+
   .nav-link {
     padding: 0.7rem 1.2rem;
     font-size: 1rem;
@@ -513,29 +447,29 @@
     padding: 0 1rem;
     min-height: 85px;
   }
-  
+
   .brand-title {
     font-size: 1.8rem;
   }
-  
+
   .brand-subtitle {
     font-size: 0.85rem;
   }
-  
+
   .logo-container {
     width: 60px;
     height: 60px;
   }
-  
+
   .nav-items {
     gap: 0.5rem;
   }
-  
+
   .nav-link {
     padding: 0.6rem 1rem;
     font-size: 0.95rem;
   }
-  
+
   .language-toggle,
   .login-button {
     padding: 0.6rem 1.2rem;
@@ -547,28 +481,28 @@
   .main-navigation {
     display: none;
   }
-  
+
   .mobile-toggle {
     display: block;
   }
-  
+
   .mobile-nav-overlay {
     display: block;
   }
-  
+
   .brand-title {
     font-size: 1.6rem;
   }
-  
+
   .brand-subtitle {
     font-size: 0.8rem;
   }
-  
+
   .logo-container {
     width: 55px;
     height: 55px;
   }
-  
+
   .brand-link {
     gap: 1rem;
   }
@@ -579,24 +513,24 @@
     padding: 0 0.8rem;
     min-height: 75px;
   }
-  
+
   .brand-title {
     font-size: 1.4rem;
   }
-  
+
   /* .brand-subtitle {
     display: none;
   } */
-  
+
   .logo-container {
     width: 50px;
     height: 50px;
   }
-  
+
   .mobile-nav-content {
     width: 100%;
   }
-  
+
   .mobile-brand-text h2 {
     font-size: 1.3rem;
   }

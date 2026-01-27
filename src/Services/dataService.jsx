@@ -1,3 +1,4 @@
+// Data service for managing school data operations
 import ecolesData from "../Data/ecoles.json";
 
 /**
